@@ -184,6 +184,9 @@ export default function App() {
   const [globalHistory, setGlobalHistory] = useState<GlobalHistoryEntry[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
+  const [gamePhase, setGamePhase] = useState<'input' | 'playing'>('input');
+  const [inputId, setInputId] = useState('');
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   const initGame = useCallback((diff: Difficulty = difficulty, prefill: number = prefillCount) => {
     const numRegions = DIFFICULTY_SETTINGS[diff];
@@ -212,8 +215,10 @@ export default function App() {
   }, [difficulty, prefillCount]);
 
   useEffect(() => {
-    initGame();
-  }, [initGame]);
+    if (gamePhase === 'playing' && !sequence) {
+      initGame();
+    }
+  }, [initGame, gamePhase, sequence]);
 
   useEffect(() => {
     historyEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -364,6 +369,7 @@ export default function App() {
     const id = params.get('id');
     if (id) {
       setSessionId(id);
+      setGamePhase('playing');
       fetch(`${import.meta.env.BASE_URL}sequences/${id}.csv`)
         .then(res => {
           if (!res.ok) throw new Error('Sequence file not found');
@@ -392,6 +398,25 @@ export default function App() {
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
+  };
+
+  const handleIdSubmit = () => {
+    const id = inputId.trim();
+    if (!id) return;
+    setLoadError(null);
+    fetch(`${import.meta.env.BASE_URL}sequences/${id}.csv`)
+      .then(res => {
+        if (!res.ok) throw new Error('not found');
+        return res.text();
+      })
+      .then(text => {
+        setSessionId(id);
+        setGamePhase('playing');
+        parseSequenceCSV(text);
+      })
+      .catch(() => {
+        setLoadError(`Sequence "${id}" not found. Please check your ID.`);
+      });
   };
 
   const handleNextRound = () => {
@@ -455,6 +480,39 @@ export default function App() {
     link.click();
     document.body.removeChild(link);
   };
+
+  if (gamePhase === 'input') {
+    return (
+      <div className="min-h-screen bg-[#2a2a2a] font-sans flex flex-col items-center justify-center selection:bg-blue-500/30">
+        <div className="flex items-center gap-3 text-3xl font-bold text-white mb-12">
+          <Grid size={36} />
+          Grid Puzz
+        </div>
+        <div className="bg-[#3a3a3a] p-10 rounded-2xl shadow-2xl border border-white/10 w-full max-w-md">
+          <h2 className="text-2xl font-bold text-white mb-2 text-center">Enter Your ID</h2>
+          <p className="text-gray-400 text-sm mb-8 text-center">Input your assigned number to start the experiment.</p>
+          <input
+            type="text"
+            value={inputId}
+            onChange={e => { setInputId(e.target.value); setLoadError(null); }}
+            onKeyDown={e => e.key === 'Enter' && handleIdSubmit()}
+            placeholder="e.g. 1, 2, 3..."
+            className="w-full px-5 py-3 rounded-lg bg-[#2a2a2a] text-white text-lg border border-white/20 focus:border-blue-500 focus:outline-none mb-4"
+            autoFocus
+          />
+          {loadError && (
+            <p className="text-red-400 text-sm mb-4 text-center">{loadError}</p>
+          )}
+          <button
+            onClick={handleIdSubmit}
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-lg transition-colors"
+          >
+            Start
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (!mapData) return null;
 
