@@ -16,8 +16,7 @@ NUM_FILES = 10          # Number of CSV files to generate
 ROUNDS_PER_FILE = 4     # Number of rounds per file
 
 DIFFICULTIES = [
-    "Tutorial", "Beginner", "Easy", "Medium",
-    "Hard", "Expert", "Master", "Grandmaster",
+    "Tutorial", "Beginner", "Easy", "Medium", "Hard",
 ]
 
 PREFILL_OPTIONS = [0, 1, 3, 5, 10, 15, 20]
