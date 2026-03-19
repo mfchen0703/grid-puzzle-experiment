@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Grid, Lightbulb, Globe, ChevronDown, Star, RotateCcw, Undo, Redo, Check, Share2, Eraser, Download, Upload, PlaySquare, ListOrdered } from 'lucide-react';
+import { Grid, Lightbulb, Globe, ChevronDown, Star, RotateCcw, Undo, Redo, Check, Share2, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
 
 const ROWS = 12;
 const COLS = 20;
@@ -26,8 +26,6 @@ const DIFFICULTY_SETTINGS: Record<Difficulty, number> = {
   'Master': 120,
   'Grandmaster': 160,
 };
-
-const PREFILL_OPTIONS = [0, 1, 3, 5, 10, 15, 20];
 
 interface Region {
   id: number;
@@ -169,8 +167,6 @@ const solveMap = (mapData: MapData, initialColors: (string | null)[] = []) => {
 export default function App() {
   const [difficulty, setDifficulty] = useState<Difficulty>('Medium');
   const [prefillCount, setPrefillCount] = useState<number>(3);
-  const [showTypeDropdown, setShowTypeDropdown] = useState(false);
-  const [showPrefillDropdown, setShowPrefillDropdown] = useState(false);
   const [mapData, setMapData] = useState<MapData | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
@@ -182,7 +178,7 @@ export default function App() {
   const [sequence, setSequence] = useState<SequenceRound[] | null>(null);
   const [sequenceIndex, setSequenceIndex] = useState<number>(0);
   const [globalHistory, setGlobalHistory] = useState<GlobalHistoryEntry[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [gamePhase, setGamePhase] = useState<'input' | 'playing'>('input');
   const [inputId, setInputId] = useState('');
@@ -384,22 +380,6 @@ export default function App() {
     }
   }, [parseSequenceCSV]);
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const text = event.target?.result as string;
-      parseSequenceCSV(text);
-    };
-    reader.readAsText(file);
-    
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
-  };
-
   const handleIdSubmit = () => {
     const id = inputId.trim();
     if (!id) return;
@@ -595,78 +575,14 @@ export default function App() {
             )}
             
             <div className="flex justify-center gap-4">
-              <div className="relative">
-                <button 
-                  onClick={() => { setShowTypeDropdown(!showTypeDropdown); setShowPrefillDropdown(false); }}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm"
-                >
-                  <Grid size={16} /> Size: {difficulty} <ChevronDown size={14} />
-                </button>
-                {showTypeDropdown && (
-                  <>
-                    <div className="fixed inset-0 z-10" onClick={() => setShowTypeDropdown(false)} />
-                    <div className="absolute top-full mt-2 w-40 bg-white rounded-lg shadow-xl overflow-hidden z-20 left-0">
-                      {(Object.keys(DIFFICULTY_SETTINGS) as Difficulty[]).map(diff => (
-                        <button
-                          key={diff}
-                          className="w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                          onClick={() => {
-                            setSequence(null);
-                            setGlobalHistory([]);
-                            setDifficulty(diff);
-                            setShowTypeDropdown(false);
-                            initGame(diff, prefillCount);
-                          }}
-                        >
-                          {diff} ({DIFFICULTY_SETTINGS[diff]})
-                        </button>
-                      ))}
-                    </div>
-                  </>
-                )}
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold shadow-sm">
+                <Grid size={16} /> Size: {difficulty}
               </div>
-              <div className="relative">
-                <button 
-                  onClick={() => { setShowPrefillDropdown(!showPrefillDropdown); setShowTypeDropdown(false); }}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm"
-                >
-                  <Star size={16} /> Pre-filled: {prefillCount} <ChevronDown size={14} />
-                </button>
-                {showPrefillDropdown && (
-                  <>
-                    <div className="fixed inset-0 z-10" onClick={() => setShowPrefillDropdown(false)} />
-                    <div className="absolute top-full mt-2 w-36 bg-white rounded-lg shadow-xl overflow-hidden z-20 left-0">
-                      {PREFILL_OPTIONS.map(count => (
-                        <button
-                          key={count}
-                          className="w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-                          onClick={() => {
-                            setSequence(null);
-                            setGlobalHistory([]);
-                            setPrefillCount(count);
-                            setShowPrefillDropdown(false);
-                            initGame(difficulty, count);
-                          }}
-                        >
-                          {count} regions
-                        </button>
-                      ))}
-                    </div>
-                  </>
-                )}
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold shadow-sm">
+                <Star size={16} /> Pre-filled: {prefillCount}
               </div>
             </div>
             <div className="flex justify-center gap-3">
-              <input 
-                type="file" 
-                accept=".csv" 
-                ref={fileInputRef} 
-                onChange={handleFileUpload} 
-                className="hidden" 
-              />
-              <button onClick={() => fileInputRef.current?.click()} className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors shadow-sm">
-                <Upload size={16} /> Load Sequence
-              </button>
               <button onClick={handleNew} className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm">
                 <Star size={16} /> New
               </button>
