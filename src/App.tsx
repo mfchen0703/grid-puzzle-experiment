@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Grid, Lightbulb, Globe, ChevronDown, Star, RotateCcw, Check, Share2, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
+import { Grid, Lightbulb, Globe, ChevronDown, RotateCcw, Check, Share2, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
 
 const ROWS = 12;
 const COLS = 20;
@@ -11,21 +11,8 @@ const COLORS = [
   '#9c7c64', // Brown
 ];
 
-type Difficulty = 'Tutorial' | 'Beginner' | 'Easy' | 'Medium' | 'Hard' | 'Expert' | 'Master' | 'Grandmaster';
-
-type SequenceRound = { difficulty: Difficulty; prefill: number };
-type GlobalHistoryEntry = HistoryEntry & { round: number; difficulty: string; prefill: number };
-
-const DIFFICULTY_SETTINGS: Record<Difficulty, number> = {
-  'Tutorial': 8,
-  'Beginner': 12,
-  'Easy': 15,
-  'Medium': 30,
-  'Hard': 50,
-  'Expert': 80,
-  'Master': 120,
-  'Grandmaster': 160,
-};
+// Fixed sequence: 10 rounds, region count from 20 to 45 (arithmetic)
+const ROUND_SIZES = [20, 23, 26, 28, 31, 34, 37, 39, 42, 45];
 
 interface Region {
   id: number;
@@ -45,11 +32,12 @@ type HistoryEntry = {
   timeTakenMs?: number;
 };
 
+type GlobalHistoryEntry = HistoryEntry & { round: number; numRegions: number };
+
 const generateMapData = (numRegions: number): MapData => {
   const grid = Array(ROWS).fill(null).map(() => Array(COLS).fill(-1));
   const regions: Region[] = [];
-  
-  // Initialize seeds
+
   for (let i = 0; i < numRegions; i++) {
     let r, c;
     do {
@@ -59,8 +47,7 @@ const generateMapData = (numRegions: number): MapData => {
     grid[r][c] = i;
     regions.push({ id: i, cells: [[r, c]] });
   }
-  
-  // Grow regions
+
   let changed = true;
   while (changed) {
     changed = false;
@@ -86,8 +73,7 @@ const generateMapData = (numRegions: number): MapData => {
       }
     }
   }
-  
-  // Fill any remaining isolated empty cells
+
   for (let r = 0; r < ROWS; r++) {
     for (let c = 0; c < COLS; c++) {
       if (grid[r][c] === -1) {
@@ -104,14 +90,13 @@ const generateMapData = (numRegions: number): MapData => {
     }
   }
 
-  // Build adjacency list
   const adjacency: Record<number, Set<number>> = {};
   for (let i = 0; i < numRegions; i++) adjacency[i] = new Set();
-  
+
   for (let r = 0; r < ROWS; r++) {
     for (let c = 0; c < COLS; c++) {
       const region1 = grid[r][c];
-      const dirs = [[0, 1], [1, 0]]; 
+      const dirs = [[0, 1], [1, 0]];
       for (const [dr, dc] of dirs) {
         const nr = r + dr, nc = c + dc;
         if (nr < ROWS && nc < COLS) {
@@ -124,48 +109,11 @@ const generateMapData = (numRegions: number): MapData => {
       }
     }
   }
-  
+
   return { grid, numRegions, regions, adjacency };
 };
 
-const solveMap = (mapData: MapData, initialColors: (string | null)[] = []) => {
-  const colors = Array(mapData.numRegions).fill(null);
-  for (let i = 0; i < initialColors.length; i++) {
-    if (initialColors[i]) colors[i] = initialColors[i];
-  }
-  
-  const isValid = (region: number, color: string) => {
-    for (const neighbor of mapData.adjacency[region]) {
-      if (colors[neighbor] === color) return false;
-    }
-    return true;
-  };
-  
-  const backtrack = (region: number): boolean => {
-    if (region === mapData.numRegions) return true;
-    
-    if (colors[region] !== null) {
-        return backtrack(region + 1);
-    }
-    
-    const shuffledColors = [...COLORS].sort(() => Math.random() - 0.5);
-    
-    for (const c of shuffledColors) {
-      if (isValid(region, c)) {
-        colors[region] = c;
-        if (backtrack(region + 1)) return true;
-        colors[region] = null;
-      }
-    }
-    return false;
-  };
-  
-  backtrack(0);
-  return colors;
-};
-
 export default function App() {
-  const [difficulty, setDifficulty] = useState<Difficulty>('Medium');
   const [mapData, setMapData] = useState<MapData | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
@@ -173,43 +121,45 @@ export default function App() {
   const [hoveredRegion, setHoveredRegion] = useState<number | null>(null);
   const historyEndRef = useRef<HTMLDivElement>(null);
   const lastActionTime = useRef<number>(Date.now());
-  
-  const [sequence, setSequence] = useState<SequenceRound[] | null>(null);
+
   const [sequenceIndex, setSequenceIndex] = useState<number>(0);
   const [globalHistory, setGlobalHistory] = useState<GlobalHistoryEntry[]>([]);
 
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [gamePhase, setGamePhase] = useState<'input' | 'playing'>('input');
   const [inputId, setInputId] = useState('');
-  const [loadError, setLoadError] = useState<string | null>(null);
 
-  const initGame = useCallback((diff: Difficulty = difficulty) => {
-    const numRegions = DIFFICULTY_SETTINGS[diff];
+  const initGame = useCallback((numRegions: number) => {
     const newMap = generateMapData(numRegions);
     const initialColors = Array(numRegions).fill(null);
 
     setMapData(newMap);
     lastActionTime.current = Date.now();
-    setHistory([{ regionColors: initialColors, moveDescription: `Game Started (${diff})`, timeTakenMs: 0 }]);
+    setHistory([{ regionColors: initialColors, moveDescription: `Game Started (${numRegions} regions)`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
-  }, [difficulty]);
-
-  useEffect(() => {
-    if (gamePhase === 'playing' && !sequence) {
-      initGame();
-    }
-  }, [initGame, gamePhase, sequence]);
+  }, []);
 
   useEffect(() => {
     historyEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [historyIndex]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+      setSessionId(id);
+      setGamePhase('playing');
+      setSequenceIndex(0);
+      initGame(ROUND_SIZES[0]);
+    }
+  }, [initGame]);
 
   const currentColors = historyIndex >= 0 ? history[historyIndex].regionColors : [];
 
   const errors = useMemo(() => {
     const errs = new Set<number>();
     if (!mapData || currentColors.length === 0) return errs;
-    
+
     for (let i = 0; i < mapData.numRegions; i++) {
       if (currentColors[i] === null) continue;
       for (const neighbor of mapData.adjacency[i]) {
@@ -228,174 +178,90 @@ export default function App() {
     return errors.size === 0;
   }, [mapData, currentColors, errors]);
 
-  const isSequenceComplete = sequence !== null && sequenceIndex === sequence.length - 1 && isSolved;
+  const isSequenceComplete = sequenceIndex === ROUND_SIZES.length - 1 && isSolved;
 
   const allDisplayHistory = useMemo(() => {
-    const items: { round: number; difficulty: string; prefill: number; moveDescription: string; timeTakenMs?: number }[] = [];
+    const items: { round: number; numRegions: number; moveDescription: string; timeTakenMs?: number }[] = [];
     for (const entry of globalHistory) {
       items.push(entry);
     }
-    const currentRound = sequence ? sequenceIndex + 1 : 1;
-    const currentDiff = sequence ? sequence[sequenceIndex].difficulty : difficulty;
-    const currentPre = sequence ? sequence[sequenceIndex].prefill : 0;
+    const currentRound = sequenceIndex + 1;
+    const currentSize = ROUND_SIZES[sequenceIndex];
     for (const entry of history.slice(0, historyIndex + 1)) {
-      items.push({ round: currentRound, difficulty: currentDiff, prefill: currentPre, moveDescription: entry.moveDescription, timeTakenMs: entry.timeTakenMs });
+      items.push({ round: currentRound, numRegions: currentSize, moveDescription: entry.moveDescription, timeTakenMs: entry.timeTakenMs });
     }
     return items;
-  }, [globalHistory, history, historyIndex, sequence, sequenceIndex, difficulty]);
+  }, [globalHistory, history, historyIndex, sequenceIndex]);
 
   const handleRegionClick = (regionId: number) => {
     if (selectedColor === undefined || !mapData || isSolved) return;
-    
+
     const isLocked = history.length > 0 && history[0].regionColors[regionId] !== null;
     if (isLocked) return;
-    
+
     if (currentColors[regionId] === selectedColor) return;
-    
+
     const newColors = [...currentColors];
     newColors[regionId] = selectedColor;
-    
+
     const colorName = selectedColor === null ? 'Eraser' : `Color ${COLORS.indexOf(selectedColor) + 1}`;
     const moveDesc = `Colored Region ${regionId + 1} with ${colorName}`;
-    
+
     const now = Date.now();
     const timeTakenMs = now - lastActionTime.current;
     lastActionTime.current = now;
-    
+
     const newHistory = history.slice(0, historyIndex + 1);
     newHistory.push({ regionColors: newColors, moveDescription: moveDesc, timeTakenMs });
-    
+
     setHistory(newHistory);
     setHistoryIndex(newHistory.length - 1);
   };
 
-  const parseSequenceCSV = useCallback((text: string) => {
-    const lines = text.split('\n').map(l => l.trim()).filter(l => l);
-    const parsedSequence: SequenceRound[] = [];
-    
-    let startIndex = 0;
-    if (lines[0].toLowerCase().includes('difficulty') || lines[0].toLowerCase().includes('prefill')) {
-      startIndex = 1;
-    }
-    
-    for (let i = startIndex; i < lines.length; i++) {
-      const parts = lines[i].split(',');
-      if (parts.length >= 2) {
-        const diffStr = parts[0].trim();
-        const prefillStr = parts[1].trim();
-        
-        const diffKey = (Object.keys(DIFFICULTY_SETTINGS) as Difficulty[]).find(
-          k => k.toLowerCase() === diffStr.toLowerCase()
-        );
-        
-        const prefill = parseInt(prefillStr, 10);
-        
-        if (diffKey && !isNaN(prefill)) {
-          parsedSequence.push({ difficulty: diffKey, prefill });
-        }
-      }
-    }
-    
-    if (parsedSequence.length > 0) {
-      setSequence(parsedSequence);
-      setSequenceIndex(0);
-      setGlobalHistory([]);
-      setDifficulty(parsedSequence[0].difficulty);
-      initGame(parsedSequence[0].difficulty);
-    } else {
-      alert("Invalid CSV format. Expected: Difficulty,Prefill (e.g., Medium,3)");
-    }
-  }, [initGame]);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    if (id) {
-      setSessionId(id);
-      setGamePhase('playing');
-      fetch(`${import.meta.env.BASE_URL}sequences/${id}.csv`)
-        .then(res => {
-          if (!res.ok) throw new Error('Sequence file not found');
-          return res.text();
-        })
-        .then(text => {
-          parseSequenceCSV(text);
-        })
-        .catch(err => {
-          console.error("Could not load sequence from URL:", err);
-        });
-    }
-  }, [parseSequenceCSV]);
-
   const handleIdSubmit = () => {
     const id = inputId.trim();
     if (!id) return;
-    setLoadError(null);
-    fetch(`${import.meta.env.BASE_URL}sequences/${id}.csv`)
-      .then(res => {
-        if (!res.ok) throw new Error('not found');
-        return res.text();
-      })
-      .then(text => {
-        setSessionId(id);
-        setGamePhase('playing');
-        parseSequenceCSV(text);
-      })
-      .catch(() => {
-        setLoadError(`Sequence "${id}" not found. Please check your ID.`);
-      });
+    setSessionId(id);
+    setGamePhase('playing');
+    setSequenceIndex(0);
+    setGlobalHistory([]);
+    initGame(ROUND_SIZES[0]);
   };
 
   const handleNextRound = () => {
-    if (!sequence || sequenceIndex >= sequence.length - 1) return;
-    
+    if (sequenceIndex >= ROUND_SIZES.length - 1) return;
+
     const currentRoundHistory = history.slice(0, historyIndex + 1).map(h => ({
-      ...h, 
-      round: sequenceIndex + 1, 
-      difficulty: sequence[sequenceIndex].difficulty, 
-      prefill: sequence[sequenceIndex].prefill
+      ...h,
+      round: sequenceIndex + 1,
+      numRegions: ROUND_SIZES[sequenceIndex],
     }));
-    
+
     setGlobalHistory(prev => [...prev, ...currentRoundHistory]);
-    
+
     const nextIndex = sequenceIndex + 1;
     setSequenceIndex(nextIndex);
-    const nextDiff = sequence[nextIndex].difficulty;
-    const nextPrefill = sequence[nextIndex].prefill;
-    
-    setDifficulty(nextDiff);
-    initGame(nextDiff);
+    initGame(ROUND_SIZES[nextIndex]);
   };
 
   const handleExportCSV = () => {
-    let csvContent = "";
     const currentRoundHistory = history.slice(0, historyIndex + 1);
     const idPrefix = sessionId ? `${sessionId},` : "";
     const headerIdPrefix = sessionId ? "SessionID," : "";
-    
-    if (sequence) {
-      csvContent = `${headerIdPrefix}Round,Difficulty,Prefill,Step,Action,TimeTaken(s)\n`;
-      const currentMapped = currentRoundHistory.map(h => ({
-        ...h, 
-        round: sequenceIndex + 1, 
-        difficulty: sequence[sequenceIndex].difficulty, 
-        prefill: sequence[sequenceIndex].prefill
-      }));
-      const allHistory = [...globalHistory, ...currentMapped];
-      
-      allHistory.forEach((entry, idx) => {
-        const time = entry.timeTakenMs ? (entry.timeTakenMs / 1000).toFixed(1) : "0.0";
-        const desc = `"${entry.moveDescription.replace(/"/g, '""')}"`;
-        csvContent += `${idPrefix}${entry.round},${entry.difficulty},${entry.prefill},${idx},${desc},${time}\n`;
-      });
-    } else {
-      csvContent = `${headerIdPrefix}Step,Action,TimeTaken(s)\n`;
-      currentRoundHistory.forEach((entry, idx) => {
-        const time = entry.timeTakenMs ? (entry.timeTakenMs / 1000).toFixed(1) : "0.0";
-        const desc = `"${entry.moveDescription.replace(/"/g, '""')}"`;
-        csvContent += `${idPrefix}${idx},${desc},${time}\n`;
-      });
-    }
+
+    let csvContent = `${headerIdPrefix}Round,NumRegions,Step,Action,TimeTaken(s)\n`;
+    const currentMapped = currentRoundHistory.map(h => ({
+      ...h,
+      round: sequenceIndex + 1,
+      numRegions: ROUND_SIZES[sequenceIndex],
+    }));
+    const allHistory = [...globalHistory, ...currentMapped];
+
+    allHistory.forEach((entry, idx) => {
+      const time = entry.timeTakenMs ? (entry.timeTakenMs / 1000).toFixed(1) : "0.0";
+      const desc = `"${entry.moveDescription.replace(/"/g, '""')}"`;
+      csvContent += `${idPrefix}${entry.round},${entry.numRegions},${idx},${desc},${time}\n`;
+    });
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
@@ -420,15 +286,12 @@ export default function App() {
           <input
             type="text"
             value={inputId}
-            onChange={e => { setInputId(e.target.value); setLoadError(null); }}
+            onChange={e => setInputId(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleIdSubmit()}
             placeholder="e.g. 1, 2, 3..."
             className="w-full px-5 py-3 rounded-lg bg-[#2a2a2a] text-white text-lg border border-white/20 focus:border-blue-500 focus:outline-none mb-4"
             autoFocus
           />
-          {loadError && (
-            <p className="text-red-400 text-sm mb-4 text-center">{loadError}</p>
-          )}
           <button
             onClick={handleIdSubmit}
             className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-lg transition-colors"
@@ -462,14 +325,14 @@ export default function App() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto mt-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 p-6">
-        
+
         {/* Left Column */}
         <div className="flex flex-col">
           <h1 className="text-6xl font-bold text-white mb-6 tracking-tight">Map</h1>
           <p className="text-2xl text-gray-300 mb-10 leading-relaxed">
             Color the map so that no two adjacent regions share the same color.
           </p>
-          
+
           {/* Action History */}
           <div className="bg-[#3a3a3a] p-5 rounded-xl text-gray-300 h-80 overflow-y-auto shadow-inner border border-white/5 flex-grow">
             <h3 className="font-bold mb-4 text-white sticky top-0 bg-[#3a3a3a] pb-3 border-b border-gray-600 text-lg flex items-center justify-between">
@@ -483,12 +346,12 @@ export default function App() {
             <div className="flex flex-col gap-1.5">
               {allDisplayHistory.map((entry, idx) => {
                 const prevRound = idx > 0 ? allDisplayHistory[idx - 1].round : 0;
-                const showRoundHeader = sequence && entry.round !== prevRound;
+                const showRoundHeader = entry.round !== prevRound;
                 return (
                   <React.Fragment key={idx}>
                     {showRoundHeader && (
                       <div className="text-xs font-bold text-indigo-300 mt-3 mb-1 px-3 py-1 bg-indigo-900/40 rounded">
-                        Round {entry.round}: {entry.difficulty}
+                        Round {entry.round}: {entry.numRegions} regions
                       </div>
                     )}
                     <div
@@ -514,25 +377,17 @@ export default function App() {
 
         {/* Right Column */}
         <div className="flex flex-col items-center">
-          
+
           {/* Controls */}
           <div className="flex flex-col gap-4 mb-10">
-            {sequence && (
-              <div className="bg-indigo-900/80 text-indigo-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-indigo-500/30">
-                <div className="flex items-center gap-2 font-bold">
-                  <ListOrdered size={18} />
-                  Sequence Active: Round {sequenceIndex + 1} of {sequence.length}
-                  {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
-                </div>
-                <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
-                  Current: {sequence[sequenceIndex].difficulty}
-</div>
+            <div className="bg-indigo-900/80 text-indigo-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-indigo-500/30">
+              <div className="flex items-center gap-2 font-bold">
+                <ListOrdered size={18} />
+                Round {sequenceIndex + 1} of {ROUND_SIZES.length}
+                {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
               </div>
-            )}
-            
-            <div className="flex justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold shadow-sm">
-                <Grid size={16} /> Size: {difficulty}
+              <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
+                {ROUND_SIZES[sequenceIndex]} regions
               </div>
             </div>
           </div>
@@ -540,9 +395,9 @@ export default function App() {
           {/* Game Board Container */}
           <div className="p-5 bg-[#e0e0e0] rounded-sm shadow-2xl ring-2 ring-blue-500 ring-offset-4 ring-offset-[#2a2a2a] inline-block relative">
              {/* Map Grid */}
-             <div 
-               className="grid bg-[#1a1a1a] border border-[#1a1a1a]" 
-               style={{ 
+             <div
+               className="grid bg-[#1a1a1a] border border-[#1a1a1a]"
+               style={{
                  gridTemplateColumns: `repeat(${COLS}, 32px)`,
                  gridTemplateRows: `repeat(${ROWS}, 32px)`
                }}
@@ -554,9 +409,8 @@ export default function App() {
                     const color = currentColors[regionId];
                     const isError = errors.has(regionId);
                     const isHovered = hoveredRegion === regionId;
-                    const isLocked = history.length > 0 && history[0].regionColors[regionId] !== null;
-                    const cursor = isSolved || isLocked ? 'default' : 'pointer';
-                    
+                    const cursor = isSolved ? 'default' : 'pointer';
+
                     return (
                       <div
                         key={`${r}-${c}`}
@@ -574,27 +428,26 @@ export default function App() {
                         onMouseEnter={() => setHoveredRegion(regionId)}
                         onClick={() => handleRegionClick(regionId)}
                       >
-                        {isHovered && !isSolved && !isLocked && <div className="absolute inset-0 bg-white/25 pointer-events-none" />}
+                        {isHovered && !isSolved && <div className="absolute inset-0 bg-white/25 pointer-events-none" />}
                         {isError && <div className="absolute inset-0 bg-red-500/60 pointer-events-none" />}
-                        {isLocked && <div className="absolute inset-0 flex items-center justify-center pointer-events-none"><div className="w-1.5 h-1.5 rounded-full bg-black/20" /></div>}
                       </div>
                     );
                   })
                 )}
              </div>
-             
+
              {isSolved && (
                <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
                  <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-green-600 flex items-center gap-3 animate-bounce">
-                   <Check size={40} strokeWidth={3} /> {sequence && sequenceIndex === sequence.length - 1 ? "Sequence Complete!" : "Solved!"}
+                   <Check size={40} strokeWidth={3} /> {isSequenceComplete ? "Sequence Complete!" : "Solved!"}
                  </div>
-                 
-                 {sequence && sequenceIndex < sequence.length - 1 ? (
+
+                 {!isSequenceComplete ? (
                    <button
                      onClick={handleNextRound}
                      className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
                    >
-                     <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{sequence.length})
+                     <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{ROUND_SIZES.length})
                    </button>
                  ) : (
                    <button
