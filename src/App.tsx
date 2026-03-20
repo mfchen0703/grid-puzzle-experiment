@@ -6,10 +6,10 @@ const COLS = 20;
 const CELL_SIZE = 40;
 
 const COLORS = [
-  '#F5FFFA', // MintCream
-  '#8a9a65', // Green
-  '#d4c473', // Yellow
-  '#9c7c64', // Brown
+  '#377eb8', // Blue (Set1)
+  '#4daf4a', // Green (Set1)
+  '#984ea3', // Purple (Set1)
+  '#ffff33', // Yellow (Set1)
 ];
 
 // Fixed sequence: 10 rounds, region count from 20 to 45 (arithmetic)
@@ -384,7 +384,7 @@ export default function App() {
               <li>点击地图上的区域进行涂色</li>
               <li>点击橡皮擦可以擦除已涂的颜色</li>
             </ul>
-            <p>共有 <strong>4</strong> 种可用颜色。</p>
+            <p>共有 <strong>4</strong> 种可用颜色。如果两个相邻区域被涂成了相同的颜色，那么它们会变成红色，提示填色错误。</p>
             <p><strong>实验流程：</strong></p>
             <ul className="list-disc list-inside ml-4 space-y-1">
               <li>先进行 2 轮练习（每轮 10 个区域）</li>
