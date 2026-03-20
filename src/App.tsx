@@ -244,6 +244,22 @@ export default function App() {
     return errors.size === 0;
   }, [mapData, currentColors, errors]);
 
+  const isSequenceComplete = sequence !== null && sequenceIndex === sequence.length - 1 && isSolved;
+
+  const allDisplayHistory = useMemo(() => {
+    const items: { round: number; difficulty: string; prefill: number; moveDescription: string; timeTakenMs?: number }[] = [];
+    for (const entry of globalHistory) {
+      items.push(entry);
+    }
+    const currentRound = sequence ? sequenceIndex + 1 : 1;
+    const currentDiff = sequence ? sequence[sequenceIndex].difficulty : difficulty;
+    const currentPre = sequence ? sequence[sequenceIndex].prefill : prefillCount;
+    for (const entry of history.slice(0, historyIndex + 1)) {
+      items.push({ round: currentRound, difficulty: currentDiff, prefill: currentPre, moveDescription: entry.moveDescription, timeTakenMs: entry.timeTakenMs });
+    }
+    return items;
+  }, [globalHistory, history, historyIndex, sequence, sequenceIndex, difficulty, prefillCount]);
+
   const handleRegionClick = (regionId: number) => {
     if (selectedColor === undefined || !mapData || isSolved) return;
     
@@ -528,29 +544,39 @@ export default function App() {
           <div className="bg-[#3a3a3a] p-5 rounded-xl text-gray-300 h-80 overflow-y-auto shadow-inner border border-white/5 flex-grow">
             <h3 className="font-bold mb-4 text-white sticky top-0 bg-[#3a3a3a] pb-3 border-b border-gray-600 text-lg flex items-center justify-between">
               <div className="flex items-center gap-2"><RotateCcw size={18} /> Action History</div>
-              {isSolved && (
+              {isSequenceComplete && (
                 <button onClick={handleExportCSV} className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-md flex items-center gap-1.5 transition-colors shadow-sm">
                   <Download size={14} /> CSV
                 </button>
               )}
             </h3>
             <div className="flex flex-col gap-1.5">
-              {history.slice(0, historyIndex + 1).map((entry, idx) => (
-                <div 
-                  key={idx} 
-                  className={`text-sm py-2 px-3 rounded-md transition-colors flex justify-between items-center ${idx === historyIndex ? 'bg-blue-500/20 text-blue-200 font-medium' : 'hover:bg-[#4a4a4a]'}`}
-                >
-                  <span>
-                    <span className="text-gray-500 mr-3 w-6 inline-block text-right">{idx}.</span> 
-                    {entry.moveDescription}
-                  </span>
-                  {entry.timeTakenMs !== undefined && entry.timeTakenMs > 0 && (
-                    <span className="text-xs opacity-60 font-mono">
-                      {(entry.timeTakenMs / 1000).toFixed(1)}s
-                    </span>
-                  )}
-                </div>
-              ))}
+              {allDisplayHistory.map((entry, idx) => {
+                const prevRound = idx > 0 ? allDisplayHistory[idx - 1].round : 0;
+                const showRoundHeader = sequence && entry.round !== prevRound;
+                return (
+                  <React.Fragment key={idx}>
+                    {showRoundHeader && (
+                      <div className="text-xs font-bold text-indigo-300 mt-3 mb-1 px-3 py-1 bg-indigo-900/40 rounded">
+                        Round {entry.round}: {entry.difficulty} ({entry.prefill} pre-filled)
+                      </div>
+                    )}
+                    <div
+                      className={`text-sm py-2 px-3 rounded-md transition-colors flex justify-between items-center ${idx === allDisplayHistory.length - 1 ? 'bg-blue-500/20 text-blue-200 font-medium' : 'hover:bg-[#4a4a4a]'}`}
+                    >
+                      <span>
+                        <span className="text-gray-500 mr-3 w-6 inline-block text-right">{idx}.</span>
+                        {entry.moveDescription}
+                      </span>
+                      {entry.timeTakenMs !== undefined && entry.timeTakenMs > 0 && (
+                        <span className="text-xs opacity-60 font-mono">
+                          {(entry.timeTakenMs / 1000).toFixed(1)}s
+                        </span>
+                      )}
+                    </div>
+                  </React.Fragment>
+                );
+              })}
               <div ref={historyEndRef} />
             </div>
           </div>
@@ -654,18 +680,18 @@ export default function App() {
                  </div>
                  
                  {sequence && sequenceIndex < sequence.length - 1 ? (
-                   <button 
+                   <button
                      onClick={handleNextRound}
                      className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
                    >
                      <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{sequence.length})
                    </button>
                  ) : (
-                   <button 
+                   <button
                      onClick={handleExportCSV}
                      className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
                    >
-                     <Download size={20} /> Export {sequence ? "All History" : "History"} (CSV)
+                     <Download size={20} /> Export All History (CSV)
                    </button>
                  )}
                </div>
