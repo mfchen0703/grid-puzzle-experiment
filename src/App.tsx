@@ -488,7 +488,7 @@ export default function App() {
                   <React.Fragment key={idx}>
                     {showRoundHeader && (
                       <div className="text-xs font-bold text-indigo-300 mt-3 mb-1 px-3 py-1 bg-indigo-900/40 rounded">
-                        Round {entry.round}: {entry.difficulty} ({entry.prefill} pre-filled)
+                        Round {entry.round}: {entry.difficulty}
                       </div>
                     )}
                     <div
@@ -525,8 +525,8 @@ export default function App() {
                   {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
                 </div>
                 <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
-                  Current: {sequence[sequenceIndex].difficulty} ({sequence[sequenceIndex].prefill} pre-filled)
-                </div>
+                  Current: {sequence[sequenceIndex].difficulty}
+</div>
               </div>
             )}
             
