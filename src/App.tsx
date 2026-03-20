@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Grid, Lightbulb, Globe, ChevronDown, RotateCcw, Check, Share2, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
+import { Grid, Check, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
 
 const ROWS = 12;
 const COLS = 20;
+const CELL_SIZE = 40;
 
 const COLORS = [
   '#b58b72', // Tan
@@ -47,6 +48,8 @@ type HistoryEntry = {
 };
 
 type GlobalHistoryEntry = HistoryEntry & { round: number; numRegions: number };
+
+type RoundAdjacency = { round: number; numRegions: number; adjacency: [number, number][] };
 
 const generateMapData = (numRegions: number, random: () => number): MapData => {
   const grid = Array(ROWS).fill(null).map(() => Array(COLS).fill(-1));
@@ -127,17 +130,29 @@ const generateMapData = (numRegions: number, random: () => number): MapData => {
   return { grid, numRegions, regions, adjacency };
 };
 
+// Extract adjacency pairs (sorted, deduplicated)
+function getAdjacencyPairs(adjacency: Record<number, Set<number>>): [number, number][] {
+  const pairs: [number, number][] = [];
+  for (const [region, neighbors] of Object.entries(adjacency)) {
+    const r = parseInt(region);
+    for (const n of neighbors) {
+      if (r < n) pairs.push([r, n]);
+    }
+  }
+  return pairs.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+}
+
 export default function App() {
   const [mapData, setMapData] = useState<MapData | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [selectedColor, setSelectedColor] = useState<string | null>(COLORS[0]);
   const [hoveredRegion, setHoveredRegion] = useState<number | null>(null);
-  const historyEndRef = useRef<HTMLDivElement>(null);
   const lastActionTime = useRef<number>(Date.now());
 
   const [sequenceIndex, setSequenceIndex] = useState<number>(0);
   const [globalHistory, setGlobalHistory] = useState<GlobalHistoryEntry[]>([]);
+  const [allAdjacencies, setAllAdjacencies] = useState<RoundAdjacency[]>([]);
 
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [gamePhase, setGamePhase] = useState<'input' | 'playing'>('input');
@@ -153,11 +168,11 @@ export default function App() {
     lastActionTime.current = Date.now();
     setHistory([{ regionColors: initialColors, moveDescription: `Game Started (${numRegions} regions)`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
-  }, []);
 
-  useEffect(() => {
-    historyEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [historyIndex]);
+    // Store adjacency for this round
+    const pairs = getAdjacencyPairs(newMap.adjacency);
+    setAllAdjacencies(prev => [...prev, { round: roundIndex + 1, numRegions, adjacency: pairs }]);
+  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -196,24 +211,8 @@ export default function App() {
 
   const isSequenceComplete = sequenceIndex === ROUND_SIZES.length - 1 && isSolved;
 
-  const allDisplayHistory = useMemo(() => {
-    const items: { round: number; numRegions: number; moveDescription: string; timeTakenMs?: number }[] = [];
-    for (const entry of globalHistory) {
-      items.push(entry);
-    }
-    const currentRound = sequenceIndex + 1;
-    const currentSize = ROUND_SIZES[sequenceIndex];
-    for (const entry of history.slice(0, historyIndex + 1)) {
-      items.push({ round: currentRound, numRegions: currentSize, moveDescription: entry.moveDescription, timeTakenMs: entry.timeTakenMs });
-    }
-    return items;
-  }, [globalHistory, history, historyIndex, sequenceIndex]);
-
   const handleRegionClick = (regionId: number) => {
     if (selectedColor === undefined || !mapData || isSolved) return;
-
-    const isLocked = history.length > 0 && history[0].regionColors[regionId] !== null;
-    if (isLocked) return;
 
     if (currentColors[regionId] === selectedColor) return;
 
@@ -241,6 +240,7 @@ export default function App() {
     setGamePhase('playing');
     setSequenceIndex(0);
     setGlobalHistory([]);
+    setAllAdjacencies([]);
     initGame(0);
   };
 
@@ -265,7 +265,9 @@ export default function App() {
     const idPrefix = sessionId ? `${sessionId},` : "";
     const headerIdPrefix = sessionId ? "SessionID," : "";
 
-    let csvContent = `${headerIdPrefix}Round,NumRegions,Step,Action,TimeTaken(s)\n`;
+    // --- Actions sheet ---
+    let csvContent = `[Actions]\n`;
+    csvContent += `${headerIdPrefix}Round,NumRegions,Step,Action,TimeTaken(s)\n`;
     const currentMapped = currentRoundHistory.map(h => ({
       ...h,
       round: sequenceIndex + 1,
@@ -279,11 +281,20 @@ export default function App() {
       csvContent += `${idPrefix}${entry.round},${entry.numRegions},${idx},${desc},${time}\n`;
     });
 
+    // --- Adjacency sheet ---
+    csvContent += `\n[Adjacency]\n`;
+    csvContent += `Round,NumRegions,Region_A,Region_B\n`;
+    for (const ra of allAdjacencies) {
+      for (const [a, b] of ra.adjacency) {
+        csvContent += `${ra.round},${ra.numRegions},${a + 1},${b + 1}\n`;
+      }
+    }
+
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', sessionId ? `action_${sessionId}.csv` : `grid-puzz-history-${Date.now()}.csv`);
+    link.setAttribute('download', sessionId ? `data_${sessionId}.csv` : `grid-puzz-data-${Date.now()}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -329,184 +340,113 @@ export default function App() {
           <Grid size={28} />
           Grid Puzz
         </div>
-        <div className="flex items-center gap-6 text-sm font-medium">
-          <button className="flex items-center gap-1.5 hover:text-gray-300 transition-colors">
-            <Lightbulb size={16} /> How To
-          </button>
-          <button className="flex items-center gap-1.5 hover:text-gray-300 transition-colors">
-            <Globe size={16} /> English <ChevronDown size={14} />
-          </button>
-        </div>
       </header>
 
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto mt-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 p-6">
+      {/* Main Content - single column centered */}
+      <main className="flex flex-col items-center mt-8 p-6">
+        <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">Map</h1>
+        <p className="text-xl text-gray-300 mb-8 leading-relaxed text-center">
+          Color the map so that no two adjacent regions share the same color.
+        </p>
 
-        {/* Left Column */}
-        <div className="flex flex-col">
-          <h1 className="text-6xl font-bold text-white mb-6 tracking-tight">Map</h1>
-          <p className="text-2xl text-gray-300 mb-10 leading-relaxed">
-            Color the map so that no two adjacent regions share the same color.
-          </p>
-
-          {/* Action History */}
-          <div className="bg-[#3a3a3a] p-5 rounded-xl text-gray-300 h-80 overflow-y-auto shadow-inner border border-white/5 flex-grow">
-            <h3 className="font-bold mb-4 text-white sticky top-0 bg-[#3a3a3a] pb-3 border-b border-gray-600 text-lg flex items-center justify-between">
-              <div className="flex items-center gap-2"><RotateCcw size={18} /> Action History</div>
-              {isSequenceComplete && (
-                <button onClick={handleExportCSV} className="text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-md flex items-center gap-1.5 transition-colors shadow-sm">
-                  <Download size={14} /> CSV
-                </button>
-              )}
-            </h3>
-            <div className="flex flex-col gap-1.5">
-              {allDisplayHistory.map((entry, idx) => {
-                const prevRound = idx > 0 ? allDisplayHistory[idx - 1].round : 0;
-                const showRoundHeader = entry.round !== prevRound;
-                return (
-                  <React.Fragment key={idx}>
-                    {showRoundHeader && (
-                      <div className="text-xs font-bold text-indigo-300 mt-3 mb-1 px-3 py-1 bg-indigo-900/40 rounded">
-                        Round {entry.round}: {entry.numRegions} regions
-                      </div>
-                    )}
-                    <div
-                      className={`text-sm py-2 px-3 rounded-md transition-colors flex justify-between items-center ${idx === allDisplayHistory.length - 1 ? 'bg-blue-500/20 text-blue-200 font-medium' : 'hover:bg-[#4a4a4a]'}`}
-                    >
-                      <span>
-                        <span className="text-gray-500 mr-3 w-6 inline-block text-right">{idx}.</span>
-                        {entry.moveDescription}
-                      </span>
-                      {entry.timeTakenMs !== undefined && entry.timeTakenMs > 0 && (
-                        <span className="text-xs opacity-60 font-mono">
-                          {(entry.timeTakenMs / 1000).toFixed(1)}s
-                        </span>
-                      )}
-                    </div>
-                  </React.Fragment>
-                );
-              })}
-              <div ref={historyEndRef} />
-            </div>
+        {/* Round info */}
+        <div className="bg-indigo-900/80 text-indigo-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-indigo-500/30 mb-8 w-full" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
+          <div className="flex items-center gap-2 font-bold">
+            <ListOrdered size={18} />
+            Round {sequenceIndex + 1} of {ROUND_SIZES.length}
+            {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
+          </div>
+          <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
+            {ROUND_SIZES[sequenceIndex]} regions
           </div>
         </div>
 
-        {/* Right Column */}
-        <div className="flex flex-col items-center">
+        {/* Game Board */}
+        <div className="p-5 bg-[#e0e0e0] rounded-sm shadow-2xl ring-2 ring-blue-500 ring-offset-4 ring-offset-[#2a2a2a] inline-block relative">
+          <div
+            className="grid bg-[#1a1a1a] border border-[#1a1a1a]"
+            style={{
+              gridTemplateColumns: `repeat(${COLS}, ${CELL_SIZE}px)`,
+              gridTemplateRows: `repeat(${ROWS}, ${CELL_SIZE}px)`
+            }}
+            onMouseLeave={() => setHoveredRegion(null)}
+          >
+            {Array.from({ length: ROWS }).map((_, r) =>
+              Array.from({ length: COLS }).map((_, c) => {
+                const regionId = mapData.grid[r][c];
+                const color = currentColors[regionId];
+                const isError = errors.has(regionId);
+                const isHovered = hoveredRegion === regionId;
+                const cursor = isSolved ? 'default' : 'pointer';
 
-          {/* Controls */}
-          <div className="flex flex-col gap-4 mb-10">
-            <div className="bg-indigo-900/80 text-indigo-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-indigo-500/30">
-              <div className="flex items-center gap-2 font-bold">
-                <ListOrdered size={18} />
-                Round {sequenceIndex + 1} of {ROUND_SIZES.length}
-                {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
+                return (
+                  <div
+                    key={`${r}-${c}`}
+                    className="box-border transition-colors duration-150 relative"
+                    style={{
+                      width: `${CELL_SIZE}px`,
+                      height: `${CELL_SIZE}px`,
+                      backgroundColor: color || '#d1d1d1',
+                      borderTop: r === 0 || mapData.grid[r - 1][c] !== regionId ? '2px solid #1a1a1a' : 'none',
+                      borderBottom: r === ROWS - 1 || mapData.grid[r + 1][c] !== regionId ? '2px solid #1a1a1a' : 'none',
+                      borderLeft: c === 0 || mapData.grid[r][c - 1] !== regionId ? '2px solid #1a1a1a' : 'none',
+                      borderRight: c === COLS - 1 || mapData.grid[r][c + 1] !== regionId ? '2px solid #1a1a1a' : 'none',
+                      cursor,
+                    }}
+                    onMouseEnter={() => setHoveredRegion(regionId)}
+                    onClick={() => handleRegionClick(regionId)}
+                  >
+                    {isHovered && !isSolved && <div className="absolute inset-0 bg-white/25 pointer-events-none" />}
+                    {isError && <div className="absolute inset-0 bg-red-500/60 pointer-events-none" />}
+                  </div>
+                );
+              })
+            )}
+          </div>
+
+          {isSolved && (
+            <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
+              <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-green-600 flex items-center gap-3 animate-bounce">
+                <Check size={40} strokeWidth={3} /> {isSequenceComplete ? "Sequence Complete!" : "Solved!"}
               </div>
-              <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
-                {ROUND_SIZES[sequenceIndex]} regions
-              </div>
+
+              {!isSequenceComplete ? (
+                <button
+                  onClick={handleNextRound}
+                  className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
+                >
+                  <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{ROUND_SIZES.length})
+                </button>
+              ) : (
+                <button
+                  onClick={handleExportCSV}
+                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                >
+                  <Download size={20} /> Export All Data (CSV)
+                </button>
+              )}
             </div>
-          </div>
+          )}
+        </div>
 
-          {/* Game Board Container */}
-          <div className="p-5 bg-[#e0e0e0] rounded-sm shadow-2xl ring-2 ring-blue-500 ring-offset-4 ring-offset-[#2a2a2a] inline-block relative">
-             {/* Map Grid */}
-             <div
-               className="grid bg-[#1a1a1a] border border-[#1a1a1a]"
-               style={{
-                 gridTemplateColumns: `repeat(${COLS}, 32px)`,
-                 gridTemplateRows: `repeat(${ROWS}, 32px)`
-               }}
-               onMouseLeave={() => setHoveredRegion(null)}
-             >
-               {Array.from({ length: ROWS }).map((_, r) =>
-                  Array.from({ length: COLS }).map((_, c) => {
-                    const regionId = mapData.grid[r][c];
-                    const color = currentColors[regionId];
-                    const isError = errors.has(regionId);
-                    const isHovered = hoveredRegion === regionId;
-                    const cursor = isSolved ? 'default' : 'pointer';
-
-                    return (
-                      <div
-                        key={`${r}-${c}`}
-                        className="box-border transition-colors duration-150 relative"
-                        style={{
-                          width: '32px',
-                          height: '32px',
-                          backgroundColor: color || '#d1d1d1',
-                          borderTop: r === 0 || mapData.grid[r - 1][c] !== regionId ? '2px solid #1a1a1a' : 'none',
-                          borderBottom: r === ROWS - 1 || mapData.grid[r + 1][c] !== regionId ? '2px solid #1a1a1a' : 'none',
-                          borderLeft: c === 0 || mapData.grid[r][c - 1] !== regionId ? '2px solid #1a1a1a' : 'none',
-                          borderRight: c === COLS - 1 || mapData.grid[r][c + 1] !== regionId ? '2px solid #1a1a1a' : 'none',
-                          cursor,
-                        }}
-                        onMouseEnter={() => setHoveredRegion(regionId)}
-                        onClick={() => handleRegionClick(regionId)}
-                      >
-                        {isHovered && !isSolved && <div className="absolute inset-0 bg-white/25 pointer-events-none" />}
-                        {isError && <div className="absolute inset-0 bg-red-500/60 pointer-events-none" />}
-                      </div>
-                    );
-                  })
-                )}
-             </div>
-
-             {isSolved && (
-               <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
-                 <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-green-600 flex items-center gap-3 animate-bounce">
-                   <Check size={40} strokeWidth={3} /> {isSequenceComplete ? "Sequence Complete!" : "Solved!"}
-                 </div>
-
-                 {!isSequenceComplete ? (
-                   <button
-                     onClick={handleNextRound}
-                     className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
-                   >
-                     <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{ROUND_SIZES.length})
-                   </button>
-                 ) : (
-                   <button
-                     onClick={handleExportCSV}
-                     className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
-                   >
-                     <Download size={20} /> Export All History (CSV)
-                   </button>
-                 )}
-               </div>
-             )}
-          </div>
-
-          {/* Color Palette */}
-          <div className="flex gap-5 justify-center mt-10">
-            {COLORS.map((color, idx) => (
-              <button
-                key={color}
-                className={`w-14 h-14 rounded-full border-4 shadow-lg transition-all duration-200 ${selectedColor === color ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#2a2a2a] hover:scale-105'}`}
-                style={{ backgroundColor: color }}
-                onClick={() => setSelectedColor(color)}
-                title={`Color ${idx + 1}`}
-              />
-            ))}
+        {/* Color Palette */}
+        <div className="flex gap-5 justify-center mt-10">
+          {COLORS.map((color, idx) => (
             <button
-              className={`w-14 h-14 rounded-full border-4 shadow-lg flex items-center justify-center bg-[#e0e0e0] text-gray-800 transition-all duration-200 ${selectedColor === null ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#2a2a2a] hover:scale-105'}`}
-              onClick={() => setSelectedColor(null)}
-              title="Eraser"
-            >
-              <Eraser size={28} />
-            </button>
-          </div>
-
-          {/* Footer Links */}
-          <div className="flex items-center gap-5 mt-14 text-gray-300">
-            <span className="font-medium">Link to this puzzle by:</span>
-            <button className="flex items-center gap-2 px-5 py-2.5 bg-white text-gray-800 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors shadow-sm">
-              <Share2 size={16} /> Game ID
-            </button>
-            <button className="flex items-center gap-2 px-5 py-2.5 bg-white text-gray-800 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors shadow-sm">
-              <Share2 size={16} /> Random Seed
-            </button>
-          </div>
+              key={color}
+              className={`w-14 h-14 rounded-full border-4 shadow-lg transition-all duration-200 ${selectedColor === color ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#2a2a2a] hover:scale-105'}`}
+              style={{ backgroundColor: color }}
+              onClick={() => setSelectedColor(color)}
+              title={`Color ${idx + 1}`}
+            />
+          ))}
+          <button
+            className={`w-14 h-14 rounded-full border-4 shadow-lg flex items-center justify-center bg-[#e0e0e0] text-gray-800 transition-all duration-200 ${selectedColor === null ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#2a2a2a] hover:scale-105'}`}
+            onClick={() => setSelectedColor(null)}
+            title="Eraser"
+          >
+            <Eraser size={28} />
+          </button>
         </div>
       </main>
     </div>
