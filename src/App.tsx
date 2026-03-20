@@ -345,8 +345,8 @@ export default function App() {
           Grid Puzz
         </div>
         <div className="bg-[#3a3a3a] p-10 rounded-2xl shadow-2xl border border-white/10 w-full max-w-md">
-          <h2 className="text-2xl font-bold text-white mb-2 text-center">Enter Your ID</h2>
-          <p className="text-gray-400 text-sm mb-8 text-center">Input your assigned number to start the experiment.</p>
+          <h2 className="text-2xl font-bold text-white mb-2 text-center">输入你的编号</h2>
+          <p className="text-gray-400 text-sm mb-8 text-center">输入你的编号以开始实验。</p>
           <input
             type="text"
             value={inputId}
@@ -360,7 +360,7 @@ export default function App() {
             onClick={handleIdSubmit}
             className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-lg transition-colors"
           >
-            Start
+            开始
           </button>
         </div>
       </div>
@@ -417,9 +417,9 @@ export default function App() {
 
       {/* Main Content - single column centered */}
       <main className="flex flex-col items-center mt-8 p-6">
-        <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">Map</h1>
+        <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">地图涂色</h1>
         <p className="text-xl text-gray-300 mb-8 leading-relaxed text-center">
-          Color the map so that no two adjacent regions share the same color.
+          给地图涂色，使得相邻区域颜色不同。
         </p>
 
         {/* Round info */}
@@ -428,11 +428,11 @@ export default function App() {
             <ListOrdered size={18} />
             {gamePhase === 'practice'
               ? `练习 ${practiceIndex + 1} / ${PRACTICE_SIZES.length}`
-              : `Round ${sequenceIndex + 1} of ${ROUND_SIZES.length}`}
+              : `第 ${sequenceIndex + 1} 轮 / 共 ${ROUND_SIZES.length} 轮`}
             {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
           </div>
           <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
-            {gamePhase === 'practice' ? PRACTICE_SIZES[practiceIndex] : ROUND_SIZES[sequenceIndex]} regions
+            {gamePhase === 'practice' ? PRACTICE_SIZES[practiceIndex] : ROUND_SIZES[sequenceIndex]} 个区域
           </div>
         </div>
 
@@ -482,7 +482,7 @@ export default function App() {
           {isSolved && (
             <div className="absolute inset-0 bg-black/10 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
               <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-green-600 flex items-center gap-3 animate-bounce">
-                <Check size={40} strokeWidth={3} /> {isSequenceComplete ? "Sequence Complete!" : "Solved!"}
+                <Check size={40} strokeWidth={3} /> {isSequenceComplete ? "实验完成！" : "完成！"}
               </div>
 
               {gamePhase === 'practice' && !isPracticeRoundLast && (
@@ -490,7 +490,7 @@ export default function App() {
                   onClick={handleNextPracticeRound}
                   className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
                 >
-                  <PlaySquare size={20} /> Next Practice ({practiceIndex + 2}/{PRACTICE_SIZES.length})
+                  <PlaySquare size={20} /> 下一轮练习 ({practiceIndex + 2}/{PRACTICE_SIZES.length})
                 </button>
               )}
               {gamePhase === 'practice' && isPracticeRoundLast && (
@@ -506,16 +506,19 @@ export default function App() {
                   onClick={handleNextRound}
                   className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
                 >
-                  <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{ROUND_SIZES.length})
+                  <PlaySquare size={20} /> 下一轮 ({sequenceIndex + 2}/{ROUND_SIZES.length})
                 </button>
               )}
               {isSequenceComplete && (
-                <button
-                  onClick={handleExportCSV}
-                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
-                >
-                  <Download size={20} /> Export All Data (CSV)
-                </button>
+                <>
+                  <button
+                    onClick={handleExportCSV}
+                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                  >
+                    <Download size={20} /> 下载数据 (CSV)
+                  </button>
+                  <p className="text-white text-sm mt-2">请将下载好的 CSV 文件发送到邮箱：mfchen0703@gmail.com</p>
+                </>
               )}
             </div>
           )}
@@ -529,13 +532,13 @@ export default function App() {
               className={`w-14 h-14 rounded-full border-4 shadow-lg transition-all duration-200 ${selectedColor === color ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#2a2a2a] hover:scale-105'}`}
               style={{ backgroundColor: color }}
               onClick={() => setSelectedColor(color)}
-              title={`Color ${idx + 1}`}
+              title={`颜色 ${idx + 1}`}
             />
           ))}
           <button
             className={`w-14 h-14 rounded-full border-4 shadow-lg flex items-center justify-center bg-[#e0e0e0] text-gray-800 transition-all duration-200 ${selectedColor === null ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#2a2a2a] hover:scale-105'}`}
             onClick={() => setSelectedColor(null)}
-            title="Eraser"
+            title="橡皮擦"
           >
             <Eraser size={28} />
           </button>
