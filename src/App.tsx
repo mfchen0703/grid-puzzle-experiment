@@ -6,7 +6,7 @@ const COLS = 20;
 const CELL_SIZE = 40;
 
 const COLORS = [
-  '#b58b72', // Tan
+  '#F5FFFA', // MintCream
   '#8a9a65', // Green
   '#d4c473', // Yellow
   '#9c7c64', // Brown
@@ -472,7 +472,7 @@ export default function App() {
                     onClick={() => handleRegionClick(regionId)}
                   >
                     {isHovered && !isSolved && <div className="absolute inset-0 bg-white/25 pointer-events-none" />}
-                    {isError && <div className="absolute inset-0 bg-red-500/60 pointer-events-none" />}
+                    {isError && <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: 'rgba(255, 0, 0, 0.6)' }} />}
                   </div>
                 );
               })
