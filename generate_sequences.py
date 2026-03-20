@@ -15,9 +15,13 @@ import random
 NUM_FILES = 10          # Number of CSV files to generate
 ROUNDS_PER_FILE = 4     # Number of rounds per file
 
-DIFFICULTIES = [
-    "Tutorial", "Beginner", "Easy", "Medium", "Hard",
-]
+DIFFICULTY_REGIONS = {
+    "Tutorial": 8,
+    "Beginner": 12,
+    "Easy": 15,
+    "Medium": 30,
+    "Hard": 50,
+}
 
 PREFILL_OPTIONS = [0, 1, 3, 5, 10, 15, 20]
 
@@ -27,9 +31,12 @@ OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "public", "sequences")
 
 def generate_csv(file_id: int) -> str:
     lines = ["Difficulty,Prefill"]
+    diffs = list(DIFFICULTY_REGIONS.keys())
     for _ in range(ROUNDS_PER_FILE):
-        diff = random.choice(DIFFICULTIES)
-        prefill = random.choice(PREFILL_OPTIONS)
+        diff = random.choice(diffs)
+        max_prefill = DIFFICULTY_REGIONS[diff] - 1  # leave at least 1 region unsolved
+        valid_prefills = [p for p in PREFILL_OPTIONS if p <= max_prefill]
+        prefill = random.choice(valid_prefills)
         lines.append(f"{diff},{prefill}")
     return "\n".join(lines) + "\n"
 
