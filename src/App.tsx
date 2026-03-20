@@ -29,6 +29,10 @@ function mulberry32(seed: number) {
 // Fixed seed per round so every participant gets the same maps
 const ROUND_SEEDS = [42, 137, 256, 389, 512, 647, 783, 891, 1024, 1157];
 
+// Practice rounds: 2 rounds of 10 regions each
+const PRACTICE_SIZES = [10, 10];
+const PRACTICE_SEEDS = [9999, 8888];
+
 interface Region {
   id: number;
   cells: [number, number][];
@@ -47,9 +51,9 @@ type HistoryEntry = {
   timeTakenMs?: number;
 };
 
-type GlobalHistoryEntry = HistoryEntry & { round: number; numRegions: number };
+type GlobalHistoryEntry = HistoryEntry & { round: string; numRegions: number };
 
-type RoundAdjacency = { round: number; numRegions: number; adjacency: [number, number][] };
+type RoundAdjacency = { round: string; numRegions: number; adjacency: [number, number][] };
 
 const generateMapData = (numRegions: number, random: () => number): MapData => {
   const grid = Array(ROWS).fill(null).map(() => Array(COLS).fill(-1));
@@ -151,16 +155,19 @@ export default function App() {
   const lastActionTime = useRef<number>(Date.now());
 
   const [sequenceIndex, setSequenceIndex] = useState<number>(0);
+  const [practiceIndex, setPracticeIndex] = useState<number>(0);
   const [globalHistory, setGlobalHistory] = useState<GlobalHistoryEntry[]>([]);
   const [allAdjacencies, setAllAdjacencies] = useState<RoundAdjacency[]>([]);
 
   const [sessionId, setSessionId] = useState<string | null>(null);
-  const [gamePhase, setGamePhase] = useState<'input' | 'playing'>('input');
+  const [gamePhase, setGamePhase] = useState<'input' | 'instruction' | 'practice' | 'playing'>('input');
   const [inputId, setInputId] = useState('');
 
-  const initGame = useCallback((roundIndex: number) => {
-    const numRegions = ROUND_SIZES[roundIndex];
-    const random = mulberry32(ROUND_SEEDS[roundIndex]);
+  const initGame = useCallback((roundIndex: number, mode: 'practice' | 'formal') => {
+    const sizes = mode === 'practice' ? PRACTICE_SIZES : ROUND_SIZES;
+    const seeds = mode === 'practice' ? PRACTICE_SEEDS : ROUND_SEEDS;
+    const numRegions = sizes[roundIndex];
+    const random = mulberry32(seeds[roundIndex]);
     const newMap = generateMapData(numRegions, random);
     const initialColors = Array(numRegions).fill(null);
 
@@ -170,8 +177,9 @@ export default function App() {
     setHistoryIndex(0);
 
     // Store adjacency for this round
+    const roundLabel = mode === 'practice' ? `P${roundIndex + 1}` : `${roundIndex + 1}`;
     const pairs = getAdjacencyPairs(newMap.adjacency);
-    setAllAdjacencies(prev => [...prev, { round: roundIndex + 1, numRegions, adjacency: pairs }]);
+    setAllAdjacencies(prev => [...prev, { round: roundLabel, numRegions, adjacency: pairs }]);
   }, []);
 
   useEffect(() => {
@@ -179,11 +187,9 @@ export default function App() {
     const id = params.get('id');
     if (id) {
       setSessionId(id);
-      setGamePhase('playing');
-      setSequenceIndex(0);
-      initGame(0);
+      setGamePhase('instruction');
     }
-  }, [initGame]);
+  }, []);
 
   const currentColors = historyIndex >= 0 ? history[historyIndex].regionColors : [];
 
@@ -209,7 +215,8 @@ export default function App() {
     return errors.size === 0;
   }, [mapData, currentColors, errors]);
 
-  const isSequenceComplete = sequenceIndex === ROUND_SIZES.length - 1 && isSolved;
+  const isSequenceComplete = gamePhase === 'playing' && sequenceIndex === ROUND_SIZES.length - 1 && isSolved;
+  const isPracticeRoundLast = gamePhase === 'practice' && practiceIndex === PRACTICE_SIZES.length - 1;
 
   const handleRegionClick = (regionId: number) => {
     if (selectedColor === undefined || !mapData || isSolved) return;
@@ -237,11 +244,15 @@ export default function App() {
     const id = inputId.trim();
     if (!id) return;
     setSessionId(id);
-    setGamePhase('playing');
-    setSequenceIndex(0);
     setGlobalHistory([]);
     setAllAdjacencies([]);
-    initGame(0);
+    setGamePhase('instruction');
+  };
+
+  const handleStartPractice = () => {
+    setPracticeIndex(0);
+    setGamePhase('practice');
+    initGame(0, 'practice');
   };
 
   const handleNextRound = () => {
@@ -249,7 +260,7 @@ export default function App() {
 
     const currentRoundHistory = history.slice(0, historyIndex + 1).map(h => ({
       ...h,
-      round: sequenceIndex + 1,
+      round: `${sequenceIndex + 1}`,
       numRegions: ROUND_SIZES[sequenceIndex],
     }));
 
@@ -257,7 +268,33 @@ export default function App() {
 
     const nextIndex = sequenceIndex + 1;
     setSequenceIndex(nextIndex);
-    initGame(nextIndex);
+    initGame(nextIndex, 'formal');
+  };
+
+  const handleNextPracticeRound = () => {
+    const currentRoundHistory = history.slice(0, historyIndex + 1).map(h => ({
+      ...h,
+      round: `P${practiceIndex + 1}`,
+      numRegions: PRACTICE_SIZES[practiceIndex],
+    }));
+    setGlobalHistory(prev => [...prev, ...currentRoundHistory]);
+
+    const nextIndex = practiceIndex + 1;
+    setPracticeIndex(nextIndex);
+    initGame(nextIndex, 'practice');
+  };
+
+  const handleStartFormal = () => {
+    const currentRoundHistory = history.slice(0, historyIndex + 1).map(h => ({
+      ...h,
+      round: `P${practiceIndex + 1}`,
+      numRegions: PRACTICE_SIZES[practiceIndex],
+    }));
+    setGlobalHistory(prev => [...prev, ...currentRoundHistory]);
+
+    setGamePhase('playing');
+    setSequenceIndex(0);
+    initGame(0, 'formal');
   };
 
   const handleExportCSV = () => {
@@ -270,7 +307,7 @@ export default function App() {
     csvContent += `${headerIdPrefix}Round,NumRegions,Step,Action,TimeTaken(s)\n`;
     const currentMapped = currentRoundHistory.map(h => ({
       ...h,
-      round: sequenceIndex + 1,
+      round: `${sequenceIndex + 1}`,
       numRegions: ROUND_SIZES[sequenceIndex],
     }));
     const allHistory = [...globalHistory, ...currentMapped];
@@ -330,6 +367,42 @@ export default function App() {
     );
   }
 
+  if (gamePhase === 'instruction') {
+    return (
+      <div className="min-h-screen bg-[#2a2a2a] font-sans flex flex-col items-center justify-center selection:bg-blue-500/30 p-6">
+        <div className="flex items-center gap-3 text-3xl font-bold text-white mb-12">
+          <Grid size={36} />
+          Grid Puzz
+        </div>
+        <div className="bg-[#3a3a3a] p-10 rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">实验说明</h2>
+          <div className="text-gray-200 text-lg leading-relaxed space-y-4 mb-8">
+            <p><strong>目标：</strong>给地图中的每个区域涂上颜色，使得相邻的区域颜色不同。</p>
+            <p><strong>操作方法：</strong></p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>点击下方的色块选择颜色</li>
+              <li>点击地图上的区域进行涂色</li>
+              <li>点击橡皮擦可以擦除已涂的颜色</li>
+            </ul>
+            <p>共有 <strong>4</strong> 种可用颜色。</p>
+            <p><strong>实验流程：</strong></p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>先进行 2 轮练习（每轮 10 个区域）</li>
+              <li>再进行 10 轮正式实验（区域数从 20 到 45 递增）</li>
+            </ul>
+            <p className="text-yellow-300">注意：您的所有操作和用时都会被记录。</p>
+          </div>
+          <button
+            onClick={handleStartPractice}
+            className="w-full py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-semibold rounded-lg transition-colors"
+          >
+            开始练习
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   if (!mapData) return null;
 
   return (
@@ -353,11 +426,13 @@ export default function App() {
         <div className="bg-indigo-900/80 text-indigo-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-indigo-500/30 mb-8 w-full" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
           <div className="flex items-center gap-2 font-bold">
             <ListOrdered size={18} />
-            Round {sequenceIndex + 1} of {ROUND_SIZES.length}
+            {gamePhase === 'practice'
+              ? `练习 ${practiceIndex + 1} / ${PRACTICE_SIZES.length}`
+              : `Round ${sequenceIndex + 1} of ${ROUND_SIZES.length}`}
             {sessionId && <span className="ml-2 px-2 py-0.5 bg-indigo-800 rounded text-xs">ID: {sessionId}</span>}
           </div>
           <div className="text-sm font-medium opacity-90 bg-indigo-950/50 px-3 py-1 rounded-md">
-            {ROUND_SIZES[sequenceIndex]} regions
+            {gamePhase === 'practice' ? PRACTICE_SIZES[practiceIndex] : ROUND_SIZES[sequenceIndex]} regions
           </div>
         </div>
 
@@ -410,14 +485,31 @@ export default function App() {
                 <Check size={40} strokeWidth={3} /> {isSequenceComplete ? "Sequence Complete!" : "Solved!"}
               </div>
 
-              {!isSequenceComplete ? (
+              {gamePhase === 'practice' && !isPracticeRoundLast && (
+                <button
+                  onClick={handleNextPracticeRound}
+                  className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
+                >
+                  <PlaySquare size={20} /> Next Practice ({practiceIndex + 2}/{PRACTICE_SIZES.length})
+                </button>
+              )}
+              {gamePhase === 'practice' && isPracticeRoundLast && (
+                <button
+                  onClick={handleStartFormal}
+                  className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                >
+                  <PlaySquare size={20} /> 开始正式实验
+                </button>
+              )}
+              {gamePhase === 'playing' && !isSequenceComplete && (
                 <button
                   onClick={handleNextRound}
                   className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition-colors shadow-lg"
                 >
                   <PlaySquare size={20} /> Next Round ({sequenceIndex + 2}/{ROUND_SIZES.length})
                 </button>
-              ) : (
+              )}
+              {isSequenceComplete && (
                 <button
                   onClick={handleExportCSV}
                   className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
