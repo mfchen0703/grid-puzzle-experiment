@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { Grid, Lightbulb, Globe, ChevronDown, Star, RotateCcw, Undo, Redo, Check, Share2, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
+import { Grid, Lightbulb, Globe, ChevronDown, Star, RotateCcw, Check, Share2, Eraser, Download, PlaySquare, ListOrdered } from 'lucide-react';
 
 const ROWS = 12;
 const COLS = 20;
@@ -166,7 +166,6 @@ const solveMap = (mapData: MapData, initialColors: (string | null)[] = []) => {
 
 export default function App() {
   const [difficulty, setDifficulty] = useState<Difficulty>('Medium');
-  const [prefillCount, setPrefillCount] = useState<number>(3);
   const [mapData, setMapData] = useState<MapData | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
@@ -184,31 +183,16 @@ export default function App() {
   const [inputId, setInputId] = useState('');
   const [loadError, setLoadError] = useState<string | null>(null);
 
-  const initGame = useCallback((diff: Difficulty = difficulty, prefill: number = prefillCount) => {
+  const initGame = useCallback((diff: Difficulty = difficulty) => {
     const numRegions = DIFFICULTY_SETTINGS[diff];
     const newMap = generateMapData(numRegions);
-    
-    const solution = solveMap(newMap);
     const initialColors = Array(numRegions).fill(null);
-    
-    if (solution && prefill > 0) {
-      const indices = Array.from({length: numRegions}, (_, i) => i);
-      for (let i = indices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [indices[i], indices[j]] = [indices[j], indices[i]];
-      }
-      
-      const actualPrefill = Math.min(prefill, numRegions);
-      for (let i = 0; i < actualPrefill; i++) {
-        initialColors[indices[i]] = solution[indices[i]];
-      }
-    }
-    
+
     setMapData(newMap);
     lastActionTime.current = Date.now();
-    setHistory([{ regionColors: initialColors, moveDescription: `Game Started (${diff}, ${prefill} pre-filled)`, timeTakenMs: 0 }]);
+    setHistory([{ regionColors: initialColors, moveDescription: `Game Started (${diff})`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
-  }, [difficulty, prefillCount]);
+  }, [difficulty]);
 
   useEffect(() => {
     if (gamePhase === 'playing' && !sequence) {
@@ -253,12 +237,12 @@ export default function App() {
     }
     const currentRound = sequence ? sequenceIndex + 1 : 1;
     const currentDiff = sequence ? sequence[sequenceIndex].difficulty : difficulty;
-    const currentPre = sequence ? sequence[sequenceIndex].prefill : prefillCount;
+    const currentPre = sequence ? sequence[sequenceIndex].prefill : 0;
     for (const entry of history.slice(0, historyIndex + 1)) {
       items.push({ round: currentRound, difficulty: currentDiff, prefill: currentPre, moveDescription: entry.moveDescription, timeTakenMs: entry.timeTakenMs });
     }
     return items;
-  }, [globalHistory, history, historyIndex, sequence, sequenceIndex, difficulty, prefillCount]);
+  }, [globalHistory, history, historyIndex, sequence, sequenceIndex, difficulty]);
 
   const handleRegionClick = (regionId: number) => {
     if (selectedColor === undefined || !mapData || isSolved) return;
@@ -280,73 +264,6 @@ export default function App() {
     
     const newHistory = history.slice(0, historyIndex + 1);
     newHistory.push({ regionColors: newColors, moveDescription: moveDesc, timeTakenMs });
-    
-    setHistory(newHistory);
-    setHistoryIndex(newHistory.length - 1);
-  };
-
-  const handleNew = () => {
-    setSequence(null);
-    setGlobalHistory([]);
-    initGame(difficulty, prefillCount);
-  };
-  
-  const handleRestart = () => {
-    if (historyIndex === 0) return;
-    
-    const now = Date.now();
-    const timeTakenMs = now - lastActionTime.current;
-    lastActionTime.current = now;
-    
-    const newHistory = history.slice(0, historyIndex + 1);
-    newHistory.push({ regionColors: history[0].regionColors, moveDescription: 'Restarted Game', timeTakenMs });
-    setHistory(newHistory);
-    setHistoryIndex(newHistory.length - 1);
-  };
-
-  const handleUndo = () => {
-    if (historyIndex > 0) {
-      const now = Date.now();
-      const timeTakenMs = now - lastActionTime.current;
-      lastActionTime.current = now;
-
-      const prevColors = history[historyIndex - 1].regionColors;
-      const newHistory = history.slice(0, historyIndex + 1);
-      newHistory.push({ regionColors: prevColors, moveDescription: 'Undo', timeTakenMs });
-      setHistory(newHistory);
-      setHistoryIndex(newHistory.length - 1);
-    }
-  };
-
-  const handleRedo = () => {
-    if (historyIndex >= 2 && history[historyIndex].moveDescription === 'Undo') {
-      const now = Date.now();
-      const timeTakenMs = now - lastActionTime.current;
-      lastActionTime.current = now;
-
-      // Find the state before the last undo
-      const redoColors = history[historyIndex - 1].regionColors;
-      const newHistory = history.slice(0, historyIndex + 1);
-      newHistory.push({ regionColors: redoColors, moveDescription: 'Redo', timeTakenMs });
-      setHistory(newHistory);
-      setHistoryIndex(newHistory.length - 1);
-    }
-  };
-
-  const handleSolve = () => {
-    if (!mapData || isSolved) return;
-    const solution = solveMap(mapData, history[0].regionColors);
-    
-    const now = Date.now();
-    const timeTakenMs = now - lastActionTime.current;
-    lastActionTime.current = now;
-    
-    const newHistory = history.slice(0, historyIndex + 1);
-    newHistory.push({ 
-      regionColors: solution, 
-      moveDescription: 'Auto-solved the puzzle',
-      timeTakenMs
-    });
     
     setHistory(newHistory);
     setHistoryIndex(newHistory.length - 1);
@@ -384,8 +301,7 @@ export default function App() {
       setSequenceIndex(0);
       setGlobalHistory([]);
       setDifficulty(parsedSequence[0].difficulty);
-      setPrefillCount(parsedSequence[0].prefill);
-      initGame(parsedSequence[0].difficulty, parsedSequence[0].prefill);
+      initGame(parsedSequence[0].difficulty);
     } else {
       alert("Invalid CSV format. Expected: Difficulty,Prefill (e.g., Medium,3)");
     }
@@ -448,8 +364,7 @@ export default function App() {
     const nextPrefill = sequence[nextIndex].prefill;
     
     setDifficulty(nextDiff);
-    setPrefillCount(nextPrefill);
-    initGame(nextDiff, nextPrefill);
+    initGame(nextDiff);
   };
 
   const handleExportCSV = () => {
@@ -619,26 +534,6 @@ export default function App() {
               <div className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold shadow-sm">
                 <Grid size={16} /> Size: {difficulty}
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold shadow-sm">
-                <Star size={16} /> Pre-filled: {prefillCount}
-              </div>
-            </div>
-            <div className="flex justify-center gap-3">
-              <button onClick={handleNew} className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm">
-                <Star size={16} /> New
-              </button>
-              <button onClick={handleRestart} className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm">
-                <RotateCcw size={16} /> Restart
-              </button>
-              <button onClick={handleUndo} disabled={historyIndex <= 0} className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                <Undo size={16} /> Undo
-              </button>
-              <button onClick={handleRedo} disabled={historyIndex >= history.length - 1} className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
-                <Redo size={16} /> Redo
-              </button>
-              <button onClick={handleSolve} className="flex items-center gap-2 px-5 py-2.5 bg-[#e0e0e0] text-gray-800 rounded-full text-sm font-semibold hover:bg-white transition-colors shadow-sm">
-                <Check size={16} /> Solve
-              </button>
             </div>
           </div>
 
