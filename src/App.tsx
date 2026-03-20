@@ -472,7 +472,7 @@ export default function App() {
                     onClick={() => handleRegionClick(regionId)}
                   >
                     {isHovered && !isSolved && <div className="absolute inset-0 bg-white/25 pointer-events-none" />}
-                    {isError && <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: 'rgba(255, 0, 0, 0.6)' }} />}
+                    {isError && <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: '#FF0000' }} />}
                   </div>
                 );
               })
