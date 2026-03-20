@@ -306,15 +306,30 @@ export default function App() {
 
   const handleUndo = () => {
     if (historyIndex > 0) {
-      setHistoryIndex(historyIndex - 1);
-      lastActionTime.current = Date.now();
+      const now = Date.now();
+      const timeTakenMs = now - lastActionTime.current;
+      lastActionTime.current = now;
+
+      const prevColors = history[historyIndex - 1].regionColors;
+      const newHistory = history.slice(0, historyIndex + 1);
+      newHistory.push({ regionColors: prevColors, moveDescription: 'Undo', timeTakenMs });
+      setHistory(newHistory);
+      setHistoryIndex(newHistory.length - 1);
     }
   };
 
   const handleRedo = () => {
-    if (historyIndex < history.length - 1) {
-      setHistoryIndex(historyIndex + 1);
-      lastActionTime.current = Date.now();
+    if (historyIndex >= 2 && history[historyIndex].moveDescription === 'Undo') {
+      const now = Date.now();
+      const timeTakenMs = now - lastActionTime.current;
+      lastActionTime.current = now;
+
+      // Find the state before the last undo
+      const redoColors = history[historyIndex - 1].regionColors;
+      const newHistory = history.slice(0, historyIndex + 1);
+      newHistory.push({ regionColors: redoColors, moveDescription: 'Redo', timeTakenMs });
+      setHistory(newHistory);
+      setHistoryIndex(newHistory.length - 1);
     }
   };
 
