@@ -14,6 +14,20 @@ const COLORS = [
 // Fixed sequence: 10 rounds, region count from 20 to 45 (arithmetic)
 const ROUND_SIZES = [20, 23, 26, 28, 31, 34, 37, 39, 42, 45];
 
+// Seeded PRNG (mulberry32) - ensures all participants get identical maps
+function mulberry32(seed: number) {
+  let s = seed | 0;
+  return () => {
+    s = (s + 0x6D2B79F5) | 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+// Fixed seed per round so every participant gets the same maps
+const ROUND_SEEDS = [42, 137, 256, 389, 512, 647, 783, 891, 1024, 1157];
+
 interface Region {
   id: number;
   cells: [number, number][];
@@ -34,15 +48,15 @@ type HistoryEntry = {
 
 type GlobalHistoryEntry = HistoryEntry & { round: number; numRegions: number };
 
-const generateMapData = (numRegions: number): MapData => {
+const generateMapData = (numRegions: number, random: () => number): MapData => {
   const grid = Array(ROWS).fill(null).map(() => Array(COLS).fill(-1));
   const regions: Region[] = [];
 
   for (let i = 0; i < numRegions; i++) {
     let r, c;
     do {
-      r = Math.floor(Math.random() * ROWS);
-      c = Math.floor(Math.random() * COLS);
+      r = Math.floor(random() * ROWS);
+      c = Math.floor(random() * COLS);
     } while (grid[r][c] !== -1);
     grid[r][c] = i;
     regions.push({ id: i, cells: [[r, c]] });
@@ -64,7 +78,7 @@ const generateMapData = (numRegions: number): MapData => {
         }
       }
       if (neighbors.length > 0) {
-        const [nr, nc] = neighbors[Math.floor(Math.random() * neighbors.length)];
+        const [nr, nc] = neighbors[Math.floor(random() * neighbors.length)];
         if (grid[nr][nc] === -1) {
             grid[nr][nc] = i;
             regions[i].cells.push([nr, nc]);
@@ -129,8 +143,10 @@ export default function App() {
   const [gamePhase, setGamePhase] = useState<'input' | 'playing'>('input');
   const [inputId, setInputId] = useState('');
 
-  const initGame = useCallback((numRegions: number) => {
-    const newMap = generateMapData(numRegions);
+  const initGame = useCallback((roundIndex: number) => {
+    const numRegions = ROUND_SIZES[roundIndex];
+    const random = mulberry32(ROUND_SEEDS[roundIndex]);
+    const newMap = generateMapData(numRegions, random);
     const initialColors = Array(numRegions).fill(null);
 
     setMapData(newMap);
@@ -150,7 +166,7 @@ export default function App() {
       setSessionId(id);
       setGamePhase('playing');
       setSequenceIndex(0);
-      initGame(ROUND_SIZES[0]);
+      initGame(0);
     }
   }, [initGame]);
 
@@ -225,7 +241,7 @@ export default function App() {
     setGamePhase('playing');
     setSequenceIndex(0);
     setGlobalHistory([]);
-    initGame(ROUND_SIZES[0]);
+    initGame(0);
   };
 
   const handleNextRound = () => {
@@ -241,7 +257,7 @@ export default function App() {
 
     const nextIndex = sequenceIndex + 1;
     setSequenceIndex(nextIndex);
-    initGame(ROUND_SIZES[nextIndex]);
+    initGame(nextIndex);
   };
 
   const handleExportCSV = () => {
