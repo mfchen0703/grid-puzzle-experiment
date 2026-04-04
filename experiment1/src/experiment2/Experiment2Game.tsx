@@ -237,9 +237,6 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
             第 {roundIndex + 1} 轮 / 共 {rounds.length} 轮
             <span className="ml-2 px-2 py-0.5 bg-cyan-900 rounded text-xs">ID: {sessionId}</span>
           </div>
-          <div className="text-sm font-medium opacity-90 bg-cyan-950/50 px-3 py-1 rounded-md">
-            当前冲突边数: {conflictEdges.length}
-          </div>
         </div>
 
         <div className="p-5 bg-[#e2e8f0] rounded-sm shadow-2xl ring-2 ring-cyan-500 ring-offset-4 ring-offset-[#0f172a] inline-block relative">
