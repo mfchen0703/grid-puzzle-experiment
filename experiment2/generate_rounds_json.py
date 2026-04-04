@@ -155,6 +155,43 @@ def is_legal_state(adjacency, colors):
     return len(get_conflict_edges(adjacency, colors)) == 0
 
 
+def exists_solution_only_changing_allowed(adjacency, initial_colors, allowed_regions):
+    colors = list(initial_colors)
+    allowed = sorted(allowed_regions, key=lambda idx: len(adjacency[idx]), reverse=True)
+    allowed_set = set(allowed)
+
+    def backtrack(index):
+        if index == len(allowed):
+            return is_legal_state(adjacency, colors)
+
+        region = allowed[index]
+        current = colors[region]
+
+        # Try all colors, including keeping the original color.
+        for color in range(len(COLORS)):
+            consistent = True
+            for neighbor in adjacency[region]:
+                neighbor_color = colors[neighbor]
+                if neighbor not in allowed_set:
+                    if neighbor_color == color:
+                        consistent = False
+                        break
+                elif neighbor_color == color and neighbor in allowed[:index]:
+                    consistent = False
+                    break
+            if not consistent:
+                continue
+
+            colors[region] = color
+            if backtrack(index + 1):
+                return True
+
+        colors[region] = current
+        return False
+
+    return backtrack(0)
+
+
 def get_relevant_search_regions(adjacency, conflict_edges, changed_regions):
     relevant = set(changed_regions)
     for a, b in conflict_edges:
@@ -203,6 +240,8 @@ def build_conflict_start_state(adjacency, solved_colors, random):
         if len(changed_regions) < 4:
             continue
         conflict_regions = get_conflict_regions(conflict_edges)
+        if exists_solution_only_changing_allowed(adjacency, candidate, conflict_regions):
+            continue
         if changed_regions.issubset(conflict_regions):
             continue
         relevant_regions = get_relevant_search_regions(adjacency, conflict_edges, changed_regions)
