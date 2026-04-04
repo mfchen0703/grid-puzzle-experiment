@@ -1,0 +1,1530 @@
+[Actions]
+SessionID,Round,NumRegions,Step,Action,TimeTaken(s)
+郭lx,P1,10,0,"Game Started (10 regions)",0.0
+郭lx,P1,10,1,"Colored Region 3 with Color 1",14.1
+郭lx,P1,10,2,"Colored Region 7 with Color 2",1.7
+郭lx,P1,10,3,"Colored Region 10 with Color 3",1.4
+郭lx,P1,10,4,"Colored Region 2 with Color 4",1.2
+郭lx,P1,10,5,"Colored Region 5 with Color 2",1.5
+郭lx,P1,10,6,"Colored Region 8 with Color 4",1.4
+郭lx,P1,10,7,"Colored Region 1 with Color 3",2.3
+郭lx,P1,10,8,"Colored Region 6 with Color 1",7.2
+郭lx,P1,10,9,"Colored Region 4 with Color 4",2.4
+郭lx,P1,10,10,"Colored Region 9 with Color 1",3.2
+郭lx,P2,10,11,"Game Started (10 regions)",0.0
+郭lx,P2,10,12,"Colored Region 8 with Color 1",1.8
+郭lx,P2,10,13,"Colored Region 2 with Color 1",1.2
+郭lx,P2,10,14,"Colored Region 9 with Color 1",1.3
+郭lx,P2,10,15,"Colored Region 6 with Color 4",2.2
+郭lx,P2,10,16,"Colored Region 10 with Color 4",0.5
+郭lx,P2,10,17,"Colored Region 4 with Color 4",1.5
+郭lx,P2,10,18,"Colored Region 3 with Color 4",1.4
+郭lx,P2,10,19,"Colored Region 3 with Eraser",2.0
+郭lx,P2,10,20,"Colored Region 4 with Eraser",0.4
+郭lx,P2,10,21,"Colored Region 3 with Color 3",1.7
+郭lx,P2,10,22,"Colored Region 7 with Color 3",0.7
+郭lx,P2,10,23,"Colored Region 5 with Color 3",1.8
+郭lx,P2,10,24,"Colored Region 1 with Color 2",1.5
+郭lx,P2,10,25,"Colored Region 4 with Color 2",0.4
+郭lx,1,20,26,"Game Started (20 regions)",0.0
+郭lx,1,20,27,"Colored Region 12 with Color 1",2.3
+郭lx,1,20,28,"Colored Region 6 with Color 1",0.9
+郭lx,1,20,29,"Colored Region 5 with Color 1",0.8
+郭lx,1,20,30,"Colored Region 9 with Color 1",0.8
+郭lx,1,20,31,"Colored Region 4 with Color 1",1.2
+郭lx,1,20,32,"Colored Region 11 with Color 1",1.1
+郭lx,1,20,33,"Colored Region 19 with Color 1",1.0
+郭lx,1,20,34,"Colored Region 19 with Eraser",1.7
+郭lx,1,20,35,"Colored Region 10 with Color 2",6.7
+郭lx,1,20,36,"Colored Region 2 with Color 2",0.6
+郭lx,1,20,37,"Colored Region 16 with Color 2",0.6
+郭lx,1,20,38,"Colored Region 16 with Eraser",2.0
+郭lx,1,20,39,"Colored Region 15 with Color 2",4.4
+郭lx,1,20,40,"Colored Region 18 with Color 2",0.8
+郭lx,1,20,41,"Colored Region 17 with Color 2",2.7
+郭lx,1,20,42,"Colored Region 1 with Color 3",3.6
+郭lx,1,20,43,"Colored Region 13 with Color 3",1.1
+郭lx,1,20,44,"Colored Region 14 with Color 3",1.2
+郭lx,1,20,45,"Colored Region 16 with Color 3",1.2
+郭lx,1,20,46,"Colored Region 16 with Eraser",1.8
+郭lx,1,20,47,"Colored Region 3 with Color 3",5.7
+郭lx,1,20,48,"Colored Region 7 with Color 4",3.2
+郭lx,1,20,49,"Colored Region 16 with Color 4",0.8
+郭lx,1,20,50,"Colored Region 20 with Color 4",1.0
+郭lx,1,20,51,"Colored Region 19 with Color 1",49.6
+郭lx,1,20,52,"Colored Region 19 with Eraser",1.6
+郭lx,1,20,53,"Colored Region 1 with Eraser",6.2
+郭lx,1,20,54,"Colored Region 7 with Eraser",0.6
+郭lx,1,20,55,"Colored Region 8 with Color 3",2.5
+郭lx,1,20,56,"Colored Region 7 with Color 4",4.4
+郭lx,1,20,57,"Colored Region 19 with Color 2",2.2
+郭lx,1,20,58,"Colored Region 8 with Eraser",12.1
+郭lx,1,20,59,"Colored Region 5 with Eraser",0.3
+郭lx,1,20,60,"Colored Region 5 with Color 3",0.9
+郭lx,1,20,61,"Colored Region 8 with Color 1",1.8
+郭lx,1,20,62,"Colored Region 1 with Color 3",2.1
+郭lx,2,23,63,"Game Started (23 regions)",0.0
+郭lx,2,23,64,"Colored Region 14 with Color 4",4.1
+郭lx,2,23,65,"Colored Region 10 with Color 4",2.8
+郭lx,2,23,66,"Colored Region 18 with Color 4",2.5
+郭lx,2,23,67,"Colored Region 2 with Color 4",1.8
+郭lx,2,23,68,"Colored Region 16 with Color 4",0.8
+郭lx,2,23,69,"Colored Region 3 with Color 4",1.1
+郭lx,2,23,70,"Colored Region 17 with Color 4",4.3
+郭lx,2,23,71,"Colored Region 17 with Eraser",2.0
+郭lx,2,23,72,"Colored Region 2 with Eraser",2.6
+郭lx,2,23,73,"Colored Region 17 with Color 4",4.6
+郭lx,2,23,74,"Colored Region 9 with Color 3",12.9
+郭lx,2,23,75,"Colored Region 7 with Color 3",7.6
+郭lx,2,23,76,"Colored Region 23 with Color 3",1.6
+郭lx,2,23,77,"Colored Region 15 with Color 3",2.7
+郭lx,2,23,78,"Colored Region 13 with Color 3",1.1
+郭lx,2,23,79,"Colored Region 13 with Eraser",2.2
+郭lx,2,23,80,"Colored Region 8 with Color 3",2.3
+郭lx,2,23,81,"Colored Region 2 with Color 3",1.1
+郭lx,2,23,82,"Colored Region 5 with Color 3",2.1
+郭lx,2,23,83,"Colored Region 5 with Eraser",1.9
+郭lx,2,23,84,"Colored Region 22 with Color 3",2.1
+郭lx,2,23,85,"Colored Region 11 with Color 2",3.7
+郭lx,2,23,86,"Colored Region 4 with Color 2",1.5
+郭lx,2,23,87,"Colored Region 21 with Color 2",1.0
+郭lx,2,23,88,"Colored Region 5 with Color 2",2.6
+郭lx,2,23,89,"Colored Region 12 with Color 2",0.8
+郭lx,2,23,90,"Colored Region 19 with Color 2",0.9
+郭lx,2,23,91,"Colored Region 19 with Eraser",1.6
+郭lx,2,23,92,"Colored Region 12 with Eraser",0.3
+郭lx,2,23,93,"Colored Region 13 with Color 2",1.7
+郭lx,2,23,94,"Colored Region 13 with Eraser",1.5
+郭lx,2,23,95,"Colored Region 20 with Color 1",2.7
+郭lx,2,23,96,"Colored Region 6 with Color 1",0.5
+郭lx,2,23,97,"Colored Region 19 with Color 1",0.6
+郭lx,2,23,98,"Colored Region 12 with Color 1",0.4
+郭lx,2,23,99,"Colored Region 1 with Color 1",20.7
+郭lx,2,23,100,"Colored Region 1 with Eraser",1.3
+郭lx,2,23,101,"Colored Region 10 with Eraser",52.0
+郭lx,2,23,102,"Colored Region 11 with Eraser",0.3
+郭lx,2,23,103,"Colored Region 10 with Color 2",1.6
+郭lx,2,23,104,"Colored Region 23 with Eraser",8.2
+郭lx,2,23,105,"Colored Region 14 with Eraser",0.2
+郭lx,2,23,106,"Colored Region 18 with Eraser",0.5
+郭lx,2,23,107,"Colored Region 14 with Color 1",4.9
+郭lx,2,23,108,"Colored Region 14 with Eraser",1.6
+郭lx,2,23,109,"Colored Region 14 with Color 4",3.3
+郭lx,2,23,110,"Colored Region 23 with Color 3",1.9
+郭lx,2,23,111,"Colored Region 23 with Eraser",8.7
+郭lx,2,23,112,"Colored Region 14 with Eraser",0.3
+郭lx,2,23,113,"Colored Region 14 with Color 3",2.2
+郭lx,2,23,114,"Colored Region 8 with Eraser",4.4
+郭lx,2,23,115,"Colored Region 20 with Eraser",0.3
+郭lx,2,23,116,"Colored Region 14 with Eraser",0.3
+郭lx,2,23,117,"Colored Region 8 with Color 3",1.5
+郭lx,2,23,118,"Colored Region 20 with Color 2",1.5
+郭lx,2,23,119,"Colored Region 4 with Eraser",2.1
+郭lx,2,23,120,"Colored Region 20 with Eraser",0.4
+郭lx,2,23,121,"Colored Region 20 with Color 4",3.5
+郭lx,2,23,122,"Colored Region 14 with Color 3",6.9
+郭lx,2,23,123,"Colored Region 11 with Color 1",3.3
+郭lx,2,23,124,"Colored Region 23 with Color 2",31.2
+郭lx,2,23,125,"Colored Region 4 with Color 2",1.7
+郭lx,2,23,126,"Colored Region 13 with Color 4",4.1
+郭lx,2,23,127,"Colored Region 18 with Color 4",7.4
+郭lx,2,23,128,"Colored Region 20 with Eraser",1.3
+郭lx,2,23,129,"Colored Region 20 with Color 4",1.7
+郭lx,2,23,130,"Colored Region 18 with Eraser",1.1
+郭lx,2,23,131,"Colored Region 18 with Color 3",2.5
+郭lx,2,23,132,"Colored Region 21 with Eraser",4.7
+郭lx,2,23,133,"Colored Region 16 with Eraser",0.7
+郭lx,2,23,134,"Colored Region 7 with Eraser",0.4
+郭lx,2,23,135,"Colored Region 16 with Color 4",3.4
+郭lx,2,23,136,"Colored Region 7 with Color 2",15.1
+郭lx,2,23,137,"Colored Region 21 with Color 2",3.5
+郭lx,2,23,138,"Colored Region 21 with Eraser",1.6
+郭lx,2,23,139,"Colored Region 7 with Eraser",0.3
+郭lx,2,23,140,"Colored Region 7 with Color 2",4.3
+郭lx,2,23,141,"Colored Region 21 with Color 1",3.8
+郭lx,2,23,142,"Colored Region 5 with Eraser",19.9
+郭lx,2,23,143,"Colored Region 22 with Eraser",1.1
+郭lx,2,23,144,"Colored Region 5 with Color 2",4.0
+郭lx,2,23,145,"Colored Region 22 with Color 2",1.1
+郭lx,2,23,146,"Colored Region 22 with Eraser",1.7
+郭lx,2,23,147,"Colored Region 1 with Color 2",3.4
+郭lx,2,23,148,"Colored Region 1 with Eraser",1.7
+郭lx,2,23,149,"Colored Region 4 with Eraser",11.7
+郭lx,2,23,150,"Colored Region 4 with Color 4",1.1
+郭lx,2,23,151,"Colored Region 13 with Eraser",1.5
+郭lx,2,23,152,"Colored Region 20 with Eraser",0.6
+郭lx,2,23,153,"Colored Region 20 with Color 4",2.0
+郭lx,2,23,154,"Colored Region 13 with Color 4",0.4
+郭lx,2,23,155,"Colored Region 4 with Eraser",1.7
+郭lx,2,23,156,"Colored Region 12 with Eraser",0.6
+郭lx,2,23,157,"Colored Region 9 with Eraser",0.4
+郭lx,2,23,158,"Colored Region 17 with Eraser",0.2
+郭lx,2,23,159,"Colored Region 19 with Eraser",0.3
+郭lx,2,23,160,"Colored Region 5 with Eraser",0.3
+郭lx,2,23,161,"Colored Region 2 with Eraser",0.3
+郭lx,2,23,162,"Colored Region 3 with Eraser",0.6
+郭lx,2,23,163,"Colored Region 21 with Eraser",0.4
+郭lx,2,23,164,"Colored Region 16 with Eraser",0.3
+郭lx,2,23,165,"Colored Region 7 with Eraser",0.2
+郭lx,2,23,166,"Colored Region 6 with Eraser",0.3
+郭lx,2,23,167,"Colored Region 18 with Eraser",0.6
+郭lx,2,23,168,"Colored Region 6 with Color 1",5.7
+郭lx,2,23,169,"Colored Region 4 with Color 1",1.5
+郭lx,2,23,170,"Colored Region 18 with Color 3",4.0
+郭lx,2,23,171,"Colored Region 1 with Color 3",1.6
+郭lx,2,23,172,"Colored Region 1 with Eraser",1.3
+郭lx,2,23,173,"Colored Region 7 with Color 3",3.0
+郭lx,2,23,174,"Colored Region 12 with Color 3",1.2
+郭lx,2,23,175,"Colored Region 22 with Color 3",9.3
+郭lx,2,23,176,"Colored Region 19 with Color 3",1.7
+郭lx,2,23,177,"Colored Region 16 with Color 1",4.3
+郭lx,2,23,178,"Colored Region 17 with Color 1",6.3
+郭lx,2,23,179,"Colored Region 3 with Color 1",2.7
+郭lx,2,23,180,"Colored Region 9 with Color 2",4.9
+郭lx,2,23,181,"Colored Region 5 with Color 2",0.9
+郭lx,2,23,182,"Colored Region 1 with Color 2",1.5
+郭lx,2,23,183,"Colored Region 1 with Eraser",1.6
+郭lx,2,23,184,"Colored Region 21 with Color 2",2.3
+郭lx,2,23,185,"Colored Region 1 with Color 4",1.4
+郭lx,2,23,186,"Colored Region 2 with Color 4",1.3
+郭lx,3,26,187,"Game Started (26 regions)",0.0
+郭lx,3,26,188,"Colored Region 8 with Color 3",4.9
+郭lx,3,26,189,"Colored Region 25 with Color 3",1.8
+郭lx,3,26,190,"Colored Region 13 with Color 3",0.8
+郭lx,3,26,191,"Colored Region 20 with Color 3",3.0
+郭lx,3,26,192,"Colored Region 17 with Color 1",2.7
+郭lx,3,26,193,"Colored Region 24 with Color 1",0.9
+郭lx,3,26,194,"Colored Region 18 with Color 1",5.3
+郭lx,3,26,195,"Colored Region 3 with Color 2",9.4
+郭lx,3,26,196,"Colored Region 26 with Color 2",0.9
+郭lx,3,26,197,"Colored Region 7 with Color 4",2.2
+郭lx,3,26,198,"Colored Region 12 with Color 4",1.1
+郭lx,3,26,199,"Colored Region 9 with Color 3",7.1
+郭lx,3,26,200,"Colored Region 19 with Color 3",1.2
+郭lx,3,26,201,"Colored Region 15 with Color 3",1.2
+郭lx,3,26,202,"Colored Region 5 with Color 3",3.2
+郭lx,3,26,203,"Colored Region 4 with Color 3",3.9
+郭lx,3,26,204,"Colored Region 4 with Eraser",1.6
+郭lx,3,26,205,"Colored Region 10 with Color 3",2.6
+郭lx,3,26,206,"Colored Region 1 with Color 1",2.5
+郭lx,3,26,207,"Colored Region 16 with Color 1",1.6
+郭lx,3,26,208,"Colored Region 4 with Color 1",2.0
+郭lx,3,26,209,"Colored Region 22 with Color 2",8.8
+郭lx,3,26,210,"Colored Region 11 with Color 2",0.8
+郭lx,3,26,211,"Colored Region 23 with Color 2",0.7
+郭lx,3,26,212,"Colored Region 6 with Color 2",0.8
+郭lx,3,26,213,"Colored Region 2 with Color 2",3.1
+郭lx,3,26,214,"Colored Region 14 with Color 4",2.1
+郭lx,3,26,215,"Colored Region 21 with Color 4",1.1
+郭lx,3,26,216,"Colored Region 21 with Eraser",1.5
+郭lx,3,26,217,"Colored Region 11 with Eraser",0.7
+郭lx,3,26,218,"Colored Region 11 with Color 4",1.3
+郭lx,3,26,219,"Colored Region 21 with Color 2",1.9
+郭lx,3,26,220,"Colored Region 6 with Eraser",1.8
+郭lx,3,26,221,"Colored Region 6 with Color 4",7.6
+郭lx,4,28,222,"Game Started (28 regions)",0.0
+郭lx,4,28,223,"Colored Region 6 with Color 1",5.3
+郭lx,4,28,224,"Colored Region 11 with Color 1",0.8
+郭lx,4,28,225,"Colored Region 20 with Color 1",3.6
+郭lx,4,28,226,"Colored Region 20 with Eraser",1.4
+郭lx,4,28,227,"Colored Region 27 with Color 1",7.3
+郭lx,4,28,228,"Colored Region 3 with Color 1",3.7
+郭lx,4,28,229,"Colored Region 15 with Color 1",1.9
+郭lx,4,28,230,"Colored Region 21 with Color 2",1.9
+郭lx,4,28,231,"Colored Region 25 with Color 2",0.8
+郭lx,4,28,232,"Colored Region 7 with Color 2",1.8
+郭lx,4,28,233,"Colored Region 26 with Color 2",1.2
+郭lx,4,28,234,"Colored Region 8 with Color 2",2.1
+郭lx,4,28,235,"Colored Region 5 with Color 2",1.3
+郭lx,4,28,236,"Colored Region 9 with Color 2",1.2
+郭lx,4,28,237,"Colored Region 19 with Color 3",3.5
+郭lx,4,28,238,"Colored Region 20 with Color 3",0.9
+郭lx,4,28,239,"Colored Region 12 with Color 3",1.2
+郭lx,4,28,240,"Colored Region 23 with Color 3",1.5
+郭lx,4,28,241,"Colored Region 24 with Color 4",18.0
+郭lx,4,28,242,"Colored Region 13 with Color 1",5.4
+郭lx,4,28,243,"Colored Region 28 with Color 1",1.2
+郭lx,4,28,244,"Colored Region 28 with Eraser",1.3
+郭lx,4,28,245,"Colored Region 18 with Color 1",3.2
+郭lx,4,28,246,"Colored Region 22 with Color 1",0.8
+郭lx,4,28,247,"Colored Region 4 with Color 2",4.0
+郭lx,4,28,248,"Colored Region 2 with Color 2",0.9
+郭lx,4,28,249,"Colored Region 10 with Color 4",7.9
+郭lx,4,28,250,"Colored Region 16 with Color 4",1.3
+郭lx,4,28,251,"Colored Region 14 with Color 4",1.0
+郭lx,4,28,252,"Colored Region 1 with Color 4",2.6
+郭lx,4,28,253,"Colored Region 1 with Eraser",1.6
+郭lx,4,28,254,"Colored Region 1 with Color 3",4.0
+郭lx,4,28,255,"Colored Region 17 with Color 3",1.5
+郭lx,4,28,256,"Colored Region 3 with Eraser",5.0
+郭lx,4,28,257,"Colored Region 3 with Color 4",0.9
+郭lx,4,28,258,"Colored Region 28 with Color 1",2.1
+郭lx,5,31,259,"Game Started (31 regions)",0.0
+郭lx,5,31,260,"Colored Region 26 with Color 1",4.8
+郭lx,5,31,261,"Colored Region 15 with Color 1",1.3
+郭lx,5,31,262,"Colored Region 4 with Color 1",1.5
+郭lx,5,31,263,"Colored Region 8 with Color 1",3.8
+郭lx,5,31,264,"Colored Region 27 with Color 1",0.8
+郭lx,5,31,265,"Colored Region 22 with Color 1",2.2
+郭lx,5,31,266,"Colored Region 7 with Color 1",2.0
+郭lx,5,31,267,"Colored Region 12 with Color 1",1.3
+郭lx,5,31,268,"Colored Region 12 with Eraser",1.6
+郭lx,5,31,269,"Colored Region 21 with Color 2",2.3
+郭lx,5,31,270,"Colored Region 16 with Color 2",0.7
+郭lx,5,31,271,"Colored Region 3 with Color 2",1.2
+郭lx,5,31,272,"Colored Region 5 with Color 2",2.9
+郭lx,5,31,273,"Colored Region 1 with Color 2",2.6
+郭lx,5,31,274,"Colored Region 11 with Color 3",9.6
+郭lx,5,31,275,"Colored Region 13 with Color 3",0.6
+郭lx,5,31,276,"Colored Region 23 with Color 3",0.9
+郭lx,5,31,277,"Colored Region 20 with Color 3",0.9
+郭lx,5,31,278,"Colored Region 12 with Color 3",1.3
+郭lx,5,31,279,"Colored Region 19 with Color 3",2.5
+郭lx,5,31,280,"Colored Region 31 with Color 3",1.7
+郭lx,5,31,281,"Colored Region 31 with Eraser",1.6
+郭lx,5,31,282,"Colored Region 31 with Color 4",1.4
+郭lx,5,31,283,"Colored Region 17 with Color 1",8.6
+郭lx,5,31,284,"Colored Region 9 with Color 1",1.2
+郭lx,5,31,285,"Colored Region 2 with Color 3",7.6
+郭lx,5,31,286,"Colored Region 25 with Color 3",2.0
+郭lx,5,31,287,"Colored Region 29 with Color 2",4.3
+郭lx,5,31,288,"Colored Region 29 with Eraser",1.3
+郭lx,5,31,289,"Colored Region 24 with Color 2",2.7
+郭lx,5,31,290,"Colored Region 28 with Color 2",1.4
+郭lx,5,31,291,"Colored Region 29 with Color 4",15.7
+郭lx,5,31,292,"Colored Region 18 with Color 4",1.2
+郭lx,5,31,293,"Colored Region 10 with Color 4",1.0
+郭lx,5,31,294,"Colored Region 9 with Eraser",4.7
+郭lx,5,31,295,"Colored Region 24 with Eraser",0.3
+郭lx,5,31,296,"Colored Region 2 with Eraser",0.3
+郭lx,5,31,297,"Colored Region 9 with Color 2",1.8
+郭lx,5,31,298,"Colored Region 14 with Color 1",3.9
+郭lx,5,31,299,"Colored Region 24 with Color 3",2.7
+郭lx,5,31,300,"Colored Region 2 with Color 1",3.3
+郭lx,5,31,301,"Colored Region 22 with Eraser",10.5
+郭lx,5,31,302,"Colored Region 5 with Eraser",0.3
+郭lx,5,31,303,"Colored Region 22 with Color 2",2.1
+郭lx,5,31,304,"Colored Region 5 with Color 1",1.2
+郭lx,5,31,305,"Colored Region 27 with Eraser",1.7
+郭lx,5,31,306,"Colored Region 8 with Eraser",0.3
+郭lx,5,31,307,"Colored Region 8 with Color 2",4.7
+郭lx,5,31,308,"Colored Region 16 with Eraser",1.5
+郭lx,5,31,309,"Colored Region 27 with Color 2",5.1
+郭lx,5,31,310,"Colored Region 16 with Color 4",1.7
+郭lx,5,31,311,"Colored Region 18 with Eraser",10.0
+郭lx,5,31,312,"Colored Region 19 with Eraser",0.4
+郭lx,5,31,313,"Colored Region 18 with Color 3",6.7
+郭lx,5,31,314,"Colored Region 23 with Eraser",1.3
+郭lx,5,31,315,"Colored Region 23 with Color 4",2.4
+郭lx,5,31,316,"Colored Region 1 with Eraser",9.8
+郭lx,5,31,317,"Colored Region 1 with Color 1",1.1
+郭lx,5,31,318,"Colored Region 4 with Eraser",1.1
+郭lx,5,31,319,"Colored Region 4 with Color 2",5.1
+郭lx,5,31,320,"Colored Region 12 with Eraser",20.5
+郭lx,5,31,321,"Colored Region 3 with Eraser",0.3
+郭lx,5,31,322,"Colored Region 12 with Color 3",4.1
+郭lx,5,31,323,"Colored Region 3 with Color 2",2.1
+郭lx,5,31,324,"Colored Region 29 with Eraser",15.1
+郭lx,5,31,325,"Colored Region 18 with Eraser",23.9
+郭lx,5,31,326,"Colored Region 30 with Color 3",1.2
+郭lx,5,31,327,"Colored Region 6 with Color 4",6.6
+郭lx,5,31,328,"Colored Region 19 with Color 4",4.4
+郭lx,5,31,329,"Colored Region 23 with Eraser",6.8
+郭lx,5,31,330,"Colored Region 23 with Color 3",2.3
+郭lx,5,31,331,"Colored Region 18 with Color 2",5.2
+郭lx,5,31,332,"Colored Region 28 with Eraser",1.5
+郭lx,5,31,333,"Colored Region 18 with Eraser",0.9
+郭lx,5,31,334,"Colored Region 18 with Color 2",3.0
+郭lx,5,31,335,"Colored Region 14 with Eraser",4.7
+郭lx,5,31,336,"Colored Region 25 with Eraser",0.3
+郭lx,5,31,337,"Colored Region 10 with Eraser",0.3
+郭lx,5,31,338,"Colored Region 9 with Eraser",0.4
+郭lx,5,31,339,"Colored Region 24 with Eraser",0.3
+郭lx,5,31,340,"Colored Region 2 with Eraser",0.6
+郭lx,5,31,341,"Colored Region 14 with Color 2",24.8
+郭lx,5,31,342,"Colored Region 28 with Color 1",12.8
+郭lx,5,31,343,"Colored Region 7 with Eraser",2.3
+郭lx,5,31,344,"Colored Region 7 with Color 2",4.4
+郭lx,5,31,345,"Colored Region 25 with Color 3",4.9
+郭lx,5,31,346,"Colored Region 10 with Color 4",1.6
+郭lx,5,31,347,"Colored Region 29 with Color 3",4.0
+郭lx,5,31,348,"Colored Region 2 with Color 3",1.0
+郭lx,5,31,349,"Colored Region 2 with Eraser",6.8
+郭lx,5,31,350,"Colored Region 2 with Color 1",2.9
+郭lx,5,31,351,"Colored Region 2 with Eraser",5.7
+郭lx,5,31,352,"Colored Region 2 with Color 2",1.6
+郭lx,5,31,353,"Colored Region 9 with Color 1",3.6
+郭lx,5,31,354,"Colored Region 24 with Color 3",3.5
+郭lx,6,34,355,"Game Started (34 regions)",0.0
+郭lx,6,34,356,"Colored Region 7 with Color 2",3.6
+郭lx,6,34,357,"Colored Region 2 with Color 3",2.5
+郭lx,6,34,358,"Colored Region 2 with Eraser",1.9
+郭lx,6,34,359,"Colored Region 2 with Color 2",1.1
+郭lx,6,34,360,"Colored Region 4 with Color 2",1.4
+郭lx,6,34,361,"Colored Region 15 with Color 2",1.1
+郭lx,6,34,362,"Colored Region 20 with Color 2",4.2
+郭lx,6,34,363,"Colored Region 18 with Color 1",1.7
+郭lx,6,34,364,"Colored Region 32 with Color 1",1.0
+郭lx,6,34,365,"Colored Region 5 with Color 1",2.7
+郭lx,6,34,366,"Colored Region 5 with Eraser",1.4
+郭lx,6,34,367,"Colored Region 13 with Color 1",3.0
+郭lx,6,34,368,"Colored Region 17 with Color 4",1.9
+郭lx,6,34,369,"Colored Region 25 with Color 3",1.9
+郭lx,6,34,370,"Colored Region 5 with Color 4",3.5
+郭lx,6,34,371,"Colored Region 30 with Color 1",7.8
+郭lx,6,34,372,"Colored Region 23 with Color 2",2.4
+郭lx,6,34,373,"Colored Region 15 with Eraser",1.4
+郭lx,6,34,374,"Colored Region 28 with Color 3",3.8
+郭lx,6,34,375,"Colored Region 16 with Color 4",12.3
+郭lx,6,34,376,"Colored Region 15 with Color 2",4.7
+郭lx,6,34,377,"Colored Region 15 with Eraser",1.9
+郭lx,6,34,378,"Colored Region 15 with Color 1",1.8
+郭lx,6,34,379,"Colored Region 15 with Eraser",1.5
+郭lx,6,34,380,"Colored Region 16 with Color 3",2.1
+郭lx,6,34,381,"Colored Region 15 with Color 3",0.8
+郭lx,6,34,382,"Colored Region 16 with Eraser",1.6
+郭lx,6,34,383,"Colored Region 16 with Color 4",1.6
+郭lx,6,34,384,"Colored Region 21 with Color 2",5.3
+郭lx,6,34,385,"Colored Region 21 with Eraser",3.9
+郭lx,6,34,386,"Colored Region 10 with Color 2",1.4
+郭lx,6,34,387,"Colored Region 14 with Color 1",2.9
+郭lx,6,34,388,"Colored Region 21 with Color 3",4.8
+郭lx,6,34,389,"Colored Region 3 with Color 4",2.1
+郭lx,6,34,390,"Colored Region 19 with Color 1",8.7
+郭lx,6,34,391,"Colored Region 29 with Color 3",4.7
+郭lx,6,34,392,"Colored Region 11 with Color 4",7.3
+郭lx,6,34,393,"Colored Region 8 with Color 1",4.9
+郭lx,6,34,394,"Colored Region 26 with Color 2",2.0
+郭lx,6,34,395,"Colored Region 34 with Color 1",4.9
+郭lx,6,34,396,"Colored Region 34 with Eraser",1.5
+郭lx,6,34,397,"Colored Region 34 with Color 3",1.2
+郭lx,6,34,398,"Colored Region 22 with Color 3",1.7
+郭lx,6,34,399,"Colored Region 24 with Color 2",2.0
+郭lx,6,34,400,"Colored Region 27 with Color 1",10.5
+郭lx,6,34,401,"Colored Region 27 with Eraser",1.3
+郭lx,6,34,402,"Colored Region 6 with Color 1",3.0
+郭lx,6,34,403,"Colored Region 9 with Color 1",1.9
+郭lx,6,34,404,"Colored Region 6 with Eraser",1.1
+郭lx,6,34,405,"Colored Region 1 with Color 2",4.0
+郭lx,6,34,406,"Colored Region 12 with Color 3",2.6
+郭lx,6,34,407,"Colored Region 33 with Color 3",2.2
+郭lx,6,34,408,"Colored Region 6 with Color 4",5.3
+郭lx,6,34,409,"Colored Region 27 with Color 4",11.1
+郭lx,6,34,410,"Colored Region 14 with Eraser",1.7
+郭lx,6,34,411,"Colored Region 14 with Color 4",4.4
+郭lx,6,34,412,"Colored Region 31 with Color 1",3.1
+郭lx,7,37,413,"Game Started (37 regions)",0.0
+郭lx,7,37,414,"Colored Region 31 with Color 2",5.3
+郭lx,7,37,415,"Colored Region 4 with Color 2",3.8
+郭lx,7,37,416,"Colored Region 10 with Color 2",1.4
+郭lx,7,37,417,"Colored Region 1 with Color 2",2.5
+郭lx,7,37,418,"Colored Region 36 with Color 1",2.0
+郭lx,7,37,419,"Colored Region 26 with Color 1",2.5
+郭lx,7,37,420,"Colored Region 29 with Color 4",1.8
+郭lx,7,37,421,"Colored Region 23 with Color 4",7.1
+郭lx,7,37,422,"Colored Region 23 with Eraser",2.9
+郭lx,7,37,423,"Colored Region 23 with Color 1",2.3
+郭lx,7,37,424,"Colored Region 25 with Color 1",2.4
+郭lx,7,37,425,"Colored Region 3 with Color 1",2.4
+郭lx,7,37,426,"Colored Region 12 with Color 1",1.3
+郭lx,7,37,427,"Colored Region 18 with Color 1",1.5
+郭lx,7,37,428,"Colored Region 23 with Color 4",3.1
+郭lx,7,37,429,"Colored Region 7 with Color 4",1.3
+郭lx,7,37,430,"Colored Region 23 with Color 1",2.6
+郭lx,7,37,431,"Colored Region 35 with Color 3",2.0
+郭lx,7,37,432,"Colored Region 9 with Color 3",3.0
+郭lx,7,37,433,"Colored Region 33 with Color 2",1.3
+郭lx,7,37,434,"Colored Region 30 with Color 2",3.4
+郭lx,7,37,435,"Colored Region 16 with Color 4",1.6
+郭lx,7,37,436,"Colored Region 14 with Color 3",1.0
+郭lx,7,37,437,"Colored Region 6 with Color 1",3.4
+郭lx,7,37,438,"Colored Region 21 with Color 4",2.1
+郭lx,7,37,439,"Colored Region 15 with Color 2",5.1
+郭lx,7,37,440,"Colored Region 20 with Color 3",2.9
+郭lx,7,37,441,"Colored Region 32 with Color 3",3.4
+郭lx,7,37,442,"Colored Region 19 with Color 3",1.3
+郭lx,7,37,443,"Colored Region 11 with Color 3",7.3
+郭lx,7,37,444,"Colored Region 27 with Color 3",3.3
+郭lx,7,37,445,"Colored Region 13 with Color 4",5.3
+郭lx,7,37,446,"Colored Region 12 with Eraser",7.6
+郭lx,7,37,447,"Colored Region 12 with Color 2",2.3
+郭lx,7,37,448,"Colored Region 4 with Eraser",1.5
+郭lx,7,37,449,"Colored Region 26 with Eraser",17.6
+郭lx,7,37,450,"Colored Region 29 with Eraser",0.4
+郭lx,7,37,451,"Colored Region 26 with Color 4",2.2
+郭lx,7,37,452,"Colored Region 29 with Color 3",5.2
+郭lx,7,37,453,"Colored Region 9 with Eraser",1.1
+郭lx,7,37,454,"Colored Region 9 with Color 4",3.0
+郭lx,7,37,455,"Colored Region 4 with Color 2",3.3
+郭lx,7,37,456,"Colored Region 12 with Eraser",1.6
+郭lx,7,37,457,"Colored Region 28 with Color 1",10.4
+郭lx,7,37,458,"Colored Region 22 with Color 1",4.4
+郭lx,7,37,459,"Colored Region 22 with Eraser",4.9
+郭lx,7,37,460,"Colored Region 19 with Eraser",1.7
+郭lx,7,37,461,"Colored Region 22 with Color 1",1.5
+郭lx,7,37,462,"Colored Region 19 with Color 4",2.0
+郭lx,7,37,463,"Colored Region 2 with Color 2",4.1
+郭lx,7,37,464,"Colored Region 12 with Color 3",1.6
+郭lx,7,37,465,"Colored Region 24 with Color 3",3.0
+郭lx,7,37,466,"Colored Region 24 with Eraser",3.4
+郭lx,7,37,467,"Colored Region 8 with Color 4",9.8
+郭lx,7,37,468,"Colored Region 37 with Color 2",1.6
+郭lx,7,37,469,"Colored Region 5 with Color 1",4.0
+郭lx,7,37,470,"Colored Region 3 with Eraser",1.3
+郭lx,7,37,471,"Colored Region 24 with Color 2",7.6
+郭lx,7,37,472,"Colored Region 24 with Eraser",1.1
+郭lx,7,37,473,"Colored Region 3 with Color 2",8.7
+郭lx,7,37,474,"Colored Region 3 with Eraser",1.4
+郭lx,7,37,475,"Colored Region 5 with Eraser",1.3
+郭lx,7,37,476,"Colored Region 37 with Eraser",0.4
+郭lx,7,37,477,"Colored Region 3 with Color 4",23.3
+郭lx,7,37,478,"Colored Region 9 with Eraser",0.9
+郭lx,7,37,479,"Colored Region 37 with Color 2",2.1
+郭lx,7,37,480,"Colored Region 17 with Color 3",5.2
+郭lx,7,37,481,"Colored Region 34 with Color 1",1.3
+郭lx,7,37,482,"Colored Region 5 with Color 4",3.0
+郭lx,7,37,483,"Colored Region 5 with Eraser",1.5
+郭lx,7,37,484,"Colored Region 24 with Color 4",1.8
+郭lx,7,37,485,"Colored Region 5 with Color 3",1.2
+郭lx,7,37,486,"Colored Region 33 with Eraser",5.9
+郭lx,7,37,487,"Colored Region 33 with Color 4",1.5
+郭lx,7,37,488,"Colored Region 33 with Eraser",1.0
+郭lx,7,37,489,"Colored Region 33 with Color 2",3.9
+郭lx,7,37,490,"Colored Region 3 with Eraser",32.0
+郭lx,7,37,491,"Colored Region 3 with Color 3",1.4
+郭lx,7,37,492,"Colored Region 5 with Eraser",1.5
+郭lx,7,37,493,"Colored Region 17 with Eraser",0.6
+郭lx,7,37,494,"Colored Region 3 with Eraser",7.6
+郭lx,7,37,495,"Colored Region 3 with Color 4",1.0
+郭lx,7,37,496,"Colored Region 5 with Color 3",2.4
+郭lx,7,37,497,"Colored Region 17 with Color 3",0.4
+郭lx,7,37,498,"Colored Region 9 with Color 1",6.1
+郭lx,7,37,499,"Colored Region 25 with Eraser",1.2
+郭lx,7,37,500,"Colored Region 25 with Color 3",3.4
+郭lx,8,39,501,"Game Started (39 regions)",0.0
+郭lx,8,39,502,"Colored Region 17 with Color 2",5.6
+郭lx,8,39,503,"Colored Region 35 with Color 2",1.8
+郭lx,8,39,504,"Colored Region 3 with Color 1",2.0
+郭lx,8,39,505,"Colored Region 34 with Color 1",0.6
+郭lx,8,39,506,"Colored Region 29 with Color 1",2.6
+郭lx,8,39,507,"Colored Region 22 with Color 1",1.4
+郭lx,8,39,508,"Colored Region 15 with Color 2",3.3
+郭lx,8,39,509,"Colored Region 28 with Color 3",3.3
+郭lx,8,39,510,"Colored Region 33 with Color 1",6.4
+郭lx,8,39,511,"Colored Region 34 with Eraser",2.2
+郭lx,8,39,512,"Colored Region 32 with Color 2",4.4
+郭lx,8,39,513,"Colored Region 12 with Color 3",3.1
+郭lx,8,39,514,"Colored Region 4 with Color 4",1.1
+郭lx,8,39,515,"Colored Region 8 with Color 3",8.4
+郭lx,8,39,516,"Colored Region 36 with Color 3",7.2
+郭lx,8,39,517,"Colored Region 37 with Color 1",3.2
+郭lx,8,39,518,"Colored Region 19 with Color 2",1.9
+郭lx,8,39,519,"Colored Region 10 with Color 2",1.1
+郭lx,8,39,520,"Colored Region 31 with Color 1",4.2
+郭lx,8,39,521,"Colored Region 31 with Eraser",1.4
+郭lx,8,39,522,"Colored Region 31 with Color 3",3.8
+郭lx,8,39,523,"Colored Region 13 with Color 4",1.6
+郭lx,8,39,524,"Colored Region 6 with Color 4",2.1
+郭lx,8,39,525,"Colored Region 34 with Color 2",5.3
+郭lx,8,39,526,"Colored Region 14 with Color 1",3.0
+郭lx,8,39,527,"Colored Region 25 with Color 4",2.6
+郭lx,8,39,528,"Colored Region 27 with Color 3",1.4
+郭lx,8,39,529,"Colored Region 7 with Color 3",28.7
+郭lx,8,39,530,"Colored Region 7 with Eraser",1.9
+郭lx,8,39,531,"Colored Region 7 with Color 2",1.5
+郭lx,8,39,532,"Colored Region 16 with Color 1",2.5
+郭lx,8,39,533,"Colored Region 30 with Color 4",1.5
+郭lx,8,39,534,"Colored Region 11 with Color 4",8.0
+郭lx,8,39,535,"Colored Region 1 with Color 1",4.4
+郭lx,8,39,536,"Colored Region 5 with Color 1",3.4
+郭lx,8,39,537,"Colored Region 5 with Eraser",1.3
+郭lx,8,39,538,"Colored Region 5 with Color 3",1.6
+郭lx,8,39,539,"Colored Region 21 with Color 2",2.8
+郭lx,8,39,540,"Colored Region 9 with Color 2",6.0
+郭lx,8,39,541,"Colored Region 2 with Color 2",0.8
+郭lx,8,39,542,"Colored Region 23 with Color 1",2.2
+郭lx,8,39,543,"Colored Region 20 with Color 1",1.1
+郭lx,8,39,544,"Colored Region 26 with Color 4",2.5
+郭lx,8,39,545,"Colored Region 39 with Color 4",0.8
+郭lx,8,39,546,"Colored Region 39 with Eraser",2.3
+郭lx,8,39,547,"Colored Region 18 with Color 4",3.7
+郭lx,8,39,548,"Colored Region 38 with Color 3",2.3
+郭lx,8,39,549,"Colored Region 39 with Color 3",3.7
+郭lx,8,39,550,"Colored Region 24 with Color 3",1.0
+郭lx,8,39,551,"Colored Region 39 with Eraser",1.6
+郭lx,8,39,552,"Colored Region 39 with Color 1",2.6
+郭lx,9,42,553,"Game Started (42 regions)",0.0
+郭lx,9,42,554,"Colored Region 13 with Color 1",25.0
+郭lx,9,42,555,"Colored Region 12 with Color 2",1.6
+郭lx,9,42,556,"Colored Region 29 with Color 1",1.2
+郭lx,9,42,557,"Colored Region 21 with Color 2",2.6
+郭lx,9,42,558,"Colored Region 32 with Color 1",1.8
+郭lx,9,42,559,"Colored Region 32 with Eraser",1.4
+郭lx,9,42,560,"Colored Region 19 with Color 3",3.8
+郭lx,9,42,561,"Colored Region 25 with Color 1",7.5
+郭lx,9,42,562,"Colored Region 10 with Color 2",2.8
+郭lx,9,42,563,"Colored Region 36 with Color 2",4.3
+郭lx,9,42,564,"Colored Region 18 with Color 1",1.9
+郭lx,9,42,565,"Colored Region 15 with Color 4",1.7
+郭lx,9,42,566,"Colored Region 6 with Color 4",0.9
+郭lx,9,42,567,"Colored Region 9 with Color 3",5.6
+郭lx,9,42,568,"Colored Region 30 with Color 3",4.8
+郭lx,9,42,569,"Colored Region 14 with Color 4",2.1
+郭lx,9,42,570,"Colored Region 1 with Color 2",3.8
+郭lx,9,42,571,"Colored Region 8 with Color 4",3.4
+郭lx,9,42,572,"Colored Region 16 with Color 4",4.9
+郭lx,9,42,573,"Colored Region 26 with Color 2",2.7
+郭lx,9,42,574,"Colored Region 32 with Color 1",2.2
+郭lx,9,42,575,"Colored Region 32 with Eraser",1.6
+郭lx,9,42,576,"Colored Region 26 with Eraser",0.4
+郭lx,9,42,577,"Colored Region 26 with Color 2",4.3
+郭lx,9,42,578,"Colored Region 32 with Color 3",1.6
+郭lx,9,42,579,"Colored Region 28 with Color 1",2.9
+郭lx,9,42,580,"Colored Region 31 with Color 1",1.9
+郭lx,9,42,581,"Colored Region 21 with Eraser",8.5
+郭lx,9,42,582,"Colored Region 31 with Eraser",0.9
+郭lx,9,42,583,"Colored Region 31 with Color 4",1.4
+郭lx,9,42,584,"Colored Region 21 with Color 2",5.0
+郭lx,9,42,585,"Colored Region 17 with Color 1",2.4
+郭lx,9,42,586,"Colored Region 4 with Color 2",1.6
+郭lx,9,42,587,"Colored Region 2 with Color 1",40.5
+郭lx,9,42,588,"Colored Region 24 with Color 2",1.8
+郭lx,9,42,589,"Colored Region 3 with Color 1",3.5
+郭lx,9,42,590,"Colored Region 3 with Eraser",1.9
+郭lx,9,42,591,"Colored Region 3 with Color 4",1.6
+郭lx,9,42,592,"Colored Region 37 with Color 3",2.9
+郭lx,9,42,593,"Colored Region 37 with Eraser",1.4
+郭lx,9,42,594,"Colored Region 37 with Color 1",1.4
+郭lx,9,42,595,"Colored Region 23 with Color 2",4.8
+郭lx,9,42,596,"Colored Region 41 with Color 2",1.4
+郭lx,9,42,597,"Colored Region 38 with Color 1",2.1
+郭lx,9,42,598,"Colored Region 38 with Eraser",1.7
+郭lx,9,42,599,"Colored Region 35 with Color 1",2.4
+郭lx,9,42,600,"Colored Region 38 with Color 4",24.4
+郭lx,9,42,601,"Colored Region 20 with Color 4",2.8
+郭lx,9,42,602,"Colored Region 33 with Color 3",2.4
+郭lx,9,42,603,"Colored Region 33 with Eraser",2.1
+郭lx,9,42,604,"Colored Region 20 with Eraser",0.3
+郭lx,9,42,605,"Colored Region 20 with Color 1",3.6
+郭lx,9,42,606,"Colored Region 33 with Color 3",2.7
+郭lx,9,42,607,"Colored Region 7 with Color 4",1.9
+郭lx,9,42,608,"Colored Region 42 with Color 4",6.0
+郭lx,9,42,609,"Colored Region 34 with Color 1",7.9
+郭lx,9,42,610,"Colored Region 22 with Color 2",2.8
+郭lx,9,42,611,"Colored Region 40 with Color 2",1.9
+郭lx,9,42,612,"Colored Region 11 with Color 3",1.5
+郭lx,9,42,613,"Colored Region 27 with Color 4",3.9
+郭lx,9,42,614,"Colored Region 5 with Color 3",4.8
+郭lx,9,42,615,"Colored Region 39 with Color 1",1.0
+郭lx,10,45,616,"Game Started (45 regions)",0.0
+郭lx,10,45,617,"Colored Region 33 with Color 1",4.9
+郭lx,10,45,618,"Colored Region 23 with Color 1",1.8
+郭lx,10,45,619,"Colored Region 1 with Color 1",3.2
+郭lx,10,45,620,"Colored Region 44 with Color 2",2.5
+郭lx,10,45,621,"Colored Region 29 with Color 2",2.1
+郭lx,10,45,622,"Colored Region 34 with Color 2",2.5
+郭lx,10,45,623,"Colored Region 34 with Eraser",3.9
+郭lx,10,45,624,"Colored Region 5 with Color 2",2.7
+郭lx,10,45,625,"Colored Region 19 with Color 2",4.3
+郭lx,10,45,626,"Colored Region 7 with Color 1",2.7
+郭lx,10,45,627,"Colored Region 7 with Eraser",4.2
+郭lx,10,45,628,"Colored Region 14 with Color 1",2.1
+郭lx,10,45,629,"Colored Region 36 with Color 4",2.7
+郭lx,10,45,630,"Colored Region 38 with Color 4",2.0
+郭lx,10,45,631,"Colored Region 24 with Color 4",0.7
+郭lx,10,45,632,"Colored Region 31 with Color 2",4.1
+郭lx,10,45,633,"Colored Region 31 with Eraser",8.1
+郭lx,10,45,634,"Colored Region 33 with Eraser",0.3
+郭lx,10,45,635,"Colored Region 16 with Color 1",5.6
+郭lx,10,45,636,"Colored Region 32 with Color 3",2.8
+郭lx,10,45,637,"Colored Region 20 with Color 2",7.7
+郭lx,10,45,638,"Colored Region 9 with Color 1",1.8
+郭lx,10,45,639,"Colored Region 9 with Eraser",1.7
+郭lx,10,45,640,"Colored Region 27 with Color 4",2.1
+郭lx,10,45,641,"Colored Region 31 with Color 3",3.7
+郭lx,10,45,642,"Colored Region 33 with Color 4",3.1
+郭lx,10,45,643,"Colored Region 21 with Color 2",7.0
+郭lx,10,45,644,"Colored Region 42 with Color 4",2.9
+郭lx,10,45,645,"Colored Region 34 with Color 1",4.3
+郭lx,10,45,646,"Colored Region 43 with Color 3",1.6
+郭lx,10,45,647,"Colored Region 4 with Color 2",8.5
+郭lx,10,45,648,"Colored Region 41 with Color 2",1.8
+郭lx,10,45,649,"Colored Region 25 with Color 1",4.4
+郭lx,10,45,650,"Colored Region 15 with Color 1",1.9
+郭lx,10,45,651,"Colored Region 17 with Color 1",3.5
+郭lx,10,45,652,"Colored Region 40 with Color 1",1.4
+郭lx,10,45,653,"Colored Region 12 with Color 2",3.3
+郭lx,10,45,654,"Colored Region 11 with Color 4",2.7
+郭lx,10,45,655,"Colored Region 3 with Color 3",1.6
+郭lx,10,45,656,"Colored Region 10 with Color 3",1.8
+郭lx,10,45,657,"Colored Region 22 with Color 4",2.5
+郭lx,10,45,658,"Colored Region 39 with Color 3",2.2
+郭lx,10,45,659,"Colored Region 7 with Color 3",1.5
+郭lx,10,45,660,"Colored Region 2 with Color 3",2.6
+郭lx,10,45,661,"Colored Region 2 with Eraser",3.7
+郭lx,10,45,662,"Colored Region 2 with Color 1",2.4
+郭lx,10,45,663,"Colored Region 2 with Eraser",1.3
+郭lx,10,45,664,"Colored Region 2 with Color 3",1.3
+郭lx,10,45,665,"Colored Region 18 with Color 2",2.7
+郭lx,10,45,666,"Colored Region 35 with Color 4",2.0
+郭lx,10,45,667,"Colored Region 35 with Eraser",5.3
+郭lx,10,45,668,"Colored Region 2 with Eraser",1.7
+郭lx,10,45,669,"Colored Region 2 with Color 2",3.9
+郭lx,10,45,670,"Colored Region 18 with Eraser",1.5
+郭lx,10,45,671,"Colored Region 37 with Color 4",12.7
+郭lx,10,45,672,"Colored Region 35 with Color 3",5.0
+郭lx,10,45,673,"Colored Region 22 with Eraser",7.2
+郭lx,10,45,674,"Colored Region 18 with Color 4",3.1
+郭lx,10,45,675,"Colored Region 22 with Color 2",4.1
+郭lx,10,45,676,"Colored Region 39 with Eraser",1.0
+郭lx,10,45,677,"Colored Region 41 with Eraser",0.7
+郭lx,10,45,678,"Colored Region 41 with Color 4",3.6
+郭lx,10,45,679,"Colored Region 39 with Color 3",2.4
+郭lx,10,45,680,"Colored Region 27 with Eraser",9.1
+郭lx,10,45,681,"Colored Region 27 with Color 2",2.3
+郭lx,10,45,682,"Colored Region 26 with Color 1",2.0
+郭lx,10,45,683,"Colored Region 9 with Color 4",3.2
+郭lx,10,45,684,"Colored Region 28 with Color 4",1.9
+郭lx,10,45,685,"Colored Region 28 with Eraser",1.4
+郭lx,10,45,686,"Colored Region 28 with Color 3",2.0
+郭lx,10,45,687,"Colored Region 13 with Color 2",3.0
+郭lx,10,45,688,"Colored Region 30 with Color 4",2.8
+郭lx,10,45,689,"Colored Region 8 with Color 3",2.3
+郭lx,10,45,690,"Colored Region 28 with Eraser",13.2
+郭lx,10,45,691,"Colored Region 13 with Eraser",0.4
+郭lx,10,45,692,"Colored Region 28 with Color 2",1.0
+郭lx,10,45,693,"Colored Region 26 with Eraser",1.4
+郭lx,10,45,694,"Colored Region 28 with Eraser",0.4
+郭lx,10,45,695,"Colored Region 30 with Eraser",3.9
+郭lx,10,45,696,"Colored Region 6 with Color 4",1.5
+郭lx,10,45,697,"Colored Region 6 with Eraser",5.9
+郭lx,10,45,698,"Colored Region 8 with Eraser",0.3
+郭lx,10,45,699,"Colored Region 28 with Color 4",1.8
+郭lx,10,45,700,"Colored Region 8 with Color 4",0.8
+郭lx,10,45,701,"Colored Region 9 with Eraser",1.4
+郭lx,10,45,702,"Colored Region 9 with Color 3",8.8
+郭lx,10,45,703,"Colored Region 31 with Eraser",2.8
+郭lx,10,45,704,"Colored Region 6 with Color 2",24.8
+郭lx,10,45,705,"Colored Region 6 with Eraser",22.7
+郭lx,10,45,706,"Colored Region 6 with Color 3",1.3
+郭lx,10,45,707,"Colored Region 26 with Color 2",6.5
+郭lx,10,45,708,"Colored Region 13 with Color 2",0.7
+郭lx,10,45,709,"Colored Region 13 with Eraser",3.3
+郭lx,10,45,710,"Colored Region 13 with Color 4",1.1
+郭lx,10,45,711,"Colored Region 30 with Color 2",1.0
+郭lx,10,45,712,"Colored Region 30 with Eraser",1.3
+郭lx,10,45,713,"Colored Region 45 with Color 1",4.7
+郭lx,10,45,714,"Colored Region 31 with Color 1",1.9
+郭lx,10,45,715,"Colored Region 31 with Eraser",1.9
+郭lx,10,45,716,"Colored Region 31 with Color 3",2.9
+郭lx,10,45,717,"Colored Region 31 with Eraser",1.4
+郭lx,10,45,718,"Colored Region 24 with Eraser",15.6
+郭lx,10,45,719,"Colored Region 33 with Eraser",11.3
+郭lx,10,45,720,"Colored Region 16 with Eraser",4.9
+郭lx,10,45,721,"Colored Region 33 with Color 3",4.7
+郭lx,10,45,722,"Colored Region 31 with Color 1",3.2
+郭lx,10,45,723,"Colored Region 16 with Color 1",1.7
+郭lx,10,45,724,"Colored Region 31 with Eraser",2.2
+郭lx,10,45,725,"Colored Region 31 with Color 4",3.1
+郭lx,10,45,726,"Colored Region 24 with Color 2",1.6
+郭lx,10,45,727,"Colored Region 13 with Eraser",9.0
+郭lx,10,45,728,"Colored Region 15 with Eraser",10.0
+郭lx,10,45,729,"Colored Region 15 with Color 4",5.1
+郭lx,10,45,730,"Colored Region 41 with Eraser",2.2
+郭lx,10,45,731,"Colored Region 13 with Color 2",5.0
+郭lx,10,45,732,"Colored Region 30 with Color 1",1.7
+郭lx,10,45,733,"Colored Region 41 with Color 1",10.1
+郭lx,10,45,734,"Colored Region 41 with Eraser",1.1
+郭lx,10,45,735,"Colored Region 41 with Color 2",16.5
+郭lx,10,45,736,"Colored Region 22 with Eraser",1.4
+郭lx,10,45,737,"Colored Region 22 with Color 4",6.8
+郭lx,10,45,738,"Colored Region 18 with Eraser",0.9
+郭lx,10,45,739,"Colored Region 2 with Eraser",6.0
+郭lx,10,45,740,"Colored Region 37 with Eraser",0.8
+郭lx,10,45,741,"Colored Region 2 with Color 4",1.2
+郭lx,10,45,742,"Colored Region 18 with Color 2",2.2
+郭lx,10,45,743,"Colored Region 17 with Eraser",13.2
+郭lx,10,45,744,"Colored Region 17 with Color 3",1.4
+郭lx,10,45,745,"Colored Region 37 with Color 1",1.5
+
+[Adjacency]
+Round,NumRegions,Region_A,Region_B
+P1,10,1,4
+P1,10,1,8
+P1,10,1,9
+P1,10,2,3
+P1,10,2,5
+P1,10,2,10
+P1,10,3,7
+P1,10,3,10
+P1,10,4,6
+P1,10,4,9
+P1,10,4,10
+P1,10,5,8
+P1,10,5,10
+P1,10,6,7
+P1,10,6,10
+P1,10,7,10
+P1,10,8,9
+P1,10,8,10
+P1,10,9,10
+P2,10,1,2
+P2,10,1,6
+P2,10,1,7
+P2,10,1,8
+P2,10,1,10
+P2,10,2,3
+P2,10,2,4
+P2,10,2,6
+P2,10,2,10
+P2,10,3,4
+P2,10,3,6
+P2,10,3,9
+P2,10,4,5
+P2,10,4,9
+P2,10,4,10
+P2,10,5,9
+P2,10,6,8
+P2,10,7,8
+P2,10,7,10
+1,20,1,4
+1,20,1,7
+1,20,1,8
+1,20,1,17
+1,20,1,19
+1,20,2,5
+1,20,2,6
+1,20,2,8
+1,20,2,16
+1,20,3,4
+1,20,3,7
+1,20,3,9
+1,20,3,17
+1,20,3,18
+1,20,3,20
+1,20,4,17
+1,20,4,19
+1,20,4,20
+1,20,5,7
+1,20,5,8
+1,20,5,10
+1,20,6,13
+1,20,6,15
+1,20,6,16
+1,20,7,8
+1,20,7,10
+1,20,7,11
+1,20,7,12
+1,20,7,14
+1,20,7,17
+1,20,8,16
+1,20,8,19
+1,20,9,13
+1,20,9,18
+1,20,9,20
+1,20,10,11
+1,20,11,14
+1,20,12,14
+1,20,12,18
+1,20,13,15
+1,20,13,16
+1,20,13,19
+1,20,13,20
+1,20,16,19
+1,20,19,20
+2,23,1,3
+2,23,1,4
+2,23,1,6
+2,23,1,7
+2,23,1,9
+2,23,1,18
+2,23,1,21
+2,23,2,5
+2,23,2,12
+2,23,2,17
+2,23,3,5
+2,23,3,9
+2,23,3,19
+2,23,3,21
+2,23,3,22
+2,23,4,8
+2,23,4,9
+2,23,4,12
+2,23,4,13
+2,23,4,18
+2,23,4,20
+2,23,5,17
+2,23,5,19
+2,23,5,22
+2,23,6,7
+2,23,6,18
+2,23,6,23
+2,23,7,16
+2,23,7,21
+2,23,8,10
+2,23,8,13
+2,23,8,20
+2,23,9,12
+2,23,9,17
+2,23,9,19
+2,23,10,11
+2,23,10,13
+2,23,10,15
+2,23,10,20
+2,23,11,14
+2,23,11,15
+2,23,11,20
+2,23,12,13
+2,23,12,17
+2,23,13,15
+2,23,14,20
+2,23,14,23
+2,23,16,21
+2,23,16,22
+2,23,17,19
+2,23,18,20
+2,23,18,23
+2,23,20,23
+2,23,21,22
+3,26,1,2
+3,26,1,7
+3,26,1,13
+3,26,1,19
+3,26,1,20
+3,26,1,22
+3,26,2,16
+3,26,2,19
+3,26,3,7
+3,26,3,17
+3,26,3,20
+3,26,3,24
+3,26,3,25
+3,26,4,5
+3,26,4,10
+3,26,4,11
+3,26,4,21
+3,26,4,23
+3,26,5,6
+3,26,5,21
+3,26,5,23
+3,26,6,9
+3,26,6,21
+3,26,7,13
+3,26,7,17
+3,26,7,20
+3,26,8,12
+3,26,8,24
+3,26,9,12
+3,26,9,18
+3,26,9,26
+3,26,10,11
+3,26,10,16
+3,26,11,15
+3,26,11,16
+3,26,11,21
+3,26,12,24
+3,26,12,26
+3,26,13,17
+3,26,14,15
+3,26,14,18
+3,26,14,20
+3,26,14,21
+3,26,14,22
+3,26,15,16
+3,26,15,21
+3,26,15,22
+3,26,16,22
+3,26,17,25
+3,26,18,20
+3,26,18,21
+3,26,18,26
+3,26,19,22
+3,26,20,22
+3,26,20,24
+3,26,20,26
+3,26,24,25
+3,26,24,26
+4,28,1,4
+4,28,1,10
+4,28,1,13
+4,28,1,16
+4,28,1,22
+4,28,2,13
+4,28,2,16
+4,28,2,23
+4,28,3,5
+4,28,3,8
+4,28,3,12
+4,28,3,19
+4,28,3,25
+4,28,3,28
+4,28,4,10
+4,28,4,18
+4,28,5,12
+4,28,5,14
+4,28,5,17
+4,28,5,28
+4,28,6,20
+4,28,6,21
+4,28,6,26
+4,28,7,19
+4,28,7,20
+4,28,7,24
+4,28,7,27
+4,28,8,12
+4,28,8,19
+4,28,8,27
+4,28,9,13
+4,28,9,14
+4,28,9,15
+4,28,9,20
+4,28,9,23
+4,28,9,27
+4,28,10,13
+4,28,10,17
+4,28,10,18
+4,28,10,28
+4,28,11,19
+4,28,11,21
+4,28,11,24
+4,28,11,25
+4,28,12,14
+4,28,12,27
+4,28,13,14
+4,28,13,16
+4,28,13,17
+4,28,13,23
+4,28,14,17
+4,28,14,27
+4,28,15,20
+4,28,15,23
+4,28,15,26
+4,28,16,22
+4,28,17,28
+4,28,19,24
+4,28,19,25
+4,28,19,27
+4,28,20,21
+4,28,20,24
+4,28,20,26
+4,28,21,24
+5,31,1,4
+5,31,1,18
+5,31,1,19
+5,31,1,29
+5,31,2,9
+5,31,2,24
+5,31,3,12
+5,31,3,26
+5,31,3,31
+5,31,4,20
+5,31,4,23
+5,31,5,8
+5,31,5,12
+5,31,5,13
+5,31,5,18
+5,31,5,22
+5,31,5,23
+5,31,5,27
+5,31,5,30
+5,31,6,7
+5,31,6,12
+5,31,6,22
+5,31,6,28
+5,31,6,30
+5,31,7,10
+5,31,7,12
+5,31,7,28
+5,31,8,13
+5,31,8,16
+5,31,8,20
+5,31,8,23
+5,31,9,10
+5,31,9,14
+5,31,9,24
+5,31,9,29
+5,31,10,14
+5,31,10,17
+5,31,10,24
+5,31,10,25
+5,31,11,21
+5,31,11,26
+5,31,11,31
+5,31,12,22
+5,31,12,31
+5,31,13,15
+5,31,13,16
+5,31,13,21
+5,31,13,27
+5,31,14,19
+5,31,14,25
+5,31,14,28
+5,31,14,29
+5,31,15,16
+5,31,15,20
+5,31,15,21
+5,31,16,20
+5,31,17,24
+5,31,18,19
+5,31,18,23
+5,31,18,28
+5,31,18,30
+5,31,19,28
+5,31,19,29
+5,31,21,31
+5,31,22,30
+5,31,25,28
+5,31,26,31
+5,31,27,31
+5,31,28,30
+6,34,1,6
+6,34,1,14
+6,34,1,27
+6,34,1,31
+6,34,1,33
+6,34,2,12
+6,34,2,13
+6,34,2,17
+6,34,2,18
+6,34,3,4
+6,34,3,10
+6,34,3,13
+6,34,3,30
+6,34,4,13
+6,34,4,17
+6,34,4,28
+6,34,5,7
+6,34,5,15
+6,34,5,22
+6,34,5,24
+6,34,5,25
+6,34,5,26
+6,34,5,32
+6,34,5,34
+6,34,6,9
+6,34,6,33
+6,34,7,17
+6,34,7,18
+6,34,7,25
+6,34,7,32
+6,34,8,20
+6,34,8,25
+6,34,8,26
+6,34,8,34
+6,34,9,20
+6,34,9,27
+6,34,9,33
+6,34,10,13
+6,34,10,14
+6,34,10,21
+6,34,10,30
+6,34,11,22
+6,34,11,24
+6,34,11,34
+6,34,12,13
+6,34,12,27
+6,34,12,31
+6,34,13,17
+6,34,13,21
+6,34,14,21
+6,34,14,31
+6,34,15,16
+6,34,15,19
+6,34,15,23
+6,34,15,32
+6,34,16,19
+6,34,16,22
+6,34,16,29
+6,34,17,18
+6,34,17,28
+6,34,17,32
+6,34,18,20
+6,34,18,25
+6,34,18,27
+6,34,19,23
+6,34,19,29
+6,34,20,27
+6,34,21,31
+6,34,22,24
+6,34,23,28
+6,34,23,29
+6,34,23,32
+6,34,24,34
+6,34,25,26
+6,34,26,34
+6,34,27,31
+6,34,27,33
+6,34,28,30
+7,37,1,13
+7,37,1,26
+7,37,1,27
+7,37,1,29
+7,37,1,35
+7,37,1,36
+7,37,2,12
+7,37,2,13
+7,37,2,19
+7,37,3,4
+7,37,3,5
+7,37,3,9
+7,37,3,17
+7,37,3,34
+7,37,4,8
+7,37,4,9
+7,37,4,12
+7,37,4,17
+7,37,4,28
+7,37,4,29
+7,37,5,24
+7,37,5,34
+7,37,5,37
+7,37,6,10
+7,37,6,11
+7,37,6,14
+7,37,6,16
+7,37,6,21
+7,37,6,30
+7,37,7,10
+7,37,7,23
+7,37,7,31
+7,37,7,35
+7,37,7,36
+7,37,8,17
+7,37,8,22
+7,37,8,37
+7,37,9,25
+7,37,9,29
+7,37,9,33
+7,37,10,16
+7,37,10,18
+7,37,10,20
+7,37,10,21
+7,37,10,23
+7,37,10,35
+7,37,11,15
+7,37,11,21
+7,37,11,30
+7,37,12,13
+7,37,12,19
+7,37,12,22
+7,37,12,28
+7,37,13,27
+7,37,13,28
+7,37,14,16
+7,37,14,30
+7,37,14,33
+7,37,15,18
+7,37,15,20
+7,37,15,21
+7,37,15,32
+7,37,16,23
+7,37,16,25
+7,37,16,31
+7,37,16,33
+7,37,17,34
+7,37,17,37
+7,37,18,20
+7,37,18,32
+7,37,18,35
+7,37,19,22
+7,37,20,21
+7,37,23,31
+7,37,24,37
+7,37,25,31
+7,37,25,33
+7,37,26,27
+7,37,26,28
+7,37,26,29
+7,37,27,28
+7,37,29,31
+7,37,29,36
+7,37,31,36
+7,37,34,37
+8,39,1,11
+8,39,1,21
+8,39,1,26
+8,39,2,18
+8,39,2,23
+8,39,2,24
+8,39,2,39
+8,39,3,8
+8,39,3,17
+8,39,3,18
+8,39,3,28
+8,39,4,8
+8,39,4,12
+8,39,4,22
+8,39,4,29
+8,39,4,35
+8,39,4,36
+8,39,5,7
+8,39,5,11
+8,39,5,13
+8,39,5,16
+8,39,5,21
+8,39,5,37
+8,39,6,10
+8,39,6,31
+8,39,7,11
+8,39,7,30
+8,39,8,18
+8,39,8,29
+8,39,8,35
+8,39,9,23
+8,39,9,26
+8,39,9,38
+8,39,10,16
+8,39,10,30
+8,39,10,31
+8,39,11,21
+8,39,12,22
+8,39,12,32
+8,39,12,33
+8,39,12,35
+8,39,13,16
+8,39,13,31
+8,39,13,36
+8,39,13,37
+8,39,14,25
+8,39,14,27
+8,39,14,34
+8,39,15,18
+8,39,15,29
+8,39,15,36
+8,39,15,37
+8,39,15,38
+8,39,16,30
+8,39,17,24
+8,39,17,25
+8,39,17,28
+8,39,17,39
+8,39,18,23
+8,39,18,38
+8,39,18,39
+8,39,19,22
+8,39,19,31
+8,39,20,24
+8,39,20,25
+8,39,21,26
+8,39,21,38
+8,39,22,31
+8,39,22,32
+8,39,22,36
+8,39,23,38
+8,39,24,25
+8,39,24,39
+8,39,25,28
+8,39,25,34
+8,39,26,38
+8,39,27,33
+8,39,27,34
+8,39,28,33
+8,39,28,34
+8,39,28,35
+8,39,29,36
+8,39,32,33
+8,39,33,34
+8,39,33,35
+8,39,36,37
+8,39,37,38
+9,42,1,8
+9,42,1,9
+9,42,1,13
+9,42,1,14
+9,42,1,29
+9,42,1,32
+9,42,2,3
+9,42,2,12
+9,42,2,19
+9,42,2,21
+9,42,2,24
+9,42,3,5
+9,42,3,12
+9,42,3,37
+9,42,3,39
+9,42,4,17
+9,42,4,20
+9,42,4,28
+9,42,4,31
+9,42,4,32
+9,42,4,33
+9,42,4,34
+9,42,5,27
+9,42,5,37
+9,42,5,39
+9,42,6,9
+9,42,6,10
+9,42,6,25
+9,42,6,37
+9,42,7,20
+9,42,7,22
+9,42,7,33
+9,42,7,35
+9,42,7,41
+9,42,8,13
+9,42,8,17
+9,42,8,19
+9,42,8,21
+9,42,8,32
+9,42,9,12
+9,42,9,13
+9,42,9,14
+9,42,9,25
+9,42,9,37
+9,42,10,15
+9,42,10,18
+9,42,10,25
+9,42,10,30
+9,42,11,22
+9,42,11,34
+9,42,11,40
+9,42,11,42
+9,42,12,13
+9,42,12,19
+9,42,12,37
+9,42,13,19
+9,42,14,25
+9,42,14,29
+9,42,14,30
+9,42,15,18
+9,42,16,26
+9,42,16,29
+9,42,16,30
+9,42,16,36
+9,42,17,21
+9,42,17,31
+9,42,17,32
+9,42,18,36
+9,42,19,21
+9,42,20,22
+9,42,20,33
+9,42,21,31
+9,42,21,34
+9,42,22,34
+9,42,22,42
+9,42,23,33
+9,42,23,35
+9,42,23,38
+9,42,24,27
+9,42,24,39
+9,42,25,30
+9,42,26,28
+9,42,26,29
+9,42,26,32
+9,42,26,38
+9,42,27,39
+9,42,28,32
+9,42,28,33
+9,42,28,38
+9,42,29,32
+9,42,30,36
+9,42,31,34
+9,42,33,35
+9,42,33,38
+9,42,34,40
+9,42,35,41
+9,42,40,42
+10,45,1,5
+10,45,1,29
+10,45,1,36
+10,45,1,38
+10,45,1,43
+10,45,1,44
+10,45,2,18
+10,45,2,35
+10,45,2,37
+10,45,3,4
+10,45,3,11
+10,45,3,21
+10,45,3,22
+10,45,3,25
+10,45,3,40
+10,45,4,7
+10,45,4,14
+10,45,4,25
+10,45,4,43
+10,45,5,34
+10,45,5,38
+10,45,5,42
+10,45,6,8
+10,45,6,13
+10,45,6,26
+10,45,6,28
+10,45,6,30
+10,45,7,14
+10,45,7,15
+10,45,7,19
+10,45,7,41
+10,45,8,26
+10,45,8,45
+10,45,9,20
+10,45,9,23
+10,45,9,26
+10,45,9,27
+10,45,9,28
+10,45,9,31
+10,45,9,45
+10,45,10,18
+10,45,10,22
+10,45,11,12
+10,45,11,17
+10,45,11,21
+10,45,11,40
+10,45,12,17
+10,45,12,35
+10,45,12,37
+10,45,12,40
+10,45,13,15
+10,45,13,30
+10,45,14,36
+10,45,14,43
+10,45,15,19
+10,45,15,30
+10,45,15,39
+10,45,15,41
+10,45,16,24
+10,45,16,29
+10,45,16,31
+10,45,16,32
+10,45,16,33
+10,45,16,44
+10,45,17,21
+10,45,17,37
+10,45,17,42
+10,45,18,22
+10,45,18,35
+10,45,18,40
+10,45,19,23
+10,45,19,28
+10,45,19,30
+10,45,19,36
+10,45,20,23
+10,45,20,31
+10,45,20,33
+10,45,21,34
+10,45,21,42
+10,45,21,43
+10,45,22,25
+10,45,22,39
+10,45,22,41
+10,45,23,28
+10,45,23,44
+10,45,24,31
+10,45,24,32
+10,45,25,41
+10,45,26,28
+10,45,26,45
+10,45,27,31
+10,45,27,45
+10,45,28,30
+10,45,29,32
+10,45,29,38
+10,45,31,33
+10,45,33,44
+10,45,34,42
+10,45,34,43
+10,45,35,37
+10,45,35,40
+10,45,36,43
+10,45,36,44
+10,45,39,41

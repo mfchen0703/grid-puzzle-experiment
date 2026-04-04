@@ -1,0 +1,457 @@
+[Actions]
+SessionID,Round,NumRegions,Step,Action,TimeTaken(s)
+24,P1,10,0,Game Started (10 regions),0
+24,P1,10,1,Colored Region 3 with Color 1,3.7
+24,P1,10,2,Colored Region 2 with Color 2,1.4
+24,P1,10,3,Colored Region 10 with Color 4,1.3
+24,P1,10,4,Colored Region 7 with Color 3,1.5
+24,P1,10,5,Colored Region 6 with Color 2,2.9
+24,P1,10,6,Colored Region 5 with Color 1,2.6
+24,P1,10,7,Colored Region 8 with Color 2,2.5
+24,P1,10,8,Colored Region 9 with Color 3,1.5
+24,P1,10,9,Colored Region 4 with Color 1,3.2
+24,P1,10,10,Colored Region 1 with Color 4,1.5
+24,P2,10,11,Game Started (10 regions),0
+24,P2,10,12,Colored Region 8 with Color 1,2.2
+24,P2,10,13,Colored Region 1 with Color 2,1.2
+24,P2,10,14,Colored Region 7 with Color 3,1.3
+24,P2,10,15,Colored Region 6 with Color 4,0.9
+24,P2,10,16,Colored Region 2 with Color 3,2.5
+24,P2,10,17,Colored Region 3 with Color 1,1
+24,P2,10,18,Colored Region 4 with Color 2,2.4
+24,P2,10,19,Colored Region 10 with Color 4,2.8
+24,P2,10,20,Colored Region 9 with Color 4,1.8
+24,P2,10,21,Colored Region 5 with Color 3,2.6
+24,1,20,22,Game Started (20 regions),0
+24,1,20,23,Colored Region 18 with Color 2,3.3
+24,1,20,24,Colored Region 12 with Color 1,1.3
+24,1,20,25,Colored Region 7 with Color 2,4.9
+24,1,20,26,Colored Region 3 with Color 3,2
+24,1,20,27,Colored Region 9 with Color 4,1.2
+24,1,20,28,Colored Region 10 with Color 1,3
+24,1,20,29,Colored Region 11 with Color 3,4.9
+24,1,20,30,Colored Region 14 with Color 4,1.1
+24,1,20,31,Colored Region 17 with Color 1,2.9
+24,1,20,32,Colored Region 4 with Color 2,2.7
+24,1,20,33,Colored Region 1 with Color 3,2.1
+24,1,20,34,Colored Region 5 with Color 4,2.1
+24,1,20,35,Colored Region 8 with Color 1,1.6
+24,1,20,36,Colored Region 2 with Color 2,4.6
+24,1,20,37,Colored Region 16 with Color 3,2.3
+24,1,20,38,Colored Region 19 with Color 4,1.3
+24,1,20,39,Colored Region 20 with Color 1,4
+24,1,20,40,Colored Region 13 with Color 2,4.8
+24,1,20,41,Colored Region 15 with Color 1,2.8
+24,1,20,42,Colored Region 6 with Color 4,1.8
+24,2,23,43,Game Started (23 regions),0
+24,2,23,44,Colored Region 2 with Color 2,3.8
+24,2,23,45,Colored Region 12 with Color 1,2.4
+24,2,23,46,Colored Region 13 with Color 2,2.1
+24,2,23,47,Colored Region 15 with Color 1,2.9
+24,2,23,48,Colored Region 17 with Color 3,2.7
+24,2,23,49,Colored Region 5 with Color 1,4.7
+24,2,23,50,Colored Region 22 with Color 3,2.6
+24,2,23,51,Colored Region 16 with Color 1,2.6
+24,2,23,52,Colored Region 19 with Color 2,5.4
+24,2,23,53,Colored Region 3 with Color 4,3.1
+24,2,23,54,Colored Region 21 with Color 2,2.3
+24,2,23,55,Colored Region 22 with Eraser,13.1
+24,2,23,56,Colored Region 21 with Eraser,0.5
+24,2,23,57,Colored Region 3 with Eraser,0.3
+24,2,23,58,Colored Region 16 with Eraser,0.4
+24,2,23,59,Colored Region 3 with Color 3,4.9
+24,2,23,60,Colored Region 9 with Color 4,2.8
+24,2,23,61,Colored Region 22 with Color 2,3.3
+24,2,23,62,Colored Region 16 with Color 3,3.4
+24,2,23,63,Colored Region 21 with Color 1,2.2
+24,2,23,64,Colored Region 7 with Color 2,4.7
+24,2,23,65,Colored Region 7 with Eraser,2.4
+24,2,23,66,Colored Region 7 with Color 4,3.3
+24,2,23,67,Colored Region 1 with Color 2,1.9
+24,2,23,68,Colored Region 4 with Color 3,3.6
+24,2,23,69,Colored Region 18 with Color 1,9.7
+24,2,23,70,Colored Region 6 with Color 3,0.9
+24,2,23,71,Colored Region 23 with Color 2,5.4
+24,2,23,72,Colored Region 20 with Color 4,2.1
+24,2,23,73,Colored Region 8 with Color 1,2.9
+24,2,23,74,Colored Region 8 with Color 3,2.7
+24,2,23,75,Colored Region 8 with Eraser,3
+24,2,23,76,Colored Region 8 with Color 1,4.2
+24,2,23,77,Colored Region 10 with Color 3,1.4
+24,2,23,78,Colored Region 11 with Color 2,4.2
+24,2,23,79,Colored Region 14 with Color 1,2.3
+24,3,26,80,Game Started (26 regions),0
+24,3,26,81,Colored Region 8 with Color 1,6.4
+24,3,26,82,Colored Region 24 with Color 2,2.6
+24,3,26,83,Colored Region 25 with Color 1,2.8
+24,3,26,84,Colored Region 17 with Color 2,3.5
+24,3,26,85,Colored Region 13 with Color 1,2.8
+24,3,26,86,Colored Region 3 with Color 3,4.3
+24,3,26,87,Colored Region 7 with Color 4,2.1
+24,3,26,88,Colored Region 20 with Color 1,6.7
+24,3,26,89,Colored Region 12 with Color 3,6.2
+24,3,26,90,Colored Region 18 with Color 4,6.5
+24,3,26,91,Colored Region 18 with Eraser,2.9
+24,3,26,92,Colored Region 26 with Color 4,1.3
+24,3,26,93,Colored Region 1 with Color 3,3.4
+24,3,26,94,Colored Region 9 with Color 2,4.4
+24,3,26,95,Colored Region 18 with Color 3,5.5
+24,3,26,96,Colored Region 14 with Color 2,6.5
+24,3,26,97,Colored Region 22 with Color 4,2.4
+24,3,26,98,Colored Region 2 with Color 1,3.1
+24,3,26,99,Colored Region 19 with Color 2,2.4
+24,3,26,100,Colored Region 16 with Color 3,2.7
+24,3,26,101,Colored Region 15 with Color 1,3.2
+24,3,26,102,Colored Region 21 with Color 4,3.2
+24,3,26,103,Colored Region 6 with Color 1,4.1
+24,3,26,104,Colored Region 11 with Color 2,3.9
+24,3,26,105,Colored Region 10 with Color 1,4.7
+24,3,26,106,Colored Region 10 with Eraser,6.7
+24,3,26,107,Colored Region 10 with Color 4,2.2
+24,3,26,108,Colored Region 4 with Color 1,7.8
+24,3,26,109,Colored Region 23 with Color 4,6
+24,3,26,110,Colored Region 5 with Color 3,1.7
+24,4,28,111,Game Started (28 regions),0
+24,4,28,112,Colored Region 6 with Color 1,2
+24,4,28,113,Colored Region 21 with Color 2,2.7
+24,4,28,114,Colored Region 11 with Color 1,3.3
+24,4,28,115,Colored Region 25 with Color 2,2.4
+24,4,28,116,Colored Region 26 with Color 2,5.6
+24,4,28,117,Colored Region 3 with Color 1,3.8
+24,4,28,118,Colored Region 28 with Color 2,2.8
+24,4,28,119,Colored Region 10 with Color 1,1.3
+24,4,28,120,Colored Region 18 with Color 2,1.6
+24,4,28,121,Colored Region 15 with Color 1,2.5
+24,4,28,122,Colored Region 23 with Color 2,1.2
+24,4,28,123,Colored Region 2 with Color 1,1.5
+24,4,28,124,Colored Region 16 with Color 2,2.2
+24,4,28,125,Colored Region 22 with Color 1,1.5
+24,4,28,126,Colored Region 1 with Color 2,2.5
+24,4,28,127,Colored Region 1 with Eraser,1.8
+24,4,28,128,Colored Region 20 with Color 3,4.7
+24,4,28,129,Colored Region 4 with Color 3,3.8
+24,4,28,130,Colored Region 1 with Color 4,1.7
+24,4,28,131,Colored Region 24 with Color 4,4.5
+24,4,28,132,Colored Region 9 with Color 4,2.9
+24,4,28,133,Colored Region 13 with Color 3,3.1
+24,4,28,134,Colored Region 19 with Color 3,3.5
+24,4,28,135,Colored Region 5 with Color 3,5.5
+24,4,28,136,Colored Region 17 with Color 4,3.7
+24,4,28,137,Colored Region 14 with Color 2,3.8
+24,4,28,138,Colored Region 27 with Color 1,4.4
+24,4,28,139,Colored Region 12 with Color 4,4.3
+24,4,28,140,Colored Region 8 with Color 2,0.9
+24,4,28,141,Colored Region 7 with Color 2,3.4
+24,5,31,142,Game Started (31 regions),0
+24,5,31,143,Colored Region 26 with Color 1,2.3
+24,5,31,144,Colored Region 3 with Color 2,3.1
+24,5,31,145,Colored Region 12 with Color 1,1.5
+24,5,31,146,Colored Region 7 with Color 2,1.3
+24,5,31,147,Colored Region 10 with Color 1,1.7
+24,5,31,148,Colored Region 17 with Color 2,1.2
+24,5,31,149,Colored Region 15 with Color 1,5.9
+24,5,31,150,Colored Region 21 with Color 1,1
+24,5,31,151,Colored Region 15 with Color 2,2.1
+24,5,31,152,Colored Region 11 with Color 2,2.1
+24,5,31,153,Colored Region 4 with Color 2,1.4
+24,5,31,154,Colored Region 29 with Color 2,0.8
+24,5,31,155,Colored Region 2 with Color 2,1.6
+24,5,31,156,Colored Region 20 with Color 1,2.1
+24,5,31,157,Colored Region 1 with Color 1,0.5
+24,5,31,158,Colored Region 9 with Color 1,0.6
+24,5,31,159,Colored Region 9 with Color 4,3.4
+24,5,31,160,Colored Region 24 with Color 3,2.5
+24,5,31,161,Colored Region 14 with Color 3,10.8
+24,5,31,162,Colored Region 25 with Color 2,4.2
+24,5,31,163,Colored Region 18 with Color 2,5.8
+24,5,31,164,Colored Region 22 with Color 2,1.9
+24,5,31,165,Colored Region 8 with Color 2,4.3
+24,5,31,166,Colored Region 27 with Color 2,3.1
+24,5,31,167,Colored Region 16 with Color 4,6
+24,5,31,168,Colored Region 31 with Color 4,1
+24,5,31,169,Colored Region 23 with Color 4,1.5
+24,5,31,170,Colored Region 19 with Color 4,0.7
+24,5,31,171,Colored Region 28 with Color 4,1.2
+24,5,31,172,Colored Region 6 with Color 4,2.2
+24,5,31,173,Colored Region 28 with Color 1,4.3
+24,5,31,174,Colored Region 13 with Color 3,4.7
+24,5,31,175,Colored Region 5 with Color 3,0.4
+24,5,31,176,Colored Region 30 with Color 3,0.3
+24,5,31,177,Colored Region 13 with Eraser,3.6
+24,5,31,178,Colored Region 5 with Eraser,0.3
+24,5,31,179,Colored Region 30 with Eraser,0.3
+24,5,31,180,Colored Region 13 with Color 3,1.8
+24,5,31,181,Colored Region 5 with Color 1,1.7
+24,5,31,182,Colored Region 5 with Eraser,4.6
+24,5,31,183,Colored Region 22 with Eraser,1.8
+24,5,31,184,Colored Region 13 with Eraser,4.8
+24,5,31,185,Colored Region 13 with Color 3,3.8
+24,5,31,186,Colored Region 23 with Color 3,7.8
+24,5,31,187,Colored Region 5 with Color 1,10.1
+24,5,31,188,Colored Region 5 with Color 4,2.8
+24,5,31,189,Colored Region 30 with Color 3,12
+24,5,31,190,Colored Region 22 with Color 2,2
+24,6,34,191,Game Started (34 regions),0
+24,6,34,192,Colored Region 16 with Color 1,8
+24,6,34,193,Colored Region 11 with Color 1,1.4
+24,6,34,194,Colored Region 8 with Color 1,0.9
+24,6,34,195,Colored Region 9 with Color 1,0.8
+24,6,34,196,Colored Region 1 with Color 1,1.2
+24,6,34,197,Colored Region 10 with Color 1,1.5
+24,6,34,198,Colored Region 10 with Eraser,3.7
+24,6,34,199,Colored Region 10 with Color 1,1.6
+24,6,34,200,Colored Region 28 with Color 1,0.9
+24,6,34,201,Colored Region 32 with Color 1,3.2
+24,6,34,202,Colored Region 18 with Color 1,1.3
+24,6,34,203,Colored Region 12 with Color 1,2.4
+24,6,34,204,Colored Region 22 with Color 2,10.2
+24,6,34,205,Colored Region 34 with Color 2,1.3
+24,6,34,206,Colored Region 20 with Color 2,0.7
+24,6,34,207,Colored Region 6 with Color 2,2.8
+24,6,34,208,Colored Region 14 with Color 2,0.7
+24,6,34,209,Colored Region 30 with Color 2,0.8
+24,6,34,210,Colored Region 23 with Color 2,0.5
+24,6,34,211,Colored Region 2 with Color 2,11.9
+24,6,34,212,Colored Region 4 with Color 2,1.6
+24,6,34,213,Colored Region 7 with Color 2,3.2
+24,6,34,214,Colored Region 29 with Color 3,8.4
+24,6,34,215,Colored Region 15 with Color 3,2.7
+24,6,34,216,Colored Region 24 with Color 3,1.5
+24,6,34,217,Colored Region 19 with Color 4,11.6
+24,6,34,218,Colored Region 5 with Color 4,1.8
+24,6,34,219,Colored Region 26 with Color 3,5.7
+24,6,34,220,Colored Region 7 with Color 3,6.3
+24,6,34,221,Colored Region 25 with Color 2,2.6
+24,6,34,222,Colored Region 3 with Color 3,7.6
+24,6,34,223,Colored Region 21 with Color 3,1.1
+24,6,34,224,Colored Region 27 with Color 3,4.4
+24,6,34,225,Colored Region 33 with Color 4,2.1
+24,6,34,226,Colored Region 31 with Color 4,0.4
+24,6,34,227,Colored Region 3 with Color 4,6.7
+24,6,34,228,Colored Region 17 with Color 4,3.2
+24,6,34,229,Colored Region 2 with Color 3,12.5
+24,6,34,230,Colored Region 4 with Color 3,3.2
+24,6,34,231,Colored Region 13 with Color 2,3.1
+24,7,37,232,Game Started (37 regions),0
+24,7,37,233,Colored Region 32 with Color 1,1.7
+24,7,37,234,Colored Region 11 with Color 1,0.9
+24,7,37,235,Colored Region 14 with Color 1,0.9
+24,7,37,236,Colored Region 3 with Color 1,0.9
+24,7,37,237,Colored Region 3 with Eraser,3.2
+24,7,37,238,Colored Region 9 with Color 1,3.3
+24,7,37,239,Colored Region 5 with Color 1,1.1
+24,7,37,240,Colored Region 8 with Color 1,4.3
+24,7,37,241,Colored Region 19 with Color 1,0.9
+24,7,37,242,Colored Region 13 with Color 1,1.2
+24,7,37,243,Colored Region 35 with Color 1,1
+24,7,37,244,Colored Region 15 with Color 2,4.3
+24,7,37,245,Colored Region 18 with Color 2,0.6
+24,7,37,246,Colored Region 18 with Eraser,4.6
+24,7,37,247,Colored Region 30 with Color 2,2.1
+24,7,37,248,Colored Region 33 with Color 2,0.9
+24,7,37,249,Colored Region 3 with Color 2,0.9
+24,7,37,250,Colored Region 24 with Color 2,0.9
+24,7,37,251,Colored Region 22 with Color 2,1.2
+24,7,37,252,Colored Region 2 with Color 2,0.8
+24,7,37,253,Colored Region 1 with Color 2,0.8
+24,7,37,254,Colored Region 18 with Color 3,2.8
+24,7,37,255,Colored Region 6 with Color 3,3.5
+24,7,37,256,Colored Region 36 with Color 3,3.3
+24,7,37,257,Colored Region 12 with Color 3,1.3
+24,7,37,258,Colored Region 37 with Color 3,1.8
+24,7,37,259,Colored Region 25 with Color 3,2.1
+24,7,37,260,Colored Region 16 with Color 4,4.2
+24,7,37,261,Colored Region 21 with Color 4,3.7
+24,7,37,262,Colored Region 20 with Color 1,3.2
+24,7,37,263,Colored Region 10 with Color 2,4.5
+24,7,37,264,Colored Region 7 with Color 4,3.4
+24,7,37,265,Colored Region 23 with Color 1,2.7
+24,7,37,266,Colored Region 31 with Color 2,3.1
+24,7,37,267,Colored Region 29 with Color 4,3.1
+24,7,37,268,Colored Region 27 with Color 3,5.5
+24,7,37,269,Colored Region 26 with Color 1,9.3
+24,7,37,270,Colored Region 28 with Color 2,5.5
+24,7,37,271,Colored Region 12 with Color 4,4.4
+24,7,37,272,Colored Region 4 with Color 3,1.8
+24,7,37,273,Colored Region 17 with Color 4,6.9
+24,7,37,274,Colored Region 5 with Color 4,18.3
+24,7,37,275,Colored Region 34 with Color 1,3.1
+24,8,39,276,Game Started (39 regions),0
+24,8,39,277,Colored Region 27 with Color 1,1.5
+24,8,39,278,Colored Region 20 with Color 1,1.1
+24,8,39,279,Colored Region 2 with Color 1,1.9
+24,8,39,280,Colored Region 32 with Color 1,3.3
+24,8,39,281,Colored Region 19 with Color 1,1.6
+24,8,39,282,Colored Region 6 with Color 1,0.7
+24,8,39,283,Colored Region 30 with Color 1,2.1
+24,8,39,284,Colored Region 11 with Color 1,1.1
+24,8,39,285,Colored Region 26 with Color 1,0.8
+24,8,39,286,Colored Region 33 with Color 2,4.9
+24,8,39,287,Colored Region 14 with Color 2,2.5
+24,8,39,288,Colored Region 22 with Color 2,0.8
+24,8,39,289,Colored Region 31 with Color 2,0.5
+24,8,39,290,Colored Region 31 with Color 3,2.4
+24,8,39,291,Colored Region 23 with Color 2,2.3
+24,8,39,292,Colored Region 1 with Color 2,0.7
+24,8,39,293,Colored Region 7 with Color 2,0.7
+24,8,39,294,Colored Region 10 with Color 2,1
+24,8,39,295,Colored Region 24 with Color 2,3.3
+24,8,39,296,Colored Region 25 with Color 3,2.3
+24,8,39,297,Colored Region 21 with Color 3,3.1
+24,8,39,298,Colored Region 16 with Color 3,1.6
+24,8,39,299,Colored Region 12 with Color 3,5.1
+24,8,39,300,Colored Region 35 with Color 1,5.2
+24,8,39,301,Colored Region 13 with Color 1,8.8
+24,8,39,302,Colored Region 5 with Color 4,3.3
+24,8,39,303,Colored Region 9 with Color 4,2.4
+24,8,39,304,Colored Region 9 with Color 3,1.2
+24,8,39,305,Colored Region 38 with Color 4,3.4
+24,8,39,306,Colored Region 39 with Color 3,4.1
+24,8,39,307,Colored Region 17 with Color 1,2.2
+24,8,39,308,Colored Region 34 with Color 4,4.3
+24,8,39,309,Colored Region 28 with Color 2,1.8
+24,8,39,310,Colored Region 28 with Color 3,3.5
+24,8,39,311,Colored Region 28 with Eraser,2
+24,8,39,312,Colored Region 17 with Color 4,7.4
+24,8,39,313,Colored Region 3 with Color 3,14.4
+24,8,39,314,Colored Region 35 with Color 4,14.9
+24,8,39,315,Colored Region 28 with Color 1,1.6
+24,8,39,316,Colored Region 36 with Color 4,28.4
+24,8,39,317,Colored Region 37 with Color 2,4.1
+24,8,39,318,Colored Region 15 with Color 3,7.8
+24,8,39,319,Colored Region 2 with Color 4,5.3
+24,8,39,320,Colored Region 18 with Color 1,1.3
+24,8,39,321,Colored Region 4 with Color 1,11.8
+24,8,39,322,Colored Region 29 with Color 2,5.8
+24,8,39,323,Colored Region 18 with Eraser,13.4
+24,8,39,324,Colored Region 23 with Eraser,1.2
+24,8,39,325,Colored Region 23 with Color 1,1.6
+24,8,39,326,Colored Region 18 with Color 2,1.4
+24,8,39,327,Colored Region 4 with Eraser,24.3
+24,8,39,328,Colored Region 8 with Color 1,3.7
+24,8,39,329,Colored Region 4 with Color 2,14.4
+24,8,39,330,Colored Region 4 with Eraser,1.8
+24,8,39,331,Colored Region 12 with Eraser,6.3
+24,8,39,332,Colored Region 32 with Eraser,0.9
+24,8,39,333,Colored Region 12 with Color 1,3
+24,8,39,334,Colored Region 4 with Color 3,3
+24,8,39,335,Colored Region 32 with Color 3,0.5
+24,9,42,336,Game Started (42 regions),0
+24,9,42,337,Colored Region 25 with Color 1,15.4
+24,9,42,338,Colored Region 13 with Color 1,0.5
+24,9,42,339,Colored Region 37 with Color 1,1.1
+24,9,42,340,Colored Region 29 with Color 1,1
+24,9,42,341,Colored Region 21 with Color 1,5.2
+24,9,42,342,Colored Region 28 with Color 1,1.5
+24,9,42,343,Colored Region 31 with Color 1,1
+24,9,42,344,Colored Region 31 with Eraser,1.4
+24,9,42,345,Colored Region 39 with Color 1,4.5
+24,9,42,346,Colored Region 20 with Color 1,5.8
+24,9,42,347,Colored Region 11 with Color 1,1
+24,9,42,348,Colored Region 23 with Color 1,1.9
+24,9,42,349,Colored Region 14 with Color 2,5.9
+24,9,42,350,Colored Region 6 with Color 2,2.1
+24,9,42,351,Colored Region 5 with Color 2,1.7
+24,9,42,352,Colored Region 24 with Color 2,1.3
+24,9,42,353,Colored Region 19 with Color 2,1.6
+24,9,42,354,Colored Region 32 with Color 2,1.8
+24,9,42,355,Colored Region 33 with Color 2,1.2
+24,9,42,356,Colored Region 7 with Color 2,2.4
+24,9,42,357,Colored Region 7 with Eraser,1.8
+24,9,42,358,Colored Region 41 with Color 2,2.7
+24,9,42,359,Colored Region 22 with Color 2,3.3
+24,9,42,360,Colored Region 40 with Color 2,0.6
+24,9,42,361,Colored Region 31 with Color 2,1.2
+24,9,42,362,Colored Region 16 with Color 2,4.5
+24,9,42,363,Colored Region 15 with Color 2,5.8
+24,9,42,364,Colored Region 27 with Color 3,4.8
+24,9,42,365,Colored Region 34 with Color 3,3.2
+24,9,42,366,Colored Region 42 with Color 3,1.1
+24,9,42,367,Colored Region 7 with Color 3,0.6
+24,9,42,368,Colored Region 18 with Color 3,4.6
+24,9,42,369,Colored Region 30 with Color 3,0.7
+24,9,42,370,Colored Region 12 with Color 3,3.8
+24,9,42,371,Colored Region 1 with Color 3,2.8
+24,9,42,372,Colored Region 17 with Color 3,0.8
+24,9,42,373,Colored Region 26 with Color 3,1.3
+24,9,42,374,Colored Region 10 with Color 4,12.7
+24,9,42,375,Colored Region 36 with Color 4,0.5
+24,9,42,376,Colored Region 38 with Color 4,0.6
+24,9,42,377,Colored Region 35 with Color 4,0.4
+24,9,42,378,Colored Region 4 with Color 4,0.4
+24,9,42,379,Colored Region 9 with Color 4,0.9
+24,9,42,380,Colored Region 8 with Color 4,0.3
+24,9,42,381,Colored Region 3 with Color 4,1.4
+24,9,42,382,Colored Region 27 with Color 4,7.2
+24,9,42,383,Colored Region 24 with Color 3,1.8
+24,9,42,384,Colored Region 24 with Color 2,9
+24,9,42,385,Colored Region 31 with Color 4,19.1
+24,9,42,386,Colored Region 31 with Color 2,3
+24,9,42,387,Colored Region 3 with Eraser,22.8
+24,9,42,388,Colored Region 39 with Eraser,0.5
+24,9,42,389,Colored Region 2 with Color 4,4.3
+24,9,42,390,Colored Region 5 with Eraser,5.1
+24,9,42,391,Colored Region 3 with Color 2,5.6
+24,9,42,392,Colored Region 39 with Color 3,3.1
+24,9,42,393,Colored Region 39 with Color 1,2.4
+24,9,42,394,Colored Region 5 with Color 3,1.3
+24,10,45,395,Game Started (45 regions),0
+24,10,45,396,Colored Region 16 with Color 1,3.4
+24,10,45,397,Colored Region 23 with Color 1,9.1
+24,10,45,398,Colored Region 36 with Color 1,1.7
+24,10,45,399,Colored Region 7 with Color 1,0.9
+24,10,45,400,Colored Region 34 with Color 1,7.6
+24,10,45,401,Colored Region 3 with Color 1,1
+24,10,45,402,Colored Region 18 with Color 1,4.2
+24,10,45,403,Colored Region 12 with Color 1,1.4
+24,10,45,404,Colored Region 39 with Color 1,5.8
+24,10,45,405,Colored Region 30 with Color 1,0.8
+24,10,45,406,Colored Region 26 with Color 1,1.3
+24,10,45,407,Colored Region 27 with Color 1,3.1
+24,10,45,408,Colored Region 38 with Color 1,3.6
+24,10,45,409,Colored Region 31 with Color 2,17.2
+24,10,45,410,Colored Region 32 with Color 2,1.3
+24,10,45,411,Colored Region 5 with Color 2,1.1
+24,10,45,412,Colored Region 44 with Color 2,3.1
+24,10,45,413,Colored Region 28 with Color 2,0.6
+24,10,45,414,Colored Region 45 with Color 2,1.2
+24,10,45,415,Colored Region 6 with Color 2,0.6
+24,10,45,416,Colored Region 6 with Eraser,2.2
+24,10,45,417,Colored Region 45 with Eraser,0.7
+24,10,45,418,Colored Region 8 with Color 2,1
+24,10,45,419,Colored Region 13 with Color 2,3.6
+24,10,45,420,Colored Region 41 with Color 2,1.8
+24,10,45,421,Colored Region 14 with Color 2,1
+24,10,45,422,Colored Region 21 with Color 2,2.4
+24,10,45,423,Colored Region 11 with Color 2,1.1
+24,10,45,424,Colored Region 11 with Eraser,1.5
+24,10,45,425,Colored Region 10 with Color 2,1.8
+24,10,45,426,Colored Region 2 with Color 2,0.6
+24,10,45,427,Colored Region 37 with Color 2,1.2
+24,10,45,428,Colored Region 37 with Eraser,1.5
+24,10,45,429,Colored Region 40 with Color 2,5.6
+24,10,45,430,Colored Region 24 with Color 4,4.4
+24,10,45,431,Colored Region 45 with Color 4,0.6
+24,10,45,432,Colored Region 6 with Color 4,0.7
+24,10,45,433,Colored Region 15 with Color 4,0.7
+24,10,45,434,Colored Region 10 with Color 4,0.8
+24,10,45,435,Colored Region 10 with Color 2,2.8
+24,10,45,436,Colored Region 22 with Color 4,1.1
+24,10,45,437,Colored Region 37 with Color 4,2.5
+24,10,45,438,Colored Region 42 with Color 4,1.8
+24,10,45,439,Colored Region 29 with Color 4,1.2
+24,10,45,440,Colored Region 43 with Color 4,1.7
+24,10,45,441,Colored Region 11 with Color 4,1.2
+24,10,45,442,Colored Region 4 with Color 4,1.8
+24,10,45,443,Colored Region 4 with Eraser,1.9
+24,10,45,444,Colored Region 20 with Color 4,2.1
+24,10,45,445,Colored Region 33 with Color 3,3.9
+24,10,45,446,Colored Region 9 with Color 3,0.5
+24,10,45,447,Colored Region 1 with Color 3,0.5
+24,10,45,448,Colored Region 19 with Color 3,0.7
+24,10,45,449,Colored Region 4 with Color 3,0.6
+24,10,45,450,Colored Region 35 with Color 3,0.9
+24,10,45,451,Colored Region 17 with Color 3,0.7
+24,10,45,452,Colored Region 41 with Color 3,6.8
+24,10,45,453,Colored Region 25 with Color 2,1.9
+

@@ -1,0 +1,1368 @@
+[Actions]
+SessionID,Round,NumRegions,Step,Action,TimeTaken(s)
+031,P1,10,0,"Game Started (10 regions)",0.0
+031,P1,10,1,"Colored Region 2 with Color 1",2.5
+031,P1,10,2,"Colored Region 10 with Color 2",1.7
+031,P1,10,3,"Colored Region 3 with Color 3",2.0
+031,P1,10,4,"Colored Region 7 with Color 4",1.9
+031,P1,10,5,"Colored Region 6 with Color 1",1.5
+031,P1,10,6,"Colored Region 4 with Color 4",2.6
+031,P1,10,7,"Colored Region 5 with Color 3",2.3
+031,P1,10,8,"Colored Region 1 with Color 3",2.1
+031,P1,10,9,"Colored Region 9 with Color 3",2.0
+031,P1,10,10,"Colored Region 9 with Eraser",3.3
+031,P1,10,11,"Colored Region 9 with Color 1",2.6
+031,P1,10,12,"Colored Region 8 with Color 4",2.7
+031,P2,10,13,"Game Started (10 regions)",0.0
+031,P2,10,14,"Colored Region 2 with Color 4",1.3
+031,P2,10,15,"Colored Region 8 with Color 4",0.9
+031,P2,10,16,"Colored Region 9 with Color 4",13.4
+031,P2,10,17,"Colored Region 6 with Color 3",1.8
+031,P2,10,18,"Colored Region 10 with Color 3",0.6
+031,P2,10,19,"Colored Region 7 with Color 2",1.7
+031,P2,10,20,"Colored Region 1 with Color 1",1.1
+031,P2,10,21,"Colored Region 3 with Color 2",1.1
+031,P2,10,22,"Colored Region 4 with Color 1",1.3
+031,P2,10,23,"Colored Region 5 with Color 3",2.2
+031,1,20,24,"Game Started (20 regions)",0.0
+031,1,20,25,"Colored Region 18 with Color 3",5.0
+031,1,20,26,"Colored Region 6 with Color 3",0.9
+031,1,20,27,"Colored Region 5 with Color 3",0.9
+031,1,20,28,"Colored Region 1 with Color 3",4.2
+031,1,20,29,"Colored Region 20 with Color 3",0.9
+031,1,20,30,"Colored Region 12 with Color 2",2.2
+031,1,20,31,"Colored Region 15 with Color 2",1.2
+031,1,20,32,"Colored Region 13 with Color 2",2.2
+031,1,20,33,"Colored Region 13 with Eraser",2.0
+031,1,20,34,"Colored Region 15 with Eraser",0.3
+031,1,20,35,"Colored Region 15 with Color 4",1.2
+031,1,20,36,"Colored Region 10 with Color 4",1.0
+031,1,20,37,"Colored Region 11 with Color 3",2.6
+031,1,20,38,"Colored Region 14 with Color 1",2.8
+031,1,20,39,"Colored Region 11 with Color 1",2.4
+031,1,20,40,"Colored Region 14 with Eraser",2.0
+031,1,20,41,"Colored Region 1 with Eraser",5.7
+031,1,20,42,"Colored Region 7 with Color 3",1.8
+031,1,20,43,"Colored Region 5 with Eraser",1.4
+031,1,20,44,"Colored Region 5 with Color 1",1.1
+031,1,20,45,"Colored Region 14 with Color 4",2.2
+031,1,20,46,"Colored Region 3 with Color 1",4.6
+031,1,20,47,"Colored Region 9 with Color 2",2.4
+031,1,20,48,"Colored Region 9 with Color 4",3.0
+031,1,20,49,"Colored Region 13 with Color 2",2.2
+031,1,20,50,"Colored Region 17 with Color 2",503.1
+031,1,20,51,"Colored Region 4 with Color 3",2.1
+031,1,20,52,"Colored Region 4 with Eraser",1.7
+031,1,20,53,"Colored Region 4 with Color 4",332.6
+031,1,20,54,"Colored Region 2 with Color 2",6.5
+031,1,20,55,"Colored Region 16 with Color 4",2.1
+031,1,20,56,"Colored Region 19 with Color 1",1.6
+031,1,20,57,"Colored Region 4 with Eraser",25.6
+031,1,20,58,"Colored Region 7 with Eraser",1.6
+031,1,20,59,"Colored Region 14 with Eraser",4.4
+031,1,20,60,"Colored Region 14 with Color 3",2.0
+031,1,20,61,"Colored Region 12 with Eraser",11.6
+031,1,20,62,"Colored Region 12 with Color 1",1.1
+031,1,20,63,"Colored Region 7 with Color 2",1.1
+031,1,20,64,"Colored Region 17 with Eraser",1.7
+031,1,20,65,"Colored Region 17 with Color 4",3.4
+031,1,20,66,"Colored Region 1 with Color 3",3.6
+031,1,20,67,"Colored Region 4 with Color 2",3.8
+031,1,20,68,"Colored Region 5 with Eraser",19.4
+031,1,20,69,"Colored Region 5 with Color 3",0.7
+031,1,20,70,"Colored Region 2 with Eraser",11.2
+031,1,20,71,"Colored Region 2 with Color 1",3.7
+031,1,20,72,"Colored Region 2 with Eraser",7.5
+031,1,20,73,"Colored Region 16 with Eraser",1.3
+031,1,20,74,"Colored Region 6 with Eraser",4.5
+031,1,20,75,"Colored Region 6 with Color 3",2.3
+031,1,20,76,"Colored Region 16 with Color 4",2.1
+031,1,20,77,"Colored Region 16 with Eraser",4.1
+031,1,20,78,"Colored Region 6 with Eraser",0.5
+031,1,20,79,"Colored Region 16 with Color 3",1.3
+031,1,20,80,"Colored Region 8 with Color 4",2.0
+031,1,20,81,"Colored Region 2 with Color 4",2.3
+031,1,20,82,"Colored Region 2 with Eraser",1.3
+031,1,20,83,"Colored Region 2 with Color 2",0.9
+031,1,20,84,"Colored Region 6 with Color 1",1.2
+031,2,23,85,"Game Started (23 regions)",0.0
+031,2,23,86,"Colored Region 15 with Color 1",2.2
+031,2,23,87,"Colored Region 14 with Color 1",0.9
+031,2,23,88,"Colored Region 2 with Color 1",0.6
+031,2,23,89,"Colored Region 16 with Color 1",0.7
+031,2,23,90,"Colored Region 1 with Color 2",3.4
+031,2,23,91,"Colored Region 3 with Color 2",0.8
+031,2,23,92,"Colored Region 3 with Eraser",1.8
+031,2,23,93,"Colored Region 1 with Eraser",0.7
+031,2,23,94,"Colored Region 14 with Eraser",1.4
+031,2,23,95,"Colored Region 15 with Eraser",0.5
+031,2,23,96,"Colored Region 2 with Eraser",0.6
+031,2,23,97,"Colored Region 16 with Eraser",0.7
+031,2,23,98,"Colored Region 4 with Color 4",10.1
+031,2,23,99,"Colored Region 13 with Color 3",3.3
+031,2,23,100,"Colored Region 20 with Color 3",0.9
+031,2,23,101,"Colored Region 1 with Color 3",1.4
+031,2,23,102,"Colored Region 18 with Color 2",5.8
+031,2,23,103,"Colored Region 8 with Color 2",0.8
+031,2,23,104,"Colored Region 9 with Color 2",0.5
+031,2,23,105,"Colored Region 12 with Color 1",2.9
+031,2,23,106,"Colored Region 23 with Color 4",7.5
+031,2,23,107,"Colored Region 6 with Color 4",0.6
+031,2,23,108,"Colored Region 6 with Eraser",1.7
+031,2,23,109,"Colored Region 6 with Color 1",1.9
+031,2,23,110,"Colored Region 10 with Color 4",4.7
+031,2,23,111,"Colored Region 15 with Color 2",2.9
+031,2,23,112,"Colored Region 11 with Color 1",2.3
+031,2,23,113,"Colored Region 14 with Color 2",1.6
+031,2,23,114,"Colored Region 17 with Color 3",2.8
+031,2,23,115,"Colored Region 19 with Color 4",1.8
+031,2,23,116,"Colored Region 2 with Color 2",1.6
+031,2,23,117,"Colored Region 22 with Color 3",3.2
+031,2,23,118,"Colored Region 16 with Color 2",4.5
+031,2,23,119,"Colored Region 5 with Color 1",1.7
+031,2,23,120,"Colored Region 5 with Eraser",6.6
+031,2,23,121,"Colored Region 22 with Eraser",2.4
+031,2,23,122,"Colored Region 5 with Color 1",15.7
+031,2,23,123,"Colored Region 9 with Eraser",3.0
+031,2,23,124,"Colored Region 9 with Color 2",4.0
+031,2,23,125,"Colored Region 19 with Eraser",2.1
+031,2,23,126,"Colored Region 5 with Eraser",1.2
+031,2,23,127,"Colored Region 19 with Color 1",1.8
+031,2,23,128,"Colored Region 5 with Color 4",3.1
+031,2,23,129,"Colored Region 7 with Color 4",9.1
+031,2,23,130,"Colored Region 22 with Color 3",2.2
+031,2,23,131,"Colored Region 21 with Color 1",3.1
+031,2,23,132,"Colored Region 9 with Eraser",17.1
+031,2,23,133,"Colored Region 3 with Color 2",1.0
+031,2,23,134,"Colored Region 17 with Eraser",11.9
+031,2,23,135,"Colored Region 9 with Color 3",1.3
+031,2,23,136,"Colored Region 9 with Eraser",2.1
+031,2,23,137,"Colored Region 17 with Color 3",2.3
+031,2,23,138,"Colored Region 9 with Color 4",6.1
+031,2,23,139,"Colored Region 4 with Eraser",1.2
+031,2,23,140,"Colored Region 12 with Eraser",15.8
+031,2,23,141,"Colored Region 4 with Color 1",2.0
+031,2,23,142,"Colored Region 2 with Eraser",8.4
+031,2,23,143,"Colored Region 12 with Color 2",1.3
+031,2,23,144,"Colored Region 2 with Color 1",1.7
+031,3,26,145,"Game Started (26 regions)",0.0
+031,3,26,146,"Colored Region 14 with Color 1",47.1
+031,3,26,147,"Colored Region 16 with Color 1",1.1
+031,3,26,148,"Colored Region 19 with Color 1",1.9
+031,3,26,149,"Colored Region 14 with Eraser",5.4
+031,3,26,150,"Colored Region 2 with Color 4",5.1
+031,3,26,151,"Colored Region 7 with Color 3",3.3
+031,3,26,152,"Colored Region 7 with Eraser",2.1
+031,3,26,153,"Colored Region 1 with Color 3",0.9
+031,3,26,154,"Colored Region 20 with Color 1",2.7
+031,3,26,155,"Colored Region 13 with Color 1",1.2
+031,3,26,156,"Colored Region 22 with Color 4",6.4
+031,3,26,157,"Colored Region 7 with Color 4",0.4
+031,3,26,158,"Colored Region 3 with Color 3",16.7
+031,3,26,159,"Colored Region 17 with Color 2",2.9
+031,3,26,160,"Colored Region 25 with Color 1",2.4
+031,3,26,161,"Colored Region 24 with Color 4",2.1
+031,3,26,162,"Colored Region 8 with Color 1",4.0
+031,3,26,163,"Colored Region 12 with Color 3",4.4
+031,3,26,164,"Colored Region 26 with Color 2",2.4
+031,3,26,165,"Colored Region 10 with Color 4",7.4
+031,3,26,166,"Colored Region 11 with Color 3",1.7
+031,3,26,167,"Colored Region 4 with Color 1",3.4
+031,3,26,168,"Colored Region 23 with Color 4",1.9
+031,3,26,169,"Colored Region 5 with Color 2",2.9
+031,3,26,170,"Colored Region 6 with Color 4",5.7
+031,3,26,171,"Colored Region 6 with Color 1",3.8
+031,3,26,172,"Colored Region 21 with Color 4",4.2
+031,3,26,173,"Colored Region 15 with Color 2",3.7
+031,3,26,174,"Colored Region 14 with Color 3",3.3
+031,3,26,175,"Colored Region 9 with Color 4",7.7
+031,3,26,176,"Colored Region 26 with Eraser",6.4
+031,3,26,177,"Colored Region 18 with Color 2",10.8
+031,3,26,178,"Colored Region 26 with Color 3",16.4
+031,3,26,179,"Colored Region 12 with Eraser",1.4
+031,3,26,180,"Colored Region 8 with Eraser",3.3
+031,3,26,181,"Colored Region 12 with Color 2",5.0
+031,3,26,182,"Colored Region 8 with Color 3",3.4
+031,4,28,183,"Game Started (28 regions)",0.0
+031,4,28,184,"Colored Region 18 with Color 3",11.6
+031,4,28,185,"Colored Region 22 with Color 3",0.4
+031,4,28,186,"Colored Region 6 with Color 3",0.7
+031,4,28,187,"Colored Region 25 with Color 3",0.5
+031,4,28,188,"Colored Region 25 with Eraser",3.6
+031,4,28,189,"Colored Region 6 with Eraser",0.4
+031,4,28,190,"Colored Region 22 with Eraser",0.6
+031,4,28,191,"Colored Region 18 with Eraser",1.0
+031,4,28,192,"Colored Region 27 with Color 3",4.7
+031,4,28,193,"Colored Region 20 with Color 3",0.4
+031,4,28,194,"Colored Region 7 with Color 4",5.8
+031,4,28,195,"Colored Region 11 with Color 2",4.4
+031,4,28,196,"Colored Region 11 with Eraser",2.0
+031,4,28,197,"Colored Region 24 with Color 2",1.0
+031,4,28,198,"Colored Region 21 with Color 4",2.5
+031,4,28,199,"Colored Region 19 with Color 1",1.9
+031,4,28,200,"Colored Region 11 with Color 3",1.6
+031,4,28,201,"Colored Region 25 with Color 4",2.3
+031,4,28,202,"Colored Region 3 with Color 3",3.8
+031,4,28,203,"Colored Region 12 with Color 4",3.4
+031,4,28,204,"Colored Region 12 with Eraser",1.5
+031,4,28,205,"Colored Region 8 with Color 4",0.8
+031,4,28,206,"Colored Region 12 with Color 2",2.4
+031,4,28,207,"Colored Region 5 with Color 4",3.4
+031,4,28,208,"Colored Region 28 with Color 2",2.3
+031,4,28,209,"Colored Region 10 with Color 4",3.1
+031,4,28,210,"Colored Region 18 with Color 3",6.5
+031,4,28,211,"Colored Region 4 with Color 2",4.4
+031,4,28,212,"Colored Region 1 with Color 1",1.5
+031,4,28,213,"Colored Region 13 with Color 2",1.7
+031,4,28,214,"Colored Region 14 with Color 3",3.9
+031,4,28,215,"Colored Region 14 with Eraser",1.6
+031,4,28,216,"Colored Region 17 with Color 3",2.8
+031,4,28,217,"Colored Region 5 with Eraser",4.7
+031,4,28,218,"Colored Region 14 with Color 1",1.6
+031,4,28,219,"Colored Region 5 with Color 4",1.3
+031,4,28,220,"Colored Region 22 with Color 4",3.8
+031,4,28,221,"Colored Region 16 with Color 3",1.8
+031,4,28,222,"Colored Region 15 with Color 2",3.4
+031,4,28,223,"Colored Region 6 with Color 2",1.2
+031,4,28,224,"Colored Region 26 with Color 1",1.8
+031,4,28,225,"Colored Region 23 with Color 1",1.8
+031,4,28,226,"Colored Region 9 with Color 4",2.3
+031,4,28,227,"Colored Region 16 with Color 1",6.7
+031,4,28,228,"Colored Region 16 with Eraser",3.6
+031,4,28,229,"Colored Region 16 with Color 3",2.4
+031,4,28,230,"Colored Region 2 with Color 1",1.5
+031,4,28,231,"Colored Region 23 with Eraser",1.2
+031,4,28,232,"Colored Region 23 with Color 3",1.1
+031,5,31,233,"Game Started (31 regions)",0.0
+031,5,31,234,"Colored Region 4 with Color 2",3.1
+031,5,31,235,"Colored Region 18 with Color 2",0.4
+031,5,31,236,"Colored Region 8 with Color 2",5.4
+031,5,31,237,"Colored Region 23 with Color 3",3.5
+031,5,31,238,"Colored Region 19 with Color 3",6.2
+031,5,31,239,"Colored Region 30 with Color 3",0.9
+031,5,31,240,"Colored Region 1 with Color 4",2.9
+031,5,31,241,"Colored Region 5 with Color 4",1.7
+031,5,31,242,"Colored Region 5 with Eraser",6.7
+031,5,31,243,"Colored Region 27 with Color 3",3.8
+031,5,31,244,"Colored Region 27 with Eraser",2.5
+031,5,31,245,"Colored Region 13 with Color 3",1.6
+031,5,31,246,"Colored Region 27 with Color 2",4.4
+031,5,31,247,"Colored Region 12 with Color 3",1.3
+031,5,31,248,"Colored Region 5 with Color 4",5.4
+031,5,31,249,"Colored Region 22 with Color 1",1.0
+031,5,31,250,"Colored Region 6 with Color 2",2.7
+031,5,31,251,"Colored Region 25 with Color 2",10.8
+031,5,31,252,"Colored Region 14 with Color 2",0.3
+031,5,31,253,"Colored Region 14 with Eraser",1.6
+031,5,31,254,"Colored Region 25 with Eraser",1.8
+031,5,31,255,"Colored Region 25 with Color 2",3.2
+031,5,31,256,"Colored Region 9 with Color 2",0.6
+031,5,31,257,"Colored Region 17 with Color 2",0.9
+031,5,31,258,"Colored Region 9 with Eraser",4.4
+031,5,31,259,"Colored Region 25 with Eraser",0.4
+031,5,31,260,"Colored Region 17 with Eraser",0.5
+031,5,31,261,"Colored Region 7 with Color 1",5.7
+031,5,31,262,"Colored Region 28 with Color 4",1.7
+031,5,31,263,"Colored Region 25 with Color 2",5.7
+031,5,31,264,"Colored Region 25 with Eraser",3.5
+031,5,31,265,"Colored Region 25 with Color 1",2.1
+031,5,31,266,"Colored Region 10 with Color 2",1.4
+031,5,31,267,"Colored Region 25 with Eraser",6.0
+031,5,31,268,"Colored Region 25 with Color 3",1.8
+031,5,31,269,"Colored Region 14 with Color 1",2.0
+031,5,31,270,"Colored Region 24 with Color 1",4.1
+031,5,31,271,"Colored Region 17 with Color 4",3.1
+031,5,31,272,"Colored Region 9 with Color 3",4.1
+031,5,31,273,"Colored Region 2 with Color 4",3.3
+031,5,31,274,"Colored Region 29 with Color 2",2.2
+031,5,31,275,"Colored Region 15 with Color 2",4.2
+031,5,31,276,"Colored Region 16 with Color 1",2.0
+031,5,31,277,"Colored Region 20 with Color 4",1.0
+031,5,31,278,"Colored Region 21 with Color 1",9.9
+031,5,31,279,"Colored Region 31 with Color 4",1.7
+031,5,31,280,"Colored Region 11 with Color 2",3.2
+031,5,31,281,"Colored Region 26 with Color 1",1.6
+031,5,31,282,"Colored Region 3 with Color 2",2.1
+031,6,34,283,"Game Started (34 regions)",0.0
+031,6,34,284,"Colored Region 2 with Color 4",7.9
+031,6,34,285,"Colored Region 27 with Color 4",0.3
+031,6,34,286,"Colored Region 21 with Color 2",6.7
+031,6,34,287,"Colored Region 13 with Color 2",0.3
+031,6,34,288,"Colored Region 21 with Eraser",1.9
+031,6,34,289,"Colored Region 31 with Color 2",2.0
+031,6,34,290,"Colored Region 33 with Color 2",10.2
+031,6,34,291,"Colored Region 18 with Color 2",2.8
+031,6,34,292,"Colored Region 18 with Eraser",3.5
+031,6,34,293,"Colored Region 20 with Color 2",1.5
+031,6,34,294,"Colored Region 10 with Color 2",7.4
+031,6,34,295,"Colored Region 10 with Eraser",1.6
+031,6,34,296,"Colored Region 4 with Color 4",5.1
+031,6,34,297,"Colored Region 10 with Color 4",1.4
+031,6,34,298,"Colored Region 30 with Color 2",4.4
+031,6,34,299,"Colored Region 8 with Color 4",16.2
+031,6,34,300,"Colored Region 25 with Color 2",3.6
+031,6,34,301,"Colored Region 5 with Color 4",6.5
+031,6,34,302,"Colored Region 16 with Color 4",7.3
+031,6,34,303,"Colored Region 15 with Color 2",1.9
+031,6,34,304,"Colored Region 22 with Color 2",0.7
+031,6,34,305,"Colored Region 34 with Color 2",1.7
+031,6,34,306,"Colored Region 29 with Color 2",4.2
+031,6,34,307,"Colored Region 24 with Color 3",5.7
+031,6,34,308,"Colored Region 11 with Color 1",0.9
+031,6,34,309,"Colored Region 26 with Color 1",2.3
+031,6,34,310,"Colored Region 9 with Color 1",1.8
+031,6,34,311,"Colored Region 6 with Color 3",1.9
+031,6,34,312,"Colored Region 1 with Color 1",1.7
+031,6,34,313,"Colored Region 14 with Color 3",2.8
+031,6,34,314,"Colored Region 21 with Color 1",1.3
+031,6,34,315,"Colored Region 12 with Color 1",1.6
+031,6,34,316,"Colored Region 3 with Color 3",2.6
+031,6,34,317,"Colored Region 28 with Color 3",2.5
+031,6,34,318,"Colored Region 32 with Color 3",1.0
+031,6,34,319,"Colored Region 7 with Color 3",2.0
+031,6,34,320,"Colored Region 7 with Eraser",1.6
+031,6,34,321,"Colored Region 17 with Color 1",3.8
+031,6,34,322,"Colored Region 18 with Color 3",3.7
+031,6,34,323,"Colored Region 26 with Eraser",11.9
+031,6,34,324,"Colored Region 8 with Eraser",1.7
+031,6,34,325,"Colored Region 5 with Eraser",0.8
+031,6,34,326,"Colored Region 8 with Color 4",1.4
+031,6,34,327,"Colored Region 5 with Color 3",2.2
+031,6,34,328,"Colored Region 5 with Eraser",1.3
+031,6,34,329,"Colored Region 5 with Color 1",2.1
+031,6,34,330,"Colored Region 7 with Color 4",5.3
+031,6,34,331,"Colored Region 26 with Color 3",4.9
+031,6,34,332,"Colored Region 32 with Color 1",2.4
+031,6,34,333,"Colored Region 23 with Color 1",1.1
+031,6,34,334,"Colored Region 32 with Eraser",1.3
+031,6,34,335,"Colored Region 32 with Color 3",2.4
+031,6,34,336,"Colored Region 19 with Color 3",1.2
+031,7,37,337,"Game Started (37 regions)",0.0
+031,7,37,338,"Colored Region 25 with Color 3",3.0
+031,7,37,339,"Colored Region 29 with Color 3",0.4
+031,7,37,340,"Colored Region 23 with Color 3",1.6
+031,7,37,341,"Colored Region 3 with Color 3",3.5
+031,7,37,342,"Colored Region 12 with Color 3",0.6
+031,7,37,343,"Colored Region 8 with Color 3",3.0
+031,7,37,344,"Colored Region 27 with Color 3",6.3
+031,7,37,345,"Colored Region 35 with Color 3",2.1
+031,7,37,346,"Colored Region 32 with Color 3",1.0
+031,7,37,347,"Colored Region 20 with Color 3",0.7
+031,7,37,348,"Colored Region 6 with Color 3",4.2
+031,7,37,349,"Colored Region 36 with Color 4",7.7
+031,7,37,350,"Colored Region 26 with Color 4",1.2
+031,7,37,351,"Colored Region 31 with Color 4",1.0
+031,7,37,352,"Colored Region 25 with Eraser",1.3
+031,7,37,353,"Colored Region 31 with Eraser",0.6
+031,7,37,354,"Colored Region 25 with Color 3",1.0
+031,7,37,355,"Colored Region 33 with Color 4",2.3
+031,7,37,356,"Colored Region 33 with Eraser",1.1
+031,7,37,357,"Colored Region 9 with Color 4",1.1
+031,7,37,358,"Colored Region 16 with Color 4",3.2
+031,7,37,359,"Colored Region 30 with Color 4",1.4
+031,7,37,360,"Colored Region 21 with Color 4",3.2
+031,7,37,361,"Colored Region 18 with Color 4",1.6
+031,7,37,362,"Colored Region 13 with Color 4",2.7
+031,7,37,363,"Colored Region 19 with Color 4",0.9
+031,7,37,364,"Colored Region 17 with Color 4",2.4
+031,7,37,365,"Colored Region 5 with Color 4",0.8
+031,7,37,366,"Colored Region 15 with Color 2",3.9
+031,7,37,367,"Colored Region 11 with Color 1",1.1
+031,7,37,368,"Colored Region 14 with Color 1",1.4
+031,7,37,369,"Colored Region 25 with Color 2",1.1
+031,7,37,370,"Colored Region 25 with Eraser",1.4
+031,7,37,371,"Colored Region 25 with Color 3",1.1
+031,7,37,372,"Colored Region 33 with Color 2",2.0
+031,7,37,373,"Colored Region 34 with Color 1",2.2
+031,7,37,374,"Colored Region 37 with Color 2",1.4
+031,7,37,375,"Colored Region 24 with Color 1",1.2
+031,7,37,376,"Colored Region 22 with Color 1",1.3
+031,7,37,377,"Colored Region 2 with Color 2",2.1
+031,7,37,378,"Colored Region 28 with Color 1",2.2
+031,7,37,379,"Colored Region 4 with Color 2",1.2
+031,7,37,380,"Colored Region 1 with Color 2",1.8
+031,7,37,381,"Colored Region 7 with Color 2",0.8
+031,7,37,382,"Colored Region 31 with Color 1",2.6
+031,7,37,383,"Colored Region 10 with Color 1",0.5
+031,8,39,384,"Game Started (39 regions)",0.0
+031,8,39,385,"Colored Region 27 with Color 1",1.2
+031,8,39,386,"Colored Region 27 with Eraser",1.8
+031,8,39,387,"Colored Region 13 with Color 2",4.8
+031,8,39,388,"Colored Region 19 with Color 2",0.3
+031,8,39,389,"Colored Region 19 with Eraser",1.7
+031,8,39,390,"Colored Region 22 with Color 2",1.7
+031,8,39,391,"Colored Region 38 with Color 2",4.5
+031,8,39,392,"Colored Region 38 with Eraser",1.9
+031,8,39,393,"Colored Region 15 with Color 2",3.4
+031,8,39,394,"Colored Region 8 with Color 2",0.7
+031,8,39,395,"Colored Region 28 with Color 2",2.5
+031,8,39,396,"Colored Region 14 with Color 2",4.0
+031,8,39,397,"Colored Region 20 with Color 2",2.3
+031,8,39,398,"Colored Region 39 with Color 2",1.3
+031,8,39,399,"Colored Region 23 with Color 2",3.7
+031,8,39,400,"Colored Region 26 with Color 2",1.4
+031,8,39,401,"Colored Region 11 with Color 2",2.6
+031,8,39,402,"Colored Region 30 with Color 2",1.6
+031,8,39,403,"Colored Region 6 with Color 2",1.5
+031,8,39,404,"Colored Region 1 with Color 4",7.0
+031,8,39,405,"Colored Region 5 with Color 4",1.3
+031,8,39,406,"Colored Region 10 with Color 4",1.9
+031,8,39,407,"Colored Region 19 with Color 4",0.8
+031,8,39,408,"Colored Region 19 with Eraser",4.7
+031,8,39,409,"Colored Region 10 with Eraser",0.3
+031,8,39,410,"Colored Region 5 with Eraser",0.8
+031,8,39,411,"Colored Region 1 with Eraser",0.4
+031,8,39,412,"Colored Region 36 with Color 4",0.9
+031,8,39,413,"Colored Region 31 with Color 4",0.4
+031,8,39,414,"Colored Region 16 with Color 4",2.8
+031,8,39,415,"Colored Region 7 with Color 4",1.1
+031,8,39,416,"Colored Region 21 with Color 4",1.5
+031,8,39,417,"Colored Region 9 with Color 4",2.6
+031,8,39,418,"Colored Region 18 with Color 4",1.9
+031,8,39,419,"Colored Region 17 with Color 4",2.0
+031,8,39,420,"Colored Region 34 with Color 4",2.2
+031,8,39,421,"Colored Region 35 with Color 4",2.8
+031,8,39,422,"Colored Region 32 with Color 4",0.7
+031,8,39,423,"Colored Region 1 with Color 3",5.2
+031,8,39,424,"Colored Region 10 with Color 3",0.9
+031,8,39,425,"Colored Region 5 with Color 3",0.7
+031,8,39,426,"Colored Region 37 with Color 1",3.9
+031,8,39,427,"Colored Region 15 with Eraser",5.7
+031,8,39,428,"Colored Region 37 with Eraser",4.9
+031,8,39,429,"Colored Region 38 with Color 1",1.5
+031,8,39,430,"Colored Region 38 with Eraser",7.3
+031,8,39,431,"Colored Region 38 with Color 3",1.4
+031,8,39,432,"Colored Region 15 with Color 1",3.8
+031,8,39,433,"Colored Region 36 with Eraser",2.8
+031,8,39,434,"Colored Region 37 with Color 4",3.9
+031,8,39,435,"Colored Region 4 with Color 1",4.5
+031,8,39,436,"Colored Region 36 with Color 3",3.8
+031,8,39,437,"Colored Region 29 with Color 4",5.3
+031,8,39,438,"Colored Region 19 with Color 1",3.1
+031,8,39,439,"Colored Region 33 with Color 1",0.8
+031,8,39,440,"Colored Region 12 with Color 3",1.4
+031,8,39,441,"Colored Region 27 with Color 3",0.6
+031,8,39,442,"Colored Region 25 with Color 3",0.7
+031,8,39,443,"Colored Region 2 with Color 3",1.3
+031,8,39,444,"Colored Region 3 with Color 1",1.2
+031,8,39,445,"Colored Region 24 with Color 1",1.3
+031,9,42,446,"Game Started (42 regions)",0.0
+031,9,42,447,"Colored Region 8 with Color 1",10.4
+031,9,42,448,"Colored Region 8 with Eraser",2.8
+031,9,42,449,"Colored Region 34 with Color 1",5.4
+031,9,42,450,"Colored Region 20 with Color 1",0.3
+031,9,42,451,"Colored Region 42 with Color 1",1.3
+031,9,42,452,"Colored Region 41 with Color 1",0.7
+031,9,42,453,"Colored Region 23 with Color 1",1.4
+031,9,42,454,"Colored Region 26 with Color 1",0.6
+031,9,42,455,"Colored Region 30 with Color 1",1.8
+031,9,42,456,"Colored Region 18 with Color 1",0.6
+031,9,42,457,"Colored Region 9 with Color 1",2.7
+031,9,42,458,"Colored Region 9 with Eraser",3.5
+031,9,42,459,"Colored Region 17 with Color 1",4.7
+031,9,42,460,"Colored Region 19 with Color 1",3.4
+031,9,42,461,"Colored Region 19 with Eraser",3.5
+031,9,42,462,"Colored Region 2 with Color 1",0.9
+031,9,42,463,"Colored Region 39 with Color 1",0.9
+031,9,42,464,"Colored Region 37 with Color 1",1.5
+031,9,42,465,"Colored Region 25 with Color 1",1.0
+031,9,42,466,"Colored Region 30 with Eraser",1.9
+031,9,42,467,"Colored Region 18 with Eraser",3.4
+031,9,42,468,"Colored Region 18 with Color 1",1.1
+031,9,42,469,"Colored Region 18 with Eraser",1.5
+031,9,42,470,"Colored Region 15 with Color 1",1.4
+031,9,42,471,"Colored Region 13 with Color 1",2.4
+031,9,42,472,"Colored Region 40 with Color 2",11.1
+031,9,42,473,"Colored Region 11 with Color 3",2.0
+031,9,42,474,"Colored Region 22 with Color 2",2.5
+031,9,42,475,"Colored Region 7 with Color 3",1.6
+031,9,42,476,"Colored Region 35 with Color 2",1.5
+031,9,42,477,"Colored Region 33 with Color 4",2.0
+031,9,42,478,"Colored Region 38 with Color 2",2.1
+031,9,42,479,"Colored Region 28 with Color 3",2.7
+031,9,42,480,"Colored Region 4 with Color 2",2.2
+031,9,42,481,"Colored Region 31 with Color 3",4.9
+031,9,42,482,"Colored Region 21 with Color 2",3.9
+031,9,42,483,"Colored Region 19 with Color 3",1.6
+031,9,42,484,"Colored Region 8 with Color 4",2.3
+031,9,42,485,"Colored Region 32 with Color 3",2.1
+031,9,42,486,"Colored Region 32 with Eraser",1.6
+031,9,42,487,"Colored Region 19 with Eraser",2.7
+031,9,42,488,"Colored Region 8 with Eraser",0.4
+031,9,42,489,"Colored Region 8 with Color 3",1.2
+031,9,42,490,"Colored Region 32 with Color 4",2.5
+031,9,42,491,"Colored Region 19 with Color 4",6.4
+031,9,42,492,"Colored Region 1 with Color 2",6.3
+031,9,42,493,"Colored Region 29 with Color 3",1.5
+031,9,42,494,"Colored Region 9 with Color 3",2.5
+031,9,42,495,"Colored Region 12 with Color 2",3.3
+031,9,42,496,"Colored Region 3 with Color 3",1.5
+031,9,42,497,"Colored Region 5 with Color 2",1.8
+031,9,42,498,"Colored Region 27 with Color 3",1.5
+031,9,42,499,"Colored Region 24 with Color 2",1.1
+031,9,42,500,"Colored Region 6 with Color 2",0.8
+031,9,42,501,"Colored Region 10 with Color 3",2.3
+031,9,42,502,"Colored Region 18 with Color 2",1.6
+031,9,42,503,"Colored Region 36 with Color 3",1.6
+031,9,42,504,"Colored Region 30 with Color 2",2.2
+031,9,42,505,"Colored Region 29 with Color 1",2.0
+031,9,42,506,"Colored Region 29 with Eraser",1.5
+031,9,42,507,"Colored Region 14 with Color 1",2.0
+031,9,42,508,"Colored Region 14 with Eraser",1.5
+031,9,42,509,"Colored Region 14 with Color 4",2.0
+031,9,42,510,"Colored Region 29 with Color 3",7.4
+031,9,42,511,"Colored Region 36 with Eraser",3.5
+031,9,42,512,"Colored Region 16 with Color 4",4.8
+031,9,42,513,"Colored Region 36 with Color 1",2.2
+031,10,45,514,"Game Started (45 regions)",0.0
+031,10,45,515,"Colored Region 25 with Color 1",12.2
+031,10,45,516,"Colored Region 7 with Color 1",1.6
+031,10,45,517,"Colored Region 36 with Color 1",0.7
+031,10,45,518,"Colored Region 23 with Color 1",0.7
+031,10,45,519,"Colored Region 33 with Color 1",1.2
+031,10,45,520,"Colored Region 1 with Color 2",16.7
+031,10,45,521,"Colored Region 34 with Color 2",0.3
+031,10,45,522,"Colored Region 16 with Color 2",1.7
+031,10,45,523,"Colored Region 16 with Eraser",6.6
+031,10,45,524,"Colored Region 1 with Eraser",0.5
+031,10,45,525,"Colored Region 34 with Eraser",0.3
+031,10,45,526,"Colored Region 44 with Color 2",2.1
+031,10,45,527,"Colored Region 20 with Color 2",0.5
+031,10,45,528,"Colored Region 29 with Color 2",1.3
+031,10,45,529,"Colored Region 1 with Color 3",5.6
+031,10,45,530,"Colored Region 16 with Color 3",0.4
+031,10,45,531,"Colored Region 34 with Color 3",0.7
+031,10,45,532,"Colored Region 24 with Color 1",10.5
+031,10,45,533,"Colored Region 31 with Color 2",5.3
+031,10,45,534,"Colored Region 31 with Eraser",2.0
+031,10,45,535,"Colored Region 31 with Color 4",1.4
+031,10,45,536,"Colored Region 32 with Color 4",0.9
+031,10,45,537,"Colored Region 27 with Color 1",1.9
+031,10,45,538,"Colored Region 26 with Color 1",2.8
+031,10,45,539,"Colored Region 13 with Color 1",3.9
+031,10,45,540,"Colored Region 39 with Color 1",5.5
+031,10,45,541,"Colored Region 10 with Color 1",0.9
+031,10,45,542,"Colored Region 2 with Color 1",1.0
+031,10,45,543,"Colored Region 40 with Color 1",0.9
+031,10,45,544,"Colored Region 21 with Color 1",1.3
+031,10,45,545,"Colored Region 28 with Color 2",10.8
+031,10,45,546,"Colored Region 45 with Color 2",0.6
+031,10,45,547,"Colored Region 9 with Color 3",11.1
+031,10,45,548,"Colored Region 8 with Color 3",0.9
+031,10,45,549,"Colored Region 6 with Color 4",1.2
+031,10,45,550,"Colored Region 30 with Color 3",1.4
+031,10,45,551,"Colored Region 19 with Color 4",1.8
+031,10,45,552,"Colored Region 15 with Color 2",2.3
+031,10,45,553,"Colored Region 41 with Color 3",1.8
+031,10,45,554,"Colored Region 22 with Color 2",1.2
+031,10,45,555,"Colored Region 18 with Color 3",1.3
+031,10,45,556,"Colored Region 35 with Color 2",1.1
+031,10,45,557,"Colored Region 37 with Color 3",1.3
+031,10,45,558,"Colored Region 17 with Color 2",2.9
+031,10,45,559,"Colored Region 12 with Color 4",3.4
+031,10,45,560,"Colored Region 40 with Eraser",6.6
+031,10,45,561,"Colored Region 12 with Eraser",0.4
+031,10,45,562,"Colored Region 12 with Color 1",1.6
+031,10,45,563,"Colored Region 40 with Color 4",3.2
+031,10,45,564,"Colored Region 11 with Color 3",2.8
+031,10,45,565,"Colored Region 17 with Eraser",6.2
+031,10,45,566,"Colored Region 11 with Eraser",0.5
+031,10,45,567,"Colored Region 11 with Color 2",1.4
+031,10,45,568,"Colored Region 3 with Color 3",4.2
+031,10,45,569,"Colored Region 34 with Eraser",1.9
+031,10,45,570,"Colored Region 43 with Color 3",1.9
+031,10,45,571,"Colored Region 1 with Eraser",1.7
+031,10,45,572,"Colored Region 5 with Color 3",1.9
+031,10,45,573,"Colored Region 14 with Color 4",5.4
+031,10,45,574,"Colored Region 4 with Color 2",3.8
+031,10,45,575,"Colored Region 38 with Color 2",3.3
+031,10,45,576,"Colored Region 38 with Eraser",2.8
+031,10,45,577,"Colored Region 38 with Color 4",3.3
+031,10,45,578,"Colored Region 38 with Eraser",4.5
+031,10,45,579,"Colored Region 1 with Color 4",2.0
+031,10,45,580,"Colored Region 38 with Color 1",5.5
+031,10,45,581,"Colored Region 17 with Color 4",4.5
+031,10,45,582,"Colored Region 42 with Color 2",3.1
+031,10,45,583,"Colored Region 34 with Color 4",2.9
+
+[Adjacency]
+Round,NumRegions,Region_A,Region_B
+P1,10,1,4
+P1,10,1,8
+P1,10,1,9
+P1,10,2,3
+P1,10,2,5
+P1,10,2,10
+P1,10,3,7
+P1,10,3,10
+P1,10,4,6
+P1,10,4,9
+P1,10,4,10
+P1,10,5,8
+P1,10,5,10
+P1,10,6,7
+P1,10,6,10
+P1,10,7,10
+P1,10,8,9
+P1,10,8,10
+P1,10,9,10
+P2,10,1,2
+P2,10,1,6
+P2,10,1,7
+P2,10,1,8
+P2,10,1,10
+P2,10,2,3
+P2,10,2,4
+P2,10,2,6
+P2,10,2,10
+P2,10,3,4
+P2,10,3,6
+P2,10,3,9
+P2,10,4,5
+P2,10,4,9
+P2,10,4,10
+P2,10,5,9
+P2,10,6,8
+P2,10,7,8
+P2,10,7,10
+1,20,1,4
+1,20,1,7
+1,20,1,8
+1,20,1,17
+1,20,1,19
+1,20,2,5
+1,20,2,6
+1,20,2,8
+1,20,2,16
+1,20,3,4
+1,20,3,7
+1,20,3,9
+1,20,3,17
+1,20,3,18
+1,20,3,20
+1,20,4,17
+1,20,4,19
+1,20,4,20
+1,20,5,7
+1,20,5,8
+1,20,5,10
+1,20,6,13
+1,20,6,15
+1,20,6,16
+1,20,7,8
+1,20,7,10
+1,20,7,11
+1,20,7,12
+1,20,7,14
+1,20,7,17
+1,20,8,16
+1,20,8,19
+1,20,9,13
+1,20,9,18
+1,20,9,20
+1,20,10,11
+1,20,11,14
+1,20,12,14
+1,20,12,18
+1,20,13,15
+1,20,13,16
+1,20,13,19
+1,20,13,20
+1,20,16,19
+1,20,19,20
+2,23,1,3
+2,23,1,4
+2,23,1,6
+2,23,1,7
+2,23,1,9
+2,23,1,18
+2,23,1,21
+2,23,2,5
+2,23,2,12
+2,23,2,17
+2,23,3,5
+2,23,3,9
+2,23,3,19
+2,23,3,21
+2,23,3,22
+2,23,4,8
+2,23,4,9
+2,23,4,12
+2,23,4,13
+2,23,4,18
+2,23,4,20
+2,23,5,17
+2,23,5,19
+2,23,5,22
+2,23,6,7
+2,23,6,18
+2,23,6,23
+2,23,7,16
+2,23,7,21
+2,23,8,10
+2,23,8,13
+2,23,8,20
+2,23,9,12
+2,23,9,17
+2,23,9,19
+2,23,10,11
+2,23,10,13
+2,23,10,15
+2,23,10,20
+2,23,11,14
+2,23,11,15
+2,23,11,20
+2,23,12,13
+2,23,12,17
+2,23,13,15
+2,23,14,20
+2,23,14,23
+2,23,16,21
+2,23,16,22
+2,23,17,19
+2,23,18,20
+2,23,18,23
+2,23,20,23
+2,23,21,22
+3,26,1,2
+3,26,1,7
+3,26,1,13
+3,26,1,19
+3,26,1,20
+3,26,1,22
+3,26,2,16
+3,26,2,19
+3,26,3,7
+3,26,3,17
+3,26,3,20
+3,26,3,24
+3,26,3,25
+3,26,4,5
+3,26,4,10
+3,26,4,11
+3,26,4,21
+3,26,4,23
+3,26,5,6
+3,26,5,21
+3,26,5,23
+3,26,6,9
+3,26,6,21
+3,26,7,13
+3,26,7,17
+3,26,7,20
+3,26,8,12
+3,26,8,24
+3,26,9,12
+3,26,9,18
+3,26,9,26
+3,26,10,11
+3,26,10,16
+3,26,11,15
+3,26,11,16
+3,26,11,21
+3,26,12,24
+3,26,12,26
+3,26,13,17
+3,26,14,15
+3,26,14,18
+3,26,14,20
+3,26,14,21
+3,26,14,22
+3,26,15,16
+3,26,15,21
+3,26,15,22
+3,26,16,22
+3,26,17,25
+3,26,18,20
+3,26,18,21
+3,26,18,26
+3,26,19,22
+3,26,20,22
+3,26,20,24
+3,26,20,26
+3,26,24,25
+3,26,24,26
+4,28,1,4
+4,28,1,10
+4,28,1,13
+4,28,1,16
+4,28,1,22
+4,28,2,13
+4,28,2,16
+4,28,2,23
+4,28,3,5
+4,28,3,8
+4,28,3,12
+4,28,3,19
+4,28,3,25
+4,28,3,28
+4,28,4,10
+4,28,4,18
+4,28,5,12
+4,28,5,14
+4,28,5,17
+4,28,5,28
+4,28,6,20
+4,28,6,21
+4,28,6,26
+4,28,7,19
+4,28,7,20
+4,28,7,24
+4,28,7,27
+4,28,8,12
+4,28,8,19
+4,28,8,27
+4,28,9,13
+4,28,9,14
+4,28,9,15
+4,28,9,20
+4,28,9,23
+4,28,9,27
+4,28,10,13
+4,28,10,17
+4,28,10,18
+4,28,10,28
+4,28,11,19
+4,28,11,21
+4,28,11,24
+4,28,11,25
+4,28,12,14
+4,28,12,27
+4,28,13,14
+4,28,13,16
+4,28,13,17
+4,28,13,23
+4,28,14,17
+4,28,14,27
+4,28,15,20
+4,28,15,23
+4,28,15,26
+4,28,16,22
+4,28,17,28
+4,28,19,24
+4,28,19,25
+4,28,19,27
+4,28,20,21
+4,28,20,24
+4,28,20,26
+4,28,21,24
+5,31,1,4
+5,31,1,18
+5,31,1,19
+5,31,1,29
+5,31,2,9
+5,31,2,24
+5,31,3,12
+5,31,3,26
+5,31,3,31
+5,31,4,20
+5,31,4,23
+5,31,5,8
+5,31,5,12
+5,31,5,13
+5,31,5,18
+5,31,5,22
+5,31,5,23
+5,31,5,27
+5,31,5,30
+5,31,6,7
+5,31,6,12
+5,31,6,22
+5,31,6,28
+5,31,6,30
+5,31,7,10
+5,31,7,12
+5,31,7,28
+5,31,8,13
+5,31,8,16
+5,31,8,20
+5,31,8,23
+5,31,9,10
+5,31,9,14
+5,31,9,24
+5,31,9,29
+5,31,10,14
+5,31,10,17
+5,31,10,24
+5,31,10,25
+5,31,11,21
+5,31,11,26
+5,31,11,31
+5,31,12,22
+5,31,12,31
+5,31,13,15
+5,31,13,16
+5,31,13,21
+5,31,13,27
+5,31,14,19
+5,31,14,25
+5,31,14,28
+5,31,14,29
+5,31,15,16
+5,31,15,20
+5,31,15,21
+5,31,16,20
+5,31,17,24
+5,31,18,19
+5,31,18,23
+5,31,18,28
+5,31,18,30
+5,31,19,28
+5,31,19,29
+5,31,21,31
+5,31,22,30
+5,31,25,28
+5,31,26,31
+5,31,27,31
+5,31,28,30
+6,34,1,6
+6,34,1,14
+6,34,1,27
+6,34,1,31
+6,34,1,33
+6,34,2,12
+6,34,2,13
+6,34,2,17
+6,34,2,18
+6,34,3,4
+6,34,3,10
+6,34,3,13
+6,34,3,30
+6,34,4,13
+6,34,4,17
+6,34,4,28
+6,34,5,7
+6,34,5,15
+6,34,5,22
+6,34,5,24
+6,34,5,25
+6,34,5,26
+6,34,5,32
+6,34,5,34
+6,34,6,9
+6,34,6,33
+6,34,7,17
+6,34,7,18
+6,34,7,25
+6,34,7,32
+6,34,8,20
+6,34,8,25
+6,34,8,26
+6,34,8,34
+6,34,9,20
+6,34,9,27
+6,34,9,33
+6,34,10,13
+6,34,10,14
+6,34,10,21
+6,34,10,30
+6,34,11,22
+6,34,11,24
+6,34,11,34
+6,34,12,13
+6,34,12,27
+6,34,12,31
+6,34,13,17
+6,34,13,21
+6,34,14,21
+6,34,14,31
+6,34,15,16
+6,34,15,19
+6,34,15,23
+6,34,15,32
+6,34,16,19
+6,34,16,22
+6,34,16,29
+6,34,17,18
+6,34,17,28
+6,34,17,32
+6,34,18,20
+6,34,18,25
+6,34,18,27
+6,34,19,23
+6,34,19,29
+6,34,20,27
+6,34,21,31
+6,34,22,24
+6,34,23,28
+6,34,23,29
+6,34,23,32
+6,34,24,34
+6,34,25,26
+6,34,26,34
+6,34,27,31
+6,34,27,33
+6,34,28,30
+7,37,1,13
+7,37,1,26
+7,37,1,27
+7,37,1,29
+7,37,1,35
+7,37,1,36
+7,37,2,12
+7,37,2,13
+7,37,2,19
+7,37,3,4
+7,37,3,5
+7,37,3,9
+7,37,3,17
+7,37,3,34
+7,37,4,8
+7,37,4,9
+7,37,4,12
+7,37,4,17
+7,37,4,28
+7,37,4,29
+7,37,5,24
+7,37,5,34
+7,37,5,37
+7,37,6,10
+7,37,6,11
+7,37,6,14
+7,37,6,16
+7,37,6,21
+7,37,6,30
+7,37,7,10
+7,37,7,23
+7,37,7,31
+7,37,7,35
+7,37,7,36
+7,37,8,17
+7,37,8,22
+7,37,8,37
+7,37,9,25
+7,37,9,29
+7,37,9,33
+7,37,10,16
+7,37,10,18
+7,37,10,20
+7,37,10,21
+7,37,10,23
+7,37,10,35
+7,37,11,15
+7,37,11,21
+7,37,11,30
+7,37,12,13
+7,37,12,19
+7,37,12,22
+7,37,12,28
+7,37,13,27
+7,37,13,28
+7,37,14,16
+7,37,14,30
+7,37,14,33
+7,37,15,18
+7,37,15,20
+7,37,15,21
+7,37,15,32
+7,37,16,23
+7,37,16,25
+7,37,16,31
+7,37,16,33
+7,37,17,34
+7,37,17,37
+7,37,18,20
+7,37,18,32
+7,37,18,35
+7,37,19,22
+7,37,20,21
+7,37,23,31
+7,37,24,37
+7,37,25,31
+7,37,25,33
+7,37,26,27
+7,37,26,28
+7,37,26,29
+7,37,27,28
+7,37,29,31
+7,37,29,36
+7,37,31,36
+7,37,34,37
+8,39,1,11
+8,39,1,21
+8,39,1,26
+8,39,2,18
+8,39,2,23
+8,39,2,24
+8,39,2,39
+8,39,3,8
+8,39,3,17
+8,39,3,18
+8,39,3,28
+8,39,4,8
+8,39,4,12
+8,39,4,22
+8,39,4,29
+8,39,4,35
+8,39,4,36
+8,39,5,7
+8,39,5,11
+8,39,5,13
+8,39,5,16
+8,39,5,21
+8,39,5,37
+8,39,6,10
+8,39,6,31
+8,39,7,11
+8,39,7,30
+8,39,8,18
+8,39,8,29
+8,39,8,35
+8,39,9,23
+8,39,9,26
+8,39,9,38
+8,39,10,16
+8,39,10,30
+8,39,10,31
+8,39,11,21
+8,39,12,22
+8,39,12,32
+8,39,12,33
+8,39,12,35
+8,39,13,16
+8,39,13,31
+8,39,13,36
+8,39,13,37
+8,39,14,25
+8,39,14,27
+8,39,14,34
+8,39,15,18
+8,39,15,29
+8,39,15,36
+8,39,15,37
+8,39,15,38
+8,39,16,30
+8,39,17,24
+8,39,17,25
+8,39,17,28
+8,39,17,39
+8,39,18,23
+8,39,18,38
+8,39,18,39
+8,39,19,22
+8,39,19,31
+8,39,20,24
+8,39,20,25
+8,39,21,26
+8,39,21,38
+8,39,22,31
+8,39,22,32
+8,39,22,36
+8,39,23,38
+8,39,24,25
+8,39,24,39
+8,39,25,28
+8,39,25,34
+8,39,26,38
+8,39,27,33
+8,39,27,34
+8,39,28,33
+8,39,28,34
+8,39,28,35
+8,39,29,36
+8,39,32,33
+8,39,33,34
+8,39,33,35
+8,39,36,37
+8,39,37,38
+9,42,1,8
+9,42,1,9
+9,42,1,13
+9,42,1,14
+9,42,1,29
+9,42,1,32
+9,42,2,3
+9,42,2,12
+9,42,2,19
+9,42,2,21
+9,42,2,24
+9,42,3,5
+9,42,3,12
+9,42,3,37
+9,42,3,39
+9,42,4,17
+9,42,4,20
+9,42,4,28
+9,42,4,31
+9,42,4,32
+9,42,4,33
+9,42,4,34
+9,42,5,27
+9,42,5,37
+9,42,5,39
+9,42,6,9
+9,42,6,10
+9,42,6,25
+9,42,6,37
+9,42,7,20
+9,42,7,22
+9,42,7,33
+9,42,7,35
+9,42,7,41
+9,42,8,13
+9,42,8,17
+9,42,8,19
+9,42,8,21
+9,42,8,32
+9,42,9,12
+9,42,9,13
+9,42,9,14
+9,42,9,25
+9,42,9,37
+9,42,10,15
+9,42,10,18
+9,42,10,25
+9,42,10,30
+9,42,11,22
+9,42,11,34
+9,42,11,40
+9,42,11,42
+9,42,12,13
+9,42,12,19
+9,42,12,37
+9,42,13,19
+9,42,14,25
+9,42,14,29
+9,42,14,30
+9,42,15,18
+9,42,16,26
+9,42,16,29
+9,42,16,30
+9,42,16,36
+9,42,17,21
+9,42,17,31
+9,42,17,32
+9,42,18,36
+9,42,19,21
+9,42,20,22
+9,42,20,33
+9,42,21,31
+9,42,21,34
+9,42,22,34
+9,42,22,42
+9,42,23,33
+9,42,23,35
+9,42,23,38
+9,42,24,27
+9,42,24,39
+9,42,25,30
+9,42,26,28
+9,42,26,29
+9,42,26,32
+9,42,26,38
+9,42,27,39
+9,42,28,32
+9,42,28,33
+9,42,28,38
+9,42,29,32
+9,42,30,36
+9,42,31,34
+9,42,33,35
+9,42,33,38
+9,42,34,40
+9,42,35,41
+9,42,40,42
+10,45,1,5
+10,45,1,29
+10,45,1,36
+10,45,1,38
+10,45,1,43
+10,45,1,44
+10,45,2,18
+10,45,2,35
+10,45,2,37
+10,45,3,4
+10,45,3,11
+10,45,3,21
+10,45,3,22
+10,45,3,25
+10,45,3,40
+10,45,4,7
+10,45,4,14
+10,45,4,25
+10,45,4,43
+10,45,5,34
+10,45,5,38
+10,45,5,42
+10,45,6,8
+10,45,6,13
+10,45,6,26
+10,45,6,28
+10,45,6,30
+10,45,7,14
+10,45,7,15
+10,45,7,19
+10,45,7,41
+10,45,8,26
+10,45,8,45
+10,45,9,20
+10,45,9,23
+10,45,9,26
+10,45,9,27
+10,45,9,28
+10,45,9,31
+10,45,9,45
+10,45,10,18
+10,45,10,22
+10,45,11,12
+10,45,11,17
+10,45,11,21
+10,45,11,40
+10,45,12,17
+10,45,12,35
+10,45,12,37
+10,45,12,40
+10,45,13,15
+10,45,13,30
+10,45,14,36
+10,45,14,43
+10,45,15,19
+10,45,15,30
+10,45,15,39
+10,45,15,41
+10,45,16,24
+10,45,16,29
+10,45,16,31
+10,45,16,32
+10,45,16,33
+10,45,16,44
+10,45,17,21
+10,45,17,37
+10,45,17,42
+10,45,18,22
+10,45,18,35
+10,45,18,40
+10,45,19,23
+10,45,19,28
+10,45,19,30
+10,45,19,36
+10,45,20,23
+10,45,20,31
+10,45,20,33
+10,45,21,34
+10,45,21,42
+10,45,21,43
+10,45,22,25
+10,45,22,39
+10,45,22,41
+10,45,23,28
+10,45,23,44
+10,45,24,31
+10,45,24,32
+10,45,25,41
+10,45,26,28
+10,45,26,45
+10,45,27,31
+10,45,27,45
+10,45,28,30
+10,45,29,32
+10,45,29,38
+10,45,31,33
+10,45,33,44
+10,45,34,42
+10,45,34,43
+10,45,35,37
+10,45,35,40
+10,45,36,43
+10,45,36,44
+10,45,39,41
