@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Check, Download, Grid, ListOrdered, PlaySquare } from 'lucide-react';
 import {
   buildAdjacencyMap,
@@ -57,10 +57,15 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
 
   const rounds = materials?.rounds ?? [];
   const round = rounds[roundIndex] ?? null;
-  const adjacency = useMemo(
-    () => (round ? buildAdjacencyMap(round.mapData) : null),
-    [round],
-  );
+  const adjacency = round ? buildAdjacencyMap(round.mapData) : null;
+  const currentColors = round ? (history[historyIndex]?.regionColors ?? round.initialColors) : [];
+  const conflictEdges = adjacency ? getConflictEdges(adjacency, currentColors) : [];
+  const errorRegions = new Set<number>();
+  for (const [a, b] of conflictEdges) {
+    errorRegions.add(a);
+    errorRegions.add(b);
+  }
+  const isSolved = round ? conflictEdges.length === 0 : false;
 
   if (loadState === 'loading') {
     return (
@@ -83,18 +88,6 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
       </div>
     );
   }
-
-  const currentColors = history[historyIndex]?.regionColors ?? round.initialColors;
-  const conflictEdges = useMemo(() => getConflictEdges(adjacency, currentColors), [adjacency, currentColors]);
-  const errorRegions = useMemo(() => {
-    const set = new Set<number>();
-    for (const [a, b] of conflictEdges) {
-      set.add(a);
-      set.add(b);
-    }
-    return set;
-  }, [conflictEdges]);
-  const isSolved = conflictEdges.length === 0;
 
   const startExperiment = () => {
     setPhase('playing');
