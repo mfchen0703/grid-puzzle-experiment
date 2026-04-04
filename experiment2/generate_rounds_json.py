@@ -8,6 +8,7 @@ Output:
 from __future__ import annotations
 
 import json
+import itertools
 from pathlib import Path
 
 ROWS = 12
@@ -142,25 +143,51 @@ def get_conflict_edges(adjacency, colors):
     return conflicts
 
 
-def can_fix_in_one_move(adjacency, colors):
-    for region in range(len(colors)):
-        current_color = colors[region]
-        for color in range(len(COLORS)):
-            if color == current_color:
-                continue
-            candidate = list(colors)
-            candidate[region] = color
-            if not get_conflict_edges(adjacency, candidate):
-                return True
+def get_conflict_regions(conflict_edges):
+    regions = set()
+    for a, b in conflict_edges:
+        regions.add(a)
+        regions.add(b)
+    return regions
+
+
+def is_legal_state(adjacency, colors):
+    return len(get_conflict_edges(adjacency, colors)) == 0
+
+
+def get_relevant_search_regions(adjacency, conflict_edges, changed_regions):
+    relevant = set(changed_regions)
+    for a, b in conflict_edges:
+        relevant.add(a)
+        relevant.add(b)
+        relevant.update(adjacency[a])
+        relevant.update(adjacency[b])
+    return sorted(relevant)
+
+
+def has_solution_within_k_changes(adjacency, initial_colors, max_changes, region_ids):
+
+    for n_changes in range(1, max_changes + 1):
+        for changed_regions in itertools.combinations(region_ids, n_changes):
+            alternative_colors = [
+                [c for c in range(len(COLORS)) if c != initial_colors[region]]
+                for region in changed_regions
+            ]
+            for new_colors in itertools.product(*alternative_colors):
+                candidate = list(initial_colors)
+                for region, color in zip(changed_regions, new_colors):
+                    candidate[region] = color
+                if is_legal_state(adjacency, candidate):
+                    return True
     return False
 
 
 def build_conflict_start_state(adjacency, solved_colors, random):
     region_ids = list(range(len(solved_colors)))
 
-    for _ in range(4000):
+    for _ in range(8000):
         candidate = list(solved_colors)
-        change_count = 2 + int(random() * 4)
+        change_count = 4 + int(random() * 3)
         chosen_regions = shuffle(region_ids, random)[:change_count]
 
         for region in chosen_regions:
@@ -170,13 +197,25 @@ def build_conflict_start_state(adjacency, solved_colors, random):
             candidate[region] = preferred[0] if preferred else fallback[0]
 
         conflict_edges = get_conflict_edges(adjacency, candidate)
-        if len(conflict_edges) < 2:
+        if len(conflict_edges) < 3:
             continue
-        if can_fix_in_one_move(adjacency, candidate):
+        changed_regions = {idx for idx, (a, b) in enumerate(zip(candidate, solved_colors)) if a != b}
+        if len(changed_regions) < 4:
+            continue
+        conflict_regions = get_conflict_regions(conflict_edges)
+        if changed_regions.issubset(conflict_regions):
+            continue
+        relevant_regions = get_relevant_search_regions(adjacency, conflict_edges, changed_regions)
+        if has_solution_within_k_changes(
+            adjacency,
+            candidate,
+            max_changes=3,
+            region_ids=relevant_regions,
+        ):
             continue
         return candidate, conflict_edges
 
-    raise RuntimeError("Failed to build a planning-heavy initial state.")
+    raise RuntimeError("Failed to build a planning-heavy initial state with min distance > 3.")
 
 
 def build_rounds():
