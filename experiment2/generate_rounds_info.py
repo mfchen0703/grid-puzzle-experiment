@@ -43,6 +43,7 @@ def main() -> None:
     lines: list[str] = []
     for round_idx, round_data in enumerate(rounds):
         map_data = round_data["mapData"]
+        condition_type = round_data.get("conditionType", "unknown")
         num_regions = int(map_data["numRegions"])
         grid = map_data["grid"]
         adjacency_pairs = map_data["adjacencyPairs"]
@@ -54,6 +55,7 @@ def main() -> None:
         adjacency = build_adjacency_from_pairs(num_regions, adjacency_pairs)
 
         lines.append(f"===== Round {round_idx} ({num_regions} regions) =====")
+        lines.append(f"Condition: {condition_type}")
         lines.append("")
         lines.append("--- Regions (id: cells) ---")
         for region_id, cells in enumerate(regions):

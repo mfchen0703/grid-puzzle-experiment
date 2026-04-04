@@ -16,6 +16,10 @@ COLS = 20
 NUM_REGIONS = 45
 COLORS = ["#377eb8", "#4daf4a", "#984ea3", "#ffff33"]
 ROUND_SEEDS = [2021, 2037, 2053, 2069, 2081, 2099, 2111, 2137, 2153, 2179]
+ROUND_CONDITIONS = (
+    ["requires_nonconflict_region"] * 5
+    + ["requires_adjacent_nonconflict_pair"] * 5
+)
 
 
 def mulberry32(seed: int):
@@ -192,6 +196,15 @@ def exists_solution_only_changing_allowed(adjacency, initial_colors, allowed_reg
     return backtrack(0)
 
 
+def has_adjacent_nonconflict_pair(changed_regions, conflict_regions, adjacency):
+    nonconflict_changed = [r for r in changed_regions if r not in conflict_regions]
+    nonconflict_changed_set = set(nonconflict_changed)
+    for region in nonconflict_changed:
+        if adjacency[region] & nonconflict_changed_set:
+            return True
+    return False
+
+
 def get_relevant_search_regions(adjacency, conflict_edges, changed_regions):
     relevant = set(changed_regions)
     for a, b in conflict_edges:
@@ -219,13 +232,44 @@ def has_solution_within_k_changes(adjacency, initial_colors, max_changes, region
     return False
 
 
-def build_conflict_start_state(adjacency, solved_colors, random):
-    region_ids = list(range(len(solved_colors)))
+def legal_alternative_colors(region, current_colors, adjacency):
+    original = current_colors[region]
+    options = []
+    for color in range(len(COLORS)):
+        if color == original:
+            continue
+        if is_legal_color(region, color, adjacency, current_colors):
+            options.append(color)
+    return options
 
-    for _ in range(8000):
+
+def build_conflict_start_state(adjacency, solved_colors, random, condition_type):
+    region_ids = list(range(len(solved_colors)))
+    adjacency_edges = [(a, b) for a in region_ids for b in adjacency[a] if a < b]
+
+    max_attempts = 50000 if condition_type == "requires_adjacent_nonconflict_pair" else 8000
+
+    for _ in range(max_attempts):
         candidate = list(solved_colors)
-        change_count = 4 + int(random() * 3)
-        chosen_regions = shuffle(region_ids, random)[:change_count]
+        if condition_type == "requires_adjacent_nonconflict_pair":
+            core_a, core_b = shuffle(adjacency_edges, random)[0]
+            options_a = legal_alternative_colors(core_a, candidate, adjacency)
+            if not options_a:
+                continue
+            candidate[core_a] = shuffle(options_a, random)[0]
+            options_b = legal_alternative_colors(core_b, candidate, adjacency)
+            if not options_b:
+                continue
+            candidate[core_b] = shuffle(options_b, random)[0]
+            extra_count = 3 + int(random() * 2)
+            extra_regions = [
+                region for region in shuffle(region_ids, random)
+                if region not in {core_a, core_b}
+            ][:extra_count]
+            chosen_regions = extra_regions
+        else:
+            change_count = 4 + int(random() * 3)
+            chosen_regions = shuffle(region_ids, random)[:change_count]
 
         for region in chosen_regions:
             neighbor_colors = [candidate[neighbor] for neighbor in adjacency[region]]
@@ -252,6 +296,9 @@ def build_conflict_start_state(adjacency, solved_colors, random):
             region_ids=relevant_regions,
         ):
             continue
+        if condition_type == "requires_adjacent_nonconflict_pair":
+            if not has_adjacent_nonconflict_pair(changed_regions, conflict_regions, adjacency):
+                continue
         return candidate, conflict_edges
 
     raise RuntimeError("Failed to build a planning-heavy initial state with min distance > 3.")
@@ -259,13 +306,19 @@ def build_conflict_start_state(adjacency, solved_colors, random):
 
 def build_rounds():
     rounds = []
-    for seed in ROUND_SEEDS:
+    for seed, condition_type in zip(ROUND_SEEDS, ROUND_CONDITIONS):
         random = mulberry32(seed)
         map_data, adjacency = generate_map_data(NUM_REGIONS, random)
         solved_colors = solve_coloring(adjacency, random)
-        initial_colors, conflict_edges = build_conflict_start_state(adjacency, solved_colors, random)
+        initial_colors, conflict_edges = build_conflict_start_state(
+            adjacency,
+            solved_colors,
+            random,
+            condition_type=condition_type,
+        )
         rounds.append(
             {
+                "conditionType": condition_type,
                 "mapData": map_data,
                 "initialColors": initial_colors,
                 "solvedColors": solved_colors,
