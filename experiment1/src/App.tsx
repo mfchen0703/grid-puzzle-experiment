@@ -1,7 +1,7 @@
 import { Grid } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Experiment1Game from './Experiment1Game';
-import Experiment2Game from '../../experiment2/Experiment2Game';
+import Experiment2Game from './experiment2/Experiment2Game';
 
 type ExperimentChoice = 'experiment1' | 'experiment2';
 type Route = 'home' | ExperimentChoice;
