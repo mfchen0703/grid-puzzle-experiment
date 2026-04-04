@@ -1,12 +1,12 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Check, Download, Grid, ListOrdered, PlaySquare } from 'lucide-react';
 import {
-  buildExperiment2Rounds,
+  buildAdjacencyMap,
   CELL_SIZE,
   COLORS,
   COLS,
+  Experiment2Materials,
   ROWS,
-  getAdjacencyPairs,
   getConflictEdges,
 } from './gameLogic';
 
@@ -16,9 +16,9 @@ type HistoryEntry = {
   timeTakenMs?: number;
 };
 
-const ROUNDS = buildExperiment2Rounds();
-
 export default function Experiment2Game({ sessionId }: { sessionId: string }) {
+  const [materials, setMaterials] = useState<Experiment2Materials | null>(null);
+  const [loadState, setLoadState] = useState<'loading' | 'ready' | 'error'>('loading');
   const [phase, setPhase] = useState<'instruction' | 'playing' | 'finished'>('instruction');
   const [roundIndex, setRoundIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(0);
@@ -29,10 +29,63 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const [uploadStatus, setUploadStatus] = useState<'idle' | 'uploading' | 'success' | 'error'>('idle');
   const lastActionTime = useRef(Date.now());
 
-  const round = ROUNDS[roundIndex];
+  useEffect(() => {
+    let cancelled = false;
+    async function loadMaterials() {
+      setLoadState('loading');
+      try {
+        const res = await fetch(`${import.meta.env.BASE_URL}experiment2/rounds.json`);
+        if (!res.ok) {
+          throw new Error(`Failed to fetch rounds.json: ${res.status}`);
+        }
+        const data: Experiment2Materials = await res.json();
+        if (!cancelled) {
+          setMaterials(data);
+          setLoadState('ready');
+        }
+      } catch {
+        if (!cancelled) {
+          setLoadState('error');
+        }
+      }
+    }
+    loadMaterials();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const rounds = materials?.rounds ?? [];
+  const round = rounds[roundIndex] ?? null;
+  const adjacency = useMemo(
+    () => (round ? buildAdjacencyMap(round.mapData) : null),
+    [round],
+  );
+
+  if (loadState === 'loading') {
+    return (
+      <div className="min-h-screen bg-[#0f172a] text-white flex items-center justify-center p-6">
+        <div className="w-full max-w-2xl rounded-3xl border border-cyan-500/20 bg-slate-900/80 p-10 shadow-2xl text-center">
+          <div className="mb-4 text-3xl font-bold">实验 2 材料加载中</div>
+          <p className="text-slate-300">正在读取预生成的地图与初始颜色，请稍候。</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (loadState === 'error' || !materials || !round || !adjacency) {
+    return (
+      <div className="min-h-screen bg-[#0f172a] text-white flex items-center justify-center p-6">
+        <div className="w-full max-w-2xl rounded-3xl border border-red-500/20 bg-slate-900/80 p-10 shadow-2xl text-center">
+          <div className="mb-4 text-3xl font-bold">实验 2 加载失败</div>
+          <p className="text-slate-300">没有成功读取预生成材料。请刷新页面，或检查 `experiment1/public/experiment2/rounds.json` 是否存在。</p>
+        </div>
+      </div>
+    );
+  }
 
   const currentColors = history[historyIndex]?.regionColors ?? round.initialColors;
-  const conflictEdges = useMemo(() => getConflictEdges(round.mapData.adjacency, currentColors), [currentColors, round]);
+  const conflictEdges = useMemo(() => getConflictEdges(adjacency, currentColors), [adjacency, currentColors]);
   const errorRegions = useMemo(() => {
     const set = new Set<number>();
     for (const [a, b] of conflictEdges) {
@@ -47,7 +100,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     setPhase('playing');
     setRoundIndex(0);
     lastActionTime.current = Date.now();
-    setHistory([{ regionColors: [...ROUNDS[0].initialColors], moveDescription: `Game Started (45 regions, ${ROUNDS[0].conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
+    setHistory([{ regionColors: [...rounds[0].initialColors], moveDescription: `Game Started (45 regions, ${rounds[0].conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
     setGlobalHistory([]);
   };
@@ -82,11 +135,11 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const handleNextRound = () => {
     commitCurrentRound();
     const nextRoundIndex = roundIndex + 1;
-    if (nextRoundIndex >= ROUNDS.length) {
+    if (nextRoundIndex >= rounds.length) {
       setPhase('finished');
       return;
     }
-    const nextRound = ROUNDS[nextRoundIndex];
+    const nextRound = rounds[nextRoundIndex];
     setRoundIndex(nextRoundIndex);
     setHistory([{ regionColors: [...nextRound.initialColors], moveDescription: `Game Started (45 regions, ${nextRound.conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
@@ -110,7 +163,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
 
     csvContent += '\n[InitialState]\n';
     csvContent += 'Round,Region,InitialColor\n';
-    ROUNDS.forEach((roundData, idx) => {
+    rounds.forEach((roundData, idx) => {
       roundData.initialColors.forEach((color, region) => {
         csvContent += `${idx + 1},${region + 1},${color + 1}\n`;
       });
@@ -118,8 +171,8 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
 
     csvContent += '\n[Adjacency]\n';
     csvContent += 'Round,NumRegions,Region_A,Region_B\n';
-    ROUNDS.forEach((roundData, idx) => {
-      for (const [a, b] of getAdjacencyPairs(roundData.mapData.adjacency)) {
+    rounds.forEach((roundData, idx) => {
+      for (const [a, b] of roundData.mapData.adjacencyPairs) {
         csvContent += `${idx + 1},45,${a + 1},${b + 1}\n`;
       }
     });
@@ -158,7 +211,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
             <p><strong>目标：</strong>地图一开始已经全部着色，但存在若干颜色冲突。你的任务是修改颜色，使整个地图最终没有任何相邻同色。</p>
             <p><strong>关键点：</strong>不只是当前冲突的区域可能需要修改，一些当前看起来没冲突的区域也可能必须改色，才能让整张图恢复合法。</p>
             <p><strong>操作方法：</strong>先选择一种颜色，再点击地图中的区域，将该区域改成所选颜色。</p>
-            <p><strong>实验流程：</strong>共 10 轮正式实验，每轮都是 45 个区域。每轮初始地图都含有需要规划的冲突结构。</p>
+            <p><strong>实验流程：</strong>共 {rounds.length} 轮正式实验，每轮都是 45 个区域。每轮初始地图都含有需要规划的冲突结构。</p>
             <p className="text-amber-300">注意：你的所有修改步骤和用时都会被记录。</p>
           </div>
           <button
@@ -188,7 +241,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
         <div className="bg-cyan-950/80 text-cyan-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-cyan-500/30 mb-8 w-full" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
           <div className="flex items-center gap-2 font-bold">
             <ListOrdered size={18} />
-            第 {roundIndex + 1} 轮 / 共 {ROUNDS.length} 轮
+            第 {roundIndex + 1} 轮 / 共 {rounds.length} 轮
             <span className="ml-2 px-2 py-0.5 bg-cyan-900 rounded text-xs">ID: {sessionId}</span>
           </div>
           <div className="text-sm font-medium opacity-90 bg-cyan-950/50 px-3 py-1 rounded-md">
@@ -232,9 +285,24 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
                     {isHovered && !isSolved && <div className="absolute inset-0 bg-white/20 pointer-events-none" />}
                     {isError && (
                       <div
-                        className="absolute inset-0 pointer-events-none"
+                        className="absolute inset-0 pointer-events-none box-border"
                         style={{
-                          boxShadow: 'inset 0 0 0 3px #ef4444',
+                          borderTop:
+                            r === 0 || round.mapData.grid[r - 1][c] !== regionId
+                              ? '3px solid #ef4444'
+                              : 'none',
+                          borderBottom:
+                            r === ROWS - 1 || round.mapData.grid[r + 1][c] !== regionId
+                              ? '3px solid #ef4444'
+                              : 'none',
+                          borderLeft:
+                            c === 0 || round.mapData.grid[r][c - 1] !== regionId
+                              ? '3px solid #ef4444'
+                              : 'none',
+                          borderRight:
+                            c === COLS - 1 || round.mapData.grid[r][c + 1] !== regionId
+                              ? '3px solid #ef4444'
+                              : 'none',
                         }}
                       />
                     )}
@@ -247,11 +315,11 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
           {isSolved && (
             <div className="absolute inset-0 bg-black/15 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
               <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-emerald-600 flex items-center gap-3">
-                <Check size={40} strokeWidth={3} /> {roundIndex === ROUNDS.length - 1 ? '实验完成！' : '本轮完成！'}
+                <Check size={40} strokeWidth={3} /> {roundIndex === rounds.length - 1 ? '实验完成！' : '本轮完成！'}
               </div>
-              {roundIndex < ROUNDS.length - 1 ? (
+              {roundIndex < rounds.length - 1 ? (
                 <button onClick={handleNextRound} className="flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-full text-lg font-semibold hover:bg-emerald-700 transition-colors shadow-lg">
-                  <PlaySquare size={20} /> 下一轮 ({roundIndex + 2}/{ROUNDS.length})
+                  <PlaySquare size={20} /> 下一轮 ({roundIndex + 2}/{rounds.length})
                 </button>
               ) : (
                 <>

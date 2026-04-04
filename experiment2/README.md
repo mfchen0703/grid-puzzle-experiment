@@ -6,5 +6,11 @@
 
 - `experiment1/src/experiment2/Experiment2Game.tsx`
 - `experiment1/src/experiment2/gameLogic.ts`
+- `experiment1/public/experiment2/rounds.json`
 
 这样做的原因是 GitHub Pages 的构建只会在 `experiment1/` 下安装依赖；如果运行时代码放在仓库根目录的 `experiment2/`，CI 无法稳定解析 `react` 依赖。
+
+为了避免实验 2 在浏览器里现场生成 10 轮 45-region 材料，现在使用静态预生成文件：
+
+- `experiment2/generate_rounds_json.py` 负责生成材料
+- 页面运行时只读取 `experiment1/public/experiment2/rounds.json`
