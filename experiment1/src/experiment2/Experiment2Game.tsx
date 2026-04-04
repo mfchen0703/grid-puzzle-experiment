@@ -230,7 +230,14 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
                     onClick={() => handleRegionClick(regionId)}
                   >
                     {isHovered && !isSolved && <div className="absolute inset-0 bg-white/20 pointer-events-none" />}
-                    {isError && <div className="absolute inset-0 bg-red-500/55 pointer-events-none" />}
+                    {isError && (
+                      <div
+                        className="absolute inset-0 pointer-events-none"
+                        style={{
+                          boxShadow: 'inset 0 0 0 3px #ef4444',
+                        }}
+                      />
+                    )}
                   </div>
                 );
               }),
