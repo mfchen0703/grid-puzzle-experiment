@@ -1,0 +1,10 @@
+round,n_steps,steps_with_any_depth0_action,steps_with_no_depth0_action,share_steps_with_any_depth0_action,selected_action_depth0_steps,share_selected_action_depth0_steps,selected_successor_has_depth0_steps,share_selected_successor_has_depth0_steps,ever_no_depth0_action,first_step_with_no_depth0_action,all_steps_have_depth0_action
+13,100,100,0,1.0,1,0.01,100,1.0,False,,True
+20,100,100,0,1.0,0,0.0,100,1.0,False,,True
+34,100,100,0,1.0,1,0.01,100,1.0,False,,True
+36,100,100,0,1.0,0,0.0,100,1.0,False,,True
+69,100,100,0,1.0,0,0.0,100,1.0,False,,True
+76,100,100,0,1.0,1,0.01,100,1.0,False,,True
+81,100,100,0,1.0,2,0.02,100,1.0,False,,True
+86,100,100,0,1.0,2,0.02,100,1.0,False,,True
+98,100,100,0,1.0,3,0.03,100,1.0,False,,True

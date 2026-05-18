@@ -1,0 +1,25 @@
+{
+  "agent": "tree",
+  "fit_method": "bads",
+  "true": {
+    "pruning_thresh": 0.0,
+    "gamma": 0.2,
+    "lapse_rate": 0.05
+  },
+  "best": {
+    "pruning_thresh": 0.1574554443359375,
+    "gamma": 0.22033233642578126,
+    "lapse_rate": 0.06251129608154296
+  },
+  "nll": 1540.9179720106654,
+  "n_actions": 1491,
+  "n_workers": 64,
+  "parallel_backend": "process",
+  "cpp_hsp2_ibs": false,
+  "cpp_hsp2_exact": false,
+  "python_hsp2_exact": false,
+  "cpp_tree_ibs": true,
+  "ibs_max_tries": 100,
+  "observed_path": "experiment2/generated_tree_agent_failed_maps/solver_validation/tree_cpp_recovery_p0.0_g0.2_l0.05_synthetic_actions.csv",
+  "fit_path": "experiment2/generated_tree_agent_failed_maps/solver_validation/tree_cpp_recovery_p0.0_g0.2_l0.05_fit.csv"
+}

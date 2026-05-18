@@ -1,0 +1,13 @@
+# Core numerical/data stack
+numpy>=1.22
+pandas>=2.0
+scipy>=1.10
+
+# Plotting and notebook support
+matplotlib>=3.7
+nbformat>=5.9
+notebook>=7.0
+ipykernel>=6.0
+
+# Continuous optimizer for Experiment 2 parameter recovery
+pybads>=1.0.6

@@ -1,0 +1,12 @@
+﻿round,seed,optimalLength,optimal_first_action_region,optimal_first_action_color,has_depth6_optimal_path,n_action_steps
+13,9023,4,22.0,3.0,True,100
+20,9035,4,,,False,100
+30,9053,4,9.0,1.0,True,100
+33,9056,4,26.0,3.0,True,100
+34,9057,4,23.0,0.0,True,100
+36,9061,4,,,False,100
+69,9058,5,,,False,100
+76,9088,5,,,False,100
+81,9008,6,,,False,100
+86,9028,6,,,False,100
+98,9090,6,,,False,100

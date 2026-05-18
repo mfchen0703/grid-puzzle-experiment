@@ -1,0 +1,18 @@
+{
+  "agent": "tree",
+  "fit_method": "bads",
+  "true": {
+    "pruning_thresh": 2.0,
+    "gamma": 0.1,
+    "lapse_rate": 0.05
+  },
+  "best": {
+    "pruning_thresh": 2.256591796875,
+    "gamma": 0.15712890625,
+    "lapse_rate": 0.0031507324218749966
+  },
+  "nll": 2.5,
+  "n_actions": 4,
+  "observed_path": "/Users/akira1/Documents/26\u6625/codes/grid-puzzle-experiment-main/experiment2/generated_tree_agent_failed_maps/solver_validation/tree_parameter_recovery_bads_synthetic_actions.csv",
+  "fit_path": "/Users/akira1/Documents/26\u6625/codes/grid-puzzle-experiment-main/experiment2/generated_tree_agent_failed_maps/solver_validation/tree_parameter_recovery_bads_fit.csv"
+}

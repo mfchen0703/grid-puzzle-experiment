@@ -1,0 +1,5 @@
+﻿category,n,rounds
+selected_failed_all_pruning_1_2_5,10,1 3 4 6 7 8 9 10 11 12
+available_failed_all_pruning_1_2_5,28,1 3 4 6 7 8 9 10 11 12 14 15 16 17 18 19 20 23 24 25 26 27 28 30 32 34 35 36
+deleted_solved_any_pruning_1_2_5,8,2 5 13 21 22 29 31 33
+unselected_failed_all_pruning_1_2_5,18,14 15 16 17 18 19 20 23 24 25 26 27 28 30 32 34 35 36

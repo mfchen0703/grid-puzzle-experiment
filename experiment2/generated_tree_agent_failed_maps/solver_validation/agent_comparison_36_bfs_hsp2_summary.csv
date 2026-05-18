@@ -1,0 +1,4 @@
+﻿strategy,n_maps,success_n,success_rate,mean_steps,median_steps,max_steps,mean_final_conflicts
+tree,36,6,0.16666666666666666,84.583,100.0,100,1.417
+hsp2,36,36,1.0,6.611,6.0,12,0
+eflop,36,36,1.0,10.861,10.0,22,0

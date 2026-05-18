@@ -1,0 +1,14 @@
+﻿n_iterations,round,seed,optimalLength,solved,n_agent_steps,final_conflict_edges,reason,elapsed_seconds
+50,20,9035,4,False,100,4,max_steps_100_unsolved,19.3788
+50,30,9053,4,False,100,4,max_steps_100_unsolved,17.8109
+50,33,9056,4,False,100,5,max_steps_100_unsolved,21.8628
+50,34,9057,4,False,100,4,max_steps_100_unsolved,21.6778
+50,77,9096,5,False,100,6,max_steps_100_unsolved,22.1102
+50,86,9028,6,False,100,4,max_steps_100_unsolved,20.103
+100,20,9035,4,False,100,4,max_steps_100_unsolved,44.7121
+100,30,9053,4,False,100,5,max_steps_100_unsolved,37.4606
+100,33,9056,4,False,100,5,max_steps_100_unsolved,53.051
+100,69,9058,5,False,100,6,max_steps_100_unsolved,27.5093
+100,76,9088,5,False,100,7,max_steps_100_unsolved,35.2533
+100,81,9008,6,False,100,5,max_steps_100_unsolved,37.6704
+100,98,9090,6,False,100,7,max_steps_100_unsolved,39.9923

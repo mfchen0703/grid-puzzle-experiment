@@ -1,0 +1,11 @@
+﻿round,original_round,seed,conditionType,source,initial_conflicts,optimalLength
+1,1,9005,requires_adjacent_nonconflict_pair,existing_unsolved,5,4
+2,3,9023,requires_adjacent_nonconflict_pair,existing_unsolved,4,4
+3,4,9035,requires_adjacent_nonconflict_pair,existing_unsolved,4,4
+4,6,9053,requires_adjacent_nonconflict_pair,existing_unsolved,6,4
+5,7,9055,requires_adjacent_nonconflict_pair,existing_unsolved,5,4
+6,8,9056,requires_nonconflict_region,existing_unsolved,7,4
+7,9,9057,requires_adjacent_nonconflict_pair,existing_unsolved,4,4
+8,10,9061,requires_adjacent_nonconflict_pair,existing_unsolved,4,4
+9,11,9067,requires_adjacent_nonconflict_pair,existing_unsolved,4,4
+10,12,9069,requires_adjacent_nonconflict_pair,existing_unsolved,4,4

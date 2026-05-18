@@ -1,0 +1,9 @@
+round,seed,final_conflicts,dfs_found_d6,dfs_len_d6,dfs_first_action_d6,dfs_found_d8,dfs_len_d8,dfs_first_action_d8,dfs_found_d10,dfs_len_d10,dfs_first_action_d10,dfs_found_d12,dfs_len_d12,dfs_first_action_d12
+13,9023,1,True,5,0->0,True,7,0->0,True,9,0->0,True,11,0->0
+36,9061,1,False,,,False,,,False,,,False,,
+41,9069,1,False,,,False,,,False,,,False,,
+69,9058,1,False,,,False,,,False,,,False,,
+76,9088,1,False,,,False,,,True,10,42->1,True,12,22->3
+77,9096,1,False,,,False,,,False,,,False,,
+81,9008,1,False,,,False,,,False,,,False,,
+86,9028,1,False,,,False,,,False,,,False,,

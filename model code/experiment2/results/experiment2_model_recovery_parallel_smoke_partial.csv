@@ -1,0 +1,3 @@
+﻿task_id,random_seed,true_pruning_thresh,true_gamma,true_lapse_rate,true_region_preserve,true_color_preserve,hat_pruning_thresh,hat_gamma,hat_lapse_rate,hat_region_preserve,hat_color_preserve,ll,nll,n_actions,converged
+0,1,0.0,0.1,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,-2258.055974288992,2258.055974288992,1042,True
+1,1,0.0,0.1,0.1,0.0,0.0,0.0,0.1,0.1,0.0,0.0,-1408.9690241178919,1408.9690241178919,666,True

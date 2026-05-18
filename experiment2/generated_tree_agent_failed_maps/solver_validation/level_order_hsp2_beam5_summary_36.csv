@@ -1,0 +1,2 @@
+﻿strategy,n_maps,ok_n,timeout_n,success_n,success_rate,mean_steps_success,median_steps_success,max_steps_success,mean_expansions_ok,max_expansions_ok
+level_order_hsp2_beam5,36,36,0,36,1.0,6.611,6.0,12,13.75,37

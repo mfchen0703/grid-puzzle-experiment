@@ -1,0 +1,2 @@
+﻿agent,n_maps,success_n,success_rate,mean_steps,median_steps,max_steps,mean_final_conflicts,mean_elapsed_seconds,max_elapsed_seconds
+fourinarow_style_bfs_tree_agent,36,2,0.05555555555555555,94.75,100.0,100,1.611,1.552,2.99

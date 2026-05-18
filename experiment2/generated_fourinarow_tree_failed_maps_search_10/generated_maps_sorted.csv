@@ -1,0 +1,11 @@
+﻿round,seed,seedAttemptIndex,difficultyLabel,difficultyScore,conditionType,generationMode,optimalLength,planningRequirementCollected,initialConflictEdges,searchNodes,elapsedSeconds
+1,10001,2,medium,4.1,requires_adjacent_nonconflict_pair,legacy,4,1,4,2369,0.7478
+2,10002,3,medium,5.1,requires_nonconflict_region,legacy,5,1,7,3939,1.2291
+3,10003,4,medium,4.1,requires_adjacent_nonconflict_pair,legacy,4,1,6,1920,0.7107
+4,10010,11,medium,5.1,requires_nonconflict_region,legacy,5,1,7,4994,0.5346
+5,10015,16,medium,4.1,requires_adjacent_nonconflict_pair,legacy,4,1,4,1321,0.8662
+6,10016,17,other,6.1,requires_nonconflict_region,legacy,6,1,7,13929,1.3057
+7,10023,24,medium,4.1,requires_adjacent_nonconflict_pair,legacy,4,1,5,3397,1.0906
+8,10024,25,medium,5.1,requires_nonconflict_region,legacy,5,1,7,1709,0.9163
+9,10025,26,medium,4.1,requires_adjacent_nonconflict_pair,legacy,4,1,4,924,0.594
+10,10035,36,medium,4.1,requires_adjacent_nonconflict_pair,legacy,4,1,6,2768,1.4465

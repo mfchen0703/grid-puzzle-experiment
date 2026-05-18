@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Check, Download, Grid, ListOrdered, PlaySquare } from 'lucide-react';
+import { Check, Download, Grid, ListOrdered, PlaySquare, RotateCcw, SkipForward } from 'lucide-react';
 import {
   buildAdjacencyMap,
   CELL_SIZE,
@@ -16,6 +16,8 @@ type HistoryEntry = {
   timeTakenMs?: number;
 };
 
+const ROUND_SKIP_DELAY_MS = 3 * 60 * 1000;
+
 export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const [materials, setMaterials] = useState<Experiment2Materials | null>(null);
   const [loadState, setLoadState] = useState<'loading' | 'ready' | 'error'>('loading');
@@ -27,6 +29,8 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const [historyIndex, setHistoryIndex] = useState(0);
   const [globalHistory, setGlobalHistory] = useState<Array<HistoryEntry & { round: string }>>([]);
   const [uploadStatus, setUploadStatus] = useState<'idle' | 'uploading' | 'success' | 'error'>('idle');
+  const [roundStartedAt, setRoundStartedAt] = useState(Date.now());
+  const [nowMs, setNowMs] = useState(Date.now());
   const lastActionTime = useRef(Date.now());
 
   useEffect(() => {
@@ -66,6 +70,22 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     errorRegions.add(b);
   }
   const isSolved = round ? conflictEdges.length === 0 : false;
+  const roundSkipped = history[historyIndex]?.moveDescription.startsWith('Round Skipped') ?? false;
+  const roundComplete = isSolved || roundSkipped;
+  const skipRemainingMs = Math.max(0, ROUND_SKIP_DELAY_MS - (phase === 'playing' ? nowMs - roundStartedAt : 0));
+  const canSkipRound = phase === 'playing' && !roundComplete && skipRemainingMs === 0;
+
+  useEffect(() => {
+    if (phase !== 'playing' || roundComplete) {
+      return;
+    }
+    const timer = window.setInterval(() => {
+      setNowMs(Date.now());
+    }, 1000);
+    return () => {
+      window.clearInterval(timer);
+    };
+  }, [phase, roundComplete, roundIndex]);
 
   if (loadState === 'loading') {
     return (
@@ -90,16 +110,19 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   }
 
   const startExperiment = () => {
+    const startedAt = Date.now();
     setPhase('playing');
     setRoundIndex(0);
-    lastActionTime.current = Date.now();
+    setRoundStartedAt(startedAt);
+    setNowMs(startedAt);
+    lastActionTime.current = startedAt;
     setHistory([{ regionColors: [...rounds[0].initialColors], moveDescription: `Game Started (45 regions, ${rounds[0].conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
     setGlobalHistory([]);
   };
 
   const handleRegionClick = (regionId: number) => {
-    if (phase !== 'playing' || isSolved || currentColors[regionId] === selectedColor) {
+    if (phase !== 'playing' || roundComplete || currentColors[regionId] === selectedColor) {
       return;
     }
     const nextColors = [...currentColors];
@@ -117,12 +140,34 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     setHistoryIndex(newHistory.length - 1);
   };
 
-  const commitCurrentRound = () => {
-    const roundHistory = history.slice(0, historyIndex + 1).map((entry) => ({
+  const handleResetRound = () => {
+    if (phase !== 'playing' || roundComplete) {
+      return;
+    }
+    const now = Date.now();
+    const timeTakenMs = now - lastActionTime.current;
+    lastActionTime.current = now;
+    const resetColors = [...round.initialColors];
+    const newHistory = history.slice(0, historyIndex + 1);
+    newHistory.push({
+      regionColors: resetColors,
+      moveDescription: 'Round Reset',
+      timeTakenMs,
+    });
+    setHistory(newHistory);
+    setHistoryIndex(newHistory.length - 1);
+  };
+
+  const commitRoundHistory = (roundHistory: HistoryEntry[], committedRoundIndex: number) => {
+    const committedHistory = roundHistory.map((entry) => ({
       ...entry,
-      round: `${roundIndex + 1}`,
+      round: `${committedRoundIndex + 1}`,
     }));
-    setGlobalHistory((prev) => [...prev, ...roundHistory]);
+    setGlobalHistory((prev) => [...prev, ...committedHistory]);
+  };
+
+  const commitCurrentRound = () => {
+    commitRoundHistory(history.slice(0, historyIndex + 1), roundIndex);
   };
 
   const handleNextRound = () => {
@@ -133,10 +178,31 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
       return;
     }
     const nextRound = rounds[nextRoundIndex];
+    const startedAt = Date.now();
     setRoundIndex(nextRoundIndex);
     setHistory([{ regionColors: [...nextRound.initialColors], moveDescription: `Game Started (45 regions, ${nextRound.conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
     setHistoryIndex(0);
-    lastActionTime.current = Date.now();
+    setRoundStartedAt(startedAt);
+    setNowMs(startedAt);
+    lastActionTime.current = startedAt;
+  };
+
+  const handleSkipRound = () => {
+    if (!canSkipRound) {
+      return;
+    }
+    const now = Date.now();
+    const timeTakenMs = now - lastActionTime.current;
+    lastActionTime.current = now;
+    setNowMs(now);
+    const skippedHistory = history.slice(0, historyIndex + 1);
+    skippedHistory.push({
+      regionColors: [...currentColors],
+      moveDescription: 'Round Skipped After 3 Minutes',
+      timeTakenMs,
+    });
+    setHistory(skippedHistory);
+    setHistoryIndex(skippedHistory.length - 1);
   };
 
   const handleExportCSV = async () => {
@@ -147,27 +213,20 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     const allHistory = [...globalHistory, ...currentRoundHistory];
 
     let csvContent = '[Actions]\n';
-    csvContent += 'SessionID,Experiment,Round,NumRegions,Step,Action,TimeTaken(s)\n';
+    csvContent += 'SessionID,Experiment,Round,Step,Action,ConflictRegions,TimeTaken(s)\n';
     allHistory.forEach((entry, idx) => {
       const time = entry.timeTakenMs ? (entry.timeTakenMs / 1000).toFixed(1) : '0.0';
       const desc = `"${entry.moveDescription.replace(/"/g, '""')}"`;
-      csvContent += `${sessionId},experiment2,${entry.round},45,${idx},${desc},${time}\n`;
-    });
-
-    csvContent += '\n[InitialState]\n';
-    csvContent += 'Round,Region,InitialColor\n';
-    rounds.forEach((roundData, idx) => {
-      roundData.initialColors.forEach((color, region) => {
-        csvContent += `${idx + 1},${region + 1},${color + 1}\n`;
-      });
-    });
-
-    csvContent += '\n[Adjacency]\n';
-    csvContent += 'Round,NumRegions,Region_A,Region_B\n';
-    rounds.forEach((roundData, idx) => {
-      for (const [a, b] of roundData.mapData.adjacencyPairs) {
-        csvContent += `${idx + 1},45,${a + 1},${b + 1}\n`;
+      const stepRound = rounds[Number(entry.round) - 1];
+      const stepAdjacency = buildAdjacencyMap(stepRound.mapData);
+      const stepConflicts = getConflictEdges(stepAdjacency, entry.regionColors);
+      const conflictRegions = new Set<number>();
+      for (const [a, b] of stepConflicts) {
+        conflictRegions.add(a + 1);
+        conflictRegions.add(b + 1);
       }
+      const conflictText = `"${Array.from(conflictRegions).sort((a, b) => a - b).join(' ')}"`;
+      csvContent += `${sessionId},experiment2,${entry.round},${idx},${desc},${conflictText},${time}\n`;
     });
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -205,6 +264,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
             <p><strong>关键点：</strong>不只是当前冲突的区域可能需要修改，一些当前看起来没冲突的区域也可能必须改色，才能让整张图恢复合法。</p>
             <p><strong>操作方法：</strong>先选择一种颜色，再点击地图中的区域，将该区域改成所选颜色。</p>
             <p><strong>实验流程：</strong>共 {rounds.length} 轮正式实验，每轮都是 45 个区域。每轮初始地图都含有需要规划的冲突结构。</p>
+            <p><strong>跳过规则：</strong>如果某一轮超过 3 分钟仍未完成，可以点击“跳过本轮”继续下一轮。</p>
             <p className="text-amber-300">注意：你的所有修改步骤和用时都会被记录。</p>
           </div>
           <button
@@ -267,12 +327,12 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
                       borderBottom: r === ROWS - 1 || round.mapData.grid[r + 1][c] !== regionId ? '2px solid #0f172a' : 'none',
                       borderLeft: c === 0 || round.mapData.grid[r][c - 1] !== regionId ? '2px solid #0f172a' : 'none',
                       borderRight: c === COLS - 1 || round.mapData.grid[r][c + 1] !== regionId ? '2px solid #0f172a' : 'none',
-                      cursor: isSolved ? 'default' : 'pointer',
+                      cursor: roundComplete ? 'default' : 'pointer',
                     }}
                     onMouseEnter={() => setHoveredRegion(regionId)}
                     onClick={() => handleRegionClick(regionId)}
                   >
-                    {isHovered && !isSolved && <div className="absolute inset-0 bg-white/20 pointer-events-none" />}
+                    {isHovered && !roundComplete && <div className="absolute inset-0 bg-white/20 pointer-events-none" />}
                     {isError && (
                       <div
                         className="absolute inset-0 pointer-events-none box-border"
@@ -302,10 +362,10 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
             )}
           </div>
 
-          {isSolved && (
+          {roundComplete && (
             <div className="absolute inset-0 bg-black/15 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
               <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-emerald-600 flex items-center gap-3">
-                <Check size={40} strokeWidth={3} /> {roundIndex === rounds.length - 1 ? '实验完成！' : '本轮完成！'}
+                <Check size={40} strokeWidth={3} /> {roundIndex === rounds.length - 1 ? '实验完成！' : roundSkipped ? '本轮已跳过' : '本轮完成！'}
               </div>
               {roundIndex < rounds.length - 1 ? (
                 <button onClick={handleNextRound} className="flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-full text-lg font-semibold hover:bg-emerald-700 transition-colors shadow-lg">
@@ -325,7 +385,26 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
           )}
         </div>
 
-        <div className="flex gap-5 justify-center mt-10">
+        <div className="mt-10 flex flex-col items-center gap-5">
+          <button
+            onClick={handleResetRound}
+            disabled={roundComplete}
+            className="flex items-center gap-2 rounded-xl border border-amber-400/40 bg-amber-500/15 px-5 py-3 text-amber-100 shadow-lg transition-colors hover:bg-amber-500/25 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            <RotateCcw size={18} />
+            重置本轮
+          </button>
+
+          <button
+            onClick={handleSkipRound}
+            disabled={!canSkipRound}
+            className="flex items-center gap-2 rounded-xl border border-slate-400/40 bg-slate-500/15 px-5 py-3 text-slate-100 shadow-lg transition-colors hover:bg-slate-500/25 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            <SkipForward size={18} />
+            跳过本轮
+          </button>
+
+          <div className="flex gap-5 justify-center">
           {COLORS.map((color, idx) => (
             <button
               key={color}
@@ -335,6 +414,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
               title={`颜色 ${idx + 1}`}
             />
           ))}
+          </div>
         </div>
       </main>
     </div>

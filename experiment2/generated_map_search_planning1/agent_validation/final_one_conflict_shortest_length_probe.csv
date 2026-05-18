@@ -1,0 +1,9 @@
+round,seed,conditionType,final_conflicts,shortest_from_final_state_leq12,first_action,elapsed_seconds
+13,9023,requires_adjacent_nonconflict_pair,1,8,11->0,4.2964
+36,9061,requires_nonconflict_region,0,0,,2.3287
+41,9092,requires_nonconflict_region,1,,,3.7535
+69,9058,requires_nonconflict_region,1,,,8.3346
+76,9088,requires_nonconflict_region,1,11,27->0,21.7482
+77,9032,requires_nonconflict_region,0,0,,1.8488
+81,9008,requires_nonconflict_region,1,,,4.871
+86,9028,requires_nonconflict_region,1,,,13.7629

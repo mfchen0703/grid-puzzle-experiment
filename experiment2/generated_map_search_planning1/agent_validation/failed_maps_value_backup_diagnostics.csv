@@ -1,0 +1,10 @@
+round,seed,optimalLength,optimal_first_action_region,optimal_first_action_color,n_action_steps,solution_visible_steps,first_solution_visible_step,correct_child_visible_steps,first_visible_step,correct_child_selected_steps,first_selected_step,correct_child_best_score_steps,min_correct_heur_rank,median_correct_heur_rank,min_correct_score_rank,median_correct_score_rank,mean_correct_heuristic_score,mean_top_heuristic_score,top_repeated_action_region,top_repeated_action_color,top_repeated_action_share,top_repeated_state_share,diagnosis
+13,9023,4,22,3,100,0,,2,0,1,1,1,1,1.5,2,7.0,1.5,1.663333333333333,37,3,0.49,0.49,correct_child_selected_but_still_failed
+20,9035,4,,,100,0,,0,,0,,0,,,,,,2.0,16,3,0.5,0.5,no_optimal_path_found_depth6
+34,9057,4,23,0,100,0,,100,0,0,,0,3,3.0,13,13.0,1.005,1.6649999999999998,5,2,0.5,0.5,correct_child_visible_but_never_selected
+36,9061,4,,,100,0,,0,,0,,0,,,,,,2.0,24,1,0.5,0.5,no_optimal_path_found_depth6
+69,9058,5,,,100,0,,0,,0,,0,,,,,,2.0,20,3,0.5,0.5,no_optimal_path_found_depth6
+76,9088,5,,,100,0,,0,,0,,0,,,,,,1.9966666666666666,22,2,0.5,0.5,no_optimal_path_found_depth6
+81,9008,6,,,100,0,,0,,0,,0,,,,,,1.9946666666666666,6,2,0.49,0.49,no_optimal_path_found_depth6
+86,9028,6,,,100,0,,0,,0,,0,,,,,,1.6623333333333332,22,3,0.49,0.49,no_optimal_path_found_depth6
+98,9090,6,,,100,0,,0,,0,,0,,,,,,1.7903333333333333,14,0,0.48,0.48,no_optimal_path_found_depth6

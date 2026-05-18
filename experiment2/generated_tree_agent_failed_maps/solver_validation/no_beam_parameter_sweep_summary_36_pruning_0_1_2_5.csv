@@ -1,0 +1,9 @@
+﻿agent,pruning_thresh,beam,n_maps,ok_n,timeout_n,success_n,success_rate,mean_steps_success,median_steps_success,max_steps_success,mean_expansions_ok,max_expansions_ok
+tree_guided_bfs,best_only,off,36,36,0,18,0.5,6,6.0,8,1116.139,5000
+tree_guided_bfs,1,off,36,36,0,21,0.583,4.905,5,7,2644.333,5000
+tree_guided_bfs,2,off,36,36,0,21,0.583,4.905,5,7,2657.917,5000
+tree_guided_bfs,5,off,36,36,0,21,0.583,4.905,5,7,2657.917,5000
+hsp2_bfs,best_only,off,36,36,0,35,0.972,7.514,7,15,13.75,110
+hsp2_bfs,1,off,36,35,1,35,0.972,6.571,7,12,16.486,65
+hsp2_bfs,2,off,36,36,0,36,1.0,6.556,6.5,12,53.083,552
+hsp2_bfs,5,off,36,29,7,29,0.806,5.724,6,8,70.931,363

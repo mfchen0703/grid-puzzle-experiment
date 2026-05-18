@@ -1,0 +1,31 @@
+﻿round,condition,heuristic_weights,rendered_action_steps,trace_final_status,final_conflict_edges_in_trace,max_steps,max_depth,n_iterations,pruning_thresh
+1,默认,,7,solved,0,20,4,20,0.0
+1,区域保持高,{'region_preserve': 2.0},6,solved,0,20,4,20,0.0
+1,颜色保持高,{'color_preserve': 0.02},20,action,1,20,4,20,0.0
+2,默认,,4,solved,0,20,4,20,0.0
+2,区域保持高,{'region_preserve': 2.0},4,solved,0,20,4,20,0.0
+2,颜色保持高,{'color_preserve': 0.02},4,solved,0,20,4,20,0.0
+3,默认,,5,solved,0,20,4,20,0.0
+3,区域保持高,{'region_preserve': 2.0},4,solved,0,20,4,20,0.0
+3,颜色保持高,{'color_preserve': 0.02},4,solved,0,20,4,20,0.0
+4,默认,,4,solved,0,20,4,20,0.0
+4,区域保持高,{'region_preserve': 2.0},4,solved,0,20,4,20,0.0
+4,颜色保持高,{'color_preserve': 0.02},8,solved,0,20,4,20,0.0
+5,默认,,6,solved,0,20,4,20,0.0
+5,区域保持高,{'region_preserve': 2.0},6,solved,0,20,4,20,0.0
+5,颜色保持高,{'color_preserve': 0.02},6,solved,0,20,4,20,0.0
+6,默认,,11,solved,0,20,4,20,0.0
+6,区域保持高,{'region_preserve': 2.0},12,solved,0,20,4,20,0.0
+6,颜色保持高,{'color_preserve': 0.02},20,action,1,20,4,20,0.0
+7,默认,,5,solved,0,20,4,20,0.0
+7,区域保持高,{'region_preserve': 2.0},5,solved,0,20,4,20,0.0
+7,颜色保持高,{'color_preserve': 0.02},5,solved,0,20,4,20,0.0
+8,默认,,6,solved,0,20,4,20,0.0
+8,区域保持高,{'region_preserve': 2.0},6,solved,0,20,4,20,0.0
+8,颜色保持高,{'color_preserve': 0.02},20,action,1,20,4,20,0.0
+9,默认,,7,solved,0,20,4,20,0.0
+9,区域保持高,{'region_preserve': 2.0},6,solved,0,20,4,20,0.0
+9,颜色保持高,{'color_preserve': 0.02},6,solved,0,20,4,20,0.0
+10,默认,,7,solved,0,20,4,20,0.0
+10,区域保持高,{'region_preserve': 2.0},7,solved,0,20,4,20,0.0
+10,颜色保持高,{'color_preserve': 0.02},20,action,1,20,4,20,0.0

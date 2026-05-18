@@ -1,0 +1,6 @@
+repair_weight,selected_region_step0,selected_new_color_step0,selected_is_correct_step0,correct_score_step0,selected_score_step0,correct_h_step0,selected_h_step0,score_gap_step0_selected_minus_correct,solved,n_action_steps,final_status,final_conflicts_proxy
+2.0,20,1,False,"(0.0, 0.5, -0.0)","(0.0, 0.8333333333333333, -0.0)",1.5,1.5,0.33333333333333326,False,100,action,3
+1.5,20,1,False,"(0.0, 0.5, -0.0)","(0.0, 0.75, -0.0)",1.375,1.375,0.25,False,100,action,3
+1.0,20,1,False,"(0.0, 0.5, -0.0)","(0.0, 0.6666666666666666, -0.0)",1.25,1.25,0.16666666666666663,False,100,action,3
+0.5,20,1,False,"(0.0, 0.5, -0.0)","(0.0, 0.5833333333333334, -0.0)",1.125,1.125,0.08333333333333337,False,100,action,3
+0.25,20,1,False,"(0.0, 0.5, -0.0)","(0.0, 0.5416666666666666, -0.0)",1.0625,1.0625,0.04166666666666663,False,100,action,3

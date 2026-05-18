@@ -1,0 +1,289 @@
+﻿agent,pruning_thresh,beam,round,seed,status,elapsed_seconds,success,steps,final_conflicts,expansions,planner_calls,score_pruned,beam_pruned,visited_states,conflict_trace
+tree_guided_bfs,best_only,off,1,9005,ok,2.04,False,8,1,1281,,,,2201,5 3 3 3 3 3 3 2 1
+tree_guided_bfs,best_only,off,2,9019,ok,0.16,True,5,0,104,,,,303,3 2 2 2 1 0
+tree_guided_bfs,best_only,off,3,9023,ok,3.237,True,7,0,1660,,,,4354,4 3 3 3 3 3 1 0
+tree_guided_bfs,best_only,off,4,9035,ok,3.287,True,7,0,1465,,,,4459,4 2 2 2 2 1 1 0
+tree_guided_bfs,best_only,off,5,9037,ok,0.018,True,4,0,9,,,,34,5 3 3 1 0
+tree_guided_bfs,best_only,off,6,9053,ok,0.236,True,6,0,93,,,,437,6 5 4 3 2 2 0
+tree_guided_bfs,best_only,off,7,9055,ok,0.532,True,6,0,300,,,,849,5 2 2 2 2 1 0
+tree_guided_bfs,best_only,off,8,9056,ok,1.19,True,7,0,391,,,,2321,7 5 3 2 2 2 2 0
+tree_guided_bfs,best_only,off,9,9057,ok,0.399,True,5,0,130,,,,676,4 3 3 1 1 0
+tree_guided_bfs,best_only,off,10,9061,ok,2.279,False,2,1,1697,,,,3011,4 2 1
+tree_guided_bfs,best_only,off,11,9067,ok,0.921,True,7,0,565,,,,1431,4 2 2 2 2 2 1 0
+tree_guided_bfs,best_only,off,12,9069,ok,0.644,False,5,1,567,,,,926,4 2 1 1 1 1
+tree_guided_bfs,best_only,off,13,9081,ok,0.046,True,5,0,23,,,,94,5 3 1 1 1 0
+tree_guided_bfs,best_only,off,14,9058,ok,4.427,False,3,1,3149,,,,6194,6 3 2 1
+tree_guided_bfs,best_only,off,15,9088,ok,3.439,False,5,1,1724,,,,4553,9 6 3 3 2 1
+tree_guided_bfs,best_only,off,16,9096,ok,2.725,False,5,1,1836,,,,3646,8 4 2 1 1 1
+tree_guided_bfs,best_only,off,17,9008,ok,1.513,False,4,1,1152,,,,2351,6 4 3 2 1
+tree_guided_bfs,best_only,off,18,9028,ok,9.158,False,4,1,5000,,,,11806,5 4 3 2 1
+tree_guided_bfs,best_only,off,19,9090,ok,8.755,False,5,3,3724,,,,9734,10 8 6 4 4 3
+tree_guided_bfs,best_only,off,20,9098,ok,0.481,True,6,0,128,,,,869,10 7 5 4 4 1 0
+tree_guided_bfs,best_only,off,21,9106,ok,0.226,False,1,3,202,,,,268,5 3
+tree_guided_bfs,best_only,off,22,9110,ok,0.035,True,4,0,22,,,,67,5 3 3 1 0
+tree_guided_bfs,best_only,off,23,9121,ok,0.947,False,5,1,677,,,,1277,7 5 3 3 1 1
+tree_guided_bfs,best_only,off,24,9135,ok,0.683,False,3,1,587,,,,897,5 3 2 1
+tree_guided_bfs,best_only,off,25,9142,ok,4.083,False,2,1,3055,,,,4535,4 2 1
+tree_guided_bfs,best_only,off,26,9149,ok,6.813,False,4,1,3852,,,,8531,6 4 3 2 1
+tree_guided_bfs,best_only,off,27,9153,ok,0.943,True,6,0,322,,,,1590,8 7 4 3 3 1 0
+tree_guided_bfs,best_only,off,28,9155,ok,2.286,False,3,1,1576,,,,3218,6 3 2 1
+tree_guided_bfs,best_only,off,29,9157,ok,0.024,True,5,0,12,,,,39,8 6 4 4 1 0
+tree_guided_bfs,best_only,off,30,9160,ok,3.106,False,2,1,2496,,,,3859,4 2 1
+tree_guided_bfs,best_only,off,31,9163,ok,0.035,True,5,0,15,,,,64,7 5 3 3 1 0
+tree_guided_bfs,best_only,off,32,9169,ok,0.422,True,7,0,239,,,,902,10 7 4 3 2 2 2 0
+tree_guided_bfs,best_only,off,33,9175,ok,0.098,False,2,3,99,,,,101,7 5 3
+tree_guided_bfs,best_only,off,34,9215,ok,0.574,True,8,0,404,,,,1058,7 5 4 3 2 2 2 2 0
+tree_guided_bfs,best_only,off,35,9218,ok,1.522,False,2,1,1064,,,,2167,4 2 1
+tree_guided_bfs,best_only,off,36,9227,ok,1.217,True,8,0,561,,,,1906,9 7 5 3 3 3 3 1 0
+tree_guided_bfs,1,off,1,9005,ok,0.231,True,4,0,87,,,,396,5 5 3 2 0
+tree_guided_bfs,1,off,2,9019,ok,0.275,True,5,0,171,,,,494,3 3 3 2 1 0
+tree_guided_bfs,1,off,3,9023,ok,3.365,True,6,0,1622,,,,4895,4 4 4 3 3 1 0
+tree_guided_bfs,1,off,4,9035,ok,12.502,False,6,1,5000,,,,18518,4 2 2 2 2 1 1
+tree_guided_bfs,1,off,5,9037,ok,0.264,True,4,0,100,,,,494,5 5 3 1 0
+tree_guided_bfs,1,off,6,9053,ok,0.53,True,4,0,159,,,,902,6 6 2 1 0
+tree_guided_bfs,1,off,7,9055,ok,3.294,True,6,0,1715,,,,4840,5 2 2 2 2 1 0
+tree_guided_bfs,1,off,8,9056,ok,0.997,True,4,0,226,,,,1637,7 7 4 2 0
+tree_guided_bfs,1,off,9,9057,ok,1.668,True,5,0,634,,,,2655,4 3 3 1 1 0
+tree_guided_bfs,1,off,10,9061,ok,7.206,False,2,1,4764,,,,8011,4 2 1
+tree_guided_bfs,1,off,11,9067,ok,9.597,True,7,0,4608,,,,12162,4 4 4 4 3 2 1 0
+tree_guided_bfs,1,off,12,9069,ok,0.135,True,4,0,68,,,,244,4 4 2 1 0
+tree_guided_bfs,1,off,13,9081,ok,0.749,True,5,0,387,,,,1187,5 3 1 1 1 0
+tree_guided_bfs,1,off,14,9058,ok,8.167,False,3,1,5000,,,,10708,6 5 2 1
+tree_guided_bfs,1,off,15,9088,ok,13.373,False,4,1,5000,,,,19277,9 9 6 3 1
+tree_guided_bfs,1,off,16,9096,ok,2.792,True,5,0,970,,,,4026,8 4 4 2 1 0
+tree_guided_bfs,1,off,17,9008,ok,8.556,False,4,1,5000,,,,11226,6 4 3 2 1
+tree_guided_bfs,1,off,18,9028,ok,11.048,False,4,1,5000,,,,15875,5 4 3 2 1
+tree_guided_bfs,1,off,19,9090,ok,16.332,False,5,3,5000,,,,21067,10 8 6 4 3 3
+tree_guided_bfs,1,off,20,9098,ok,19.967,False,5,1,5000,,,,28621,10 10 7 4 2 1
+tree_guided_bfs,1,off,21,9106,ok,0.157,True,4,0,78,,,,294,5 4 4 2 0
+tree_guided_bfs,1,off,22,9110,ok,0.097,True,4,0,57,,,,183,5 5 3 1 0
+tree_guided_bfs,1,off,23,9121,ok,8.222,False,5,1,5000,,,,10253,7 7 4 2 1 1
+tree_guided_bfs,1,off,24,9135,ok,0.888,True,5,0,420,,,,1427,5 5 5 3 1 0
+tree_guided_bfs,1,off,25,9142,ok,9.567,False,2,1,5000,,,,11996,4 2 1
+tree_guided_bfs,1,off,26,9149,ok,12.59,False,4,1,5000,,,,16319,6 4 3 2 1
+tree_guided_bfs,1,off,27,9153,ok,12.15,True,6,0,4133,,,,14687,8 7 4 4 2 1 0
+tree_guided_bfs,1,off,28,9155,ok,10.366,False,3,1,5000,,,,15006,6 3 2 1
+tree_guided_bfs,1,off,29,9157,ok,2.179,True,5,0,734,,,,3258,8 8 5 3 1 0
+tree_guided_bfs,1,off,30,9160,ok,8.308,False,2,1,5000,,,,10507,4 2 1
+tree_guided_bfs,1,off,31,9163,ok,2.149,True,5,0,783,,,,3218,7 7 5 3 1 0
+tree_guided_bfs,1,off,32,9169,ok,19.425,False,5,1,5000,,,,28963,10 10 7 4 2 1
+tree_guided_bfs,1,off,33,9175,ok,0.736,True,5,0,383,,,,1082,7 6 6 4 2 0
+tree_guided_bfs,1,off,34,9215,ok,7.548,True,6,0,3019,,,,9970,7 7 6 6 3 1 0
+tree_guided_bfs,1,off,35,9218,ok,0.209,True,4,0,78,,,,304,4 4 2 1 0
+tree_guided_bfs,1,off,36,9227,ok,16.646,False,4,2,5000,,,,23431,9 7 5 3 2
+tree_guided_bfs,2,off,1,9005,ok,0.214,True,4,0,87,,,,396,5 5 3 2 0
+tree_guided_bfs,2,off,2,9019,ok,0.277,True,5,0,171,,,,494,3 3 3 2 1 0
+tree_guided_bfs,2,off,3,9023,ok,3.394,True,6,0,1622,,,,4896,4 4 4 3 3 1 0
+tree_guided_bfs,2,off,4,9035,ok,12.54,False,6,1,5000,,,,18518,4 2 2 2 2 1 1
+tree_guided_bfs,2,off,5,9037,ok,0.266,True,4,0,100,,,,494,5 5 3 1 0
+tree_guided_bfs,2,off,6,9053,ok,0.528,True,4,0,159,,,,902,6 6 2 1 0
+tree_guided_bfs,2,off,7,9055,ok,4.256,True,6,0,2176,,,,5881,5 2 2 2 2 1 0
+tree_guided_bfs,2,off,8,9056,ok,1.004,True,4,0,226,,,,1637,7 7 4 2 0
+tree_guided_bfs,2,off,9,9057,ok,1.692,True,5,0,634,,,,2655,4 3 3 1 1 0
+tree_guided_bfs,2,off,10,9061,ok,6.771,False,2,1,4792,,,,8096,4 2 1
+tree_guided_bfs,2,off,11,9067,ok,9.163,True,7,0,4608,,,,12162,4 4 4 4 3 2 1 0
+tree_guided_bfs,2,off,12,9069,ok,0.126,True,4,0,68,,,,244,4 4 2 1 0
+tree_guided_bfs,2,off,13,9081,ok,0.743,True,5,0,387,,,,1187,5 3 1 1 1 0
+tree_guided_bfs,2,off,14,9058,ok,8.071,False,3,1,5000,,,,10827,6 5 2 1
+tree_guided_bfs,2,off,15,9088,ok,13.124,False,4,1,5000,,,,19280,9 9 6 3 1
+tree_guided_bfs,2,off,16,9096,ok,2.745,True,5,0,970,,,,4026,8 4 4 2 1 0
+tree_guided_bfs,2,off,17,9008,ok,8.033,False,4,1,5000,,,,11226,6 4 3 2 1
+tree_guided_bfs,2,off,18,9028,ok,10.938,False,4,1,5000,,,,15875,5 4 3 2 1
+tree_guided_bfs,2,off,19,9090,ok,16.049,False,5,3,5000,,,,21067,10 8 6 4 3 3
+tree_guided_bfs,2,off,20,9098,ok,19.23,False,5,1,5000,,,,28699,10 10 7 4 2 1
+tree_guided_bfs,2,off,21,9106,ok,0.153,True,4,0,78,,,,294,5 4 4 2 0
+tree_guided_bfs,2,off,22,9110,ok,0.097,True,4,0,57,,,,183,5 5 3 1 0
+tree_guided_bfs,2,off,23,9121,ok,7.974,False,5,1,5000,,,,10311,7 7 4 2 1 1
+tree_guided_bfs,2,off,24,9135,ok,0.874,True,5,0,420,,,,1428,5 5 5 3 1 0
+tree_guided_bfs,2,off,25,9142,ok,9.414,False,2,1,5000,,,,12007,4 2 1
+tree_guided_bfs,2,off,26,9149,ok,12.235,False,4,1,5000,,,,16326,6 4 3 2 1
+tree_guided_bfs,2,off,27,9153,ok,11.812,True,6,0,4133,,,,14687,8 7 4 4 2 1 0
+tree_guided_bfs,2,off,28,9155,ok,10.173,False,3,1,5000,,,,15006,6 3 2 1
+tree_guided_bfs,2,off,29,9157,ok,2.157,True,5,0,734,,,,3258,8 8 5 3 1 0
+tree_guided_bfs,2,off,30,9160,ok,8.064,False,2,1,5000,,,,10507,4 2 1
+tree_guided_bfs,2,off,31,9163,ok,2.133,True,5,0,783,,,,3218,7 7 5 3 1 0
+tree_guided_bfs,2,off,32,9169,ok,19.518,False,5,1,5000,,,,29868,10 10 7 4 2 1
+tree_guided_bfs,2,off,33,9175,ok,0.726,True,5,0,383,,,,1082,7 6 6 4 2 0
+tree_guided_bfs,2,off,34,9215,ok,7.268,True,6,0,3019,,,,9972,7 7 6 6 3 1 0
+tree_guided_bfs,2,off,35,9218,ok,0.159,True,4,0,78,,,,304,4 4 2 1 0
+tree_guided_bfs,2,off,36,9227,ok,16.565,False,4,2,5000,,,,23431,9 7 5 3 2
+tree_guided_bfs,5,off,1,9005,ok,0.232,True,4,0,87,,,,396,5 5 3 2 0
+tree_guided_bfs,5,off,2,9019,ok,0.277,True,5,0,171,,,,494,3 3 3 2 1 0
+tree_guided_bfs,5,off,3,9023,ok,3.37,True,6,0,1622,,,,4896,4 4 4 3 3 1 0
+tree_guided_bfs,5,off,4,9035,ok,12.469,False,6,1,5000,,,,18518,4 2 2 2 2 1 1
+tree_guided_bfs,5,off,5,9037,ok,0.266,True,4,0,100,,,,494,5 5 3 1 0
+tree_guided_bfs,5,off,6,9053,ok,0.527,True,4,0,159,,,,902,6 6 2 1 0
+tree_guided_bfs,5,off,7,9055,ok,4.263,True,6,0,2176,,,,5881,5 2 2 2 2 1 0
+tree_guided_bfs,5,off,8,9056,ok,0.992,True,4,0,226,,,,1637,7 7 4 2 0
+tree_guided_bfs,5,off,9,9057,ok,1.674,True,5,0,634,,,,2655,4 3 3 1 1 0
+tree_guided_bfs,5,off,10,9061,ok,6.774,False,2,1,4792,,,,8096,4 2 1
+tree_guided_bfs,5,off,11,9067,ok,9.146,True,7,0,4608,,,,12162,4 4 4 4 3 2 1 0
+tree_guided_bfs,5,off,12,9069,ok,0.126,True,4,0,68,,,,244,4 4 2 1 0
+tree_guided_bfs,5,off,13,9081,ok,0.739,True,5,0,387,,,,1187,5 3 1 1 1 0
+tree_guided_bfs,5,off,14,9058,ok,8.072,False,3,1,5000,,,,10827,6 5 2 1
+tree_guided_bfs,5,off,15,9088,ok,13.148,False,4,1,5000,,,,19280,9 9 6 3 1
+tree_guided_bfs,5,off,16,9096,ok,2.747,True,5,0,970,,,,4026,8 4 4 2 1 0
+tree_guided_bfs,5,off,17,9008,ok,8.031,False,4,1,5000,,,,11226,6 4 3 2 1
+tree_guided_bfs,5,off,18,9028,ok,10.916,False,4,1,5000,,,,15875,5 4 3 2 1
+tree_guided_bfs,5,off,19,9090,ok,16.035,False,5,3,5000,,,,21067,10 8 6 4 3 3
+tree_guided_bfs,5,off,20,9098,ok,19.17,False,5,1,5000,,,,28699,10 10 7 4 2 1
+tree_guided_bfs,5,off,21,9106,ok,0.153,True,4,0,78,,,,294,5 4 4 2 0
+tree_guided_bfs,5,off,22,9110,ok,0.095,True,4,0,57,,,,183,5 5 3 1 0
+tree_guided_bfs,5,off,23,9121,ok,7.934,False,5,1,5000,,,,10311,7 7 4 2 1 1
+tree_guided_bfs,5,off,24,9135,ok,0.869,True,5,0,420,,,,1428,5 5 5 3 1 0
+tree_guided_bfs,5,off,25,9142,ok,9.382,False,2,1,5000,,,,12007,4 2 1
+tree_guided_bfs,5,off,26,9149,ok,12.186,False,4,1,5000,,,,16326,6 4 3 2 1
+tree_guided_bfs,5,off,27,9153,ok,11.733,True,6,0,4133,,,,14687,8 7 4 4 2 1 0
+tree_guided_bfs,5,off,28,9155,ok,10.126,False,3,1,5000,,,,15006,6 3 2 1
+tree_guided_bfs,5,off,29,9157,ok,2.153,True,5,0,734,,,,3258,8 8 5 3 1 0
+tree_guided_bfs,5,off,30,9160,ok,8.069,False,2,1,5000,,,,10507,4 2 1
+tree_guided_bfs,5,off,31,9163,ok,2.116,True,5,0,783,,,,3218,7 7 5 3 1 0
+tree_guided_bfs,5,off,32,9169,ok,19.469,False,5,1,5000,,,,29868,10 10 7 4 2 1
+tree_guided_bfs,5,off,33,9175,ok,0.722,True,5,0,383,,,,1082,7 6 6 4 2 0
+tree_guided_bfs,5,off,34,9215,ok,7.247,True,6,0,3019,,,,9972,7 7 6 6 3 1 0
+tree_guided_bfs,5,off,35,9218,ok,0.158,True,4,0,78,,,,304,4 4 2 1 0
+tree_guided_bfs,5,off,36,9227,ok,16.511,False,4,2,5000,,,,23431,9 7 5 3 2
+hsp2_bfs,best_only,off,1,9005,ok,0.115,True,6,0,5,1,295,0,,5 4 3 2 1 1 0
+hsp2_bfs,best_only,off,2,9019,ok,0.131,True,4,0,5,1,331,0,,3 2 1 1 0
+hsp2_bfs,best_only,off,3,9023,ok,0.231,True,5,0,10,1,642,0,,4 3 2 1 1 0
+hsp2_bfs,best_only,off,4,9035,ok,0.036,True,5,0,3,1,111,0,,4 3 2 1 2 0
+hsp2_bfs,best_only,off,5,9037,ok,0.201,True,10,0,9,1,520,0,,5 4 3 2 3 5 5 3 3 1 0
+hsp2_bfs,best_only,off,6,9053,ok,0.229,True,10,0,11,1,686,0,,6 5 4 3 2 1 2 2 2 2 0
+hsp2_bfs,best_only,off,7,9055,ok,0.087,True,6,0,4,1,212,0,,5 4 3 2 1 1 0
+hsp2_bfs,best_only,off,8,9056,ok,0.186,True,7,0,8,1,522,0,,7 5 3 2 1 2 1 0
+hsp2_bfs,best_only,off,9,9057,ok,0.46,True,7,0,16,1,1242,0,,4 3 2 4 5 3 2 0
+hsp2_bfs,best_only,off,10,9061,ok,0.089,True,4,0,4,1,242,0,,4 3 1 1 0
+hsp2_bfs,best_only,off,11,9067,ok,0.078,True,4,0,4,1,216,0,,4 2 1 2 0
+hsp2_bfs,best_only,off,12,9069,ok,0.149,True,7,0,9,1,439,0,,4 2 1 3 3 3 1 0
+hsp2_bfs,best_only,off,13,9081,ok,0.053,True,6,0,7,1,180,0,,5 3 1 2 2 1 0
+hsp2_bfs,best_only,off,14,9058,ok,0.164,True,7,0,6,1,418,0,,6 5 4 3 1 1 1 0
+hsp2_bfs,best_only,off,15,9088,ok,1.377,True,14,0,67,2,3489,0,,9 8 6 4 5 5 4 4 3 1 3 4 2 2 0
+hsp2_bfs,best_only,off,16,9096,ok,0.862,False,11,1,41,2,2270,0,,8 7 5 4 5 4 3 3 3 3 2 1
+hsp2_bfs,best_only,off,17,9008,ok,0.068,True,6,0,4,1,191,0,,6 5 3 2 1 1 0
+hsp2_bfs,best_only,off,18,9028,ok,0.17,True,8,0,7,1,437,0,,5 4 3 2 3 3 3 1 0
+hsp2_bfs,best_only,off,19,9090,ok,0.136,True,7,0,5,1,340,0,,10 8 7 5 3 3 3 0
+hsp2_bfs,best_only,off,20,9098,ok,0.432,True,15,0,13,1,1002,0,,10 9 8 5 4 3 2 3 4 3 1 1 3 3 1 0
+hsp2_bfs,best_only,off,21,9106,ok,0.296,True,7,0,7,1,656,0,,5 4 3 2 4 5 2 0
+hsp2_bfs,best_only,off,22,9110,ok,0.344,True,12,0,20,1,934,0,,5 3 2 3 4 4 4 5 3 2 2 1 0
+hsp2_bfs,best_only,off,23,9121,ok,0.218,True,9,0,9,1,561,0,,7 5 4 2 2 3 3 2 2 0
+hsp2_bfs,best_only,off,24,9135,ok,0.071,True,5,0,4,1,212,0,,5 3 2 1 1 0
+hsp2_bfs,best_only,off,25,9142,ok,0.091,True,6,0,10,1,301,0,,4 2 1 3 4 1 0
+hsp2_bfs,best_only,off,26,9149,ok,0.559,True,11,0,35,1,1484,0,,6 5 4 3 1 3 4 4 4 6 3 0
+hsp2_bfs,best_only,off,27,9153,ok,4.355,True,11,0,110,1,10871,0,,8 7 6 5 4 4 3 2 2 2 2 0
+hsp2_bfs,best_only,off,28,9155,ok,0.054,True,5,0,3,1,141,0,,6 4 2 1 2 0
+hsp2_bfs,best_only,off,29,9157,ok,0.083,True,6,0,4,1,232,0,,8 7 5 4 3 1 0
+hsp2_bfs,best_only,off,30,9160,ok,0.12,True,4,0,5,1,326,0,,4 3 1 2 0
+hsp2_bfs,best_only,off,31,9163,ok,0.313,True,7,0,8,1,752,0,,7 6 5 3 3 2 2 0
+hsp2_bfs,best_only,off,32,9169,ok,0.119,True,8,0,6,1,341,0,,10 7 5 4 3 2 1 1 0
+hsp2_bfs,best_only,off,33,9175,ok,0.44,True,9,0,17,1,983,0,,7 5 3 2 3 3 5 2 2 0
+hsp2_bfs,best_only,off,34,9215,ok,0.087,True,8,0,4,1,226,0,,7 6 4 3 2 1 2 2 0
+hsp2_bfs,best_only,off,35,9218,ok,0.068,True,5,0,4,1,201,0,,4 3 2 1 2 0
+hsp2_bfs,best_only,off,36,9227,ok,0.438,True,12,0,11,1,1010,0,,9 7 6 5 4 3 3 3 2 2 1 1 0
+hsp2_bfs,1,off,1,9005,ok,0.158,True,6,0,6,1,396,0,,5 4 3 3 1 1 0
+hsp2_bfs,1,off,2,9019,ok,0.132,True,4,0,5,1,331,0,,3 2 1 1 0
+hsp2_bfs,1,off,3,9023,ok,0.115,True,4,0,5,1,322,0,,4 3 2 1 0
+hsp2_bfs,1,off,4,9035,ok,0.036,True,5,0,3,1,111,0,,4 3 2 1 2 0
+hsp2_bfs,1,off,5,9037,ok,0.504,True,7,0,17,1,1260,0,,5 4 3 2 3 3 1 0
+hsp2_bfs,1,off,6,9053,ok,0.567,True,9,0,25,1,1655,0,,6 5 4 3 2 1 2 2 2 0
+hsp2_bfs,1,off,7,9055,ok,0.069,True,6,0,4,1,212,0,,5 4 3 2 1 1 0
+hsp2_bfs,1,off,8,9056,ok,0.908,True,7,0,37,1,2469,0,,7 5 3 2 1 2 1 0
+hsp2_bfs,1,off,9,9057,ok,1.054,True,7,0,33,1,2695,0,,4 3 2 3 3 2 2 0
+hsp2_bfs,1,off,10,9061,ok,0.117,True,4,0,5,1,319,0,,4 3 1 2 0
+hsp2_bfs,1,off,11,9067,ok,0.168,True,4,0,7,1,436,0,,4 2 1 2 0
+hsp2_bfs,1,off,12,9069,ok,0.685,True,7,0,37,1,1936,0,,4 2 1 2 3 2 1 0
+hsp2_bfs,1,off,13,9081,ok,0.095,True,4,0,7,1,286,0,,5 3 1 1 0
+hsp2_bfs,1,off,14,9058,ok,0.336,True,7,0,12,1,855,0,,6 5 4 3 1 1 1 0
+hsp2_bfs,1,off,15,9088,ok,1.26,True,9,0,53,1,3108,0,,9 8 6 4 5 7 6 3 2 0
+hsp2_bfs,1,off,16,9096,ok,1.474,True,9,0,55,1,3818,0,,8 7 5 4 5 6 5 4 2 0
+hsp2_bfs,1,off,17,9008,ok,0.089,True,6,0,5,1,249,0,,6 5 3 2 1 2 0
+hsp2_bfs,1,off,18,9028,ok,0.261,True,7,0,9,1,668,0,,5 4 3 2 3 1 1 0
+hsp2_bfs,1,off,19,9090,ok,0.299,True,7,0,10,1,762,0,,10 8 7 5 3 3 3 0
+hsp2_bfs,1,off,20,9098,ok,0.837,True,12,0,21,1,2001,0,,10 9 8 5 4 3 2 3 3 1 1 1 0
+hsp2_bfs,1,off,21,9106,ok,0.172,True,5,0,5,1,403,0,,5 4 3 2 1 0
+hsp2_bfs,1,off,22,9110,ok,0.139,True,4,0,5,1,346,0,,5 3 2 1 0
+hsp2_bfs,1,off,23,9121,ok,0.328,True,8,0,13,1,812,0,,7 5 4 2 2 3 1 1 0
+hsp2_bfs,1,off,24,9135,ok,0.072,True,5,0,4,1,212,0,,5 3 2 1 1 0
+hsp2_bfs,1,off,25,9142,ok,0.105,True,5,0,12,1,348,0,,4 2 1 2 2 0
+hsp2_bfs,1,off,26,9149,ok,0.895,True,9,0,65,1,2655,0,,6 5 4 3 1 3 4 6 3 0
+hsp2_bfs,1,off,27,9153,timeout_20s,20.013,False,,,,,,,,
+hsp2_bfs,1,off,28,9155,ok,0.054,True,5,0,3,1,141,0,,6 4 2 1 2 0
+hsp2_bfs,1,off,29,9157,ok,0.084,True,6,0,4,1,232,0,,8 7 5 4 3 1 0
+hsp2_bfs,1,off,30,9160,ok,0.12,True,4,0,5,1,326,0,,4 3 1 2 0
+hsp2_bfs,1,off,31,9163,ok,0.414,True,7,0,11,1,993,0,,7 6 5 3 3 3 1 0
+hsp2_bfs,1,off,32,9169,ok,0.221,True,8,0,10,1,603,0,,10 7 5 4 3 2 1 2 0
+hsp2_bfs,1,off,33,9175,ok,0.845,True,8,0,32,1,1751,0,,7 5 3 2 3 3 4 2 0
+hsp2_bfs,1,off,34,9215,ok,0.166,True,8,0,7,1,452,0,,7 6 4 3 2 1 2 2 0
+hsp2_bfs,1,off,35,9218,ok,0.12,True,5,0,6,1,347,0,,4 3 2 1 2 0
+hsp2_bfs,1,off,36,9227,ok,1.625,True,12,0,39,1,3674,0,,9 7 6 5 4 3 3 3 2 2 1 1 0
+hsp2_bfs,2,off,1,9005,ok,0.251,True,6,0,10,1,651,0,,5 4 3 3 1 1 0
+hsp2_bfs,2,off,2,9019,ok,0.201,True,4,0,7,1,487,0,,3 2 1 1 0
+hsp2_bfs,2,off,3,9023,ok,0.114,True,4,0,5,1,322,0,,4 3 2 1 0
+hsp2_bfs,2,off,4,9035,ok,0.113,True,5,0,6,1,335,0,,4 3 2 1 2 0
+hsp2_bfs,2,off,5,9037,ok,1.198,True,7,0,41,1,2977,0,,5 4 3 2 3 3 2 0
+hsp2_bfs,2,off,6,9053,ok,1.953,True,9,0,84,1,5462,0,,6 5 4 3 2 1 2 2 2 0
+hsp2_bfs,2,off,7,9055,ok,0.069,True,6,0,4,1,211,0,,5 4 3 2 1 1 0
+hsp2_bfs,2,off,8,9056,ok,1.809,True,7,0,68,1,4675,0,,7 5 3 2 1 2 1 0
+hsp2_bfs,2,off,9,9057,ok,2.406,True,7,0,78,1,6186,0,,4 3 2 3 3 2 2 0
+hsp2_bfs,2,off,10,9061,ok,0.184,True,4,0,7,1,483,0,,4 3 1 2 0
+hsp2_bfs,2,off,11,9067,ok,0.168,True,4,0,7,1,435,0,,4 2 1 2 0
+hsp2_bfs,2,off,12,9069,ok,2.279,True,7,0,130,1,6238,0,,4 2 1 2 3 2 1 0
+hsp2_bfs,2,off,13,9081,ok,0.175,True,4,0,11,1,498,0,,5 3 1 1 0
+hsp2_bfs,2,off,14,9058,ok,0.706,True,7,0,23,1,1740,0,,6 5 4 3 1 1 1 0
+hsp2_bfs,2,off,15,9088,ok,4.007,True,9,0,165,1,9732,0,,9 8 6 4 5 7 4 3 1 0
+hsp2_bfs,2,off,16,9096,ok,0.291,True,7,0,9,1,739,0,,8 7 5 4 3 2 1 0
+hsp2_bfs,2,off,17,9008,ok,0.147,True,6,0,7,1,403,0,,6 5 3 2 1 2 0
+hsp2_bfs,2,off,18,9028,ok,0.68,True,7,0,23,1,1710,0,,5 4 3 2 3 1 1 0
+hsp2_bfs,2,off,19,9090,ok,0.11,True,6,0,4,1,272,0,,10 8 7 5 3 1 0
+hsp2_bfs,2,off,20,9098,ok,1.818,True,12,0,52,1,4479,0,,10 9 8 5 4 3 2 3 3 1 1 1 0
+hsp2_bfs,2,off,21,9106,ok,0.236,True,5,0,6,1,531,0,,5 4 3 2 1 0
+hsp2_bfs,2,off,22,9110,ok,0.195,True,4,0,7,1,494,0,,5 3 2 2 0
+hsp2_bfs,2,off,23,9121,ok,0.729,True,8,0,29,1,1859,0,,7 5 4 2 2 2 2 1 0
+hsp2_bfs,2,off,24,9135,ok,0.1,True,5,0,5,1,291,0,,5 3 2 1 1 0
+hsp2_bfs,2,off,25,9142,ok,0.342,True,5,0,29,1,1048,0,,4 2 1 2 2 0
+hsp2_bfs,2,off,26,9149,ok,8.765,True,9,0,552,1,23553,0,,6 5 4 3 1 3 3 3 3 0
+hsp2_bfs,2,off,27,9153,ok,14.581,True,10,0,331,1,32587,0,,8 7 6 5 4 4 3 3 2 1 0
+hsp2_bfs,2,off,28,9155,ok,0.054,True,5,0,3,1,141,0,,6 4 2 1 2 0
+hsp2_bfs,2,off,29,9157,ok,0.084,True,6,0,4,1,230,0,,8 7 5 4 3 1 0
+hsp2_bfs,2,off,30,9160,ok,0.215,True,4,0,8,1,571,0,,4 3 1 2 0
+hsp2_bfs,2,off,31,9163,ok,0.901,True,7,0,22,1,2094,0,,7 6 5 3 3 2 2 0
+hsp2_bfs,2,off,32,9169,ok,0.264,True,8,0,12,1,703,0,,10 7 5 4 3 2 1 2 0
+hsp2_bfs,2,off,33,9175,ok,0.957,True,7,0,36,1,1942,0,,7 5 3 2 3 5 2 0
+hsp2_bfs,2,off,34,9215,ok,0.418,True,8,0,16,1,1148,0,,7 6 4 3 2 1 2 2 0
+hsp2_bfs,2,off,35,9218,ok,0.12,True,5,0,6,1,347,0,,4 3 2 1 2 0
+hsp2_bfs,2,off,36,9227,ok,4.362,True,12,0,104,1,9586,0,,9 7 6 5 4 3 3 3 2 2 2 1 0
+hsp2_bfs,5,off,1,9005,ok,3.001,True,6,0,89,1,6962,0,,5 4 3 3 3 2 0
+hsp2_bfs,5,off,2,9019,ok,0.373,True,4,0,11,1,845,0,,3 2 1 1 0
+hsp2_bfs,5,off,3,9023,ok,0.261,True,4,0,10,1,684,0,,4 3 2 1 0
+hsp2_bfs,5,off,4,9035,ok,0.252,True,5,0,12,1,694,0,,4 3 2 1 2 0
+hsp2_bfs,5,off,5,9037,ok,12.192,True,7,0,363,1,26470,0,,5 4 3 2 3 3 2 0
+hsp2_bfs,5,off,6,9053,ok,6.149,True,8,0,205,1,13785,0,,6 5 4 3 2 1 2 1 0
+hsp2_bfs,5,off,7,9055,ok,0.515,True,6,0,22,1,1322,0,,5 4 3 2 1 1 0
+hsp2_bfs,5,off,8,9056,ok,9.014,True,7,0,278,1,18820,0,,7 5 3 2 1 2 1 0
+hsp2_bfs,5,off,9,9057,timeout_20s,20.018,False,,,,,,,,
+hsp2_bfs,5,off,10,9061,ok,0.419,True,4,0,14,1,1005,0,,4 3 1 2 0
+hsp2_bfs,5,off,11,9067,ok,0.347,True,4,0,13,1,815,0,,4 2 1 1 0
+hsp2_bfs,5,off,12,9069,timeout_20s,20.007,False,,,,,,,,
+hsp2_bfs,5,off,13,9081,ok,0.319,True,4,0,18,1,794,0,,5 3 1 1 0
+hsp2_bfs,5,off,14,9058,ok,2.647,True,7,0,79,1,5690,0,,6 5 4 3 1 1 1 0
+hsp2_bfs,5,off,15,9088,timeout_20s,20.014,False,,,,,,,,
+hsp2_bfs,5,off,16,9096,ok,1.188,True,7,0,34,1,2957,0,,8 7 5 4 3 2 1 0
+hsp2_bfs,5,off,17,9008,ok,0.321,True,6,0,14,1,798,0,,6 5 3 2 1 2 0
+hsp2_bfs,5,off,18,9028,ok,7.442,True,7,0,251,1,17478,0,,5 4 3 2 2 2 2 0
+hsp2_bfs,5,off,19,9090,ok,0.153,True,6,0,5,1,371,0,,10 8 7 5 3 1 0
+hsp2_bfs,5,off,20,9098,timeout_20s,20.01,False,,,,,,,,
+hsp2_bfs,5,off,21,9106,ok,0.236,True,5,0,6,1,531,0,,5 4 3 2 1 0
+hsp2_bfs,5,off,22,9110,ok,0.352,True,4,0,12,1,877,0,,5 3 2 2 0
+hsp2_bfs,5,off,23,9121,ok,5.54,True,8,0,199,1,13020,0,,7 5 4 2 2 3 3 2 0
+hsp2_bfs,5,off,24,9135,ok,0.401,True,5,0,15,1,1019,0,,5 3 2 1 1 0
+hsp2_bfs,5,off,25,9142,ok,1.993,True,5,0,111,1,5027,0,,4 2 1 2 1 0
+hsp2_bfs,5,off,26,9149,timeout_20s,20.015,False,,,,,,,,
+hsp2_bfs,5,off,27,9153,timeout_20s,20.012,False,,,,,,,,
+hsp2_bfs,5,off,28,9155,ok,0.142,True,5,0,6,1,371,0,,6 4 2 1 1 0
+hsp2_bfs,5,off,29,9157,ok,0.084,True,6,0,4,1,206,0,,8 7 5 4 3 1 0
+hsp2_bfs,5,off,30,9160,ok,0.571,True,4,0,19,1,1394,0,,4 3 1 2 0
+hsp2_bfs,5,off,31,9163,ok,10.539,True,7,0,228,1,22220,0,,7 6 5 3 3 2 2 0
+hsp2_bfs,5,off,32,9169,ok,0.449,True,8,0,19,1,1084,0,,10 7 5 4 3 2 1 2 0
+hsp2_bfs,5,off,33,9175,ok,0.161,True,5,0,5,1,359,0,,7 5 3 2 1 0
+hsp2_bfs,5,off,34,9215,ok,0.174,True,7,0,7,1,470,0,,7 6 4 3 2 1 1 0
+hsp2_bfs,5,off,35,9218,ok,0.183,True,5,0,8,1,492,0,,4 3 2 1 2 0
+hsp2_bfs,5,off,36,9227,timeout_20s,20.011,False,,,,,,,,

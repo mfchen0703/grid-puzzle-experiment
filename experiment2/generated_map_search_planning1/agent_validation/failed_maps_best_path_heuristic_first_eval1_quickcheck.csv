@@ -1,0 +1,15 @@
+﻿round,seed,optimalLength,solved,n_agent_steps,final_conflict_edges
+3,9005,4,False,100,3
+13,9023,4,False,100,2
+20,9035,4,False,100,2
+30,9053,4,True,7,0
+33,9056,4,False,100,2
+34,9057,4,False,100,2
+36,9061,4,False,100,2
+41,9069,4,False,100,2
+69,9058,5,False,100,2
+76,9088,5,False,100,2
+77,9096,5,True,5,0
+81,9008,6,False,100,2
+86,9028,6,False,100,2
+98,9090,6,False,100,3

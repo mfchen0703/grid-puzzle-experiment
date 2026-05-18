@@ -1,0 +1,9 @@
+round,seed,final_conflicts,dfs_found_d10,dfs_len_d10,dfs_first_action_d10
+13,9023,1,True,9,0->0
+36,9061,1,False,,
+41,9069,1,False,,
+69,9058,1,False,,
+76,9088,1,True,10,42->1
+77,9096,1,False,,
+81,9008,1,False,,
+86,9028,1,False,,

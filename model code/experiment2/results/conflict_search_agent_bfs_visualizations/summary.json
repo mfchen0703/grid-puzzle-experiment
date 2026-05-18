@@ -1,0 +1,52 @@
+[
+  {
+    "round": 1,
+    "status": "cycle_detected",
+    "rendered_steps": 6
+  },
+  {
+    "round": 2,
+    "status": "solved",
+    "rendered_steps": 4
+  },
+  {
+    "round": 3,
+    "status": "cycle_detected",
+    "rendered_steps": 4
+  },
+  {
+    "round": 4,
+    "status": "solved",
+    "rendered_steps": 4
+  },
+  {
+    "round": 5,
+    "status": "cycle_detected",
+    "rendered_steps": 4
+  },
+  {
+    "round": 6,
+    "status": "cycle_detected",
+    "rendered_steps": 9
+  },
+  {
+    "round": 7,
+    "status": "solved",
+    "rendered_steps": 5
+  },
+  {
+    "round": 8,
+    "status": "solved",
+    "rendered_steps": 6
+  },
+  {
+    "round": 9,
+    "status": "solved",
+    "rendered_steps": 6
+  },
+  {
+    "round": 10,
+    "status": "cycle_detected",
+    "rendered_steps": 6
+  }
+]

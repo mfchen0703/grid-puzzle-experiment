@@ -1,0 +1,6 @@
+﻿parameter,correlation,mae
+pruning_thresh,1.0,0.0
+gamma,0.7773969097247362,0.020370370370370372
+lapse_rate,0.9889334295892254,0.003703703703703704
+region_preserve,,0.0
+color_preserve,,0.0

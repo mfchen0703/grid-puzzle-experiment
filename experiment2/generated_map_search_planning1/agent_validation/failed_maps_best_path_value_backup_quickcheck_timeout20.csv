@@ -1,0 +1,15 @@
+round,seed,optimalLength,solved,n_agent_steps,final_conflict_edges,reason,elapsed_seconds,frontier_strategy,tree_score_strategy,heuristic_eval_weight,pruning_thresh,max_depth,n_iterations
+3,9005,4,True,4,0,,0.5276,best_path,value_backup,0.5,1,6,20
+13,9023,4,False,,,timeout_20s,20.005,best_path,value_backup,0.5,1,6,20
+20,9035,4,False,,,timeout_20s,20.0039,best_path,value_backup,0.5,1,6,20
+30,9053,4,True,4,0,,3.4276,best_path,value_backup,0.5,1,6,20
+33,9056,4,True,4,0,,1.6026,best_path,value_backup,0.5,1,6,20
+34,9057,4,False,,,timeout_20s,20.0076,best_path,value_backup,0.5,1,6,20
+36,9061,4,False,,,timeout_20s,20.0039,best_path,value_backup,0.5,1,6,20
+41,9069,4,True,4,0,,0.3262,best_path,value_backup,0.5,1,6,20
+69,9058,5,False,,,timeout_20s,20.0339,best_path,value_backup,0.5,1,6,20
+76,9088,5,False,,,timeout_20s,20.0018,best_path,value_backup,0.5,1,6,20
+77,9096,5,True,5,0,,1.0463,best_path,value_backup,0.5,1,6,20
+81,9008,6,False,,,timeout_20s,20.0178,best_path,value_backup,0.5,1,6,20
+86,9028,6,False,,,timeout_20s,20.0016,best_path,value_backup,0.5,1,6,20
+98,9090,6,False,,,timeout_20s,20.0049,best_path,value_backup,0.5,1,6,20

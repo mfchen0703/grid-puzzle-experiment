@@ -1,0 +1,9 @@
+﻿agent,pruning_thresh,n_maps,ok_n,timeout_n,success_n,success_rate,mean_steps_success,median_steps_success,max_steps_success,mean_expansions_ok,max_expansions_ok,mean_elapsed_ok
+fourinarow_tree,best_only,36,36,0,2,0.056,5.5,5.5,6,756.556,800,1.447
+fourinarow_tree,1,36,36,0,8,0.222,4.625,5.0,5,625.139,800,1.217
+fourinarow_tree,2,36,36,0,8,0.222,4.625,5.0,5,625.139,800,1.213
+fourinarow_tree,5,36,36,0,8,0.222,4.625,5.0,5,625.139,800,1.212
+bfs_hsp2,best_only,36,36,0,35,0.972,7.514,7,15,13.75,110,0.37
+bfs_hsp2,1,36,36,0,36,1.0,6.667,7.0,12,34.028,648,1.163
+bfs_hsp2,2,36,36,0,36,1.0,6.556,6.5,12,53.083,552,1.454
+bfs_hsp2,5,36,31,5,31,0.861,5.774,6,8,117.419,894,3.548

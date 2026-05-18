@@ -1,0 +1,21 @@
+{
+  "n_visible_steps": 102,
+  "rounds_covered": [
+    13,
+    34
+  ],
+  "feature_keys": [
+    "repair",
+    "opportunity",
+    "spatial",
+    "neighbor",
+    "color",
+    "region_preserve",
+    "color_preserve",
+    "direct_conflict_reduction",
+    "environment_region",
+    "delta_legal_conflict_colors_norm",
+    "delta_same_color_blockers_removed_norm",
+    "local_nonneighbor_color_match_norm"
+  ]
+}

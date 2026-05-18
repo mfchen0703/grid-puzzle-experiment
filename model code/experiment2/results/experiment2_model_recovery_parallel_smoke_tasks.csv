@@ -1,0 +1,3 @@
+﻿task_id,true_pruning_thresh,true_gamma,true_lapse_rate,true_region_preserve,true_color_preserve,random_seed
+0,0.0,0.1,0.0,0.0,0.0,1
+1,0.0,0.1,0.1,0.0,0.0,1

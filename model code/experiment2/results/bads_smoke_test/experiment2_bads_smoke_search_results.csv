@@ -1,0 +1,2 @@
+﻿task_id,random_seed,true_pruning_thresh,true_gamma,true_lapse_rate,true_region_preserve,true_color_preserve,hat_pruning_thresh,hat_gamma,hat_lapse_rate,hat_region_preserve,hat_color_preserve,ll,nll,n_actions,n_evaluations,nll_std,final_reevaluations,adaptive_round_repeats,converged,bads_message
+0,1,0.5,0.1,0.1,0.0,0.0,0.65,0.25,0.155,0.0,0.0,-1487.1198040594443,1487.1198040594443,665,12,0.0,1,{},True,Optimization terminated: reached maximum number of function evaluations options['max_fun_evals'].

@@ -1,0 +1,11 @@
+﻿round,condition_type,initial_conflict_edges,final_conflict_edges,n_agent_steps,solved,max_depth,n_iterations,pruning_thresh,lapse_rate,random_tie_break,random_seed
+1,requires_nonconflict_region,11,0,6,True,4,20,0,0.3,False,7
+2,requires_nonconflict_region,4,0,4,True,4,20,0,0.3,False,7
+3,requires_nonconflict_region,6,0,4,True,4,20,0,0.3,False,7
+4,requires_nonconflict_region,4,0,4,True,4,20,0,0.3,False,7
+5,requires_nonconflict_region,3,0,7,True,4,20,0,0.3,False,7
+6,requires_adjacent_nonconflict_pair,8,0,13,True,4,20,0,0.3,False,7
+7,requires_adjacent_nonconflict_pair,6,0,7,True,4,20,0,0.3,False,7
+8,requires_adjacent_nonconflict_pair,5,0,6,True,4,20,0,0.3,False,7
+9,requires_adjacent_nonconflict_pair,8,2,500,False,4,20,0,0.3,False,7
+10,requires_adjacent_nonconflict_pair,7,0,7,True,4,20,0,0.3,False,7

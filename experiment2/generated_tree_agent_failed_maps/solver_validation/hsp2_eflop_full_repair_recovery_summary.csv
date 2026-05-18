@@ -1,0 +1,4 @@
+true_agent,n,accuracy,mean_observed_steps,success_rate,predicted_hsp2,predicted_eflop,exact_hsp2,exact_eflop
+hsp2,36,1.0,6.722222,0.972222,36,0,20,0
+eflop,36,1.0,11.527778,1.0,0,36,0,3
+overall,72,1.0,9.125,0.986111,36,36,20,3

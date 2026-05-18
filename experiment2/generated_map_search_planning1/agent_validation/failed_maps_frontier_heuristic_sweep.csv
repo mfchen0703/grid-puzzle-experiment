@@ -1,0 +1,121 @@
+﻿config,round,seed,optimalLength,max_depth,n_iterations,heuristic_frontier_weight,heuristic_eval_weight,heuristic_weights,solved,n_agent_steps,final_conflict_edges,reason,elapsed_seconds
+A_default_heuristic,3,9005,4,6,20,0.1,0.0,default,False,100,3,max_steps_100_unsolved,5.3078
+A_default_heuristic,10,9019,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,3.3761
+A_default_heuristic,13,9023,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.9696
+A_default_heuristic,20,9035,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.8899
+A_default_heuristic,21,9037,4,6,20,0.1,0.0,default,False,100,3,max_steps_100_unsolved,5.1166
+A_default_heuristic,30,9053,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.4464
+A_default_heuristic,32,9055,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,3.6241
+A_default_heuristic,33,9056,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.775
+A_default_heuristic,34,9057,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.9547
+A_default_heuristic,36,9061,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,4.361
+A_default_heuristic,40,9067,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,4.0226
+A_default_heuristic,41,9069,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,5.1789
+A_default_heuristic,49,9081,4,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,3.6005
+A_default_heuristic,69,9058,5,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,5.0084
+A_default_heuristic,76,9088,5,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,5.6562
+A_default_heuristic,77,9096,5,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.1072
+A_default_heuristic,81,9008,6,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,4.0276
+A_default_heuristic,86,9028,6,6,20,0.1,0.0,default,False,100,1,max_steps_100_unsolved,6.1658
+A_default_heuristic,98,9090,6,6,20,0.1,0.0,default,False,100,3,max_steps_100_unsolved,7.2708
+A_default_heuristic,100,9098,6,6,20,0.1,0.0,default,True,10,0,,0.5228
+A_default_heuristic,3,9005,4,6,20,0.5,0.0,default,False,100,3,max_steps_100_unsolved,5.329
+A_default_heuristic,10,9019,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,3.3015
+A_default_heuristic,13,9023,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,7.0076
+A_default_heuristic,20,9035,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,6.8729
+A_default_heuristic,21,9037,4,6,20,0.5,0.0,default,False,100,3,max_steps_100_unsolved,5.1507
+A_default_heuristic,30,9053,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,6.3817
+A_default_heuristic,32,9055,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,3.6512
+A_default_heuristic,33,9056,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,6.7146
+A_default_heuristic,34,9057,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,6.88
+A_default_heuristic,36,9061,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,4.3514
+A_default_heuristic,40,9067,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,4.0586
+A_default_heuristic,41,9069,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,5.1119
+A_default_heuristic,49,9081,4,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,3.6548
+A_default_heuristic,69,9058,5,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,4.9692
+A_default_heuristic,76,9088,5,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,5.5679
+A_default_heuristic,77,9096,5,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,6.1641
+A_default_heuristic,81,9008,6,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,4.0495
+A_default_heuristic,86,9028,6,6,20,0.5,0.0,default,False,100,1,max_steps_100_unsolved,6.1039
+A_default_heuristic,98,9090,6,6,20,0.5,0.0,default,False,100,3,max_steps_100_unsolved,7.3298
+A_default_heuristic,100,9098,6,6,20,0.5,0.0,default,True,10,0,,0.46
+A_default_heuristic,3,9005,4,6,20,1.0,0.0,default,False,100,3,max_steps_100_unsolved,5.3222
+A_default_heuristic,10,9019,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,3.3668
+A_default_heuristic,13,9023,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,7.0089
+A_default_heuristic,20,9035,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,6.7998
+A_default_heuristic,21,9037,4,6,20,1.0,0.0,default,False,100,3,max_steps_100_unsolved,5.1189
+A_default_heuristic,30,9053,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,6.4838
+A_default_heuristic,32,9055,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,3.6549
+A_default_heuristic,33,9056,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,6.7138
+A_default_heuristic,34,9057,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,6.8905
+A_default_heuristic,36,9061,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,4.3505
+A_default_heuristic,40,9067,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,4.0662
+A_default_heuristic,41,9069,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,5.1273
+A_default_heuristic,49,9081,4,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,3.6386
+A_default_heuristic,69,9058,5,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,4.9562
+A_default_heuristic,76,9088,5,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,5.5827
+A_default_heuristic,77,9096,5,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,6.1722
+A_default_heuristic,81,9008,6,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,4.0344
+A_default_heuristic,86,9028,6,6,20,1.0,0.0,default,False,100,1,max_steps_100_unsolved,6.111
+A_default_heuristic,98,9090,6,6,20,1.0,0.0,default,False,100,3,max_steps_100_unsolved,7.3688
+A_default_heuristic,100,9098,6,6,20,1.0,0.0,default,True,10,0,,0.4608
+B_env_friendly,3,9005,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,1.3706
+B_env_friendly,10,9019,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,3,max_steps_100_unsolved,0.1626
+B_env_friendly,13,9023,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.243
+B_env_friendly,20,9035,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.9573
+B_env_friendly,21,9037,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,4.5369
+B_env_friendly,30,9053,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,2,max_steps_100_unsolved,0.201
+B_env_friendly,32,9055,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2659
+B_env_friendly,33,9056,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,7,max_steps_100_unsolved,1.6659
+B_env_friendly,34,9057,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2698
+B_env_friendly,36,9061,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.1687
+B_env_friendly,40,9067,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2115
+B_env_friendly,41,9069,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2098
+B_env_friendly,49,9081,4,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2089
+B_env_friendly,69,9058,5,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,6,max_steps_100_unsolved,0.2432
+B_env_friendly,76,9088,5,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,9,max_steps_100_unsolved,2.0558
+B_env_friendly,77,9096,5,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,8,max_steps_100_unsolved,0.3801
+B_env_friendly,81,9008,6,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,6,max_steps_100_unsolved,0.7694
+B_env_friendly,86,9028,6,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2885
+B_env_friendly,98,9090,6,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,10,max_steps_100_unsolved,0.3777
+B_env_friendly,100,9098,6,6,20,0.1,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,10,max_steps_100_unsolved,0.467
+B_env_friendly,3,9005,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,1.3504
+B_env_friendly,10,9019,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,3,max_steps_100_unsolved,0.162
+B_env_friendly,13,9023,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2414
+B_env_friendly,20,9035,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.9748
+B_env_friendly,21,9037,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,4.5149
+B_env_friendly,30,9053,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,2,max_steps_100_unsolved,0.2213
+B_env_friendly,32,9055,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2607
+B_env_friendly,33,9056,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,7,max_steps_100_unsolved,1.6595
+B_env_friendly,34,9057,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2453
+B_env_friendly,36,9061,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.1709
+B_env_friendly,40,9067,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2139
+B_env_friendly,41,9069,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2132
+B_env_friendly,49,9081,4,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2105
+B_env_friendly,69,9058,5,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,6,max_steps_100_unsolved,0.2479
+B_env_friendly,76,9088,5,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,9,max_steps_100_unsolved,2.0358
+B_env_friendly,77,9096,5,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,8,max_steps_100_unsolved,0.378
+B_env_friendly,81,9008,6,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,6,max_steps_100_unsolved,0.7692
+B_env_friendly,86,9028,6,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2891
+B_env_friendly,98,9090,6,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,10,max_steps_100_unsolved,0.4033
+B_env_friendly,100,9098,6,6,20,0.5,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,10,max_steps_100_unsolved,0.4716
+B_env_friendly,3,9005,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,1.354
+B_env_friendly,10,9019,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,3,max_steps_100_unsolved,0.1629
+B_env_friendly,13,9023,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.244
+B_env_friendly,20,9035,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.9618
+B_env_friendly,21,9037,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,4.5281
+B_env_friendly,30,9053,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,2,max_steps_100_unsolved,0.1991
+B_env_friendly,32,9055,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2655
+B_env_friendly,33,9056,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,7,max_steps_100_unsolved,1.6622
+B_env_friendly,34,9057,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2445
+B_env_friendly,36,9061,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.1702
+B_env_friendly,40,9067,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2148
+B_env_friendly,41,9069,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,4,max_steps_100_unsolved,0.2114
+B_env_friendly,49,9081,4,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.213
+B_env_friendly,69,9058,5,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,6,max_steps_100_unsolved,0.2461
+B_env_friendly,76,9088,5,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,9,max_steps_100_unsolved,2.0431
+B_env_friendly,77,9096,5,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,8,max_steps_100_unsolved,0.3834
+B_env_friendly,81,9008,6,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,6,max_steps_100_unsolved,0.7714
+B_env_friendly,86,9028,6,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,5,max_steps_100_unsolved,0.2888
+B_env_friendly,98,9090,6,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,10,max_steps_100_unsolved,0.399
+B_env_friendly,100,9098,6,6,20,1.0,0.0,"{'repair': 1.0, 'opportunity': 1.0, 'region_preserve': -0.5, 'color_preserve': 2.0}",False,100,10,max_steps_100_unsolved,0.4683

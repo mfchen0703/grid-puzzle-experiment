@@ -1,0 +1,10 @@
+round,seed,diagnosis,has_correct_child_trace,n_action_steps,solution_visible_steps,correct_child_visible_steps,correct_child_selected_steps,top_repeated_action_share,top_repeated_state_share,mean_current_action_h_gap,mean_current_value_component_gap,mean_successor_best_score_gap,mean_next_repair_gap,mean_next_opportunity_gap,mean_next_region_preserve_gap,mean_next_color_preserve_gap,issue_pattern
+13,9023,correct_child_selected_but_still_failed,True,100,0,2,1,0.49,0.49,-0.25,0.125,0.25,0.125,0.0,0.5,-0.098512,current_gap_and_successor_gap_both_large
+20,9035,no_optimal_path_found_depth6,False,100,0,0,0,0.5,0.5,,,,,,,,no_depth6_correct_child_available
+34,9057,correct_child_visible_but_never_selected,True,100,0,100,0,0.5,0.5,0.0,0.333333,0.666667,0.333333,0.0,1.0,-0.128254,current_gap_small_but_successor_gap_large
+36,9061,no_optimal_path_found_depth6,False,100,0,0,0,0.5,0.5,,,,,,,,no_depth6_correct_child_available
+69,9058,no_optimal_path_found_depth6,False,100,0,0,0,0.5,0.5,,,,,,,,no_depth6_correct_child_available
+76,9088,no_optimal_path_found_depth6,False,100,0,0,0,0.5,0.5,,,,,,,,no_depth6_correct_child_available
+81,9008,no_optimal_path_found_depth6,False,100,0,0,0,0.49,0.49,,,,,,,,no_depth6_correct_child_available
+86,9028,no_optimal_path_found_depth6,False,100,0,0,0,0.49,0.49,,,,,,,,no_depth6_correct_child_available
+98,9090,no_optimal_path_found_depth6,False,100,0,0,0,0.48,0.48,,,,,,,,no_depth6_correct_child_available

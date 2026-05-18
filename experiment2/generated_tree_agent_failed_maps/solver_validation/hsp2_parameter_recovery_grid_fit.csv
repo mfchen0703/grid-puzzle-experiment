@@ -1,0 +1,3 @@
+﻿pruning_thresh,gamma,lapse_rate,nll,n_actions
+0.0,0.1,0.0,0.0,1
+2.0,0.1,0.0,0.0,1

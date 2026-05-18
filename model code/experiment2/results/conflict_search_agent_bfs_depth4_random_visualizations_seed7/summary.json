@@ -1,0 +1,82 @@
+[
+  {
+    "round": 1,
+    "status": "solved",
+    "rendered_steps": 6,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 2,
+    "status": "solved",
+    "rendered_steps": 4,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 3,
+    "status": "solved",
+    "rendered_steps": 4,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 4,
+    "status": "solved",
+    "rendered_steps": 4,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 5,
+    "status": "solved",
+    "rendered_steps": 11,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 6,
+    "status": "solved",
+    "rendered_steps": 18,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 7,
+    "status": "solved",
+    "rendered_steps": 5,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 8,
+    "status": "solved",
+    "rendered_steps": 7,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 9,
+    "status": "max_steps_reached",
+    "rendered_steps": 120,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  },
+  {
+    "round": 10,
+    "status": "solved",
+    "rendered_steps": 13,
+    "max_depth": 4,
+    "stuck_threshold": 3,
+    "random_tie_break": true
+  }
+]

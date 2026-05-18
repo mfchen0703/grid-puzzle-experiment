@@ -1,0 +1,15 @@
+﻿round,seed,optimalLength,n_action_steps,final_status,final_conflict_edges,min_conflict_edges_after,unique_states_before,repeated_state_steps,steps_with_solution_candidate,first_step_solution_candidate,steps_selected_solution,first_step_selected_solution,steps_visible_but_not_selected,diagnosis
+3,9005,4,100,action,2,2,5,95,0,,0,,0,solution_never_visible_at_root
+13,9023,4,100,action,1,1,9,91,0,,0,,0,solution_never_visible_at_root
+20,9035,4,100,action,1,1,5,95,0,,0,,0,solution_never_visible_at_root
+30,9053,4,100,action,1,1,7,93,0,,0,,0,solution_never_visible_at_root
+33,9056,4,100,action,1,1,6,94,0,,0,,0,solution_never_visible_at_root
+34,9057,4,100,action,1,1,5,95,0,,0,,0,solution_never_visible_at_root
+36,9061,4,100,action,1,1,5,95,0,,0,,0,solution_never_visible_at_root
+41,9069,4,100,action,1,1,7,93,0,,0,,0,solution_never_visible_at_root
+69,9058,5,100,action,1,1,5,95,0,,0,,0,solution_never_visible_at_root
+76,9088,5,100,action,1,1,7,93,0,,0,,0,solution_never_visible_at_root
+77,9096,5,100,action,1,1,8,92,0,,0,,0,solution_never_visible_at_root
+81,9008,6,100,action,1,1,6,94,0,,0,,0,solution_never_visible_at_root
+86,9028,6,100,action,1,1,6,94,0,,0,,0,solution_never_visible_at_root
+98,9090,6,100,action,2,2,8,92,0,,0,,0,solution_never_visible_at_root

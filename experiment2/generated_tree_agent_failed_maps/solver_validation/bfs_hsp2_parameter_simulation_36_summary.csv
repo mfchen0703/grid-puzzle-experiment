@@ -1,0 +1,13 @@
+﻿config,runs,maps_per_repeat,repeats,gamma,effective_beam_width,pruning_thresh,lapse_rate,success_n,success_rate,failed_n,timeout_n,mean_steps_success,median_steps_success,max_steps_success,mean_expansions_ok,max_expansions_ok
+gamma_0.5_prune_none_lapse0,36,36,1,0.5,3,,0.0,36,1.0,0,0,6.667,6.0,13,9.194,23
+gamma_0.333333_prune_none_lapse0,36,36,1,0.3333333333,4,,0.0,36,1.0,0,0,6.639,6.0,12,11.5,30
+gamma_0.25_prune_none_lapse0,36,36,1,0.25,5,,0.0,36,1.0,0,0,6.611,6.0,12,13.75,37
+gamma_0.2_prune_none_lapse0,36,36,1,0.2,6,,0.0,36,1.0,0,0,6.5,6.0,12,15.472,38
+gamma_0.1_prune_none_lapse0,36,36,1,0.1,11,,0.0,36,1.0,0,0,6.389,6.0,12,25.5,68
+gamma_0.25_prune_0_lapse0,36,36,1,0.25,5,0.0,0.0,34,0.9444444444444444,2,0,7.471,7.0,15,10.389,43
+gamma_0.25_prune_1_lapse0,36,36,1,0.25,5,1.0,0.0,35,0.9722222222222222,1,0,6.771,7,12,12.028,64
+gamma_0.25_prune_2_lapse0,36,36,1,0.25,5,2.0,0.0,36,1.0,0,0,6.694,6.5,12,11.944,33
+gamma_0.25_prune_3_lapse0,36,36,1,0.25,5,3.0,0.0,36,1.0,0,0,6.667,6.5,12,12.889,34
+gamma_0.25_prune_none_lapse_0.05,180,36,5,0.25,5,,0.05,179,0.9944444444444445,1,0,7.117,7,16,16.511,73
+gamma_0.25_prune_none_lapse_0.1,180,36,5,0.25,5,,0.1,177,0.9833333333333333,3,0,7.26,7,17,17.817,82
+gamma_0.25_prune_none_lapse_0.2,180,36,5,0.25,5,,0.2,178,0.9888888888888889,2,0,7.669,7.0,17,20.656,82

@@ -1,0 +1,8 @@
+step=0 region=11 old=2 new=4 conflicts=8->5 score=(0, -2, 1, 0, 0)
+step=1 region=30 old=1 new=2 conflicts=5->3 score=(0, -1, 0, -3, 0)
+step=2 region=24 old=2 new=3 conflicts=3->2 score=(0, -1, 0, -2, 0)
+step=3 region=22 old=1 new=3 conflicts=2->2 score=(0, -1, 0, -1, 0)
+step=4 region=5 old=2 new=1 conflicts=2->1 score=(0, -1, 0, -1, 0)
+step=5 region=9 old=2 new=3 conflicts=1->1 score=(0, -1, 0, -1, 0)
+step=6 region=26 old=4 new=2 conflicts=1->1 score=(0, -1, 0, -1, 0)
+status=no_tree_action_found at step=7

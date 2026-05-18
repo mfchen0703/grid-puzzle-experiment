@@ -1,0 +1,11 @@
+round,seed,n_comparable_steps,mean_state_value_gap,mean_weighted_gap_conflict_count,mean_weighted_gap_conflict_region_count,mean_weighted_gap_first_depth,mean_weighted_gap_normalized_depth0_regions,mean_weighted_gap_normalized_nonconflict_access,mean_weighted_gap_conflict_legal_option_norm,mean_weighted_gap_best_conflict_reduction_norm,mean_weighted_gap_one_step_solve_available,mean_weighted_gap_solve_action_count_norm
+3,9005,1,1.5479166666666666,1.25,0.5,0.0,-0.024999999999999994,-0.03333333333333333,-0.018749999999999996,-0.125,0.0,0.0
+13,9023,98,0.06462585034013597,0.012755102040816327,0.00510204081632653,-0.0010204081632653062,0.0,0.04778911564625842,0.0,0.0,0.0,0.0
+36,9061,0,,,,,,,,,,
+41,9069,1,1.015625,1.25,0.0,0.0,-0.0625,0.0,-0.046875,-0.12499999999999997,0.0,0.0
+69,9058,0,,,,,,,,,,
+76,9088,0,,,,,,,,,,
+77,9096,2,2.820610119047619,2.5,0.5,0.0,-0.027678571428571434,-0.041666666666666664,-0.020758928571428574,-0.08928571428571426,0.0,0.0
+81,9008,0,,,,,,,,,,
+86,9028,0,,,,,,,,,,
+98,9090,0,,,,,,,,,,

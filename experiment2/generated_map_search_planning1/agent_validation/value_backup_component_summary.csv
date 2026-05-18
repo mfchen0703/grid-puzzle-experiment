@@ -1,0 +1,5 @@
+group,n_steps,mean_gap_solved_component,mean_gap_heuristic_component,mean_gap_tiebreak_component,max_abs_gap_solved_component,max_abs_gap_heuristic_component,max_abs_gap_tiebreak_component,wrong_selection_rate
+all_visible_steps,102,0.0,0.32924836601307184,0.0,0.0,0.33333333333333326,0.0,0.9901960784313726
+wrong_only,101,0.0,0.33250825082508245,0.0,0.0,0.33333333333333326,0.0,1.0
+round_13,2,0.0,0.125,0.0,0.0,0.25,0.0,0.5
+round_34,100,0.0,0.33333333333333326,0.0,0.0,0.33333333333333326,0.0,1.0
