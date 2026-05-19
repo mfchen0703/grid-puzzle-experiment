@@ -22,6 +22,7 @@ export interface Experiment2Materials {
   cols: number;
   numRegions: number;
   colors: string[];
+  practiceRounds?: Experiment2Round[];
   rounds: Experiment2Round[];
 }
 

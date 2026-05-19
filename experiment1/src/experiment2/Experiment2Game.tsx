@@ -8,6 +8,7 @@ import {
   Experiment2Materials,
   ROWS,
   getConflictEdges,
+  Experiment2Round,
 } from './gameLogic';
 
 type HistoryEntry = {
@@ -21,7 +22,7 @@ const ROUND_SKIP_DELAY_MS = 3 * 60 * 1000;
 export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const [materials, setMaterials] = useState<Experiment2Materials | null>(null);
   const [loadState, setLoadState] = useState<'loading' | 'ready' | 'error'>('loading');
-  const [phase, setPhase] = useState<'instruction' | 'playing' | 'finished'>('instruction');
+  const [phase, setPhase] = useState<'instruction' | 'practice' | 'playing' | 'finished'>('instruction');
   const [roundIndex, setRoundIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(0);
   const [hoveredRegion, setHoveredRegion] = useState<number | null>(null);
@@ -60,7 +61,9 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   }, []);
 
   const rounds = materials?.rounds ?? [];
-  const round = rounds[roundIndex] ?? null;
+  const practiceRounds = materials?.practiceRounds ?? [];
+  const activeRounds = phase === 'practice' ? practiceRounds : rounds;
+  const round = activeRounds[roundIndex] ?? null;
   const adjacency = round ? buildAdjacencyMap(round.mapData) : null;
   const currentColors = round ? (history[historyIndex]?.regionColors ?? round.initialColors) : [];
   const conflictEdges = adjacency ? getConflictEdges(adjacency, currentColors) : [];
@@ -109,20 +112,34 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     );
   }
 
-  const startExperiment = () => {
+  const makeStartDescription = (roundData: Experiment2Round) =>
+    `Game Started (${roundData.mapData.numRegions} regions, ${roundData.conflictEdges.length} conflicts)`;
+
+  const beginRound = (nextPhase: 'practice' | 'playing', nextRoundIndex: number) => {
+    const nextRound = nextPhase === 'practice' ? practiceRounds[nextRoundIndex] : rounds[nextRoundIndex];
     const startedAt = Date.now();
-    setPhase('playing');
-    setRoundIndex(0);
+    setPhase(nextPhase);
+    setRoundIndex(nextRoundIndex);
     setRoundStartedAt(startedAt);
     setNowMs(startedAt);
     lastActionTime.current = startedAt;
-    setHistory([{ regionColors: [...rounds[0].initialColors], moveDescription: `Game Started (45 regions, ${rounds[0].conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
+    setHistory([{ regionColors: [...nextRound.initialColors], moveDescription: makeStartDescription(nextRound), timeTakenMs: 0 }]);
     setHistoryIndex(0);
-    setGlobalHistory([]);
   };
 
+  const startExperiment = () => {
+    setGlobalHistory([]);
+    if (practiceRounds.length > 0) {
+      beginRound('practice', 0);
+    } else {
+      beginRound('playing', 0);
+    }
+  };
+
+  const canEditRound = phase === 'practice' || phase === 'playing';
+
   const handleRegionClick = (regionId: number) => {
-    if (phase !== 'playing' || roundComplete || currentColors[regionId] === selectedColor) {
+    if (!canEditRound || roundComplete || currentColors[regionId] === selectedColor) {
       return;
     }
     const nextColors = [...currentColors];
@@ -141,7 +158,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   };
 
   const handleResetRound = () => {
-    if (phase !== 'playing' || roundComplete) {
+    if (!canEditRound || roundComplete) {
       return;
     }
     const now = Date.now();
@@ -167,24 +184,27 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   };
 
   const commitCurrentRound = () => {
-    commitRoundHistory(history.slice(0, historyIndex + 1), roundIndex);
+    if (phase === 'playing') {
+      commitRoundHistory(history.slice(0, historyIndex + 1), roundIndex);
+    }
   };
 
   const handleNextRound = () => {
     commitCurrentRound();
     const nextRoundIndex = roundIndex + 1;
+    if (phase === 'practice') {
+      if (nextRoundIndex < practiceRounds.length) {
+        beginRound('practice', nextRoundIndex);
+      } else {
+        beginRound('playing', 0);
+      }
+      return;
+    }
     if (nextRoundIndex >= rounds.length) {
       setPhase('finished');
       return;
     }
-    const nextRound = rounds[nextRoundIndex];
-    const startedAt = Date.now();
-    setRoundIndex(nextRoundIndex);
-    setHistory([{ regionColors: [...nextRound.initialColors], moveDescription: `Game Started (45 regions, ${nextRound.conflictEdges.length} conflicts)`, timeTakenMs: 0 }]);
-    setHistoryIndex(0);
-    setRoundStartedAt(startedAt);
-    setNowMs(startedAt);
-    lastActionTime.current = startedAt;
+    beginRound('playing', nextRoundIndex);
   };
 
   const handleSkipRound = () => {
@@ -257,21 +277,24 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
         <div className="w-full max-w-3xl rounded-3xl border border-slate-500/30 bg-slate-900/80 p-10 shadow-2xl">
           <div className="mb-8 flex items-center gap-3 text-3xl font-bold">
             <Grid size={36} />
-            实验 2
+            实验
           </div>
           <div className="space-y-4 text-lg leading-relaxed text-slate-200">
-            <p><strong>目标：</strong>地图一开始已经全部着色，但存在若干颜色冲突。你的任务是修改颜色，使整个地图最终没有任何相邻同色。</p>
-            <p><strong>关键点：</strong>不只是当前冲突的区域可能需要修改，一些当前看起来没冲突的区域也可能必须改色，才能让整张图恢复合法。</p>
+            <p>
+              <strong>目标：</strong>地图一开始已经全部着色，但存在若干相邻区域颜色冲突。你的任务是
+              <strong className="text-amber-300">修改各个区域的颜色</strong>，使整个地图最终
+              <strong className="text-amber-300">没有任何相邻区域为相同颜色</strong>。
+            </p>
             <p><strong>操作方法：</strong>先选择一种颜色，再点击地图中的区域，将该区域改成所选颜色。</p>
-            <p><strong>实验流程：</strong>共 {rounds.length} 轮正式实验，每轮都是 45 个区域。每轮初始地图都含有需要规划的冲突结构。</p>
-            <p><strong>跳过规则：</strong>如果某一轮超过 3 分钟仍未完成，可以点击“跳过本轮”继续下一轮。</p>
-            <p className="text-amber-300">注意：你的所有修改步骤和用时都会被记录。</p>
+            <p><strong>注意：</strong>你可以修改地图上任何区域的颜色以达到目标。</p>
+            <p><strong>实验流程：</strong>指导语结束后先完成 {practiceRounds.length} 轮练习，每轮 20 个区域；随后进入 {rounds.length} 轮正式实验，每轮 45 个区域。</p>
+            <p><strong>跳过规则：</strong>如果某一轮<strong className="text-amber-300">超过 3 分钟</strong>仍未完成，可以点击“跳过本轮”继续下一轮。</p>
           </div>
           <button
             onClick={startExperiment}
             className="mt-8 w-full rounded-xl bg-emerald-600 px-6 py-3 text-lg font-semibold hover:bg-emerald-700 transition-colors"
           >
-            开始实验 2
+            开始练习
           </button>
         </div>
       </div>
@@ -283,7 +306,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
       <header className="flex justify-between items-center p-4 text-white border-b border-white/10">
         <div className="flex items-center gap-3 text-xl font-bold">
           <Grid size={28} />
-          实验 2
+          实验
         </div>
       </header>
 
@@ -294,7 +317,9 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
         <div className="bg-cyan-950/80 text-cyan-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-cyan-500/30 mb-8 w-full" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
           <div className="flex items-center gap-2 font-bold">
             <ListOrdered size={18} />
-            第 {roundIndex + 1} 轮 / 共 {rounds.length} 轮
+            {phase === 'practice'
+              ? `练习 ${roundIndex + 1} / ${practiceRounds.length}`
+              : `第 ${roundIndex + 1} 轮 / 共 ${rounds.length} 轮`}
             <span className="ml-2 px-2 py-0.5 bg-cyan-900 rounded text-xs">ID: {sessionId}</span>
           </div>
         </div>
@@ -365,9 +390,13 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
           {roundComplete && (
             <div className="absolute inset-0 bg-black/15 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
               <div className="bg-white px-8 py-4 rounded-2xl shadow-2xl text-3xl font-bold text-emerald-600 flex items-center gap-3">
-                <Check size={40} strokeWidth={3} /> {roundIndex === rounds.length - 1 ? '实验完成！' : roundSkipped ? '本轮已跳过' : '本轮完成！'}
+                <Check size={40} strokeWidth={3} /> {phase === 'practice' ? '练习完成！' : roundIndex === rounds.length - 1 ? '实验完成！' : roundSkipped ? '本轮已跳过' : '本轮完成！'}
               </div>
-              {roundIndex < rounds.length - 1 ? (
+              {phase === 'practice' ? (
+                <button onClick={handleNextRound} className="flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-full text-lg font-semibold hover:bg-emerald-700 transition-colors shadow-lg">
+                  <PlaySquare size={20} /> {roundIndex < practiceRounds.length - 1 ? `下一轮练习 (${roundIndex + 2}/${practiceRounds.length})` : '进入正式实验'}
+                </button>
+              ) : roundIndex < rounds.length - 1 ? (
                 <button onClick={handleNextRound} className="flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-full text-lg font-semibold hover:bg-emerald-700 transition-colors shadow-lg">
                   <PlaySquare size={20} /> 下一轮 ({roundIndex + 2}/{rounds.length})
                 </button>

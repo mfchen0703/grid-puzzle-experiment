@@ -1,15 +1,10 @@
 import { Grid } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import Experiment1Game from './Experiment1Game';
 import Experiment2Game from './experiment2/Experiment2Game';
 
-type ExperimentChoice = 'experiment1' | 'experiment2';
-type Route = 'home' | ExperimentChoice;
+type Route = 'home' | 'experiment2';
 
 function getRouteFromPath(pathname: string): Route {
-  if (pathname === '/experiment1') {
-    return 'experiment1';
-  }
   if (pathname === '/experiment2') {
     return 'experiment2';
   }
@@ -17,9 +12,6 @@ function getRouteFromPath(pathname: string): Route {
 }
 
 function getPathFromRoute(route: Route): string {
-  if (route === 'experiment1') {
-    return '/experiment1';
-  }
   if (route === 'experiment2') {
     return '/experiment2';
   }
@@ -55,7 +47,8 @@ export default function App() {
     setSessionId(trimmed);
     const params = new URLSearchParams(window.location.search);
     params.set('id', trimmed);
-    window.history.replaceState({}, '', `${getPathFromRoute(route)}?${params.toString()}`);
+    window.history.replaceState({}, '', `/experiment2?${params.toString()}`);
+    setRoute('experiment2');
   };
 
   const navigateTo = (nextRoute: Route) => {
@@ -70,10 +63,6 @@ export default function App() {
     setRoute(nextRoute);
   };
 
-  if (sessionId && route === 'experiment1') {
-    return <Experiment1Game sessionId={sessionId} />;
-  }
-
   if (sessionId && route === 'experiment2') {
     return <Experiment2Game sessionId={sessionId} />;
   }
@@ -86,8 +75,8 @@ export default function App() {
       </div>
 
       <div className="bg-[#1f2937] p-10 rounded-2xl shadow-2xl border border-white/10 w-full max-w-2xl">
-        <h2 className="text-3xl font-bold text-white mb-3 text-center">输入编号并选择实验</h2>
-        <p className="text-gray-400 text-sm mb-8 text-center">先输入你的编号，然后选择进行实验 1 或实验 2。</p>
+        <h2 className="text-3xl font-bold text-white mb-3 text-center">输入编号</h2>
+        <p className="text-gray-400 text-sm mb-8 text-center">请输入你的编号，然后进入实验。</p>
 
         <input
           type="text"
@@ -104,7 +93,7 @@ export default function App() {
             onClick={handleSubmitId}
             className="w-full py-3 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg transition-colors"
           >
-            确认编号
+            进入实验
           </button>
         ) : (
           <div className="space-y-4">
@@ -113,19 +102,11 @@ export default function App() {
             </div>
 
             <button
-              onClick={() => navigateTo('experiment1')}
-              className="w-full rounded-xl border border-white/10 bg-slate-800 px-6 py-5 text-left hover:bg-slate-700 transition-colors"
-            >
-              <div className="text-xl font-semibold text-white">实验 1: 从空白地图开始涂色</div>
-              <div className="mt-1 text-sm text-slate-300">先做 2 轮练习，再完成 10 轮正式实验，目标是给所有区域填色并避免相邻同色。</div>
-            </button>
-
-            <button
               onClick={() => navigateTo('experiment2')}
               className="w-full rounded-xl border border-white/10 bg-slate-800 px-6 py-5 text-left hover:bg-slate-700 transition-colors"
             >
-              <div className="text-xl font-semibold text-white">实验 2: 修复已有颜色冲突</div>
-              <div className="mt-1 text-sm text-slate-300">共 10 轮，每轮 45 个区域。地图初始已着色，但含有需要规划的冲突，你需要通过改色恢复无冲突状态。</div>
+              <div className="text-xl font-semibold text-white">开始实验</div>
+              <div className="mt-1 text-sm text-slate-300">先完成 2 轮练习，再完成 30 轮正式实验。地图初始已着色，但含有需要规划的冲突，你需要通过改色恢复无冲突状态。</div>
             </button>
 
             <button

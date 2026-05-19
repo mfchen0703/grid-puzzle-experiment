@@ -42,7 +42,7 @@ It also has a standalone C++ simulation mode:
   8 \
   1000 \
   1 \
-  38 \
+  30 \
   > hsp2_cpp_actions.csv
 ```
 
@@ -145,7 +145,7 @@ python3 "model code/experiment2/analysis_code/experiment2_tree_hsp2_parameter_re
   --true-pruning-thresh 2.0 \
   --true-gamma 0.1 \
   --true-lapse-rate 0.05 \
-  --round-limit 38 \
+  --round-limit 30 \
   --max-agent-steps 50 \
   --ibs-samples 5 \
   --bads-max-fun-evals 100 \
@@ -243,7 +243,7 @@ Example: simulate tree observations and recover the model:
   --rounds experiment2/generated_fourinarow_tree_failed_maps_38/rounds_cpp.txt \
   --simulate-agent tree \
   --output-prefix experiment2/generated_tree_agent_failed_maps/solver_validation/tree_cpp_model_recovery \
-  --round-limit 38 \
+  --round-limit 30 \
   --random-seed 1 \
   --max-agent-steps 50 \
   --max-depth 8 \
