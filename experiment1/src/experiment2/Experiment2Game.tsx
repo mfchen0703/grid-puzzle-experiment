@@ -17,15 +17,90 @@ type HistoryEntry = {
   timeTakenMs?: number;
 };
 
+type ColorMenuState = {
+  regionId: number;
+  x: number;
+  y: number;
+};
+
 const ROUND_SKIP_DELAY_MS = 3 * 60 * 1000;
+
+function InstructionExampleMap({ solved }: { solved: boolean }) {
+  const exampleGrid = [
+    [0, 0, 1, 1, 2, 2, 3, 3, 4, 4],
+    [0, 5, 5, 1, 2, 6, 6, 3, 4, 7],
+    [8, 8, 5, 9, 9, 9, 6, 10, 10, 7],
+    [8, 11, 11, 11, 12, 9, 13, 13, 10, 7],
+    [14, 14, 15, 11, 12, 12, 13, 16, 16, 16],
+    [14, 17, 15, 15, 18, 18, 19, 19, 20, 16],
+    [17, 17, 17, 21, 21, 18, 19, 20, 20, 20],
+  ];
+  const conflictRegionColors = [0, 3, 1, 2, 0, 1, 3, 2, 2, 1, 0, 3, 3, 0, 1, 2, 3, 0, 1, 2, 2, 3];
+  const solvedRegionColors = [3, 1, 3, 1, 2, 2, 2, 1, 0, 0, 0, 1, 2, 1, 2, 0, 2, 1, 1, 0, 1, 2];
+  const regionColors = solved ? solvedRegionColors : conflictRegionColors;
+  const conflictRegions = new Set([5, 9, 11, 12, 19, 20]);
+  const exampleRows = exampleGrid.length;
+  const exampleCols = exampleGrid[0].length;
+  const exampleCellSize = 24;
+
+  return (
+    <div className="relative inline-block rounded-sm bg-[#e2e8f0] p-3 shadow-xl ring-2 ring-cyan-500/60">
+      <div
+        className="grid bg-[#0f172a] border border-[#0f172a]"
+        style={{
+          gridTemplateColumns: `repeat(${exampleCols}, ${exampleCellSize}px)`,
+          gridTemplateRows: `repeat(${exampleRows}, ${exampleCellSize}px)`,
+        }}
+      >
+        {exampleGrid.flatMap((row, r) =>
+          row.map((regionId, c) => {
+            const isConflictRegion = !solved && conflictRegions.has(regionId);
+            const borderColor = isConflictRegion ? '#ef4444' : '#0f172a';
+            return (
+              <div
+                key={`${r}-${c}`}
+                className="box-border"
+                style={{
+                  width: `${exampleCellSize}px`,
+                  height: `${exampleCellSize}px`,
+                  backgroundColor: COLORS[regionColors[regionId]],
+                  borderTop: r === 0 || exampleGrid[r - 1][c] !== regionId ? `3px solid ${borderColor}` : 'none',
+                  borderBottom: r === exampleRows - 1 || exampleGrid[r + 1][c] !== regionId ? `3px solid ${borderColor}` : 'none',
+                  borderLeft: c === 0 || exampleGrid[r][c - 1] !== regionId ? `3px solid ${borderColor}` : 'none',
+                  borderRight: c === exampleCols - 1 || exampleGrid[r][c + 1] !== regionId ? `3px solid ${borderColor}` : 'none',
+                }}
+              />
+            );
+          }),
+        )}
+      </div>
+      {!solved && (
+        <div className="absolute left-28 top-12 w-40 rounded-xl border border-white/15 bg-slate-950/95 p-3 text-white shadow-2xl">
+          <div className="mb-2 text-xs font-semibold text-slate-200">右键选择颜色</div>
+          <div className="grid grid-cols-2 gap-2">
+            {COLORS.map((color, idx) => (
+              <div key={color} className="flex h-9 items-center justify-center rounded-lg border border-slate-700 bg-slate-900">
+                <span
+                  className={`h-5 w-5 rounded-full border-2 ${idx === 2 ? 'border-amber-300' : 'border-white/80'}`}
+                  style={{ backgroundColor: color }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const [materials, setMaterials] = useState<Experiment2Materials | null>(null);
   const [loadState, setLoadState] = useState<'loading' | 'ready' | 'error'>('loading');
   const [phase, setPhase] = useState<'instruction' | 'practice' | 'playing' | 'finished'>('instruction');
+  const [instructionPage, setInstructionPage] = useState(1);
   const [roundIndex, setRoundIndex] = useState(0);
-  const [selectedColor, setSelectedColor] = useState(0);
   const [hoveredRegion, setHoveredRegion] = useState<number | null>(null);
+  const [colorMenu, setColorMenu] = useState<ColorMenuState | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyIndex, setHistoryIndex] = useState(0);
   const [globalHistory, setGlobalHistory] = useState<Array<HistoryEntry & { round: string }>>([]);
@@ -90,6 +165,26 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     };
   }, [phase, roundComplete, roundIndex]);
 
+  useEffect(() => {
+    if (!colorMenu) {
+      return;
+    }
+    const closeMenu = () => setColorMenu(null);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
+    window.addEventListener('click', closeMenu);
+    window.addEventListener('resize', closeMenu);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('click', closeMenu);
+      window.removeEventListener('resize', closeMenu);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [colorMenu]);
+
   if (loadState === 'loading') {
     return (
       <div className="min-h-screen bg-[#0f172a] text-white flex items-center justify-center p-6">
@@ -118,6 +213,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   const beginRound = (nextPhase: 'practice' | 'playing', nextRoundIndex: number) => {
     const nextRound = nextPhase === 'practice' ? practiceRounds[nextRoundIndex] : rounds[nextRoundIndex];
     const startedAt = Date.now();
+    setColorMenu(null);
     setPhase(nextPhase);
     setRoundIndex(nextRoundIndex);
     setRoundStartedAt(startedAt);
@@ -138,19 +234,37 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
 
   const canEditRound = phase === 'practice' || phase === 'playing';
 
-  const handleRegionClick = (regionId: number) => {
-    if (!canEditRound || roundComplete || currentColors[regionId] === selectedColor) {
+  const openColorMenu = (event: React.MouseEvent<HTMLDivElement>, regionId: number) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (!canEditRound || roundComplete) {
+      setColorMenu(null);
+      return;
+    }
+    const menuWidth = 192;
+    const menuHeight = 152;
+    const margin = 12;
+    setColorMenu({
+      regionId,
+      x: Math.max(margin, Math.min(event.clientX, window.innerWidth - menuWidth - margin)),
+      y: Math.max(margin, Math.min(event.clientY, window.innerHeight - menuHeight - margin)),
+    });
+  };
+
+  const applyRegionColor = (regionId: number, colorIndex: number) => {
+    setColorMenu(null);
+    if (!canEditRound || roundComplete || currentColors[regionId] === colorIndex) {
       return;
     }
     const nextColors = [...currentColors];
-    nextColors[regionId] = selectedColor;
+    nextColors[regionId] = colorIndex;
     const now = Date.now();
     const timeTakenMs = now - lastActionTime.current;
     lastActionTime.current = now;
     const newHistory = history.slice(0, historyIndex + 1);
     newHistory.push({
       regionColors: nextColors,
-      moveDescription: `Recolored Region ${regionId + 1} to Color ${selectedColor + 1}`,
+      moveDescription: `Recolored Region ${regionId + 1} to Color ${colorIndex + 1}`,
       timeTakenMs,
     });
     setHistory(newHistory);
@@ -161,6 +275,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     if (!canEditRound || roundComplete) {
       return;
     }
+    setColorMenu(null);
     const now = Date.now();
     const timeTakenMs = now - lastActionTime.current;
     lastActionTime.current = now;
@@ -190,6 +305,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
   };
 
   const handleNextRound = () => {
+    setColorMenu(null);
     commitCurrentRound();
     const nextRoundIndex = roundIndex + 1;
     if (phase === 'practice') {
@@ -211,6 +327,7 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
     if (!canSkipRound) {
       return;
     }
+    setColorMenu(null);
     const now = Date.now();
     const timeTakenMs = now - lastActionTime.current;
     lastActionTime.current = now;
@@ -279,23 +396,74 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
             <Grid size={36} />
             实验
           </div>
-          <div className="space-y-4 text-lg leading-relaxed text-slate-200">
-            <p>
-              <strong>目标：</strong>地图一开始已经全部着色，但存在若干相邻区域颜色冲突。你的任务是
-              <strong className="text-amber-300">修改各个区域的颜色</strong>，使整个地图最终
-              <strong className="text-amber-300">没有任何相邻区域为相同颜色</strong>。
-            </p>
-            <p><strong>操作方法：</strong>先选择一种颜色，再点击地图中的区域，将该区域改成所选颜色。</p>
-            <p><strong>注意：</strong>你可以修改地图上任何区域的颜色以达到目标。</p>
-            <p><strong>实验流程：</strong>指导语结束后先完成 {practiceRounds.length} 轮练习，每轮 20 个区域；随后进入 {rounds.length} 轮正式实验，每轮 45 个区域。</p>
-            <p><strong>跳过规则：</strong>如果某一轮<strong className="text-amber-300">超过 3 分钟</strong>仍未完成，可以点击“跳过本轮”继续下一轮。</p>
-          </div>
-          <button
-            onClick={startExperiment}
-            className="mt-8 w-full rounded-xl bg-emerald-600 px-6 py-3 text-lg font-semibold hover:bg-emerald-700 transition-colors"
-          >
-            开始练习
-          </button>
+          {instructionPage === 1 ? (
+            <>
+              <div className="space-y-4 text-lg leading-relaxed text-slate-200">
+                <p>
+                  <strong>目标：</strong>地图一开始已经全部着色，但存在若干相邻区域颜色冲突。你的任务是
+                  <strong className="text-amber-300">修改各个区域的颜色</strong>，使整个地图最终
+                  <strong className="text-amber-300">没有任何相邻区域为相同颜色</strong>。
+                </p>
+                <p>
+                  <strong>操作方法：</strong>在地图区域上
+                  <strong className="text-amber-300">点击右键，弹出四种颜色选项</strong>
+                  后选择要改成的颜色。
+                </p>
+                <p><strong>注意：</strong>你可以修改地图上任何区域的颜色以达到目标。</p>
+                <p><strong>实验流程：</strong>指导语结束后先完成 {practiceRounds.length} 轮练习，每轮 20 个区域；随后进入 {rounds.length} 轮正式实验，每轮 45 个区域。</p>
+                <p><strong>跳过规则：</strong>如果某一轮<strong className="text-amber-300">超过 3 分钟</strong>仍未完成，可以点击“跳过本轮”继续下一轮。</p>
+              </div>
+              <button
+                onClick={() => setInstructionPage(2)}
+                className="mt-8 w-full rounded-xl bg-emerald-600 px-6 py-3 text-lg font-semibold hover:bg-emerald-700 transition-colors"
+              >
+                下一页
+              </button>
+            </>
+          ) : (
+            <>
+              <div className="space-y-6 text-lg leading-relaxed text-slate-200">
+                <p>
+                  改色时，请在地图区域上
+                  <strong className="text-amber-300">点击右键，弹出四种颜色选项</strong>
+                  ，再选择一种颜色完成修改。
+                </p>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-slate-800/70 p-5">
+                    <div className="mb-4 text-base font-semibold text-white">改色示意</div>
+                    <div className="flex justify-center">
+                      <InstructionExampleMap solved={false} />
+                    </div>
+                  </div>
+                  <div className="rounded-2xl border border-white/10 bg-slate-800/70 p-5">
+                    <div className="mb-4 text-base font-semibold text-white">完成示意</div>
+                    <div className="flex justify-center">
+                      <InstructionExampleMap solved />
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  最后需要将地图修改成
+                  <strong className="text-amber-300">没有任何相邻区域为相同颜色</strong>
+                  的状态。
+                </p>
+              </div>
+              <div className="mt-8 grid gap-3 sm:grid-cols-[auto_1fr]">
+                <button
+                  onClick={() => setInstructionPage(1)}
+                  className="rounded-xl border border-slate-500/50 px-6 py-3 text-lg font-semibold text-slate-100 transition-colors hover:bg-slate-800"
+                >
+                  返回上一页
+                </button>
+                <button
+                  onClick={startExperiment}
+                  className="rounded-xl bg-emerald-600 px-6 py-3 text-lg font-semibold hover:bg-emerald-700 transition-colors"
+                >
+                  开始练习
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     );
@@ -314,13 +482,31 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
         <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">冲突修复</h1>
         <p className="text-xl text-slate-300 mb-8 leading-relaxed text-center">修改区域颜色，使整张地图恢复为无冲突状态。</p>
 
-        <div className="bg-cyan-950/80 text-cyan-100 px-5 py-3 rounded-xl flex items-center justify-between shadow-md border border-cyan-500/30 mb-8 w-full" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
+        <div className="bg-cyan-950/80 text-cyan-100 px-5 py-3 rounded-xl flex flex-wrap items-center justify-between gap-3 shadow-md border border-cyan-500/30 mb-5 w-full" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
           <div className="flex items-center gap-2 font-bold">
             <ListOrdered size={18} />
             {phase === 'practice'
               ? `练习 ${roundIndex + 1} / ${practiceRounds.length}`
               : `第 ${roundIndex + 1} 轮 / 共 ${rounds.length} 轮`}
             <span className="ml-2 px-2 py-0.5 bg-cyan-900 rounded text-xs">ID: {sessionId}</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm font-semibold text-red-100">
+            <span className="h-5 w-5 rounded-sm border-2 border-red-200 bg-red-500/75 shadow-[0_0_0_2px_rgba(239,68,68,0.25)]" />
+            红色标记表示当前仍有相邻同色冲突
+          </div>
+        </div>
+
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-3 rounded-xl border border-white/10 bg-slate-900/80 px-5 py-3 text-sm text-slate-200 shadow-lg" style={{ maxWidth: `${COLS * CELL_SIZE + 40}px` }}>
+          <span className="font-semibold text-white">右键点击区域选择颜色</span>
+          <div className="flex items-center gap-2">
+            {COLORS.map((color, idx) => (
+              <span
+                key={color}
+                className="h-6 w-6 rounded-full border-2 border-white/70 shadow"
+                style={{ backgroundColor: color }}
+                title={`颜色 ${idx + 1}`}
+              />
+            ))}
           </div>
         </div>
 
@@ -352,10 +538,11 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
                       borderBottom: r === ROWS - 1 || round.mapData.grid[r + 1][c] !== regionId ? '2px solid #0f172a' : 'none',
                       borderLeft: c === 0 || round.mapData.grid[r][c - 1] !== regionId ? '2px solid #0f172a' : 'none',
                       borderRight: c === COLS - 1 || round.mapData.grid[r][c + 1] !== regionId ? '2px solid #0f172a' : 'none',
-                      cursor: roundComplete ? 'default' : 'pointer',
+                      cursor: canEditRound && !roundComplete ? 'context-menu' : 'default',
                     }}
                     onMouseEnter={() => setHoveredRegion(regionId)}
-                    onClick={() => handleRegionClick(regionId)}
+                    onClick={() => setColorMenu(null)}
+                    onContextMenu={(event) => openColorMenu(event, regionId)}
                   >
                     {isHovered && !roundComplete && <div className="absolute inset-0 bg-white/20 pointer-events-none" />}
                     {isError && (
@@ -386,6 +573,43 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
               }),
             )}
           </div>
+
+          {colorMenu && (
+            <div
+              className="fixed z-50 w-48 rounded-xl border border-white/15 bg-slate-950/95 p-3 text-white shadow-2xl backdrop-blur"
+              style={{ left: colorMenu.x, top: colorMenu.y }}
+              onClick={(event) => event.stopPropagation()}
+              onContextMenu={(event) => event.preventDefault()}
+            >
+              <div className="mb-3 text-sm font-semibold text-slate-200">
+                区域 {colorMenu.regionId + 1} 选择颜色
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {COLORS.map((color, idx) => {
+                  const isCurrentColor = currentColors[colorMenu.regionId] === idx;
+                  return (
+                    <button
+                      key={color}
+                      type="button"
+                      disabled={isCurrentColor}
+                      className={`flex h-12 items-center justify-center rounded-lg border-2 transition-transform ${
+                        isCurrentColor
+                          ? 'cursor-not-allowed border-white bg-white/10 opacity-65'
+                          : 'border-slate-700 bg-slate-900 hover:scale-105 hover:border-white'
+                      }`}
+                      onClick={() => applyRegionColor(colorMenu.regionId, idx)}
+                      title={`颜色 ${idx + 1}${isCurrentColor ? '（当前颜色）' : ''}`}
+                    >
+                      <span
+                        className="h-7 w-7 rounded-full border-2 border-white/80 shadow"
+                        style={{ backgroundColor: color }}
+                      />
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {roundComplete && (
             <div className="absolute inset-0 bg-black/15 flex flex-col items-center justify-center backdrop-blur-[2px] z-10 gap-5">
@@ -432,18 +656,6 @@ export default function Experiment2Game({ sessionId }: { sessionId: string }) {
             <SkipForward size={18} />
             跳过本轮
           </button>
-
-          <div className="flex gap-5 justify-center">
-          {COLORS.map((color, idx) => (
-            <button
-              key={color}
-              className={`w-14 h-14 rounded-full border-4 shadow-lg transition-all duration-200 ${selectedColor === idx ? 'border-white scale-110 ring-4 ring-white/20' : 'border-[#0f172a] hover:scale-105'}`}
-              style={{ backgroundColor: color }}
-              onClick={() => setSelectedColor(idx)}
-              title={`颜色 ${idx + 1}`}
-            />
-          ))}
-          </div>
         </div>
       </main>
     </div>

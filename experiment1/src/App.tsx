@@ -83,7 +83,6 @@ export default function App() {
           value={inputId}
           onChange={(e) => setInputId(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSubmitId()}
-          placeholder="例如 1, 2, 3……或你的名字"
           className="w-full px-5 py-3 rounded-lg bg-[#111827] text-white text-lg border border-white/20 focus:border-cyan-500 focus:outline-none mb-6"
           autoFocus
         />

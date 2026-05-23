@@ -1,0 +1,406 @@
+[Actions]
+SessionID,Experiment,Round,Step,Action,ConflictRegions,TimeTaken(s)
+5201314,experiment2,1,0,"Game Started (45 regions, 5 conflicts)","11 12 15 16 35 38 43 45",0.0
+5201314,experiment2,1,1,"Recolored Region 45 to Color 3","11 12 16 35 43",12.9
+5201314,experiment2,1,2,"Recolored Region 43 to Color 2","11 12 16",4.5
+5201314,experiment2,1,3,"Recolored Region 12 to Color 1","12 27",4.5
+5201314,experiment2,1,4,"Recolored Region 12 to Color 3","9 12",13.8
+5201314,experiment2,1,5,"Recolored Region 9 to Color 4","1 9",8.7
+5201314,experiment2,1,6,"Recolored Region 1 to Color 3","1 12",3.1
+5201314,experiment2,1,7,"Recolored Region 1 to Color 1","1 18 27",4.6
+5201314,experiment2,1,8,"Recolored Region 1 to Color 3","1 12",3.5
+5201314,experiment2,1,9,"Recolored Region 27 to Color 4","1 12 21 27",4.4
+5201314,experiment2,1,10,"Recolored Region 12 to Color 1","21 27",1.8
+5201314,experiment2,1,11,"Recolored Region 21 to Color 1","14 21",11.8
+5201314,experiment2,1,12,"Recolored Region 14 to Color 4","14 26",10.3
+5201314,experiment2,1,13,"Recolored Region 26 to Color 3","8 26",5.0
+5201314,experiment2,1,14,"Recolored Region 8 to Color 2","8 15 43",11.8
+5201314,experiment2,1,15,"Recolored Region 43 to Color 3","8 15 26 43",5.0
+5201314,experiment2,1,16,"Recolored Region 43 to Color 4","8 15",3.0
+5201314,experiment2,1,17,"Recolored Region 15 to Color 4","",3.2
+5201314,experiment2,2,18,"Game Started (45 regions, 4 conflicts)","6 11 16 23 25 27 39",0.0
+5201314,experiment2,2,19,"Recolored Region 27 to Color 2","6 11 16 23 39",5.6
+5201314,experiment2,2,20,"Recolored Region 6 to Color 4","6 11 23 31",19.2
+5201314,experiment2,2,21,"Recolored Region 31 to Color 3","11 23",5.9
+5201314,experiment2,2,22,"Recolored Region 23 to Color 4","",8.0
+5201314,experiment2,3,23,"Game Started (45 regions, 4 conflicts)","8 12 14 25 38 43 44",0.0
+5201314,experiment2,3,24,"Recolored Region 14 to Color 3","8 25 38 43 44",3.5
+5201314,experiment2,3,25,"Recolored Region 43 to Color 1","8 36 38 43 44",5.8
+5201314,experiment2,3,26,"Recolored Region 12 to Color 1","8 10 12 36 38 43 44",0.9
+5201314,experiment2,3,27,"Round Reset","8 12 14 25 38 43 44",2.1
+5201314,experiment2,3,28,"Recolored Region 14 to Color 1","8 14 25 38 41 43 44",2.6
+5201314,experiment2,3,29,"Round Reset","8 12 14 25 38 43 44",1.4
+5201314,experiment2,3,30,"Recolored Region 14 to Color 3","8 25 38 43 44",2.4
+5201314,experiment2,3,31,"Recolored Region 25 to Color 1","8 25 36 38 39 41 44",11.3
+5201314,experiment2,3,32,"Recolored Region 25 to Color 4","8 25 38 43 44",3.2
+5201314,experiment2,3,33,"Recolored Region 25 to Color 1","8 25 36 38 39 41 44",4.3
+5201314,experiment2,3,34,"Recolored Region 41 to Color 2","8 25 36 38 39 44",3.3
+5201314,experiment2,3,35,"Recolored Region 39 to Color 4","8 25 36 38 44",3.0
+5201314,experiment2,3,36,"Recolored Region 36 to Color 4","2 8 36 38 43 44",2.8
+5201314,experiment2,3,37,"Recolored Region 36 to Color 2","8 36 38 42 44",7.9
+5201314,experiment2,3,38,"Recolored Region 42 to Color 4","8 38 39 42 44",14.7
+5201314,experiment2,3,39,"Recolored Region 39 to Color 2","8 18 38 39 44",5.7
+5201314,experiment2,3,40,"Recolored Region 18 to Color 4","7 8 18 38 44",8.0
+5201314,experiment2,3,41,"Recolored Region 7 to Color 1","8 38 44",3.9
+5201314,experiment2,3,42,"Recolored Region 38 to Color 1","8 44",2.3
+5201314,experiment2,3,43,"Recolored Region 8 to Color 4","",3.2
+5201314,experiment2,4,44,"Game Started (45 regions, 6 conflicts)","8 9 10 23 37 39 40 42 43",0.0
+5201314,experiment2,4,45,"Recolored Region 10 to Color 4","8 9 10 23 37 39 40 41 42 43",6.3
+5201314,experiment2,4,46,"Recolored Region 10 to Color 3","8 9 23 37 39 40 42 43",2.0
+5201314,experiment2,4,47,"Recolored Region 23 to Color 3","8 9 37 39 40 42 43",13.2
+5201314,experiment2,4,48,"Recolored Region 43 to Color 4","8 9 37 39 40 42",4.8
+5201314,experiment2,4,49,"Recolored Region 8 to Color 4","4 8 34 37 39 40 42",14.8
+5201314,experiment2,4,50,"Recolored Region 4 to Color 1","8 34 37 39 40 42",3.2
+5201314,experiment2,4,51,"Recolored Region 34 to Color 1","37 39 40 42",0.6
+5201314,experiment2,4,52,"Recolored Region 37 to Color 3","39 40",3.6
+5201314,experiment2,4,53,"Recolored Region 39 to Color 2","22 39",12.0
+5201314,experiment2,4,54,"Recolored Region 22 to Color 3","",6.3
+5201314,experiment2,5,55,"Game Started (45 regions, 5 conflicts)","14 17 18 22 29 37 40 44",0.0
+5201314,experiment2,5,56,"Recolored Region 37 to Color 1","9 17 18 21 22 29 35 37 40 44",23.9
+5201314,experiment2,5,57,"Recolored Region 35 to Color 4","9 17 18 21 22 24 29 35 37 40 44",7.3
+5201314,experiment2,5,58,"Recolored Region 24 to Color 1","9 17 18 21 22 29 37 40 44",4.4
+5201314,experiment2,5,59,"Recolored Region 7 to Color 3","7 9 12 17 18 21 22 29 37 40 44",4.3
+5201314,experiment2,5,60,"Recolored Region 9 to Color 3","7 9 12 17 18 21 22 29 37 38 40 44",0.3
+5201314,experiment2,5,61,"Recolored Region 7 to Color 4","9 17 18 21 22 29 37 38 40 44",3.6
+5201314,experiment2,5,62,"Round Reset","14 17 18 22 29 37 40 44",9.9
+5201314,experiment2,5,63,"Recolored Region 40 to Color 4","14 17 18 22 29 37 44",4.0
+5201314,experiment2,5,64,"Recolored Region 17 to Color 3","14 22 29 37",1.9
+5201314,experiment2,5,65,"Recolored Region 29 to Color 4","14 37",6.4
+5201314,experiment2,5,66,"Recolored Region 14 to Color 1","9 14 35",9.5
+5201314,experiment2,5,67,"Recolored Region 35 to Color 4","9 14 24 35",2.0
+5201314,experiment2,5,68,"Recolored Region 9 to Color 4","1 7 9 24 35",3.3
+5201314,experiment2,5,69,"Recolored Region 1 to Color 2","7 9 24 35",5.6
+5201314,experiment2,5,70,"Recolored Region 9 to Color 1","9 14 24 35",5.7
+5201314,experiment2,5,71,"Recolored Region 14 to Color 3","14 24 25 35",5.3
+5201314,experiment2,5,72,"Recolored Region 25 to Color 4","24 35",2.1
+5201314,experiment2,5,73,"Recolored Region 35 to Color 1","",4.0
+5201314,experiment2,6,74,"Game Started (45 regions, 7 conflicts)","6 15 20 27 30 32 34 36 37 43",0.0
+5201314,experiment2,6,75,"Recolored Region 20 to Color 4","6 15 27 30 32 34 36 37 43",7.0
+5201314,experiment2,6,76,"Recolored Region 37 to Color 4","6 15 27 30 32 34 36 43",3.0
+5201314,experiment2,6,77,"Recolored Region 30 to Color 3","11 15 26 27 30 32 34 36 43",9.7
+5201314,experiment2,6,78,"Recolored Region 26 to Color 4","11 15 19 26 27 30 32 34 36 43",2.2
+5201314,experiment2,6,79,"Recolored Region 11 to Color 4","8 11 15 19 26 27 32 34 36 43",2.1
+5201314,experiment2,6,80,"Recolored Region 11 to Color 1","3 11 15 19 26 27 32 34 36 43",8.3
+5201314,experiment2,6,81,"Recolored Region 27 to Color 4","3 11 19 26 27 32 34 36",2.7
+5201314,experiment2,6,82,"Recolored Region 3 to Color 4","19 26 27 32 34 36",1.4
+5201314,experiment2,6,83,"Recolored Region 26 to Color 2","17 26 32 34 36",5.7
+5201314,experiment2,6,84,"Recolored Region 17 to Color 3","12 17 32 34 36",4.0
+5201314,experiment2,6,85,"Recolored Region 12 to Color 2","12 32 34 36 42",4.3
+5201314,experiment2,6,86,"Recolored Region 42 to Color 4","32 34 36",1.8
+5201314,experiment2,6,87,"Recolored Region 34 to Color 2","",8.3
+5201314,experiment2,7,88,"Game Started (45 regions, 4 conflicts)","3 12 18 21 22 24 44",0.0
+5201314,experiment2,7,89,"Recolored Region 24 to Color 1","3 12 18 22 44",9.3
+5201314,experiment2,7,90,"Recolored Region 44 to Color 3","3 12 18 31 44",9.6
+5201314,experiment2,7,91,"Recolored Region 31 to Color 4","3 12 15 18 31",2.0
+5201314,experiment2,7,92,"Recolored Region 3 to Color 2","12 15 18 31",3.3
+5201314,experiment2,7,93,"Recolored Region 15 to Color 3","12 18",6.1
+5201314,experiment2,7,94,"Recolored Region 12 to Color 3","12 20",8.6
+5201314,experiment2,7,95,"Recolored Region 20 to Color 1","",2.5
+5201314,experiment2,8,96,"Game Started (45 regions, 4 conflicts)","10 18 19 20 32 33 34",0.0
+5201314,experiment2,8,97,"Recolored Region 34 to Color 3","10 18 19 20 26 32 33 34",6.7
+5201314,experiment2,8,98,"Round Reset","10 18 19 20 32 33 34",1.6
+5201314,experiment2,8,99,"Recolored Region 33 to Color 3","10 12 18 19 32 33 34",1.8
+5201314,experiment2,8,100,"Round Reset","10 18 19 20 32 33 34",4.7
+5201314,experiment2,8,101,"Recolored Region 18 to Color 3","10 19 20 33",3.7
+5201314,experiment2,8,102,"Recolored Region 10 to Color 2","20 33",4.2
+5201314,experiment2,8,103,"Recolored Region 20 to Color 1","20 21",4.5
+5201314,experiment2,8,104,"Recolored Region 21 to Color 4","",2.5
+5201314,experiment2,9,105,"Game Started (45 regions, 4 conflicts)","9 11 15 24 25 29 42",0.0
+5201314,experiment2,9,106,"Recolored Region 11 to Color 4","9 15 24 25 29",2.6
+5201314,experiment2,9,107,"Recolored Region 29 to Color 4","9 15 24 25",1.9
+5201314,experiment2,9,108,"Recolored Region 9 to Color 1","5 9 15 25 39",3.9
+5201314,experiment2,9,109,"Recolored Region 39 to Color 3","5 9 15 25",2.1
+5201314,experiment2,9,110,"Recolored Region 5 to Color 4","5 15 25 40",7.2
+5201314,experiment2,9,111,"Recolored Region 5 to Color 3","5 8 15 25",6.2
+5201314,experiment2,9,112,"Recolored Region 8 to Color 4","15 25",2.8
+5201314,experiment2,9,113,"Recolored Region 15 to Color 1","",4.6
+5201314,experiment2,10,114,"Game Started (45 regions, 4 conflicts)","15 22 27 33 40 44",0.0
+5201314,experiment2,10,115,"Recolored Region 44 to Color 4","15 22 27 33 40",2.4
+5201314,experiment2,10,116,"Recolored Region 15 to Color 2","15 22 27 33 35 40",5.0
+5201314,experiment2,10,117,"Round Reset","15 22 27 33 40 44",7.3
+5201314,experiment2,10,118,"Recolored Region 44 to Color 4","15 22 27 33 40",1.9
+5201314,experiment2,10,119,"Recolored Region 40 to Color 1","15 27 33",14.8
+5201314,experiment2,10,120,"Recolored Region 33 to Color 3","15 21 27 33",9.2
+5201314,experiment2,10,121,"Recolored Region 21 to Color 2","11 15 21 27",3.0
+5201314,experiment2,10,122,"Recolored Region 11 to Color 4","11 15 18 27 44",3.5
+5201314,experiment2,10,123,"Recolored Region 11 to Color 3","11 15 27 32",3.1
+5201314,experiment2,10,124,"Recolored Region 32 to Color 1","15 26 27 32",4.3
+5201314,experiment2,10,125,"Recolored Region 26 to Color 2","15 26 27 35",6.2
+5201314,experiment2,10,126,"Recolored Region 35 to Color 3","15 27 35 45",4.2
+5201314,experiment2,10,127,"Recolored Region 45 to Color 2","15 27",5.4
+5201314,experiment2,10,128,"Recolored Region 27 to Color 3","12 27 33",10.6
+5201314,experiment2,10,129,"Recolored Region 33 to Color 1","12 27",7.4
+5201314,experiment2,10,130,"Recolored Region 12 to Color 1","12 15 31",2.0
+5201314,experiment2,10,131,"Recolored Region 31 to Color 4","12 15 31 41",10.4
+5201314,experiment2,10,132,"Recolored Region 41 to Color 2","12 15 16 41 45",8.5
+5201314,experiment2,10,133,"Recolored Region 15 to Color 3","15 16 27 35 41 45",9.1
+5201314,experiment2,10,134,"Recolored Region 35 to Color 1","2 15 16 27 28 35 41 45",7.1
+5201314,experiment2,10,135,"Round Reset","15 22 27 33 40 44",1.7
+5201314,experiment2,10,136,"Recolored Region 40 to Color 2","9 15 16 27 33 40 44",3.9
+5201314,experiment2,10,137,"Recolored Region 40 to Color 1","15 27 33 44",2.3
+5201314,experiment2,10,138,"Recolored Region 27 to Color 2","27 33 36 44",11.7
+5201314,experiment2,10,139,"Recolored Region 36 to Color 4","33 44",5.3
+5201314,experiment2,10,140,"Recolored Region 44 to Color 4","",2.3
+5201314,experiment2,11,141,"Game Started (45 regions, 6 conflicts)","1 9 12 14 28 32 34 35 38 41",0.0
+5201314,experiment2,11,142,"Recolored Region 14 to Color 3","1 9 12 14 28 31 32 34 35 41",7.8
+5201314,experiment2,11,143,"Recolored Region 31 to Color 1","1 9 12 28 32 34 35 41",1.7
+5201314,experiment2,11,144,"Recolored Region 32 to Color 4","1 9 10 12 28 32 34 35 41",3.8
+5201314,experiment2,11,145,"Recolored Region 32 to Color 3","1 9 12 28 32 34 35 37 41",6.2
+5201314,experiment2,11,146,"Recolored Region 35 to Color 3","1 9 12 32 34 35 37 41",13.4
+5201314,experiment2,11,147,"Recolored Region 32 to Color 1","1 9 12 32 34 41",4.2
+5201314,experiment2,11,148,"Recolored Region 12 to Color 4","9 34",6.3
+5201314,experiment2,11,149,"Recolored Region 9 to Color 2","3 9",13.6
+5201314,experiment2,11,150,"Recolored Region 3 to Color 4","3 27",6.6
+5201314,experiment2,11,151,"Recolored Region 27 to Color 2","",2.8
+5201314,experiment2,12,152,"Game Started (45 regions, 9 conflicts)","4 6 7 14 21 26 27 37 41 45",0.0
+5201314,experiment2,12,153,"Recolored Region 41 to Color 3","4 6 7 14 20 26 27 37 41 45",14.6
+5201314,experiment2,12,154,"Recolored Region 20 to Color 1","4 6 7 14 20 26 27 37 45",2.3
+5201314,experiment2,12,155,"Recolored Region 4 to Color 2","6 7 26 27 37 45",4.4
+5201314,experiment2,12,156,"Recolored Region 7 to Color 3","6 26 27 37 45",3.7
+5201314,experiment2,12,157,"Recolored Region 26 to Color 2","6 27 45",4.5
+5201314,experiment2,12,158,"Recolored Region 27 to Color 1","6 45",3.5
+5201314,experiment2,12,159,"Recolored Region 45 to Color 1","",0.6
+5201314,experiment2,13,160,"Game Started (45 regions, 8 conflicts)","2 5 11 14 22 24 32 35 37 40",0.0
+5201314,experiment2,13,161,"Recolored Region 37 to Color 3","2 5 9 11 14 24 32 35 37",13.3
+5201314,experiment2,13,162,"Recolored Region 9 to Color 4","2 5 11 14 24 32 35",2.1
+5201314,experiment2,13,163,"Recolored Region 35 to Color 4","2 5 11 14 24 32",3.1
+5201314,experiment2,13,164,"Recolored Region 14 to Color 3","2 5 11 14 24 28 32",4.2
+5201314,experiment2,13,165,"Recolored Region 28 to Color 2","2 5 11 24 32",3.5
+5201314,experiment2,13,166,"Recolored Region 32 to Color 1","2 5 10 11 24 32 42",6.3
+5201314,experiment2,13,167,"Recolored Region 42 to Color 2","2 5 10 11 24 32",4.0
+5201314,experiment2,13,168,"Recolored Region 10 to Color 2","2 5 11 24",1.6
+5201314,experiment2,13,169,"Recolored Region 5 to Color 3","2 24",3.4
+5201314,experiment2,13,170,"Recolored Region 2 to Color 1","",4.4
+5201314,experiment2,14,171,"Game Started (45 regions, 6 conflicts)","1 8 10 14 20 24 31 32 37 38 45",0.0
+5201314,experiment2,14,172,"Recolored Region 10 to Color 1","1 8 20 24 31 32 37 38 45",6.6
+5201314,experiment2,14,173,"Recolored Region 31 to Color 4","1 8 20 31 32 37 38 44 45",6.3
+5201314,experiment2,14,174,"Recolored Region 44 to Color 3","1 8 20 32 37 38 45",3.2
+5201314,experiment2,14,175,"Recolored Region 38 to Color 1","1 8 20 28 32 37 38 45",4.0
+5201314,experiment2,14,176,"Recolored Region 37 to Color 1","1 20 28 32 37 38 45",7.1
+5201314,experiment2,14,177,"Recolored Region 38 to Color 4","1 11 20 32 38 45",4.3
+5201314,experiment2,14,178,"Recolored Region 11 to Color 3","1 5 11 20 32 45",3.9
+5201314,experiment2,14,179,"Recolored Region 5 to Color 1","1 5 20 28 32 45",2.5
+5201314,experiment2,14,180,"Recolored Region 28 to Color 2","1 20 28 30 32 45",2.6
+5201314,experiment2,14,181,"Recolored Region 30 to Color 1","1 20 32 45",3.5
+5201314,experiment2,14,182,"Recolored Region 20 to Color 2","1 45",2.9
+5201314,experiment2,14,183,"Recolored Region 45 to Color 1","",9.0
+5201314,experiment2,15,184,"Game Started (45 regions, 5 conflicts)","1 4 15 21 22 24 25 28 32 44",0.0
+5201314,experiment2,15,185,"Recolored Region 1 to Color 3","4 15 21 22 24 25 28 32",3.5
+5201314,experiment2,15,186,"Recolored Region 21 to Color 3","4 15 22 24 25 28",3.4
+5201314,experiment2,15,187,"Recolored Region 4 to Color 1","4 11 22 24 25 28",9.7
+5201314,experiment2,15,188,"Recolored Region 11 to Color 3","22 24 25 28",4.2
+5201314,experiment2,15,189,"Recolored Region 22 to Color 1","25 28",4.9
+5201314,experiment2,15,190,"Recolored Region 25 to Color 4","24 25",2.9
+5201314,experiment2,15,191,"Recolored Region 24 to Color 3","",4.6
+5201314,experiment2,16,192,"Game Started (45 regions, 10 conflicts)","1 5 7 9 16 21 26 27 29 30 31 36 41 42",0.0
+5201314,experiment2,16,193,"Recolored Region 30 to Color 2","1 5 7 9 16 21 26 27 28 29 30 31 36 41 42",5.5
+5201314,experiment2,16,194,"Recolored Region 36 to Color 1","5 7 9 16 21 24 26 27 28 29 30 31 36 38 41 42",6.1
+5201314,experiment2,16,195,"Recolored Region 36 to Color 2","5 6 7 9 16 21 26 27 28 29 30 31 36 41 42",6.3
+5201314,experiment2,16,196,"Round Reset","1 5 7 9 16 21 26 27 29 30 31 36 41 42",2.3
+5201314,experiment2,16,197,"Recolored Region 29 to Color 2","1 5 7 9 16 21 26 27 30 31 36 41",16.9
+5201314,experiment2,16,198,"Recolored Region 26 to Color 2","1 9 16 21 26 30 31 34 36 41",4.0
+5201314,experiment2,16,199,"Recolored Region 34 to Color 4","1 9 16 21 30 31 36 41",4.6
+5201314,experiment2,16,200,"Recolored Region 16 to Color 1","1 4 9 16 21 30 31 36 41",11.0
+5201314,experiment2,16,201,"Recolored Region 41 to Color 1","1 4 9 16 21 30 31 36 41",1.1
+5201314,experiment2,16,202,"Recolored Region 16 to Color 4","1 9 21 30 31 36",1.5
+5201314,experiment2,16,203,"Recolored Region 1 to Color 2","9 21 31",5.0
+5201314,experiment2,16,204,"Recolored Region 9 to Color 3","",5.8
+5201314,experiment2,17,205,"Game Started (45 regions, 10 conflicts)","4 12 15 18 19 20 24 25 31 32 34 35 37 38",0.0
+5201314,experiment2,17,206,"Recolored Region 15 to Color 1","4 12 15 17 18 19 20 24 25 31 32 34 35 37 38",6.7
+5201314,experiment2,17,207,"Recolored Region 17 to Color 4","4 11 12 17 18 19 20 24 25 31 32 34 35 37 38",3.9
+5201314,experiment2,17,208,"Recolored Region 11 to Color 1","4 12 18 19 20 24 25 31 32 34 35 37 38",1.6
+5201314,experiment2,17,209,"Recolored Region 35 to Color 1","4 12 18 19 20 24 25 31 32 34 37 38",5.1
+5201314,experiment2,17,210,"Recolored Region 12 to Color 3","4 18 19 20 24 25 31 32 34 37 38",3.0
+5201314,experiment2,17,211,"Recolored Region 25 to Color 3","4 18 20 24 31 32 34 37 38",5.2
+5201314,experiment2,17,212,"Recolored Region 4 to Color 2","18 24 31 32 34 37 38",5.6
+5201314,experiment2,17,213,"Recolored Region 32 to Color 3","7 18 24 32 33 34 37 38",8.3
+5201314,experiment2,17,214,"Recolored Region 32 to Color 1","18 24 31 32 34 37 38",4.3
+5201314,experiment2,17,215,"Recolored Region 32 to Color 2","4 18 24 32 34 37 38",4.4
+5201314,experiment2,17,216,"Recolored Region 4 to Color 1","4 18 22 24 34 37 38 41",7.4
+5201314,experiment2,17,217,"Recolored Region 22 to Color 4","4 18 20 22 24 34 37 38 41",1.8
+5201314,experiment2,17,218,"Recolored Region 41 to Color 4","18 20 22 24 34 37 38 41",1.5
+5201314,experiment2,17,219,"Recolored Region 34 to Color 1","18 20 22 24 37 38 41",2.9
+5201314,experiment2,17,220,"Recolored Region 18 to Color 1","20 22 24 38",2.5
+5201314,experiment2,17,221,"Recolored Region 38 to Color 2","20 22",4.7
+5201314,experiment2,17,222,"Recolored Region 22 to Color 1","4 22",12.6
+5201314,experiment2,17,223,"Recolored Region 4 to Color 2","4 32",6.0
+5201314,experiment2,17,224,"Recolored Region 32 to Color 4","32 43",6.6
+5201314,experiment2,17,225,"Recolored Region 43 to Color 3","7 43",8.6
+5201314,experiment2,17,226,"Recolored Region 7 to Color 1","7 15",2.8
+5201314,experiment2,17,227,"Recolored Region 15 to Color 2","15 28 30",12.7
+5201314,experiment2,17,228,"Recolored Region 28 to Color 4","15 30",2.4
+5201314,experiment2,17,229,"Recolored Region 30 to Color 1","",2.9
+5201314,experiment2,18,230,"Game Started (45 regions, 7 conflicts)","1 7 8 18 22 24 29 31 32 39",0.0
+5201314,experiment2,18,231,"Recolored Region 32 to Color 1","1 7 8 22 24 29 31 32 39",10.7
+5201314,experiment2,18,232,"Recolored Region 29 to Color 2","1 7 8 22 24 31 39",7.6
+5201314,experiment2,18,233,"Recolored Region 24 to Color 2","1 8 24 30 39",1.9
+5201314,experiment2,18,234,"Recolored Region 30 to Color 3","1 8 39",2.9
+5201314,experiment2,18,235,"Recolored Region 1 to Color 1","1 23 41",5.7
+5201314,experiment2,18,236,"Recolored Region 23 to Color 3","1 16 23 41",4.4
+5201314,experiment2,18,237,"Recolored Region 16 to Color 1","1 41",2.3
+5201314,experiment2,18,238,"Recolored Region 41 to Color 4","",2.5
+5201314,experiment2,19,239,"Game Started (45 regions, 5 conflicts)","7 11 19 22 24 26 33 41",0.0
+5201314,experiment2,19,240,"Recolored Region 33 to Color 2","7 11 19 21 22 24 26 33",5.5
+5201314,experiment2,19,241,"Recolored Region 21 to Color 3","7 11 19 22 24 26",1.5
+5201314,experiment2,19,242,"Recolored Region 22 to Color 1","2 11 19 22 24",3.1
+5201314,experiment2,19,243,"Recolored Region 2 to Color 2","11 19 24",3.4
+5201314,experiment2,19,244,"Recolored Region 24 to Color 2","11 19",2.3
+5201314,experiment2,19,245,"Recolored Region 11 to Color 2","",2.5
+5201314,experiment2,20,246,"Game Started (45 regions, 4 conflicts)","5 6 10 15 27 38 45",0.0
+5201314,experiment2,20,247,"Recolored Region 6 to Color 2","5 10 15 27 38",3.8
+5201314,experiment2,20,248,"Recolored Region 15 to Color 1","5 10 27 38",4.2
+5201314,experiment2,20,249,"Recolored Region 27 to Color 1","5 15 27 38",22.0
+5201314,experiment2,20,250,"Recolored Region 15 to Color 2","5 15 35 38",5.8
+5201314,experiment2,20,251,"Recolored Region 35 to Color 4","5 24 26 35 38",17.5
+5201314,experiment2,20,252,"Recolored Region 24 to Color 2","5 15 24 26 35 38",3.1
+5201314,experiment2,20,253,"Recolored Region 24 to Color 3","5 9 24 26 35 36 38",3.3
+5201314,experiment2,20,254,"Recolored Region 36 to Color 4","3 5 9 24 26 35 36 38",2.8
+5201314,experiment2,20,255,"Recolored Region 9 to Color 1","3 5 9 18 26 35 36 38",2.7
+5201314,experiment2,20,256,"Recolored Region 18 to Color 3","3 5 18 24 26 35 36 38",5.5
+5201314,experiment2,20,257,"Recolored Region 18 to Color 2","3 5 17 18 26 35 36 38",3.4
+5201314,experiment2,20,258,"Recolored Region 17 to Color 3","3 5 26 35 36 38",3.1
+5201314,experiment2,20,259,"Recolored Region 36 to Color 3","5 24 26 35 36 38",2.8
+5201314,experiment2,20,260,"Recolored Region 36 to Color 2","5 18 26 35 36 38",5.5
+5201314,experiment2,20,261,"Recolored Region 18 to Color 1","5 9 18 26 35 38",2.9
+5201314,experiment2,20,262,"Round Reset","5 6 10 15 27 38 45",1.4
+5201314,experiment2,20,263,"Recolored Region 27 to Color 1","5 6 38 45",15.7
+5201314,experiment2,20,264,"Recolored Region 6 to Color 1","5 38",2.6
+5201314,experiment2,20,265,"Recolored Region 5 to Color 2","2 5",5.2
+5201314,experiment2,20,266,"Recolored Region 2 to Color 1","2 38",2.7
+5201314,experiment2,20,267,"Recolored Region 38 to Color 2","5 38",6.7
+5201314,experiment2,20,268,"Recolored Region 5 to Color 4","5 7",5.4
+5201314,experiment2,20,269,"Recolored Region 7 to Color 1","",10.6
+5201314,experiment2,21,270,"Game Started (45 regions, 6 conflicts)","5 6 10 15 19 32 34 35 36",0.0
+5201314,experiment2,21,271,"Recolored Region 35 to Color 4","5 10 15 19 32 34 36",2.3
+5201314,experiment2,21,272,"Recolored Region 32 to Color 4","5 10 19 26 32",1.6
+5201314,experiment2,21,273,"Round Reset","5 6 10 15 19 32 34 35 36",2.8
+5201314,experiment2,21,274,"Recolored Region 35 to Color 4","5 10 15 19 32 34 36",0.6
+5201314,experiment2,21,275,"Recolored Region 15 to Color 4","5 10 19 32 34 36",0.6
+5201314,experiment2,21,276,"Recolored Region 36 to Color 3","2 5 10 19 32 34 36",6.3
+5201314,experiment2,21,277,"Recolored Region 2 to Color 1","2 5 10 19 22 28 32 34",4.2
+5201314,experiment2,21,278,"Recolored Region 22 to Color 4","2 5 10 19 22 28 29 32 34",3.7
+5201314,experiment2,21,279,"Recolored Region 2 to Color 2","2 5 10 19 22 29 32 34",3.8
+5201314,experiment2,21,280,"Recolored Region 2 to Color 1","2 5 10 19 22 28 29 32 34",5.7
+5201314,experiment2,21,281,"Recolored Region 28 to Color 2","5 10 14 19 22 28 29 30 32 34",1.6
+5201314,experiment2,21,282,"Recolored Region 14 to Color 1","5 10 19 22 28 29 30 32 34",3.4
+5201314,experiment2,21,283,"Recolored Region 30 to Color 1","5 10 19 22 29 32 34",2.4
+5201314,experiment2,21,284,"Recolored Region 34 to Color 3","5 10 18 19 22 29 34",3.7
+5201314,experiment2,21,285,"Recolored Region 18 to Color 1","5 10 18 19 21 22 29",5.4
+5201314,experiment2,21,286,"Recolored Region 21 to Color 2","5 10 16 19 21 22 29",3.4
+5201314,experiment2,21,287,"Recolored Region 29 to Color 1","5 10 16 18 19 21 29",2.6
+5201314,experiment2,21,288,"Recolored Region 29 to Color 3","5 10 16 19 21",3.9
+5201314,experiment2,21,289,"Recolored Region 16 to Color 1","1 5 10 16 19",7.1
+5201314,experiment2,21,290,"Recolored Region 41 to Color 2","1 5 10 16 19 41",5.9
+5201314,experiment2,21,291,"Recolored Region 1 to Color 2","1 5 10 19 41",0.9
+5201314,experiment2,21,292,"Recolored Region 41 to Color 1","1 5 10 19",3.1
+5201314,experiment2,21,293,"Recolored Region 5 to Color 1","5 10 19 41",7.7
+5201314,experiment2,21,294,"Recolored Region 41 to Color 3","10 19",2.7
+5201314,experiment2,21,295,"Recolored Region 10 to Color 1","",4.4
+5201314,experiment2,22,296,"Game Started (45 regions, 8 conflicts)","3 7 13 14 15 23 25 36 37 41 42 43 44",0.0
+5201314,experiment2,22,297,"Recolored Region 41 to Color 4","3 7 13 14 15 23 25 37 42 43 44",12.0
+5201314,experiment2,22,298,"Recolored Region 23 to Color 1","3 7 15 23 37 42 43 44",10.7
+5201314,experiment2,22,299,"Recolored Region 37 to Color 3","3 7 15 42 43",4.3
+5201314,experiment2,22,300,"Recolored Region 43 to Color 4","3 7 42",8.5
+5201314,experiment2,22,301,"Recolored Region 42 to Color 1","4 42",4.9
+5201314,experiment2,22,302,"Recolored Region 4 to Color 2","",1.6
+5201314,experiment2,23,303,"Game Started (45 regions, 6 conflicts)","7 13 14 18 30 31 40",0.0
+5201314,experiment2,23,304,"Recolored Region 14 to Color 2","6 7 13 14 19 30 31 40",5.7
+5201314,experiment2,23,305,"Recolored Region 14 to Color 1","7 13 14 24 30 31 40",2.5
+5201314,experiment2,23,306,"Recolored Region 24 to Color 3","7 13 30 31 40",2.2
+5201314,experiment2,23,307,"Recolored Region 30 to Color 2","7 10 13 26 30 31 40",2.8
+5201314,experiment2,23,308,"Recolored Region 26 to Color 1","7 10 13 30 31 40",4.5
+5201314,experiment2,23,309,"Recolored Region 31 to Color 4","7 10 13 30 40",3.3
+5201314,experiment2,23,310,"Recolored Region 10 to Color 1","7 13 40",2.4
+5201314,experiment2,23,311,"Recolored Region 40 to Color 1","7 13",1.1
+5201314,experiment2,23,312,"Recolored Region 7 to Color 2","",6.9
+5201314,experiment2,24,313,"Game Started (45 regions, 4 conflicts)","2 15 17 25 30 32 41",0.0
+5201314,experiment2,24,314,"Recolored Region 41 to Color 4","2 15 25 30 32",9.5
+5201314,experiment2,24,315,"Recolored Region 32 to Color 4","15 19 25 30 32 45",3.8
+5201314,experiment2,24,316,"Recolored Region 45 to Color 2","15 19 25 30 32",1.7
+5201314,experiment2,24,317,"Recolored Region 19 to Color 2","4 15 19 25 30",0.5
+5201314,experiment2,24,318,"Recolored Region 4 to Color 4","15 25 30",1.6
+5201314,experiment2,24,319,"Recolored Region 25 to Color 2","",6.9
+5201314,experiment2,25,320,"Game Started (45 regions, 10 conflicts)","5 8 11 12 16 29 32 36 37 38 39 40 42 43",0.0
+5201314,experiment2,25,321,"Recolored Region 42 to Color 2","5 8 11 12 16 29 32 36 37 38 39 40 43",3.8
+5201314,experiment2,25,322,"Recolored Region 12 to Color 2","5 8 11 12 16 29 32 36 37 38 39 40 43 45",6.7
+5201314,experiment2,25,323,"Recolored Region 45 to Color 1","5 8 11 16 29 32 36 37 38 39 40 43",1.9
+5201314,experiment2,25,324,"Recolored Region 16 to Color 2","5 8 11 29 32 36 37 38 39 43",5.1
+5201314,experiment2,25,325,"Recolored Region 8 to Color 4","11 29 32 36 37 38 39 43",2.2
+5201314,experiment2,25,326,"Recolored Region 36 to Color 3","4 11 28 29 32 36 38 43",5.7
+5201314,experiment2,25,327,"Recolored Region 29 to Color 2","4 11 28 32 36 38 43",3.0
+5201314,experiment2,25,328,"Recolored Region 4 to Color 2","4 11 28 29 32 36 38 43",0.8
+5201314,experiment2,25,329,"Recolored Region 29 to Color 4","11 28 29 32 36 38 43",1.4
+5201314,experiment2,25,330,"Recolored Region 28 to Color 2","11 29 32 38 43",5.4
+5201314,experiment2,25,331,"Recolored Region 32 to Color 1","11 29 38 43",4.3
+5201314,experiment2,25,332,"Recolored Region 43 to Color 2","",3.7
+5201314,experiment2,26,333,"Game Started (45 regions, 7 conflicts)","2 5 9 17 23 29 32 34 38 39 42",0.0
+5201314,experiment2,26,334,"Recolored Region 2 to Color 2","2 5 9 17 20 29 32 35 38 42",6.2
+5201314,experiment2,26,335,"Recolored Region 20 to Color 4","2 3 5 9 17 20 29 32 35 38 42",4.3
+5201314,experiment2,26,336,"Recolored Region 3 to Color 3","2 5 9 17 29 32 35 38 42",2.6
+5201314,experiment2,26,337,"Recolored Region 35 to Color 3","5 9 17 29 32 38 42",2.1
+5201314,experiment2,26,338,"Recolored Region 32 to Color 3","5 9 29 38 42",1.7
+5201314,experiment2,26,339,"Recolored Region 38 to Color 3","29 42",2.5
+5201314,experiment2,26,340,"Recolored Region 29 to Color 3","",1.4
+5201314,experiment2,27,341,"Game Started (45 regions, 4 conflicts)","1 6 7 10 29 30 41",0.0
+5201314,experiment2,27,342,"Recolored Region 29 to Color 3","1 5 6 7 10 29 30",1.9
+5201314,experiment2,27,343,"Recolored Region 29 to Color 2","1 6 7 10 30",3.3
+5201314,experiment2,27,344,"Recolored Region 7 to Color 1","1 6 30",6.2
+5201314,experiment2,27,345,"Recolored Region 30 to Color 1","1 6",1.5
+5201314,experiment2,27,346,"Recolored Region 6 to Color 2","6 36",5.4
+5201314,experiment2,27,347,"Recolored Region 27 to Color 4","6 36",4.8
+5201314,experiment2,27,348,"Recolored Region 36 to Color 4","12 27 36",1.0
+5201314,experiment2,27,349,"Recolored Region 27 to Color 2","12 36",1.7
+5201314,experiment2,27,350,"Recolored Region 12 to Color 3","",2.9
+5201314,experiment2,28,351,"Game Started (45 regions, 9 conflicts)","2 3 9 10 15 17 21 24 26 37 40 41 42",0.0
+5201314,experiment2,28,352,"Recolored Region 10 to Color 3","2 3 15 17 21 24 26 37 40 41 42",3.5
+5201314,experiment2,28,353,"Recolored Region 37 to Color 1","2 3 6 15 17 21 24 26 37 40 41 42",1.8
+5201314,experiment2,28,354,"Recolored Region 37 to Color 3","2 3 15 17 21 24 26 37 40 41 42",4.1
+5201314,experiment2,28,355,"Recolored Region 21 to Color 1","2 3 15 17 24 26 37 40 41 42",3.9
+5201314,experiment2,28,356,"Recolored Region 40 to Color 2","2 14 15 17 24 26 40 41 42",2.3
+5201314,experiment2,28,357,"Recolored Region 14 to Color 1","2 14 15 17 22 24 26 27 41 42",5.2
+5201314,experiment2,28,358,"Recolored Region 27 to Color 4","2 5 14 15 17 22 24 26 27 41 42",2.0
+5201314,experiment2,28,359,"Recolored Region 5 to Color 2","2 4 5 14 15 17 22 24 26 41 42",3.9
+5201314,experiment2,28,360,"Recolored Region 4 to Color 3","2 4 14 15 17 22 24 26 34 41 42",2.5
+5201314,experiment2,28,361,"Recolored Region 34 to Color 4","2 14 15 17 22 24 26 29 34 41 42",3.2
+5201314,experiment2,28,362,"Recolored Region 29 to Color 2","2 14 15 17 22 24 26 41 42",1.9
+5201314,experiment2,28,363,"Recolored Region 22 to Color 3","2 15 17 24 26 41 42",4.3
+5201314,experiment2,28,364,"Recolored Region 2 to Color 3","2 15 24 26 33 39 41 42",3.5
+5201314,experiment2,28,365,"Recolored Region 39 to Color 2","2 15 24 26 33 39 41 42 45",4.5
+5201314,experiment2,28,366,"Recolored Region 39 to Color 1","2 15 24 26 33 41 42",4.7
+5201314,experiment2,28,367,"Recolored Region 42 to Color 1","2 15 24 26 33",7.2
+5201314,experiment2,28,368,"Recolored Region 33 to Color 4","8 15 24 26 33",5.3
+5201314,experiment2,28,369,"Recolored Region 8 to Color 1","15 24 26",2.0
+5201314,experiment2,28,370,"Recolored Region 15 to Color 1","8 15",1.2
+5201314,experiment2,28,371,"Recolored Region 8 to Color 3","",2.5
+5201314,experiment2,29,372,"Game Started (45 regions, 4 conflicts)","7 8 14 21 32 35 42",0.0
+5201314,experiment2,29,373,"Recolored Region 8 to Color 1","7 8 14 27 32 35 42",7.8
+5201314,experiment2,29,374,"Recolored Region 27 to Color 4","7 14 27 29 32 35 42",3.4
+5201314,experiment2,29,375,"Recolored Region 29 to Color 3","7 14 29 32 34 35 42",3.2
+5201314,experiment2,29,376,"Recolored Region 34 to Color 4","7 14 32 35 42",2.7
+5201314,experiment2,29,377,"Recolored Region 7 to Color 3","32 35 42",9.0
+5201314,experiment2,29,378,"Recolored Region 32 to Color 3","",3.2
+5201314,experiment2,30,379,"Game Started (45 regions, 7 conflicts)","2 3 11 14 24 27 29 32 34 44",0.0
+5201314,experiment2,30,380,"Recolored Region 15 to Color 4","2 3 11 14 15 21 24 27 29 32 34 44",2.4
+5201314,experiment2,30,381,"Round Reset","2 3 11 14 24 27 29 32 34 44",1.7
+5201314,experiment2,30,382,"Recolored Region 27 to Color 2","2 3 11 14 24 29 32 34 44",2.8
+5201314,experiment2,30,383,"Recolored Region 29 to Color 3","2 3 11 14 24 29 32 33 34 44",3.2
+5201314,experiment2,30,384,"Recolored Region 33 to Color 1","2 3 5 9 11 14 24 32 33 34 44",1.6
+5201314,experiment2,30,385,"Recolored Region 5 to Color 2","2 3 5 9 10 11 14 24 32 33 34 44",2.6
+5201314,experiment2,30,386,"Recolored Region 10 to Color 3","2 3 9 10 11 14 24 32 33 34 36 44",3.2
+5201314,experiment2,30,387,"Recolored Region 36 to Color 1","2 3 8 9 11 14 24 32 33 34 36 44",2.6
+5201314,experiment2,30,388,"Recolored Region 36 to Color 2","2 3 9 11 14 24 32 33 34 36 38 44",2.0
+5201314,experiment2,30,389,"Recolored Region 38 to Color 3","2 3 9 11 14 24 32 33 34 38 44",2.0
+5201314,experiment2,30,390,"Round Reset","2 3 11 14 24 27 29 32 34 44",0.6
+5201314,experiment2,30,391,"Round Reset","2 3 11 14 24 27 29 32 34 44",0.4
+5201314,experiment2,30,392,"Round Reset","2 3 11 14 24 27 29 32 34 44",0.2
+5201314,experiment2,30,393,"Round Reset","2 3 11 14 24 27 29 32 34 44",0.2
+5201314,experiment2,30,394,"Recolored Region 32 to Color 2","2 3 11 14 24 27 29 34",14.1
+5201314,experiment2,30,395,"Recolored Region 34 to Color 3","2 3 11 14 24 27 29 30 34",11.4
+5201314,experiment2,30,396,"Recolored Region 30 to Color 1","2 3 11 14 16 24 27 29 30",3.7
+5201314,experiment2,30,397,"Recolored Region 3 to Color 3","2 11 16 24 27 29 30",2.2
+5201314,experiment2,30,398,"Recolored Region 16 to Color 4","2 11 16 24 27 28 29 35",4.3
+5201314,experiment2,30,399,"Recolored Region 16 to Color 2","2 11 24 27 29",2.7
+5201314,experiment2,30,400,"Recolored Region 11 to Color 3","2 11 15 24",8.0
+5201314,experiment2,30,401,"Recolored Region 15 to Color 4","2 15 21 24",3.6
+5201314,experiment2,30,402,"Recolored Region 15 to Color 2","2 24",1.8
+5201314,experiment2,30,403,"Recolored Region 2 to Color 2","",6.5

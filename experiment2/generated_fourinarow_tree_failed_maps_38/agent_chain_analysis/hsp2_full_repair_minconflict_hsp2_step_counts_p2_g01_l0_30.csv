@@ -1,0 +1,31 @@
+round,map_seed,rng_seed,success,initial_conflicts,final_conflicts,total_steps,min_conflicts_steps,hsp2_steps,min_conflicts_segments,hsp2_segments,hsp2_calls,hsp2_empty_calls,hsp2_solved_calls,hsp2_step_ratio,module_sequence_compact,conflict_trace
+1,9005,100010,0,5,2,2,2,0,1,0,1,1,0,0.0,min_conflicts min_conflicts,5 3 2
+2,9023,100020,1,4,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,4 3 2 1 0
+3,9035,100030,1,4,0,5,3,2,1,1,1,0,1,0.4,min_conflicts min_conflicts min_conflicts hsp2 hsp2,4 3 2 1 2 0
+4,9053,100040,0,6,1,5,5,0,1,0,1,1,0,0.0,min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts,6 5 4 3 2 1
+5,9055,100050,1,5,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,5 2 1 1 0
+6,9056,100060,1,7,0,8,6,2,2,1,1,0,0,0.25,min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 min_conflicts,7 5 4 3 2 1 2 1 0
+7,9057,100070,1,4,0,6,3,3,1,1,1,0,1,0.5,min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2,4 3 2 1 2 2 0
+8,9061,100080,1,4,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,4 3 1 2 0
+9,9067,100090,1,4,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,4 3 1 2 0
+10,9069,100100,1,4,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,4 3 2 2 0
+11,9058,100110,1,6,0,5,3,2,1,1,1,0,1,0.4,min_conflicts min_conflicts min_conflicts hsp2 hsp2,6 5 2 1 1 0
+12,9088,100120,1,9,0,8,5,3,2,1,2,0,0,0.375,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 min_conflicts,9 8 7 5 2 2 1 1 0
+13,9096,100130,1,8,0,7,3,4,1,1,1,0,1,0.5714285714285714,min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 hsp2,8 6 5 4 3 2 1 0
+14,9008,100140,1,6,0,6,4,2,1,1,1,0,1,0.3333333333333333,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2,6 4 3 2 1 2 0
+15,9028,100150,1,5,0,7,5,2,2,1,1,0,0,0.2857142857142857,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 min_conflicts,5 4 3 2 1 1 1 0
+16,9090,100160,1,10,0,6,4,2,1,1,1,0,1,0.3333333333333333,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2,10 8 6 5 3 1 0
+17,9098,100170,1,10,0,12,6,6,2,1,3,0,0,0.5,min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 hsp2 hsp2 hsp2 min_conflicts,10 9 8 6 3 2 3 3 1 1 1 1 0
+18,9121,100180,1,7,0,9,3,6,1,1,2,0,1,0.6666666666666666,min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 hsp2 hsp2 hsp2,7 5 3 2 2 3 1 1 1 0
+19,9135,100190,1,5,0,6,4,2,1,1,1,0,1,0.3333333333333333,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2,5 4 3 2 1 1 0
+20,9142,100200,0,4,1,2,2,0,1,0,1,1,0,0.0,min_conflicts min_conflicts,4 2 1
+21,9149,100210,0,6,2,4,4,0,1,0,1,1,0,0.0,min_conflicts min_conflicts min_conflicts min_conflicts,6 5 4 3 2
+22,9153,100220,1,8,0,8,5,3,2,1,1,0,0,0.375,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 min_conflicts,8 7 6 5 4 3 2 1 0
+23,9155,100230,1,6,0,5,3,2,1,1,1,0,1,0.4,min_conflicts min_conflicts min_conflicts hsp2 hsp2,6 4 2 1 2 0
+24,9160,100240,1,4,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,4 3 1 2 0
+25,9169,100250,1,10,0,12,8,4,2,2,2,0,1,0.3333333333333333,min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 min_conflicts hsp2 hsp2,10 9 8 7 6 5 4 2 2 2 1 1 0
+26,9215,100260,1,7,0,9,5,4,1,1,2,0,1,0.4444444444444444,min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 hsp2,7 6 5 4 2 1 2 1 2 0
+27,9218,100270,1,4,0,4,2,2,1,1,1,0,1,0.5,min_conflicts min_conflicts hsp2 hsp2,4 2 1 2 0
+28,9227,100280,1,9,0,12,7,5,3,2,3,0,0,0.4166666666666667,min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2 hsp2 min_conflicts min_conflicts hsp2 hsp2 min_conflicts,9 8 7 5 4 4 5 4 2 1 1 1 0
+29,10001,100290,1,4,0,5,3,2,2,1,2,0,0,0.4,min_conflicts min_conflicts hsp2 hsp2 min_conflicts,4 2 1 1 1 0
+30,10002,100300,1,7,0,7,5,2,1,1,1,0,1,0.2857142857142857,min_conflicts min_conflicts min_conflicts min_conflicts min_conflicts hsp2 hsp2,7 6 5 3 2 1 1 0

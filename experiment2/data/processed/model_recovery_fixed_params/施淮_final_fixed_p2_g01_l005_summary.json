@@ -1,0 +1,12 @@
+{
+  "true_agent": "",
+  "predicted_agent": "eflop",
+  "n_actions": 187,
+  "observed_path": "experiment2/data/processed/model_recovery_inputs/施淮_final_observed_actions.csv",
+  "scores_path": "experiment2/data/processed/model_recovery_fixed_params/施淮_final_fixed_p2_g01_l005_scores.csv",
+  "scores": [
+    {"model": "eflop", "nll": 395.407554928},
+    {"model": "tree", "nll": 699.762314405},
+    {"model": "hsp2", "nll": 1034.9024699}
+  ]
+}

@@ -1,0 +1,269 @@
+[Actions]
+SessionID,Experiment,Round,Step,Action,ConflictRegions,TimeTaken(s)
+施淮,experiment2,1,0,"Game Started (45 regions, 5 conflicts)","11 12 15 16 35 38 43 45",0.0
+施淮,experiment2,1,1,"Recolored Region 43 to Color 2","11 12 15 16 38 45",11.0
+施淮,experiment2,1,2,"Recolored Region 45 to Color 3","11 12 16",9.0
+施淮,experiment2,1,3,"Recolored Region 12 to Color 1","12 27",8.5
+施淮,experiment2,1,4,"Recolored Region 27 to Color 3","27 45",71.7
+施淮,experiment2,1,5,"Recolored Region 45 to Color 4","21 45",3.3
+施淮,experiment2,1,6,"Round Reset","11 12 15 16 35 38 43 45",3.8
+施淮,experiment2,1,7,"Recolored Region 12 to Color 1","12 15 27 35 38 43 45",26.4
+施淮,experiment2,1,8,"Recolored Region 27 to Color 3","15 35 38 43 45",14.8
+施淮,experiment2,1,9,"Recolored Region 45 to Color 1","35 43 45",7.2
+施淮,experiment2,1,10,"Recolored Region 35 to Color 4","",10.1
+施淮,experiment2,2,11,"Game Started (45 regions, 4 conflicts)","6 11 16 23 25 27 39",0.0
+施淮,experiment2,2,12,"Recolored Region 27 to Color 2","6 11 16 23 39",14.1
+施淮,experiment2,2,13,"Recolored Region 6 to Color 1","6 11 23 24",36.4
+施淮,experiment2,2,14,"Recolored Region 24 to Color 4","11 13 23 24",9.0
+施淮,experiment2,2,15,"Round Reset","6 11 16 23 25 27 39",9.6
+施淮,experiment2,2,16,"Recolored Region 27 to Color 2","6 11 16 23 39",4.3
+施淮,experiment2,2,17,"Recolored Region 23 to Color 4","6 16 39",13.0
+施淮,experiment2,2,18,"Recolored Region 6 to Color 1","6 24",13.3
+施淮,experiment2,2,19,"Recolored Region 24 to Color 3","5 16 24 39",11.6
+施淮,experiment2,2,20,"Recolored Region 24 to Color 4","13 24",8.0
+施淮,experiment2,2,21,"Recolored Region 13 to Color 2","13 29",19.5
+施淮,experiment2,2,22,"Recolored Region 29 to Color 1","29 34",11.5
+施淮,experiment2,2,23,"Recolored Region 34 to Color 3","",5.1
+施淮,experiment2,3,24,"Game Started (45 regions, 4 conflicts)","8 12 14 25 38 43 44",0.0
+施淮,experiment2,3,25,"Recolored Region 44 to Color 4","12 14 25 43",7.5
+施淮,experiment2,3,26,"Recolored Region 43 to Color 1","12 14 36 43",8.8
+施淮,experiment2,3,27,"Round Reset","8 12 14 25 38 43 44",2.9
+施淮,experiment2,3,28,"Recolored Region 44 to Color 4","12 14 25 43",4.3
+施淮,experiment2,3,29,"Recolored Region 14 to Color 3","25 43",20.7
+施淮,experiment2,3,30,"Recolored Region 25 to Color 3","14 25 40",84.2
+施淮,experiment2,3,31,"Recolored Region 25 to Color 4","25 43",2.6
+施淮,experiment2,3,32,"Recolored Region 43 to Color 1","36 43",6.3
+施淮,experiment2,3,33,"Recolored Region 36 to Color 2","36 42",10.8
+施淮,experiment2,3,34,"Round Reset","8 12 14 25 38 43 44",13.2
+施淮,experiment2,3,35,"Recolored Region 44 to Color 4","12 14 25 43",5.4
+施淮,experiment2,3,36,"Recolored Region 14 to Color 3","25 43",18.7
+施淮,experiment2,3,37,"Recolored Region 43 to Color 2","12 43",5.5
+施淮,experiment2,3,38,"Recolored Region 12 to Color 1","10 12",5.4
+施淮,experiment2,3,39,"Recolored Region 10 to Color 2","5 10",5.4
+施淮,experiment2,3,40,"Recolored Region 5 to Color 3","",4.3
+施淮,experiment2,4,41,"Game Started (45 regions, 6 conflicts)","8 9 10 23 37 39 40 42 43",0.0
+施淮,experiment2,4,42,"Recolored Region 40 to Color 1","8 9 10 23 37 42 43",7.2
+施淮,experiment2,4,43,"Recolored Region 42 to Color 4","8 9 10 23 43",12.8
+施淮,experiment2,4,44,"Recolored Region 43 to Color 4","8 9 10 23",5.8
+施淮,experiment2,4,45,"Recolored Region 9 to Color 3","9 13",69.1
+施淮,experiment2,4,46,"Recolored Region 13 to Color 4","13 26",13.2
+施淮,experiment2,4,47,"Recolored Region 26 to Color 3","24 26",13.0
+施淮,experiment2,4,48,"Recolored Region 24 to Color 2","",2.4
+施淮,experiment2,5,49,"Game Started (45 regions, 5 conflicts)","14 17 18 22 29 37 40 44",0.0
+施淮,experiment2,5,50,"Recolored Region 17 to Color 3","14 22 29 37",6.3
+施淮,experiment2,5,51,"Recolored Region 29 to Color 4","14 37",10.1
+施淮,experiment2,5,52,"Recolored Region 14 to Color 1","9 14 35",31.5
+施淮,experiment2,5,53,"Recolored Region 14 to Color 2","14 37",2.8
+施淮,experiment2,5,54,"Recolored Region 37 to Color 3","13 37",7.1
+施淮,experiment2,5,55,"Recolored Region 13 to Color 4","13 24",7.6
+施淮,experiment2,5,56,"Recolored Region 24 to Color 1","24 35",10.4
+施淮,experiment2,5,57,"Recolored Region 35 to Color 2","14 35",4.9
+施淮,experiment2,5,58,"Recolored Region 14 to Color 1","9 14",9.0
+施淮,experiment2,5,59,"Round Reset","14 17 18 22 29 37 40 44",14.6
+施淮,experiment2,5,60,"Recolored Region 17 to Color 4","14 16 17 22 29 37",6.2
+施淮,experiment2,5,61,"Recolored Region 29 to Color 4","14 16 17 37",5.8
+施淮,experiment2,5,62,"Recolored Region 17 to Color 3","14 37",12.8
+施淮,experiment2,5,63,"Recolored Region 14 to Color 4","1 14",9.5
+施淮,experiment2,5,64,"Recolored Region 1 to Color 2","",6.9
+施淮,experiment2,6,65,"Game Started (45 regions, 7 conflicts)","6 15 20 27 30 32 34 36 37 43",0.0
+施淮,experiment2,6,66,"Recolored Region 34 to Color 2","6 15 20 27 30 37 43",11.6
+施淮,experiment2,6,67,"Recolored Region 6 to Color 4","6 8 15 27 43",8.0
+施淮,experiment2,6,68,"Recolored Region 8 to Color 1","15 27 43",5.3
+施淮,experiment2,6,69,"Recolored Region 27 to Color 4","",4.0
+施淮,experiment2,7,70,"Game Started (45 regions, 4 conflicts)","3 12 18 21 22 24 44",0.0
+施淮,experiment2,7,71,"Recolored Region 24 to Color 2","3 12 18 22 24 30 44",35.2
+施淮,experiment2,7,72,"Recolored Region 18 to Color 4","18 22 24 30 42 44",7.2
+施淮,experiment2,7,73,"Round Reset","3 12 18 21 22 24 44",4.4
+施淮,experiment2,7,74,"Recolored Region 3 to Color 2","12 18 21 22 24 44",15.1
+施淮,experiment2,7,75,"Recolored Region 12 to Color 3","12 20 21 22 24 44",14.4
+施淮,experiment2,7,76,"Recolored Region 20 to Color 1","21 22 24 44",2.1
+施淮,experiment2,7,77,"Recolored Region 21 to Color 2","22 44",7.2
+施淮,experiment2,7,78,"Recolored Region 29 to Color 1","22 29 35 44",11.7
+施淮,experiment2,7,79,"Recolored Region 29 to Color 2","22 44",3.7
+施淮,experiment2,7,80,"Recolored Region 22 to Color 1","",2.0
+施淮,experiment2,8,81,"Game Started (45 regions, 4 conflicts)","10 18 19 20 32 33 34",0.0
+施淮,experiment2,8,82,"Recolored Region 18 to Color 3","10 19 20 33",22.4
+施淮,experiment2,8,83,"Recolored Region 20 to Color 1","10 19 20 21",13.4
+施淮,experiment2,8,84,"Recolored Region 21 to Color 4","10 19",4.1
+施淮,experiment2,8,85,"Recolored Region 10 to Color 2","",7.5
+施淮,experiment2,9,86,"Game Started (45 regions, 4 conflicts)","9 11 15 24 25 29 42",0.0
+施淮,experiment2,9,87,"Recolored Region 24 to Color 4","11 15 25 42",5.0
+施淮,experiment2,9,88,"Recolored Region 11 to Color 4","15 25",4.5
+施淮,experiment2,9,89,"Recolored Region 15 to Color 2","7 15",37.0
+施淮,experiment2,9,90,"Recolored Region 7 to Color 4","",7.3
+施淮,experiment2,10,91,"Game Started (45 regions, 4 conflicts)","15 22 27 33 40 44",0.0
+施淮,experiment2,10,92,"Recolored Region 44 to Color 4","15 22 27 33 40",4.9
+施淮,experiment2,10,93,"Recolored Region 40 to Color 1","15 27 33",24.6
+施淮,experiment2,10,94,"Recolored Region 33 to Color 4","15 27 33 44",14.7
+施淮,experiment2,10,95,"Recolored Region 33 to Color 1","15 27 33",12.3
+施淮,experiment2,10,96,"Recolored Region 27 to Color 2","27 36",7.4
+施淮,experiment2,10,97,"Recolored Region 36 to Color 4","",3.9
+施淮,experiment2,11,98,"Game Started (45 regions, 6 conflicts)","1 9 12 14 28 32 34 35 38 41",0.0
+施淮,experiment2,11,99,"Recolored Region 12 to Color 2","9 12 14 28 34 35 38",7.9
+施淮,experiment2,11,100,"Recolored Region 12 to Color 4","9 14 28 34 35 38",5.1
+施淮,experiment2,11,101,"Recolored Region 35 to Color 3","9 14 34 38",7.5
+施淮,experiment2,11,102,"Recolored Region 38 to Color 2","9 34",7.4
+施淮,experiment2,11,103,"Recolored Region 9 to Color 2","3 9",9.3
+施淮,experiment2,11,104,"Recolored Region 3 to Color 4","3 27",13.5
+施淮,experiment2,11,105,"Recolored Region 27 to Color 2","",3.0
+施淮,experiment2,12,106,"Game Started (45 regions, 9 conflicts)","4 6 7 14 21 26 27 37 41 45",0.0
+施淮,experiment2,12,107,"Recolored Region 37 to Color 2","4 6 7 14 21 27 41 45",7.1
+施淮,experiment2,12,108,"Recolored Region 6 to Color 3","4 14 21 41",4.5
+施淮,experiment2,12,109,"Recolored Region 41 to Color 2","4 14 23 41",8.4
+施淮,experiment2,12,110,"Recolored Region 14 to Color 3","14 23 39 41",11.8
+施淮,experiment2,12,111,"Round Reset","4 6 7 14 21 26 27 37 41 45",1.6
+施淮,experiment2,12,112,"Recolored Region 6 to Color 3","4 14 21 26 37 41",7.8
+施淮,experiment2,12,113,"Recolored Region 37 to Color 2","4 14 21 41",8.6
+施淮,experiment2,12,114,"Recolored Region 41 to Color 3","4 14 20 41",36.7
+施淮,experiment2,12,115,"Recolored Region 20 to Color 2","4 14",3.9
+施淮,experiment2,12,116,"Recolored Region 4 to Color 2","4 20 37",19.2
+施淮,experiment2,12,117,"Recolored Region 20 to Color 1","4 37",6.0
+施淮,experiment2,12,118,"Recolored Region 37 to Color 3","6 37",4.5
+施淮,experiment2,12,119,"Recolored Region 6 to Color 1","6 26",19.0
+施淮,experiment2,12,120,"Recolored Region 26 to Color 2","",1.5
+施淮,experiment2,13,121,"Game Started (45 regions, 8 conflicts)","2 5 11 14 22 24 32 35 37 40",0.0
+施淮,experiment2,13,122,"Recolored Region 37 to Color 4","2 5 11 14 24 32 35",17.4
+施淮,experiment2,13,123,"Recolored Region 2 to Color 1","5 11 14 32 35",8.2
+施淮,experiment2,13,124,"Recolored Region 11 to Color 3","14 35",13.7
+施淮,experiment2,13,125,"Recolored Region 14 to Color 4","14 20",31.7
+施淮,experiment2,13,126,"Recolored Region 20 to Color 2","",1.9
+施淮,experiment2,14,127,"Game Started (45 regions, 6 conflicts)","1 8 10 14 20 24 31 32 37 38 45",0.0
+施淮,experiment2,14,128,"Recolored Region 37 to Color 1","1 10 14 20 24 31 32 38 45",16.4
+施淮,experiment2,14,129,"Recolored Region 32 to Color 4","1 10 14 24 31 45",3.7
+施淮,experiment2,14,130,"Recolored Region 10 to Color 1","1 24 31 45",5.8
+施淮,experiment2,14,131,"Recolored Region 31 to Color 4","1 31 44 45",16.1
+施淮,experiment2,14,132,"Recolored Region 44 to Color 2","1 7 16 25 44 45",7.4
+施淮,experiment2,14,133,"Recolored Region 44 to Color 3","1 45",4.9
+施淮,experiment2,14,134,"Recolored Region 45 to Color 1","",7.3
+施淮,experiment2,15,135,"Game Started (45 regions, 5 conflicts)","1 4 15 21 22 24 25 28 32 44",0.0
+施淮,experiment2,15,136,"Recolored Region 1 to Color 3","4 15 21 22 24 25 28 32",5.8
+施淮,experiment2,15,137,"Recolored Region 24 to Color 1","4 15 21 25 28 32",14.5
+施淮,experiment2,15,138,"Recolored Region 25 to Color 3","4 15 21 23 25 32",3.2
+施淮,experiment2,15,139,"Recolored Region 32 to Color 4","4 15 23 25",18.8
+施淮,experiment2,15,140,"Recolored Region 23 to Color 2","4 15",3.2
+施淮,experiment2,15,141,"Recolored Region 15 to Color 4","15 43",19.3
+施淮,experiment2,15,142,"Recolored Region 43 to Color 1","43 45",2.9
+施淮,experiment2,15,143,"Recolored Region 43 to Color 2","3 43",15.3
+施淮,experiment2,15,144,"Recolored Region 43 to Color 4","15 43",20.8
+施淮,experiment2,15,145,"Recolored Region 15 to Color 3","4 15",7.8
+施淮,experiment2,15,146,"Recolored Region 4 to Color 1","4 11",5.1
+施淮,experiment2,15,147,"Recolored Region 11 to Color 3","",6.4
+施淮,experiment2,16,148,"Game Started (45 regions, 10 conflicts)","1 5 7 9 16 21 26 27 29 30 31 36 41 42",0.0
+施淮,experiment2,16,149,"Recolored Region 9 to Color 3","1 5 7 16 26 27 29 30 36 41 42",9.2
+施淮,experiment2,16,150,"Recolored Region 41 to Color 1","1 5 7 26 27 29 30 36 42",6.9
+施淮,experiment2,16,151,"Recolored Region 1 to Color 2","5 7 26 27 29 42",6.4
+施淮,experiment2,16,152,"Recolored Region 29 to Color 2","5 7 26 27",6.5
+施淮,experiment2,16,153,"Recolored Region 26 to Color 2","26 34",3.5
+施淮,experiment2,16,154,"Recolored Region 34 to Color 4","",5.6
+施淮,experiment2,17,155,"Game Started (45 regions, 10 conflicts)","4 12 15 18 19 20 24 25 31 32 34 35 37 38",0.0
+施淮,experiment2,17,156,"Recolored Region 38 to Color 2","4 12 15 18 19 20 25 31 32 34 35 37",5.0
+施淮,experiment2,17,157,"Recolored Region 37 to Color 1","4 12 15 19 20 25 31 32 35",10.8
+施淮,experiment2,17,158,"Recolored Region 32 to Color 2","4 12 15 19 20 25 35",7.6
+施淮,experiment2,17,159,"Recolored Region 20 to Color 2","12 19 20 25 27 35",15.9
+施淮,experiment2,17,160,"Recolored Region 27 to Color 3","12 19 25 35",2.0
+施淮,experiment2,17,161,"Recolored Region 19 to Color 1","",6.8
+施淮,experiment2,18,162,"Game Started (45 regions, 7 conflicts)","1 7 8 18 22 24 29 31 32 39",0.0
+施淮,experiment2,18,163,"Recolored Region 31 to Color 4","1 7 8 18 22 24 32 39",7.7
+施淮,experiment2,18,164,"Recolored Region 1 to Color 3","1 7 18 21 22 24 32",6.3
+施淮,experiment2,18,165,"Recolored Region 21 to Color 4","7 18 21 22 24 26 32",5.4
+施淮,experiment2,18,166,"Recolored Region 26 to Color 3","7 18 22 24 32",2.7
+施淮,experiment2,18,167,"Recolored Region 30 to Color 3","7 18 22 24 32",9.4
+施淮,experiment2,18,168,"Recolored Region 30 to Color 2","7 18 22 24 32",2.9
+施淮,experiment2,18,169,"Round Reset","1 7 8 18 22 24 29 31 32 39",6.7
+施淮,experiment2,18,170,"Recolored Region 1 to Color 4","7 18 22 24 29 31 32",5.0
+施淮,experiment2,18,171,"Recolored Region 31 to Color 4","7 18 22 24 32",3.3
+施淮,experiment2,18,172,"Recolored Region 26 to Color 2","7 18 22 24 26 32 44",24.6
+施淮,experiment2,18,173,"Recolored Region 44 to Color 4","7 18 22 24 32",3.0
+施淮,experiment2,18,174,"Recolored Region 7 to Color 4","18 22 24 32",7.5
+施淮,experiment2,18,175,"Recolored Region 22 to Color 3","18 32",5.6
+施淮,experiment2,18,176,"Recolored Region 32 to Color 1","29 32",46.6
+施淮,experiment2,18,177,"Recolored Region 29 to Color 2","",2.6
+施淮,experiment2,19,178,"Game Started (45 regions, 5 conflicts)","7 11 19 22 24 26 33 41",0.0
+施淮,experiment2,19,179,"Recolored Region 19 to Color 4","7 14 19 22 26 33 41",4.2
+施淮,experiment2,19,180,"Recolored Region 14 to Color 3","6 7 14 22 26 33 41 45",6.3
+施淮,experiment2,19,181,"Recolored Region 14 to Color 2","7 22 26 33 41",2.2
+施淮,experiment2,19,182,"Recolored Region 7 to Color 1","7 22 26 33 36 41",8.7
+施淮,experiment2,19,183,"Recolored Region 7 to Color 3","22 26 33 41",5.0
+施淮,experiment2,19,184,"Recolored Region 33 to Color 1","22 26",8.0
+施淮,experiment2,19,185,"Recolored Region 22 to Color 1","2 22",29.7
+施淮,experiment2,19,186,"Recolored Region 2 to Color 2","",2.9
+施淮,experiment2,20,187,"Game Started (45 regions, 4 conflicts)","5 6 10 15 27 38 45",0.0
+施淮,experiment2,20,188,"Recolored Region 5 to Color 2","2 5 6 10 15 27 45",13.4
+施淮,experiment2,20,189,"Round Reset","5 6 10 15 27 38 45",2.5
+施淮,experiment2,20,190,"Recolored Region 27 to Color 1","5 6 38 45",15.3
+施淮,experiment2,20,191,"Recolored Region 6 to Color 2","5 38",5.3
+施淮,experiment2,20,192,"Recolored Region 38 to Color 2","2 38",13.4
+施淮,experiment2,20,193,"Recolored Region 38 to Color 3","30 38 39",24.9
+施淮,experiment2,20,194,"Recolored Region 38 to Color 2","2 38",15.4
+施淮,experiment2,20,195,"Recolored Region 40 to Color 1","2 38",9.5
+施淮,experiment2,20,196,"Recolored Region 2 to Color 4","",5.9
+施淮,experiment2,21,197,"Game Started (45 regions, 6 conflicts)","5 6 10 15 19 32 34 35 36",0.0
+施淮,experiment2,21,198,"Recolored Region 35 to Color 2","5 10 15 19 32 34 36",3.2
+施淮,experiment2,21,199,"Recolored Region 15 to Color 4","5 10 19 32 34 36",5.2
+施淮,experiment2,21,200,"Round Reset","5 6 10 15 19 32 34 35 36",9.9
+施淮,experiment2,21,201,"Recolored Region 32 to Color 4","5 6 10 19 26 32 35",4.7
+施淮,experiment2,21,202,"Recolored Region 26 to Color 2","5 6 10 19 35",5.1
+施淮,experiment2,21,203,"Recolored Region 19 to Color 1","6 35",3.5
+施淮,experiment2,21,204,"Recolored Region 35 to Color 2","",4.2
+施淮,experiment2,22,205,"Game Started (45 regions, 8 conflicts)","3 7 13 14 15 23 25 36 37 41 42 43 44",0.0
+施淮,experiment2,22,206,"Recolored Region 42 to Color 2","13 14 15 19 23 25 36 37 41 42 43 44",11.4
+施淮,experiment2,22,207,"Recolored Region 36 to Color 2","13 14 15 19 23 25 36 37 42 43 44",6.0
+施淮,experiment2,22,208,"Recolored Region 19 to Color 4","13 14 15 23 25 37 43 44",2.3
+施淮,experiment2,22,209,"Recolored Region 23 to Color 1","15 23 37 43 44",5.0
+施淮,experiment2,22,210,"Recolored Region 37 to Color 3","15 43",2.8
+施淮,experiment2,22,211,"Recolored Region 43 to Color 4","",7.3
+施淮,experiment2,23,212,"Game Started (45 regions, 6 conflicts)","7 13 14 18 30 31 40",0.0
+施淮,experiment2,23,213,"Recolored Region 31 to Color 1","7 13 14 18 40",6.5
+施淮,experiment2,23,214,"Recolored Region 7 to Color 1","13 14 18 40",6.0
+施淮,experiment2,23,215,"Recolored Region 40 to Color 4","14 18",3.7
+施淮,experiment2,23,216,"Recolored Region 14 to Color 1","14 24",7.0
+施淮,experiment2,23,217,"Recolored Region 24 to Color 3","",2.6
+施淮,experiment2,24,218,"Game Started (45 regions, 4 conflicts)","2 15 17 25 30 32 41",0.0
+施淮,experiment2,24,219,"Recolored Region 2 to Color 1","2 15 17 25 30 36 41",5.3
+施淮,experiment2,24,220,"Recolored Region 17 to Color 2","2 15 25 30 36",1.8
+施淮,experiment2,24,221,"Recolored Region 2 to Color 3","2 14 15 25 30",19.3
+施淮,experiment2,24,222,"Recolored Region 3 to Color 2","2 14 15 25 30",11.4
+施淮,experiment2,24,223,"Recolored Region 25 to Color 2","2 3 14 25",1.1
+施淮,experiment2,24,224,"Recolored Region 3 to Color 1","2 14",2.3
+施淮,experiment2,24,225,"Recolored Region 2 to Color 4","2 18",11.3
+施淮,experiment2,24,226,"Recolored Region 18 to Color 2","",2.8
+施淮,experiment2,25,227,"Game Started (45 regions, 10 conflicts)","5 8 11 12 16 29 32 36 37 38 39 40 42 43",0.0
+施淮,experiment2,25,228,"Recolored Region 5 to Color 1","11 12 16 29 32 36 37 38 39 40 42 43",5.1
+施淮,experiment2,25,229,"Recolored Region 40 to Color 2","11 29 32 36 37 38 39 43",3.1
+施淮,experiment2,25,230,"Recolored Region 36 to Color 2","11 29 32 38 43",7.9
+施淮,experiment2,25,231,"Recolored Region 43 to Color 3","11 32 34 43",11.7
+施淮,experiment2,25,232,"Recolored Region 34 to Color 2","11 32",3.7
+施淮,experiment2,25,233,"Recolored Region 32 to Color 1","",8.2
+施淮,experiment2,26,234,"Game Started (45 regions, 7 conflicts)","2 5 9 17 23 29 32 34 38 39 42",0.0
+施淮,experiment2,26,235,"Recolored Region 2 to Color 3","2 5 9 17 29 32 38 42 44",21.1
+施淮,experiment2,26,236,"Recolored Region 44 to Color 1","5 9 17 29 32 38 42",4.4
+施淮,experiment2,26,237,"Recolored Region 17 to Color 3","2 5 9 17 29 38 42",5.3
+施淮,experiment2,26,238,"Recolored Region 2 to Color 4","2 5 9 21 29 38 42",6.3
+施淮,experiment2,26,239,"Recolored Region 21 to Color 3","5 9 29 38 42",1.5
+施淮,experiment2,26,240,"Recolored Region 38 to Color 3","29 42",6.2
+施淮,experiment2,26,241,"Recolored Region 29 to Color 3","",6.7
+施淮,experiment2,27,242,"Game Started (45 regions, 4 conflicts)","1 6 7 10 29 30 41",0.0
+施淮,experiment2,27,243,"Recolored Region 6 to Color 1","7 10 29 41",8.3
+施淮,experiment2,27,244,"Recolored Region 7 to Color 4","7 12 29 41",24.3
+施淮,experiment2,27,245,"Recolored Region 12 to Color 3","29 41",5.0
+施淮,experiment2,27,246,"Recolored Region 29 to Color 4","",6.1
+施淮,experiment2,28,247,"Game Started (45 regions, 9 conflicts)","2 3 9 10 15 17 21 24 26 37 40 41 42",0.0
+施淮,experiment2,28,248,"Recolored Region 15 to Color 1","2 3 9 10 17 21 26 37 40 41 42",5.1
+施淮,experiment2,28,249,"Recolored Region 2 to Color 1","3 9 10 21 37 40 41 42",6.4
+施淮,experiment2,28,250,"Recolored Region 41 to Color 2","3 9 10 37 40",23.7
+施淮,experiment2,28,251,"Recolored Region 9 to Color 1","3 37 40",8.7
+施淮,experiment2,28,252,"Recolored Region 40 to Color 2","14 40",16.3
+施淮,experiment2,28,253,"Recolored Region 14 to Color 3","",2.6
+施淮,experiment2,29,254,"Game Started (45 regions, 4 conflicts)","7 8 14 21 32 35 42",0.0
+施淮,experiment2,29,255,"Recolored Region 32 to Color 2","7 8 14 21",13.7
+施淮,experiment2,29,256,"Recolored Region 7 to Color 4","8 21",8.4
+施淮,experiment2,29,257,"Recolored Region 8 to Color 1","8 27",2.5
+施淮,experiment2,29,258,"Recolored Region 27 to Color 3","",2.9
+施淮,experiment2,30,259,"Game Started (45 regions, 7 conflicts)","2 3 11 14 24 27 29 32 34 44",0.0
+施淮,experiment2,30,260,"Recolored Region 11 to Color 2","2 3 11 14 24 26 32 34 44",5.1
+施淮,experiment2,30,261,"Recolored Region 11 to Color 4","2 3 7 11 14 24 32 34 44",3.3
+施淮,experiment2,30,262,"Recolored Region 7 to Color 3","2 3 7 14 24 32 33 34 44",4.2
+施淮,experiment2,30,263,"Recolored Region 33 to Color 2","2 3 14 24 32 34 44",4.5
+施淮,experiment2,30,264,"Recolored Region 2 to Color 2","3 14 32 34 44",5.6
+施淮,experiment2,30,265,"Recolored Region 14 to Color 3","32 44",6.1
+施淮,experiment2,30,266,"Recolored Region 32 to Color 2","",3.5

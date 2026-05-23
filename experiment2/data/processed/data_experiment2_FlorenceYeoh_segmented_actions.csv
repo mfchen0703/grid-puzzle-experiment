@@ -1,0 +1,348 @@
+SessionID,Experiment,Round,Step,Action,ConflictRegions,TimeTaken(s),action_type,region_ui,color_ui,region_zero_based,color_zero_based,started_regions,started_conflicts,attempt_id,attempt_total_step,attempt_recolor_step,conflict_region_count,max_attempt_id,is_final_attempt
+FlorenceYeoh,experiment2,1,0,"Game Started (45 regions, 5 conflicts)",11 12 15 16 35 38 43 45,0.0,game_started,,,,,45,5,1,1,,8,1,True
+FlorenceYeoh,experiment2,1,1,Recolored Region 43 to Color 2,11 12 15 16 38 45,10.5,recolor,43,2,42,1,,,1,2,1,6,1,True
+FlorenceYeoh,experiment2,1,2,Recolored Region 45 to Color 3,11 12 16,4.8,recolor,45,3,44,2,,,1,3,2,3,1,True
+FlorenceYeoh,experiment2,1,3,Recolored Region 9 to Color 4,1 9 11 12 16,35.5,recolor,9,4,8,3,,,1,4,3,5,1,True
+FlorenceYeoh,experiment2,1,4,Recolored Region 9 to Color 3,11 12 16,7.4,recolor,9,3,8,2,,,1,5,4,3,1,True
+FlorenceYeoh,experiment2,1,5,Recolored Region 12 to Color 1,12 27,9.5,recolor,12,1,11,0,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,1,6,Recolored Region 27 to Color 3,27 45,4.1,recolor,27,3,26,2,,,1,7,6,2,1,True
+FlorenceYeoh,experiment2,1,7,Recolored Region 45 to Color 4,21 45,2.0,recolor,45,4,44,3,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,1,8,Recolored Region 21 to Color 1,14 21,5.8,recolor,21,1,20,0,,,1,9,8,2,1,True
+FlorenceYeoh,experiment2,1,9,Recolored Region 14 to Color 4,14 26,5.3,recolor,14,4,13,3,,,1,10,9,2,1,True
+FlorenceYeoh,experiment2,1,10,Recolored Region 26 to Color 3,8 26,7.0,recolor,26,3,25,2,,,1,11,10,2,1,True
+FlorenceYeoh,experiment2,1,11,Recolored Region 8 to Color 2,8 15 43,8.4,recolor,8,2,7,1,,,1,12,11,3,1,True
+FlorenceYeoh,experiment2,1,12,Recolored Region 15 to Color 3,8 43,2.6,recolor,15,3,14,2,,,1,13,12,2,1,True
+FlorenceYeoh,experiment2,1,13,Recolored Region 43 to Color 4,,4.2,recolor,43,4,42,3,,,1,14,13,0,1,True
+FlorenceYeoh,experiment2,2,14,"Game Started (45 regions, 4 conflicts)",6 11 16 23 25 27 39,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,2,15,Recolored Region 27 to Color 2,6 11 16 23 39,6.6,recolor,27,2,26,1,,,1,2,1,5,1,True
+FlorenceYeoh,experiment2,2,16,Recolored Region 6 to Color 1,6 11 23 24,5.0,recolor,6,1,5,0,,,1,3,2,4,1,True
+FlorenceYeoh,experiment2,2,17,Recolored Region 24 to Color 2,11 23 24 29,7.2,recolor,24,2,23,1,,,1,4,3,4,1,True
+FlorenceYeoh,experiment2,2,18,Recolored Region 29 to Color 1,11 23 29 34,6.5,recolor,29,1,28,0,,,1,5,4,4,1,True
+FlorenceYeoh,experiment2,2,19,Recolored Region 34 to Color 3,11 23,5.3,recolor,34,3,33,2,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,2,20,Recolored Region 23 to Color 1,,3.4,recolor,23,1,22,0,,,1,7,6,0,1,True
+FlorenceYeoh,experiment2,3,21,"Game Started (45 regions, 4 conflicts)",8 12 14 25 38 43 44,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,3,22,Recolored Region 14 to Color 1,8 14 25 38 41 43 44,6.9,recolor,14,1,13,0,,,1,2,1,7,1,True
+FlorenceYeoh,experiment2,3,23,Recolored Region 14 to Color 3,8 25 38 43 44,2.5,recolor,14,3,13,2,,,1,3,2,5,1,True
+FlorenceYeoh,experiment2,3,24,Recolored Region 25 to Color 2,8 25 38 42 44,2.5,recolor,25,2,24,1,,,1,4,3,5,1,True
+FlorenceYeoh,experiment2,3,25,Recolored Region 42 to Color 1,8 36 38 39 42 44,2.9,recolor,42,1,41,0,,,1,5,4,6,1,True
+FlorenceYeoh,experiment2,3,26,Recolored Region 42 to Color 3,6 8 38 42 44 45,2.3,recolor,42,3,41,2,,,1,6,5,6,1,True
+FlorenceYeoh,experiment2,3,27,Recolored Region 6 to Color 1,6 8 23 36 38 42 44 45,8.0,recolor,6,1,5,0,,,1,7,6,8,1,True
+FlorenceYeoh,experiment2,3,28,Recolored Region 23 to Color 3,6 8 36 38 42 44 45,6.5,recolor,23,3,22,2,,,1,8,7,7,1,True
+FlorenceYeoh,experiment2,3,29,Recolored Region 36 to Color 2,8 25 36 38 42 44 45,5.9,recolor,36,2,35,1,,,1,9,8,7,1,True
+FlorenceYeoh,experiment2,3,30,Recolored Region 25 to Color 4,8 25 38 42 43 44 45,4.2,recolor,25,4,24,3,,,1,10,9,7,1,True
+FlorenceYeoh,experiment2,3,31,Recolored Region 43 to Color 1,8 38 42 44 45,2.5,recolor,43,1,42,0,,,1,11,10,5,1,True
+FlorenceYeoh,experiment2,3,32,Recolored Region 45 to Color 1,8 38 39 44 45,10.8,recolor,45,1,44,0,,,1,12,11,5,1,True
+FlorenceYeoh,experiment2,3,33,Recolored Region 39 to Color 2,8 18 38 39 44,3.0,recolor,39,2,38,1,,,1,13,12,5,1,True
+FlorenceYeoh,experiment2,3,34,Recolored Region 18 to Color 4,7 8 18 38 44,11.0,recolor,18,4,17,3,,,1,14,13,5,1,True
+FlorenceYeoh,experiment2,3,35,Recolored Region 7 to Color 3,7 8 9 38 44,5.4,recolor,7,3,6,2,,,1,15,14,5,1,True
+FlorenceYeoh,experiment2,3,36,Recolored Region 9 to Color 1,8 9 17 21 38 44,3.5,recolor,9,1,8,0,,,1,16,15,6,1,True
+FlorenceYeoh,experiment2,3,37,Recolored Region 21 to Color 4,8 9 17 21 30 38 44,4.3,recolor,21,4,20,3,,,1,17,16,7,1,True
+FlorenceYeoh,experiment2,3,38,Recolored Region 30 to Color 1,8 9 17 38 44,3.9,recolor,30,1,29,0,,,1,18,17,5,1,True
+FlorenceYeoh,experiment2,3,39,Recolored Region 17 to Color 2,8 17 38 44,3.6,recolor,17,2,16,1,,,1,19,18,4,1,True
+FlorenceYeoh,experiment2,3,40,Recolored Region 8 to Color 3,8 17 37 38 44,7.6,recolor,8,3,7,2,,,1,20,19,5,1,True
+FlorenceYeoh,experiment2,3,41,Recolored Region 37 to Color 2,17 35 37 38 44,3.3,recolor,37,2,36,1,,,1,21,20,5,1,True
+FlorenceYeoh,experiment2,3,42,Recolored Region 35 to Color 4,17 37 38 44,5.0,recolor,35,4,34,3,,,1,22,21,4,1,True
+FlorenceYeoh,experiment2,3,43,Recolored Region 44 to Color 4,,3.5,recolor,44,4,43,3,,,1,23,22,0,1,True
+FlorenceYeoh,experiment2,4,44,"Game Started (45 regions, 6 conflicts)",8 9 10 23 37 39 40 42 43,0.0,game_started,,,,,45,6,1,1,,9,1,True
+FlorenceYeoh,experiment2,4,45,Recolored Region 42 to Color 4,8 9 10 23 39 40 43,9.1,recolor,42,4,41,3,,,1,2,1,7,1,True
+FlorenceYeoh,experiment2,4,46,Recolored Region 40 to Color 1,8 9 10 23 43,10.8,recolor,40,1,39,0,,,1,3,2,5,1,True
+FlorenceYeoh,experiment2,4,47,Recolored Region 10 to Color 2,8 9 23 43,3.3,recolor,10,2,9,1,,,1,4,3,4,1,True
+FlorenceYeoh,experiment2,4,48,Recolored Region 10 to Color 4,8 9 10 23 41 43,9.5,recolor,10,4,9,3,,,1,5,4,6,1,True
+FlorenceYeoh,experiment2,4,49,Recolored Region 41 to Color 2,8 9 23 43,2.1,recolor,41,2,40,1,,,1,6,5,4,1,True
+FlorenceYeoh,experiment2,4,50,Recolored Region 23 to Color 4,8 9 43,1.6,recolor,23,4,22,3,,,1,7,6,3,1,True
+FlorenceYeoh,experiment2,4,51,Recolored Region 9 to Color 3,9 13,2.6,recolor,9,3,8,2,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,4,52,Recolored Region 13 to Color 4,13 26,4.5,recolor,13,4,12,3,,,1,9,8,2,1,True
+FlorenceYeoh,experiment2,4,53,Recolored Region 26 to Color 3,24 26,4.8,recolor,26,3,25,2,,,1,10,9,2,1,True
+FlorenceYeoh,experiment2,4,54,Recolored Region 24 to Color 2,,7.7,recolor,24,2,23,1,,,1,11,10,0,1,True
+FlorenceYeoh,experiment2,5,55,"Game Started (45 regions, 5 conflicts)",14 17 18 22 29 37 40 44,0.0,game_started,,,,,45,5,1,1,,8,1,True
+FlorenceYeoh,experiment2,5,56,Recolored Region 14 to Color 3,14 17 18 22 25 29 40 44,12.6,recolor,14,3,13,2,,,1,2,1,8,1,True
+FlorenceYeoh,experiment2,5,57,Recolored Region 25 to Color 4,1 17 18 22 25 29 40 44,3.6,recolor,25,4,24,3,,,1,3,2,8,1,True
+FlorenceYeoh,experiment2,5,58,Recolored Region 1 to Color 2,17 18 22 29 40 44,4.1,recolor,1,2,0,1,,,1,4,3,6,1,True
+FlorenceYeoh,experiment2,5,59,Recolored Region 29 to Color 4,17 18 40 44,4.4,recolor,29,4,28,3,,,1,5,4,4,1,True
+FlorenceYeoh,experiment2,5,60,Recolored Region 17 to Color 2,11 17,4.5,recolor,17,2,16,1,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,5,61,Recolored Region 11 to Color 1,11 34 40,4.2,recolor,11,1,10,0,,,1,7,6,3,1,True
+FlorenceYeoh,experiment2,5,62,Recolored Region 11 to Color 3,11 39,3.1,recolor,11,3,10,2,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,5,63,Recolored Region 39 to Color 2,22 39,3.8,recolor,39,2,38,1,,,1,9,8,2,1,True
+FlorenceYeoh,experiment2,5,64,Recolored Region 22 to Color 4,22 29,3.3,recolor,22,4,21,3,,,1,10,9,2,1,True
+FlorenceYeoh,experiment2,5,65,Recolored Region 29 to Color 3,4 29,4.7,recolor,29,3,28,2,,,1,11,10,2,1,True
+FlorenceYeoh,experiment2,5,66,Recolored Region 4 to Color 4,4 6,5.6,recolor,4,4,3,3,,,1,12,11,2,1,True
+FlorenceYeoh,experiment2,5,67,Recolored Region 6 to Color 1,6 20,2.0,recolor,6,1,5,0,,,1,13,12,2,1,True
+FlorenceYeoh,experiment2,5,68,Recolored Region 20 to Color 4,,3.1,recolor,20,4,19,3,,,1,14,13,0,1,True
+FlorenceYeoh,experiment2,6,69,"Game Started (45 regions, 7 conflicts)",6 15 20 27 30 32 34 36 37 43,0.0,game_started,,,,,45,7,1,1,,10,1,True
+FlorenceYeoh,experiment2,6,70,Recolored Region 5 to Color 2,5 6 15 18 20 24 27 30 32 34 36 37 43,18.5,recolor,5,2,4,1,,,1,2,1,13,1,True
+FlorenceYeoh,experiment2,6,71,Recolored Region 24 to Color 4,5 6 15 18 20 27 30 32 34 36 37 43,3.2,recolor,24,4,23,3,,,1,3,2,12,1,True
+FlorenceYeoh,experiment2,6,72,Recolored Region 18 to Color 1,6 15 18 20 27 30 32 34 36 37 43,1.4,recolor,18,1,17,0,,,1,4,3,11,1,True
+FlorenceYeoh,experiment2,6,73,Recolored Region 27 to Color 4,6 15 18 20 30 32 34 36 37,3.6,recolor,27,4,26,3,,,1,5,4,9,1,True
+FlorenceYeoh,experiment2,6,74,Recolored Region 15 to Color 2,6 15 20 22 30 32 34 36 37,6.7,recolor,15,2,14,1,,,1,6,5,9,1,True
+FlorenceYeoh,experiment2,6,75,Recolored Region 22 to Color 3,6 20 30 32 34 36 37,2.6,recolor,22,3,21,2,,,1,7,6,7,1,True
+FlorenceYeoh,experiment2,6,76,Recolored Region 6 to Color 1,6 31 32 34 36 40,10.0,recolor,6,1,5,0,,,1,8,7,6,1,True
+FlorenceYeoh,experiment2,6,77,Recolored Region 40 to Color 4,6 31 32 34 36,2.9,recolor,40,4,39,3,,,1,9,8,5,1,True
+FlorenceYeoh,experiment2,6,78,Recolored Region 20 to Color 4,6 31 32 34 36,1.4,recolor,20,4,19,3,,,1,10,9,5,1,True
+FlorenceYeoh,experiment2,6,79,Recolored Region 31 to Color 4,20 31 32 34 36,0.7,recolor,31,4,30,3,,,1,11,10,5,1,True
+FlorenceYeoh,experiment2,6,80,Recolored Region 20 to Color 2,32 34 36,1.8,recolor,20,2,19,1,,,1,12,11,3,1,True
+FlorenceYeoh,experiment2,6,81,Recolored Region 32 to Color 4,32 33 34 36,3.3,recolor,32,4,31,3,,,1,13,12,4,1,True
+FlorenceYeoh,experiment2,6,82,Recolored Region 33 to Color 2,34 36,2.6,recolor,33,2,32,1,,,1,14,13,2,1,True
+FlorenceYeoh,experiment2,6,83,Recolored Region 34 to Color 2,33 34,3.2,recolor,34,2,33,1,,,1,15,14,2,1,True
+FlorenceYeoh,experiment2,6,84,Recolored Region 34 to Color 1,25 34,2.9,recolor,34,1,33,0,,,1,16,15,2,1,True
+FlorenceYeoh,experiment2,6,85,Recolored Region 25 to Color 4,,3.1,recolor,25,4,24,3,,,1,17,16,0,1,True
+FlorenceYeoh,experiment2,7,86,"Game Started (45 regions, 4 conflicts)",3 12 18 21 22 24 44,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,7,87,Recolored Region 22 to Color 1,3 12 18 21 24,8.1,recolor,22,1,21,0,,,1,2,1,5,1,True
+FlorenceYeoh,experiment2,7,88,Recolored Region 21 to Color 2,3 12 18,6.6,recolor,21,2,20,1,,,1,3,2,3,1,True
+FlorenceYeoh,experiment2,7,89,Recolored Region 18 to Color 2,18 30,10.8,recolor,18,2,17,1,,,1,4,3,2,1,True
+FlorenceYeoh,experiment2,7,90,Recolored Region 30 to Color 4,30 44,5.7,recolor,30,4,29,3,,,1,5,4,2,1,True
+FlorenceYeoh,experiment2,7,91,Recolored Region 44 to Color 1,22 44,5.6,recolor,44,1,43,0,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,7,92,Recolored Region 22 to Color 4,,3.8,recolor,22,4,21,3,,,1,7,6,0,1,True
+FlorenceYeoh,experiment2,8,93,"Game Started (45 regions, 4 conflicts)",10 18 19 20 32 33 34,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,8,94,Recolored Region 10 to Color 2,18 20 32 33 34,3.8,recolor,10,2,9,1,,,1,2,1,5,1,True
+FlorenceYeoh,experiment2,8,95,Recolored Region 32 to Color 2,18 20 27 32 33 34,8.5,recolor,32,2,31,1,,,1,3,2,6,1,True
+FlorenceYeoh,experiment2,8,96,Recolored Region 27 to Color 1,18 20 27 33 34 42,3.7,recolor,27,1,26,0,,,1,4,3,6,1,True
+FlorenceYeoh,experiment2,8,97,Recolored Region 42 to Color 3,18 20 23 27 33 34 42,7.1,recolor,42,3,41,2,,,1,5,4,7,1,True
+FlorenceYeoh,experiment2,8,98,Recolored Region 23 to Color 4,3 18 20 23 27 33 34,3.0,recolor,23,4,22,3,,,1,6,5,7,1,True
+FlorenceYeoh,experiment2,8,99,Recolored Region 3 to Color 3,18 20 27 33 34,5.2,recolor,3,3,2,2,,,1,7,6,5,1,True
+FlorenceYeoh,experiment2,8,100,Recolored Region 18 to Color 2,18 20 32 33 36,5.2,recolor,18,2,17,1,,,1,8,7,5,1,True
+FlorenceYeoh,experiment2,8,101,Recolored Region 32 to Color 1,18 20 27 32 33 36,6.5,recolor,32,1,31,0,,,1,9,8,6,1,True
+FlorenceYeoh,experiment2,8,102,Recolored Region 32 to Color 2,18 20 32 33 36,7.0,recolor,32,2,31,1,,,1,10,9,5,1,True
+FlorenceYeoh,experiment2,8,103,Recolored Region 18 to Color 3,20 33,1.7,recolor,18,3,17,2,,,1,11,10,2,1,True
+FlorenceYeoh,experiment2,8,104,Recolored Region 20 to Color 1,20 21,6.8,recolor,20,1,19,0,,,1,12,11,2,1,True
+FlorenceYeoh,experiment2,8,105,Recolored Region 21 to Color 4,,2.4,recolor,21,4,20,3,,,1,13,12,0,1,True
+FlorenceYeoh,experiment2,9,106,"Game Started (45 regions, 4 conflicts)",9 11 15 24 25 29 42,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,9,107,Recolored Region 11 to Color 4,9 15 24 25 29,3.0,recolor,11,4,10,3,,,1,2,1,5,1,True
+FlorenceYeoh,experiment2,9,108,Recolored Region 29 to Color 4,9 15 24 25,1.8,recolor,29,4,28,3,,,1,3,2,4,1,True
+FlorenceYeoh,experiment2,9,109,Recolored Region 24 to Color 4,15 24 25 29,3.6,recolor,24,4,23,3,,,1,4,3,4,1,True
+FlorenceYeoh,experiment2,9,110,Recolored Region 29 to Color 2,15 25,2.9,recolor,29,2,28,1,,,1,5,4,2,1,True
+FlorenceYeoh,experiment2,9,111,Recolored Region 15 to Color 3,15 32,6.9,recolor,15,3,14,2,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,9,112,Recolored Region 25 to Color 3,15 25 32,8.9,recolor,25,3,24,2,,,1,7,6,3,1,True
+FlorenceYeoh,experiment2,9,113,Recolored Region 15 to Color 4,25 32,6.4,recolor,15,4,14,3,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,9,114,Recolored Region 25 to Color 2,12 25 45,5.3,recolor,25,2,24,1,,,1,9,8,3,1,True
+FlorenceYeoh,experiment2,9,115,Recolored Region 12 to Color 1,5 12 25 45,2.1,recolor,12,1,11,0,,,1,10,9,4,1,True
+FlorenceYeoh,experiment2,9,116,Recolored Region 45 to Color 1,5 12 31 45,2.9,recolor,45,1,44,0,,,1,11,10,4,1,True
+FlorenceYeoh,experiment2,9,117,Recolored Region 31 to Color 3,5 12 23 31,3.2,recolor,31,3,30,2,,,1,12,11,4,1,True
+FlorenceYeoh,experiment2,9,118,Recolored Region 31 to Color 2,5 12,4.3,recolor,31,2,30,1,,,1,13,12,2,1,True
+FlorenceYeoh,experiment2,9,119,Recolored Region 12 to Color 3,12 23,8.3,recolor,12,3,11,2,,,1,14,13,2,1,True
+FlorenceYeoh,experiment2,9,120,Recolored Region 23 to Color 1,,2.2,recolor,23,1,22,0,,,1,15,14,0,1,True
+FlorenceYeoh,experiment2,10,121,"Game Started (45 regions, 4 conflicts)",15 22 27 33 40 44,0.0,game_started,,,,,45,4,1,1,,6,1,True
+FlorenceYeoh,experiment2,10,122,Recolored Region 40 to Color 1,15 27 33 44,3.0,recolor,40,1,39,0,,,1,2,1,4,1,True
+FlorenceYeoh,experiment2,10,123,Recolored Region 44 to Color 4,15 27 33,4.9,recolor,44,4,43,3,,,1,3,2,3,1,True
+FlorenceYeoh,experiment2,10,124,Recolored Region 26 to Color 3,15 26 27 32 33,26.8,recolor,26,3,25,2,,,1,4,3,5,1,True
+FlorenceYeoh,experiment2,10,125,Recolored Region 32 to Color 1,15 27 33,2.8,recolor,32,1,31,0,,,1,5,4,3,1,True
+FlorenceYeoh,experiment2,10,126,Recolored Region 18 to Color 1,15 18 27 33,4.8,recolor,18,1,17,0,,,1,6,5,4,1,True
+FlorenceYeoh,experiment2,10,127,Recolored Region 27 to Color 4,15 18,3.5,recolor,27,4,26,3,,,1,7,6,2,1,True
+FlorenceYeoh,experiment2,10,128,Recolored Region 15 to Color 2,15 35,3.2,recolor,15,2,14,1,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,10,129,Recolored Region 35 to Color 4,,4.8,recolor,35,4,34,3,,,1,9,8,0,1,True
+FlorenceYeoh,experiment2,11,130,"Game Started (45 regions, 6 conflicts)",1 9 12 14 28 32 34 35 38 41,0.0,game_started,,,,,45,6,1,1,,10,1,True
+FlorenceYeoh,experiment2,11,131,Recolored Region 9 to Color 2,1 3 9 12 14 28 32 35 38 41,42.1,recolor,9,2,8,1,,,1,2,1,10,1,True
+FlorenceYeoh,experiment2,11,132,Recolored Region 3 to Color 4,1 3 12 14 27 28 32 35 38 41,5.8,recolor,3,4,2,3,,,1,3,2,10,1,True
+FlorenceYeoh,experiment2,11,133,Recolored Region 27 to Color 2,1 12 14 28 32 35 38 41,3.0,recolor,27,2,26,1,,,1,4,3,8,1,True
+FlorenceYeoh,experiment2,11,134,Recolored Region 12 to Color 4,14 28 35 38,8.6,recolor,12,4,11,3,,,1,5,4,4,1,True
+FlorenceYeoh,experiment2,11,135,Recolored Region 35 to Color 3,14 38,6.7,recolor,35,3,34,2,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,11,136,Recolored Region 14 to Color 3,14 31,5.6,recolor,14,3,13,2,,,1,7,6,2,1,True
+FlorenceYeoh,experiment2,11,137,Recolored Region 31 to Color 1,,2.1,recolor,31,1,30,0,,,1,8,7,0,1,True
+FlorenceYeoh,experiment2,12,138,"Game Started (45 regions, 9 conflicts)",4 6 7 14 21 26 27 37 41 45,0.0,game_started,,,,,45,9,1,1,,10,1,True
+FlorenceYeoh,experiment2,12,139,Recolored Region 21 to Color 4,4 6 7 8 14 21 26 27 37 41 45,6.4,recolor,21,4,20,3,,,1,2,1,11,1,True
+FlorenceYeoh,experiment2,12,140,Recolored Region 21 to Color 1,4 6 7 14 21 26 27 37 41 45,4.2,recolor,21,1,20,0,,,1,3,2,10,1,True
+FlorenceYeoh,experiment2,12,141,Recolored Region 41 to Color 4,4 6 7 8 14 26 27 37 41 43 45,6.5,recolor,41,4,40,3,,,1,4,3,11,1,True
+FlorenceYeoh,experiment2,12,142,Recolored Region 43 to Color 1,4 6 7 8 14 26 27 33 37 41 43 45,4.5,recolor,43,1,42,0,,,1,5,4,12,1,True
+FlorenceYeoh,experiment2,12,143,Recolored Region 33 to Color 4,4 6 7 8 14 26 27 37 41 45,2.5,recolor,33,4,32,3,,,1,6,5,10,1,True
+FlorenceYeoh,experiment2,12,144,Recolored Region 8 to Color 3,4 6 7 8 14 26 27 34 37 45,7.0,recolor,8,3,7,2,,,1,7,6,10,1,True
+FlorenceYeoh,experiment2,12,145,Recolored Region 34 to Color 1,4 5 6 7 14 21 26 27 34 37 45,3.9,recolor,34,1,33,0,,,1,8,7,11,1,True
+FlorenceYeoh,experiment2,12,146,Recolored Region 34 to Color 4,4 6 7 14 17 26 27 34 37 45,4.6,recolor,34,4,33,3,,,1,9,8,10,1,True
+FlorenceYeoh,experiment2,12,147,Recolored Region 17 to Color 3,4 6 7 14 26 27 37 45,2.9,recolor,17,3,16,2,,,1,10,9,8,1,True
+FlorenceYeoh,experiment2,12,148,Recolored Region 4 to Color 2,6 7 26 27 37 45,4.6,recolor,4,2,3,1,,,1,11,10,6,1,True
+FlorenceYeoh,experiment2,12,149,Recolored Region 6 to Color 3,26 37,2.9,recolor,6,3,5,2,,,1,12,11,2,1,True
+FlorenceYeoh,experiment2,12,150,Recolored Region 26 to Color 2,,3.5,recolor,26,2,25,1,,,1,13,12,0,1,True
+FlorenceYeoh,experiment2,13,151,"Game Started (45 regions, 8 conflicts)",2 5 11 14 22 24 32 35 37 40,0.0,game_started,,,,,45,8,1,1,,10,1,True
+FlorenceYeoh,experiment2,13,152,Recolored Region 22 to Color 4,2 5 11 12 14 22 24 32 35 37 40,6.0,recolor,22,4,21,3,,,1,2,1,11,1,True
+FlorenceYeoh,experiment2,13,153,Recolored Region 12 to Color 2,1 2 5 11 12 14 24 32 35 37 40,5.9,recolor,12,2,11,1,,,1,3,2,11,1,True
+FlorenceYeoh,experiment2,13,154,Recolored Region 22 to Color 1,1 2 5 11 12 14 22 24 32 35 37 40,13.8,recolor,22,1,21,0,,,1,4,3,12,1,True
+FlorenceYeoh,experiment2,13,155,Recolored Region 1 to Color 1,1 2 5 11 14 22 23 24 32 35 37 40,0.5,recolor,1,1,0,0,,,1,5,4,12,1,True
+FlorenceYeoh,experiment2,13,156,Recolored Region 23 to Color 4,1 2 5 11 14 22 24 32 35 37 40,1.6,recolor,23,4,22,3,,,1,6,5,11,1,True
+FlorenceYeoh,experiment2,13,157,Recolored Region 22 to Color 4,2 5 11 14 24 32 35 37 40,0.4,recolor,22,4,21,3,,,1,7,6,9,1,True
+FlorenceYeoh,experiment2,13,158,Recolored Region 11 to Color 3,2 14 24 35 37 40,4.8,recolor,11,3,10,2,,,1,8,7,6,1,True
+FlorenceYeoh,experiment2,13,159,Recolored Region 35 to Color 4,2 24 37 40,5.6,recolor,35,4,34,3,,,1,9,8,4,1,True
+FlorenceYeoh,experiment2,13,160,Recolored Region 37 to Color 3,2 9 24 37,9.1,recolor,37,3,36,2,,,1,10,9,4,1,True
+FlorenceYeoh,experiment2,13,161,Recolored Region 9 to Color 4,2 9 22 24,2.0,recolor,9,4,8,3,,,1,11,10,4,1,True
+FlorenceYeoh,experiment2,13,162,Recolored Region 22 to Color 1,1 2 22 24,3.1,recolor,22,1,21,0,,,1,12,11,4,1,True
+FlorenceYeoh,experiment2,13,163,Recolored Region 1 to Color 3,2 24,3.7,recolor,1,3,0,2,,,1,13,12,2,1,True
+FlorenceYeoh,experiment2,13,164,Recolored Region 2 to Color 1,,4.4,recolor,2,1,1,0,,,1,14,13,0,1,True
+FlorenceYeoh,experiment2,14,165,"Game Started (45 regions, 6 conflicts)",1 8 10 14 20 24 31 32 37 38 45,0.0,game_started,,,,,45,6,1,1,,11,1,True
+FlorenceYeoh,experiment2,14,166,Recolored Region 10 to Color 1,1 8 20 24 31 32 37 38 45,2.5,recolor,10,1,9,0,,,1,2,1,9,1,True
+FlorenceYeoh,experiment2,14,167,Recolored Region 8 to Color 1,1 8 13 20 24 31 32 38 45,5.2,recolor,8,1,7,0,,,1,3,2,9,1,True
+FlorenceYeoh,experiment2,14,168,Recolored Region 13 to Color 3,1 4 13 20 24 31 32 38 45,2.7,recolor,13,3,12,2,,,1,4,3,9,1,True
+FlorenceYeoh,experiment2,14,169,Recolored Region 32 to Color 4,1 4 13 20 24 31 45,3.0,recolor,32,4,31,3,,,1,5,4,7,1,True
+FlorenceYeoh,experiment2,14,170,Recolored Region 24 to Color 2,1 4 13 16 20 24 45,3.8,recolor,24,2,23,1,,,1,6,5,7,1,True
+FlorenceYeoh,experiment2,14,171,Recolored Region 16 to Color 3,1 4 13 20 45,2.4,recolor,16,3,15,2,,,1,7,6,5,1,True
+FlorenceYeoh,experiment2,14,172,Recolored Region 13 to Color 2,1 45,4.6,recolor,13,2,12,1,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,14,173,Recolored Region 1 to Color 1,1 8,3.2,recolor,1,1,0,0,,,1,9,8,2,1,True
+FlorenceYeoh,experiment2,14,174,Recolored Region 45 to Color 1,1 8 45,2.0,recolor,45,1,44,0,,,1,10,9,3,1,True
+FlorenceYeoh,experiment2,14,175,Recolored Region 1 to Color 4,,1.8,recolor,1,4,0,3,,,1,11,10,0,1,True
+FlorenceYeoh,experiment2,15,176,"Game Started (45 regions, 5 conflicts)",1 4 15 21 22 24 25 28 32 44,0.0,game_started,,,,,45,5,1,1,,10,1,True
+FlorenceYeoh,experiment2,15,177,Recolored Region 21 to Color 4,1 4 15 22 24 25 28 44,2.9,recolor,21,4,20,3,,,1,2,1,8,1,True
+FlorenceYeoh,experiment2,15,178,Recolored Region 22 to Color 1,1 4 11 15 22 25 28 44,3.2,recolor,22,1,21,0,,,1,3,2,8,1,True
+FlorenceYeoh,experiment2,15,179,Recolored Region 22 to Color 3,1 4 15 25 28 44,11.1,recolor,22,3,21,2,,,1,4,3,6,1,True
+FlorenceYeoh,experiment2,15,180,Recolored Region 28 to Color 4,1 4 15 44,3.5,recolor,28,4,27,3,,,1,5,4,4,1,True
+FlorenceYeoh,experiment2,15,181,Recolored Region 4 to Color 4,1 4 28 33 43 44,10.9,recolor,4,4,3,3,,,1,6,5,6,1,True
+FlorenceYeoh,experiment2,15,182,Recolored Region 4 to Color 2,1 3 4 44,3.8,recolor,4,2,3,1,,,1,7,6,4,1,True
+FlorenceYeoh,experiment2,15,183,Recolored Region 3 to Color 3,1 44,2.4,recolor,3,3,2,2,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,15,184,Recolored Region 1 to Color 3,,5.8,recolor,1,3,0,2,,,1,9,8,0,1,True
+FlorenceYeoh,experiment2,16,185,"Game Started (45 regions, 10 conflicts)",1 5 7 9 16 21 26 27 29 30 31 36 41 42,0.0,game_started,,,,,45,10,1,1,,14,1,True
+FlorenceYeoh,experiment2,16,186,Recolored Region 21 to Color 1,1 5 7 9 16 21 26 27 29 30 31 36 41 42 45,6.8,recolor,21,1,20,0,,,1,2,1,15,1,True
+FlorenceYeoh,experiment2,16,187,Recolored Region 45 to Color 3,1 5 7 9 16 26 27 29 30 31 36 41 42,4.2,recolor,45,3,44,2,,,1,3,2,13,1,True
+FlorenceYeoh,experiment2,16,188,Recolored Region 31 to Color 1,1 5 7 16 26 27 29 30 36 41 42,1.8,recolor,31,1,30,0,,,1,4,3,11,1,True
+FlorenceYeoh,experiment2,16,189,Recolored Region 1 to Color 1,1 5 7 16 24 26 27 29 36 41 42,1.8,recolor,1,1,0,0,,,1,5,4,11,1,True
+FlorenceYeoh,experiment2,16,190,Recolored Region 41 to Color 1,1 5 7 24 26 27 29 42,1.4,recolor,41,1,40,0,,,1,6,5,8,1,True
+FlorenceYeoh,experiment2,16,191,Recolored Region 24 to Color 3,2 5 7 14 24 26 27 29 42,5.0,recolor,24,3,23,2,,,1,7,6,9,1,True
+FlorenceYeoh,experiment2,16,192,Recolored Region 2 to Color 1,2 5 7 14 24 26 27 29 42,2.7,recolor,2,1,1,0,,,1,8,7,9,1,True
+FlorenceYeoh,experiment2,16,193,Recolored Region 2 to Color 4,2 5 7 14 24 26 27 29 42,4.5,recolor,2,4,1,3,,,1,9,8,9,1,True
+FlorenceYeoh,experiment2,16,194,Recolored Region 14 to Color 4,2 5 7 14 26 27 29 42,1.2,recolor,14,4,13,3,,,1,10,9,8,1,True
+FlorenceYeoh,experiment2,16,195,Recolored Region 5 to Color 3,2 5 7 23 26 27 29 42,4.5,recolor,5,3,4,2,,,1,11,10,8,1,True
+FlorenceYeoh,experiment2,16,196,Recolored Region 23 to Color 2,2 7 26 27 29 42,2.7,recolor,23,2,22,1,,,1,12,11,6,1,True
+FlorenceYeoh,experiment2,16,197,Recolored Region 7 to Color 3,2 7 22 26 27 29 42,3.6,recolor,7,3,6,2,,,1,13,12,7,1,True
+FlorenceYeoh,experiment2,16,198,Recolored Region 42 to Color 4,2 7 22 26 27 42 43,8.0,recolor,42,4,41,3,,,1,14,13,7,1,True
+FlorenceYeoh,experiment2,16,199,Recolored Region 43 to Color 1,2 7 22 26 27 29 42 43,2.7,recolor,43,1,42,0,,,1,15,14,8,1,True
+FlorenceYeoh,experiment2,16,200,Recolored Region 29 to Color 4,2 7 13 22 26 27 29 42,2.9,recolor,29,4,28,3,,,1,16,15,8,1,True
+FlorenceYeoh,experiment2,16,201,Recolored Region 29 to Color 2,2 7 22 26 27 42,7.7,recolor,29,2,28,1,,,1,17,16,6,1,True
+FlorenceYeoh,experiment2,16,202,Recolored Region 2 to Color 1,7 22 26 27,3.1,recolor,2,1,1,0,,,1,18,17,4,1,True
+FlorenceYeoh,experiment2,16,203,Recolored Region 22 to Color 4,13 22 26 27,7.5,recolor,22,4,21,3,,,1,19,18,4,1,True
+FlorenceYeoh,experiment2,16,204,Recolored Region 13 to Color 3,26 27,1.3,recolor,13,3,12,2,,,1,20,19,2,1,True
+FlorenceYeoh,experiment2,16,205,Recolored Region 26 to Color 2,26 34,3.0,recolor,26,2,25,1,,,1,21,20,2,1,True
+FlorenceYeoh,experiment2,16,206,Recolored Region 34 to Color 4,,3.1,recolor,34,4,33,3,,,1,22,21,0,1,True
+FlorenceYeoh,experiment2,17,207,"Game Started (45 regions, 10 conflicts)",4 12 15 18 19 20 24 25 31 32 34 35 37 38,0.0,game_started,,,,,45,10,1,1,,14,1,True
+FlorenceYeoh,experiment2,17,208,Recolored Region 24 to Color 2,4 12 15 18 19 20 24 25 31 32 34 35 36 37,3.2,recolor,24,2,23,1,,,1,2,1,14,1,True
+FlorenceYeoh,experiment2,17,209,Recolored Region 24 to Color 1,2 4 12 15 18 19 20 24 25 31 32 34 35 37,2.8,recolor,24,1,23,0,,,1,3,2,14,1,True
+FlorenceYeoh,experiment2,17,210,Recolored Region 2 to Color 4,4 12 15 18 19 20 25 31 32 34 35 37,2.5,recolor,2,4,1,3,,,1,4,3,12,1,True
+FlorenceYeoh,experiment2,17,211,Recolored Region 37 to Color 2,4 12 15 19 20 25 31 32 35,6.2,recolor,37,2,36,1,,,1,5,4,9,1,True
+FlorenceYeoh,experiment2,17,212,Recolored Region 31 to Color 3,4 12 15 19 20 23 25 26 31 35,6.4,recolor,31,3,30,2,,,1,6,5,10,1,True
+FlorenceYeoh,experiment2,17,213,Recolored Region 31 to Color 1,4 12 15 19 20 25 31 32 35,6.0,recolor,31,1,30,0,,,1,7,6,9,1,True
+FlorenceYeoh,experiment2,17,214,Recolored Region 32 to Color 2,4 12 15 19 20 25 35,6.9,recolor,32,2,31,1,,,1,8,7,7,1,True
+FlorenceYeoh,experiment2,17,215,Recolored Region 20 to Color 2,12 19 20 25 27 35,9.6,recolor,20,2,19,1,,,1,9,8,6,1,True
+FlorenceYeoh,experiment2,17,216,Recolored Region 27 to Color 3,12 19 25 35,2.3,recolor,27,3,26,2,,,1,10,9,4,1,True
+FlorenceYeoh,experiment2,17,217,Recolored Region 19 to Color 1,,2.8,recolor,19,1,18,0,,,1,11,10,0,1,True
+FlorenceYeoh,experiment2,18,218,"Game Started (45 regions, 7 conflicts)",1 7 8 18 22 24 29 31 32 39,0.0,game_started,,,,,45,7,1,1,,10,1,True
+FlorenceYeoh,experiment2,18,219,Recolored Region 24 to Color 4,1 8 18 24 29 31 32 39 45,6.5,recolor,24,4,23,3,,,1,2,1,9,1,True
+FlorenceYeoh,experiment2,18,220,Recolored Region 45 to Color 1,1 8 18 29 31 32 39,2.7,recolor,45,1,44,0,,,1,3,2,7,1,True
+FlorenceYeoh,experiment2,18,221,Recolored Region 29 to Color 4,1 8 12 18 29 32 39,4.8,recolor,29,4,28,3,,,1,4,3,7,1,True
+FlorenceYeoh,experiment2,18,222,Recolored Region 12 to Color 3,1 8 12 18 19 32 39,3.8,recolor,12,3,11,2,,,1,5,4,7,1,True
+FlorenceYeoh,experiment2,18,223,Recolored Region 19 to Color 1,1 8 10 18 19 32 34 39,4.0,recolor,19,1,18,0,,,1,6,5,8,1,True
+FlorenceYeoh,experiment2,18,224,Recolored Region 34 to Color 4,1 8 10 18 19 32 39,2.2,recolor,34,4,33,3,,,1,7,6,7,1,True
+FlorenceYeoh,experiment2,18,225,Recolored Region 18 to Color 4,1 8 10 18 19 27 39,5.2,recolor,18,4,17,3,,,1,8,7,7,1,True
+FlorenceYeoh,experiment2,18,226,Recolored Region 10 to Color 3,1 8 10 14 18 27 39,3.5,recolor,10,3,9,2,,,1,9,8,7,1,True
+FlorenceYeoh,experiment2,18,227,Recolored Region 14 to Color 1,1 8 18 27 39,2.4,recolor,14,1,13,0,,,1,10,9,5,1,True
+FlorenceYeoh,experiment2,18,228,Recolored Region 1 to Color 1,1 18 23 27 41,6.8,recolor,1,1,0,0,,,1,11,10,5,1,True
+FlorenceYeoh,experiment2,18,229,Recolored Region 41 to Color 4,1 18 23 27,2.2,recolor,41,4,40,3,,,1,12,11,4,1,True
+FlorenceYeoh,experiment2,18,230,Recolored Region 23 to Color 3,16 18 23 27,3.3,recolor,23,3,22,2,,,1,13,12,4,1,True
+FlorenceYeoh,experiment2,18,231,Recolored Region 16 to Color 1,18 27,2.3,recolor,16,1,15,0,,,1,14,13,2,1,True
+FlorenceYeoh,experiment2,18,232,Recolored Region 18 to Color 2,18 32,2.8,recolor,18,2,17,1,,,1,15,14,2,1,True
+FlorenceYeoh,experiment2,18,233,Recolored Region 32 to Color 1,,3.8,recolor,32,1,31,0,,,1,16,15,0,1,True
+FlorenceYeoh,experiment2,19,234,"Game Started (45 regions, 5 conflicts)",7 11 19 22 24 26 33 41,0.0,game_started,,,,,45,5,1,1,,8,1,True
+FlorenceYeoh,experiment2,19,235,Recolored Region 19 to Color 4,7 14 19 22 26 33 41,4.0,recolor,19,4,18,3,,,1,2,1,7,1,True
+FlorenceYeoh,experiment2,19,236,Recolored Region 14 to Color 2,7 22 26 33 41,2.9,recolor,14,2,13,1,,,1,3,2,5,1,True
+FlorenceYeoh,experiment2,19,237,Recolored Region 33 to Color 1,7 22 26,2.3,recolor,33,1,32,0,,,1,4,3,3,1,True
+FlorenceYeoh,experiment2,19,238,Recolored Region 22 to Color 1,2 22,13.1,recolor,22,1,21,0,,,1,5,4,2,1,True
+FlorenceYeoh,experiment2,19,239,Recolored Region 2 to Color 2,,4.2,recolor,2,2,1,1,,,1,6,5,0,1,True
+FlorenceYeoh,experiment2,20,240,"Game Started (45 regions, 4 conflicts)",5 6 10 15 27 38 45,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,20,241,Recolored Region 38 to Color 4,6 10 15 19 27 38 40 45,6.3,recolor,38,4,37,3,,,1,2,1,8,1,True
+FlorenceYeoh,experiment2,20,242,Recolored Region 38 to Color 2,2 6 10 15 27 38 45,2.8,recolor,38,2,37,1,,,1,3,2,7,1,True
+FlorenceYeoh,experiment2,20,243,Recolored Region 2 to Color 4,2 6 10 15 27 40 45,2.6,recolor,2,4,1,3,,,1,4,3,7,1,True
+FlorenceYeoh,experiment2,20,244,Recolored Region 40 to Color 1,6 10 15 27 45,1.8,recolor,40,1,39,0,,,1,5,4,5,1,True
+FlorenceYeoh,experiment2,20,245,Recolored Region 27 to Color 1,6 45,1.6,recolor,27,1,26,0,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,20,246,Recolored Region 45 to Color 1,,1.3,recolor,45,1,44,0,,,1,7,6,0,1,True
+FlorenceYeoh,experiment2,21,247,"Game Started (45 regions, 6 conflicts)",5 6 10 15 19 32 34 35 36,0.0,game_started,,,,,45,6,1,1,,9,1,True
+FlorenceYeoh,experiment2,21,248,Recolored Region 19 to Color 1,6 15 32 34 35 36,1.2,recolor,19,1,18,0,,,1,2,1,6,1,True
+FlorenceYeoh,experiment2,21,249,Recolored Region 6 to Color 4,15 32 34 36,3.1,recolor,6,4,5,3,,,1,3,2,4,1,True
+FlorenceYeoh,experiment2,21,250,Recolored Region 32 to Color 4,26 32,5.8,recolor,32,4,31,3,,,1,4,3,2,1,True
+FlorenceYeoh,experiment2,21,251,Recolored Region 26 to Color 2,,2.3,recolor,26,2,25,1,,,1,5,4,0,1,True
+FlorenceYeoh,experiment2,22,252,"Game Started (45 regions, 8 conflicts)",3 7 13 14 15 23 25 36 37 41 42 43 44,0.0,game_started,,,,,45,8,1,1,,13,1,True
+FlorenceYeoh,experiment2,22,253,Recolored Region 42 to Color 2,13 14 15 19 23 25 36 37 41 42 43 44,1.3,recolor,42,2,41,1,,,1,2,1,12,1,True
+FlorenceYeoh,experiment2,22,254,Recolored Region 19 to Color 4,13 14 15 23 25 36 37 41 43 44,3.0,recolor,19,4,18,3,,,1,3,2,10,1,True
+FlorenceYeoh,experiment2,22,255,Recolored Region 36 to Color 3,13 14 15 23 25 37 43 44,2.9,recolor,36,3,35,2,,,1,4,3,8,1,True
+FlorenceYeoh,experiment2,22,256,Recolored Region 37 to Color 3,13 14 15 23 25 43,2.5,recolor,37,3,36,2,,,1,5,4,6,1,True
+FlorenceYeoh,experiment2,22,257,Recolored Region 23 to Color 1,15 43,3.4,recolor,23,1,22,0,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,22,258,Recolored Region 43 to Color 4,,4.9,recolor,43,4,42,3,,,1,7,6,0,1,True
+FlorenceYeoh,experiment2,23,259,"Game Started (45 regions, 6 conflicts)",7 13 14 18 30 31 40,0.0,game_started,,,,,45,6,1,1,,7,1,True
+FlorenceYeoh,experiment2,23,260,Recolored Region 14 to Color 1,7 13 14 24 30 31 40,2.7,recolor,14,1,13,0,,,1,2,1,7,1,True
+FlorenceYeoh,experiment2,23,261,Recolored Region 24 to Color 3,7 13 30 31 40,2.9,recolor,24,3,23,2,,,1,3,2,5,1,True
+FlorenceYeoh,experiment2,23,262,Recolored Region 13 to Color 1,7 30 31 40,7.0,recolor,13,1,12,0,,,1,4,3,4,1,True
+FlorenceYeoh,experiment2,23,263,Recolored Region 40 to Color 4,30 31,1.7,recolor,40,4,39,3,,,1,5,4,2,1,True
+FlorenceYeoh,experiment2,23,264,Recolored Region 30 to Color 1,30 39,4.0,recolor,30,1,29,0,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,23,265,Recolored Region 39 to Color 4,11 39 42,2.3,recolor,39,4,38,3,,,1,7,6,3,1,True
+FlorenceYeoh,experiment2,23,266,Recolored Region 11 to Color 3,11 24 39 42,1.6,recolor,11,3,10,2,,,1,8,7,4,1,True
+FlorenceYeoh,experiment2,23,267,Recolored Region 24 to Color 4,22 24 39 42,4.8,recolor,24,4,23,3,,,1,9,8,4,1,True
+FlorenceYeoh,experiment2,23,268,Recolored Region 22 to Color 2,22 27 39 42,2.9,recolor,22,2,21,1,,,1,10,9,4,1,True
+FlorenceYeoh,experiment2,23,269,Recolored Region 27 to Color 1,2 27 39 42,2.2,recolor,27,1,26,0,,,1,11,10,4,1,True
+FlorenceYeoh,experiment2,23,270,Recolored Region 2 to Color 2,39 42,3.5,recolor,2,2,1,1,,,1,12,11,2,1,True
+FlorenceYeoh,experiment2,23,271,Recolored Region 42 to Color 1,,6.8,recolor,42,1,41,0,,,1,13,12,0,1,True
+FlorenceYeoh,experiment2,24,272,"Game Started (45 regions, 4 conflicts)",2 15 17 25 30 32 41,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,24,273,Recolored Region 25 to Color 4,2 17 23 25 29 32 41,13.7,recolor,25,4,24,3,,,1,2,1,7,1,True
+FlorenceYeoh,experiment2,24,274,Recolored Region 25 to Color 2,2 17 32 41,2.4,recolor,25,2,24,1,,,1,3,2,4,1,True
+FlorenceYeoh,experiment2,24,275,Recolored Region 17 to Color 4,2 32,3.6,recolor,17,4,16,3,,,1,4,3,2,1,True
+FlorenceYeoh,experiment2,24,276,Recolored Region 32 to Color 3,22 32,2.7,recolor,32,3,31,2,,,1,5,4,2,1,True
+FlorenceYeoh,experiment2,24,277,Recolored Region 22 to Color 2,22 28,3.9,recolor,22,2,21,1,,,1,6,5,2,1,True
+FlorenceYeoh,experiment2,24,278,Recolored Region 28 to Color 3,28 33,4.8,recolor,28,3,27,2,,,1,7,6,2,1,True
+FlorenceYeoh,experiment2,24,279,Recolored Region 33 to Color 1,16 33,2.6,recolor,33,1,32,0,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,24,280,Recolored Region 16 to Color 3,16 38,2.4,recolor,16,3,15,2,,,1,9,8,2,1,True
+FlorenceYeoh,experiment2,24,281,Recolored Region 38 to Color 1,24 38,2.5,recolor,38,1,37,0,,,1,10,9,2,1,True
+FlorenceYeoh,experiment2,24,282,Recolored Region 24 to Color 3,,3.6,recolor,24,3,23,2,,,1,11,10,0,1,True
+FlorenceYeoh,experiment2,25,283,"Game Started (45 regions, 10 conflicts)",5 8 11 12 16 29 32 36 37 38 39 40 42 43,0.0,game_started,,,,,45,10,1,1,,14,1,True
+FlorenceYeoh,experiment2,25,284,Recolored Region 5 to Color 4,2 5 11 12 16 29 32 36 37 38 39 40 42 43,4.7,recolor,5,4,4,3,,,1,2,1,14,1,True
+FlorenceYeoh,experiment2,25,285,Recolored Region 2 to Color 1,2 11 12 16 29 32 33 36 37 38 39 40 42 43,2.3,recolor,2,1,1,0,,,1,3,2,14,1,True
+FlorenceYeoh,experiment2,25,286,Recolored Region 33 to Color 2,11 12 16 29 32 36 37 38 39 40 42 43,2.2,recolor,33,2,32,1,,,1,4,3,12,1,True
+FlorenceYeoh,experiment2,25,287,Recolored Region 12 to Color 1,11 12 16 29 30 32 36 37 38 39 40 42 43,4.6,recolor,12,1,11,0,,,1,5,4,13,1,True
+FlorenceYeoh,experiment2,25,288,Recolored Region 40 to Color 4,3 11 12 29 30 32 36 37 38 39 40 43,1.9,recolor,40,4,39,3,,,1,6,5,12,1,True
+FlorenceYeoh,experiment2,25,289,Recolored Region 12 to Color 3,3 11 29 32 36 37 38 39 40 43,1.2,recolor,12,3,11,2,,,1,7,6,10,1,True
+FlorenceYeoh,experiment2,25,290,Recolored Region 3 to Color 2,11 29 32 36 37 38 39 43,3.0,recolor,3,2,2,1,,,1,8,7,8,1,True
+FlorenceYeoh,experiment2,25,291,Recolored Region 36 to Color 4,11 18 29 32 36 38 43,4.2,recolor,36,4,35,3,,,1,9,8,7,1,True
+FlorenceYeoh,experiment2,25,292,Recolored Region 18 to Color 2,11 29 32 36 38 43,4.7,recolor,18,2,17,1,,,1,10,9,6,1,True
+FlorenceYeoh,experiment2,25,293,Recolored Region 29 to Color 2,11 32 36 38 43,2.3,recolor,29,2,28,1,,,1,11,10,5,1,True
+FlorenceYeoh,experiment2,25,294,Recolored Region 43 to Color 3,11 32 34 43,4.3,recolor,43,3,42,2,,,1,12,11,4,1,True
+FlorenceYeoh,experiment2,25,295,Recolored Region 34 to Color 1,11 32,4.0,recolor,34,1,33,0,,,1,13,12,2,1,True
+FlorenceYeoh,experiment2,25,296,Recolored Region 11 to Color 2,,3.0,recolor,11,2,10,1,,,1,14,13,0,1,True
+FlorenceYeoh,experiment2,26,297,"Game Started (45 regions, 7 conflicts)",2 5 9 17 23 29 32 34 38 39 42,0.0,game_started,,,,,45,7,1,1,,11,1,True
+FlorenceYeoh,experiment2,26,298,Recolored Region 2 to Color 4,2 5 9 17 21 29 32 38 42,3.2,recolor,2,4,1,3,,,1,2,1,9,1,True
+FlorenceYeoh,experiment2,26,299,Recolored Region 21 to Color 3,2 5 9 17 29 32 38 42,2.3,recolor,21,3,20,2,,,1,3,2,8,1,True
+FlorenceYeoh,experiment2,26,300,Recolored Region 17 to Color 2,5 9 17 29 38 41 42,4.3,recolor,17,2,16,1,,,1,4,3,7,1,True
+FlorenceYeoh,experiment2,26,301,Recolored Region 36 to Color 1,5 9 17 28 29 36 38 41 42,1.9,recolor,36,1,35,0,,,1,5,4,9,1,True
+FlorenceYeoh,experiment2,26,302,Recolored Region 41 to Color 1,5 9 28 29 36 38 41 42,0.7,recolor,41,1,40,0,,,1,6,5,8,1,True
+FlorenceYeoh,experiment2,26,303,Recolored Region 36 to Color 4,5 9 29 38 42,2.3,recolor,36,4,35,3,,,1,7,6,5,1,True
+FlorenceYeoh,experiment2,26,304,Recolored Region 38 to Color 1,29 42,5.6,recolor,38,1,37,0,,,1,8,7,2,1,True
+FlorenceYeoh,experiment2,26,305,Recolored Region 42 to Color 4,9 11 42,4.7,recolor,42,4,41,3,,,1,9,8,3,1,True
+FlorenceYeoh,experiment2,26,306,Recolored Region 42 to Color 2,1 4 42,4.2,recolor,42,2,41,1,,,1,10,9,3,1,True
+FlorenceYeoh,experiment2,26,307,Recolored Region 42 to Color 1,29 42,2.9,recolor,42,1,41,0,,,1,11,10,2,1,True
+FlorenceYeoh,experiment2,26,308,Recolored Region 29 to Color 3,,2.2,recolor,29,3,28,2,,,1,12,11,0,1,True
+FlorenceYeoh,experiment2,27,309,"Game Started (45 regions, 4 conflicts)",1 6 7 10 29 30 41,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,27,310,Recolored Region 29 to Color 2,1 6 7 10 30,3.6,recolor,29,2,28,1,,,1,2,1,5,1,True
+FlorenceYeoh,experiment2,27,311,Recolored Region 6 to Color 1,7 10,4.1,recolor,6,1,5,0,,,1,3,2,2,1,True
+FlorenceYeoh,experiment2,27,312,Recolored Region 7 to Color 4,7 12,3.1,recolor,7,4,6,3,,,1,4,3,2,1,True
+FlorenceYeoh,experiment2,27,313,Recolored Region 12 to Color 3,,4.2,recolor,12,3,11,2,,,1,5,4,0,1,True
+FlorenceYeoh,experiment2,28,314,"Game Started (45 regions, 9 conflicts)",2 3 9 10 15 17 21 24 26 37 40 41 42,0.0,game_started,,,,,45,9,1,1,,13,1,True
+FlorenceYeoh,experiment2,28,315,Recolored Region 10 to Color 3,2 3 15 17 21 24 26 37 40 41 42,2.4,recolor,10,3,9,2,,,1,2,1,11,1,True
+FlorenceYeoh,experiment2,28,316,Recolored Region 37 to Color 1,2 3 6 15 17 21 24 26 37 40 41 42,4.6,recolor,37,1,36,0,,,1,3,2,12,1,True
+FlorenceYeoh,experiment2,28,317,Recolored Region 37 to Color 3,2 3 15 17 21 24 26 37 40 41 42,4.7,recolor,37,3,36,2,,,1,4,3,11,1,True
+FlorenceYeoh,experiment2,28,318,Recolored Region 40 to Color 2,2 14 15 17 21 24 26 40 41 42,2.7,recolor,40,2,39,1,,,1,5,4,10,1,True
+FlorenceYeoh,experiment2,28,319,Recolored Region 14 to Color 1,2 14 15 17 21 22 24 26 27 41 42,5.2,recolor,14,1,13,0,,,1,6,5,11,1,True
+FlorenceYeoh,experiment2,28,320,Recolored Region 22 to Color 3,2 14 15 17 21 24 26 27 41 42,2.3,recolor,22,3,21,2,,,1,7,6,10,1,True
+FlorenceYeoh,experiment2,28,321,Recolored Region 27 to Color 4,2 5 15 17 21 24 26 27 41 42,5.9,recolor,27,4,26,3,,,1,8,7,10,1,True
+FlorenceYeoh,experiment2,28,322,Recolored Region 5 to Color 3,2 5 15 17 21 22 24 26 41 42,2.0,recolor,5,3,4,2,,,1,9,8,10,1,True
+FlorenceYeoh,experiment2,28,323,Recolored Region 22 to Color 4,2 15 17 21 22 24 26 31 41 42,5.5,recolor,22,4,21,3,,,1,10,9,10,1,True
+FlorenceYeoh,experiment2,28,324,Recolored Region 31 to Color 1,2 15 17 21 24 26 41 42,2.5,recolor,31,1,30,0,,,1,11,10,8,1,True
+FlorenceYeoh,experiment2,28,325,Recolored Region 15 to Color 1,2 17 21 26 41 42,1.7,recolor,15,1,14,0,,,1,12,11,6,1,True
+FlorenceYeoh,experiment2,28,326,Recolored Region 2 to Color 1,21 41 42,1.5,recolor,2,1,1,0,,,1,13,12,3,1,True
+FlorenceYeoh,experiment2,28,327,Recolored Region 37 to Color 2,1 21 37 40 41 42,3.9,recolor,37,2,36,1,,,1,14,13,6,1,True
+FlorenceYeoh,experiment2,28,328,Recolored Region 41 to Color 2,1 37 40 41,0.9,recolor,41,2,40,1,,,1,15,14,4,1,True
+FlorenceYeoh,experiment2,28,329,Recolored Region 37 to Color 3,,1.9,recolor,37,3,36,2,,,1,16,15,0,1,True
+FlorenceYeoh,experiment2,29,330,"Game Started (45 regions, 4 conflicts)",7 8 14 21 32 35 42,0.0,game_started,,,,,45,4,1,1,,7,1,True
+FlorenceYeoh,experiment2,29,331,Recolored Region 8 to Color 1,7 8 14 27 32 35 42,5.2,recolor,8,1,7,0,,,1,2,1,7,1,True
+FlorenceYeoh,experiment2,29,332,Recolored Region 27 to Color 4,7 14 27 29 32 35 42,2.5,recolor,27,4,26,3,,,1,3,2,7,1,True
+FlorenceYeoh,experiment2,29,333,Recolored Region 27 to Color 3,7 14 32 35 42,3.5,recolor,27,3,26,2,,,1,4,3,5,1,True
+FlorenceYeoh,experiment2,29,334,Recolored Region 14 to Color 3,32 35 42,1.2,recolor,14,3,13,2,,,1,5,4,3,1,True
+FlorenceYeoh,experiment2,29,335,Recolored Region 32 to Color 3,,1.6,recolor,32,3,31,2,,,1,6,5,0,1,True
+FlorenceYeoh,experiment2,30,336,"Game Started (45 regions, 7 conflicts)",2 3 11 14 24 27 29 32 34 44,0.0,game_started,,,,,45,7,1,1,,10,1,True
+FlorenceYeoh,experiment2,30,337,Recolored Region 11 to Color 4,2 3 7 11 14 24 32 34 44,2.5,recolor,11,4,10,3,,,1,2,1,9,1,True
+FlorenceYeoh,experiment2,30,338,Recolored Region 11 to Color 2,2 3 11 14 24 26 32 34 44,2.8,recolor,11,2,10,1,,,1,3,2,9,1,True
+FlorenceYeoh,experiment2,30,339,Recolored Region 26 to Color 1,2 3 6 14 24 26 32 34 44,5.0,recolor,26,1,25,0,,,1,4,3,9,1,True
+FlorenceYeoh,experiment2,30,340,Recolored Region 24 to Color 4,3 6 14 21 24 26 32 34 41 44,4.1,recolor,24,4,23,3,,,1,5,4,10,1,True
+FlorenceYeoh,experiment2,30,341,Recolored Region 41 to Color 2,3 6 14 21 24 26 32 34 44,2.3,recolor,41,2,40,1,,,1,6,5,9,1,True
+FlorenceYeoh,experiment2,30,342,Recolored Region 21 to Color 2,3 6 14 26 32 34 44,1.2,recolor,21,2,20,1,,,1,7,6,7,1,True
+FlorenceYeoh,experiment2,30,343,Recolored Region 6 to Color 4,3 6 14 32 34 40 44,6.1,recolor,6,4,5,3,,,1,8,7,7,1,True
+FlorenceYeoh,experiment2,30,344,Recolored Region 32 to Color 2,3 6 14 34 40,3.7,recolor,32,2,31,1,,,1,9,8,5,1,True
+FlorenceYeoh,experiment2,30,345,Recolored Region 40 to Color 1,3 14 34,2.5,recolor,40,1,39,0,,,1,10,9,3,1,True
+FlorenceYeoh,experiment2,30,346,Recolored Region 14 to Color 3,,4.1,recolor,14,3,13,2,,,1,11,10,0,1,True

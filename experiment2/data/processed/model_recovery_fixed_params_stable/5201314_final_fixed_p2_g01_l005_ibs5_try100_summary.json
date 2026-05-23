@@ -1,0 +1,12 @@
+{
+  "true_agent": "",
+  "predicted_agent": "hsp2",
+  "n_actions": 299,
+  "observed_path": "experiment2/data/processed/model_recovery_inputs/5201314_final_observed_actions.csv",
+  "scores_path": "experiment2/data/processed/model_recovery_fixed_params_stable/5201314_final_fixed_p2_g01_l005_ibs5_try100_scores.csv",
+  "scores": [
+    {"model": "hsp2", "nll": 1805.2302221},
+    {"model": "eflop", "nll": 2223.34915892},
+    {"model": "tree", "nll": 3831.59590785}
+  ]
+}

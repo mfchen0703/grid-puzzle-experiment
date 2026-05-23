@@ -46,6 +46,14 @@ struct PlannerNode {
     bool has_action = false;
 };
 
+struct PlannerTrace {
+    int expansions = 0;
+    int max_depth_expanded = 0;
+    int returned_plan_depth = 0;
+    int found_solved = 0;
+    int used_lapse = 0;
+};
+
 static constexpr int LARGE_COST = 10;
 static constexpr int N_COLORS = 4;
 
@@ -395,8 +403,12 @@ static Action sample_hsp2_next_action(
     int max_depth,
     int max_expansions,
     std::mt19937& rng,
-    bool& has_action
+    bool& has_action,
+    PlannerTrace* trace = nullptr
 ) {
+    if (trace != nullptr) {
+        *trace = PlannerTrace{};
+    }
     has_action = false;
     const int root_conflicts = count_conflicts(root_state, round);
     if (root_conflicts > 0 && lapse_rate > 0.0) {
@@ -407,6 +419,10 @@ static Action sample_hsp2_next_action(
             if (!actions.empty()) {
                 std::uniform_int_distribution<int> pick(0, static_cast<int>(actions.size()) - 1);
                 has_action = true;
+                if (trace != nullptr) {
+                    trace->returned_plan_depth = 1;
+                    trace->used_lapse = 1;
+                }
                 return actions[pick(rng)];
             }
         }
@@ -440,12 +456,20 @@ static Action sample_hsp2_next_action(
             if (closed.find(key) != closed.end()) continue;
             closed.insert(key);
             ++expansions;
+            if (trace != nullptr) {
+                trace->expansions = expansions;
+                trace->max_depth_expanded = std::max(trace->max_depth_expanded, current.depth);
+            }
 
             const int current_conflicts = count_conflicts(current.state, round);
             if (current_conflicts == 0) {
                 auto path = reconstruct_path(nodes, current_idx);
                 if (!path.empty()) {
                     has_action = true;
+                    if (trace != nullptr) {
+                        trace->found_solved = 1;
+                        trace->returned_plan_depth = static_cast<int>(path.size());
+                    }
                     return path.front();
                 }
                 return Action{};
@@ -526,6 +550,9 @@ static Action sample_hsp2_next_action(
     auto path = reconstruct_path(nodes, best_node);
     if (!path.empty()) {
         has_action = true;
+        if (trace != nullptr) {
+            trace->returned_plan_depth = static_cast<int>(path.size());
+        }
         return path.front();
     }
     return Action{};
@@ -747,16 +774,20 @@ static int run_simulate_mode(int argc, char** argv) {
 
     std::cout
         << "agent,round,agent_step,module,state_before,region,old_color,new_color,"
-        << "n_conflict_edges_before,n_conflict_edges_after,final_conflicts,success,random_seed\n";
+        << "n_conflict_edges_before,n_conflict_edges_after,final_conflicts,success,random_seed,"
+        << "planner_expansions,planner_max_depth_expanded,planner_returned_plan_depth,"
+        << "planner_found_solved,planner_used_lapse\n";
     for (size_t round_offset = 0; round_offset < rounds.size(); ++round_offset) {
         const RoundData& round = rounds[round_offset];
         const int round_id = static_cast<int>(round_offset) + 1;
         State state = round.initial_state;
         std::vector<Action> actions;
         std::vector<State> states_before;
+        std::vector<PlannerTrace> traces;
         for (int step = 0; step < max_steps; ++step) {
             if (count_conflicts(state, round) == 0) break;
             bool has_action = false;
+            PlannerTrace trace;
             Action action = sample_hsp2_next_action(
                 round,
                 state,
@@ -766,11 +797,13 @@ static int run_simulate_mode(int argc, char** argv) {
                 max_depth,
                 max_expansions,
                 rng,
-                has_action
+                has_action,
+                &trace
             );
             if (!has_action) break;
             states_before.push_back(state);
             actions.push_back(action);
+            traces.push_back(trace);
             state = apply_action(state, action);
         }
         const int final_conflicts = count_conflicts(state, round);
@@ -790,7 +823,12 @@ static int run_simulate_mode(int argc, char** argv) {
                 << count_conflicts(after_state, round) << ','
                 << final_conflicts << ','
                 << (final_conflicts == 0 ? 1 : 0) << ','
-                << seed << '\n';
+                << seed << ','
+                << traces[step].expansions << ','
+                << traces[step].max_depth_expanded << ','
+                << traces[step].returned_plan_depth << ','
+                << traces[step].found_solved << ','
+                << traces[step].used_lapse << '\n';
         }
     }
     return 0;
